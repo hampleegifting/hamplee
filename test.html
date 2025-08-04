@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Follow Us & Submit Details</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 24px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    label {
+      margin-top: 16px;
+      display: block;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    input::placeholder {
+      color: #aaa;
+    }
+
+    .follow-section {
+      margin: 24px 0;
+      text-align: center;
+    }
+
+    .follow-btn {
+      display: inline-block;
+      background-color: #E1306C;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .checkbox-wrapper {
+      margin: 16px 0;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .submit-btn:disabled {
+      background-color: #aaa;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <h2>Join the Community</h2>
+  <p>Follow our Instagram page and enter your contact details to continue.</p>
+
+  <form id="userForm">
+    <label for="villa">Villa Number:</label>
+    <input type="text" id="villa" required placeholder="e.g., Villa 12B" />
+
+    <label for="contact">Contact (Phone or Email):</label>
+    <input type="text" id="contact" required placeholder="e.g., +91 9876543210 or email@example.com" />
+
+    <div class="follow-section">
+      <a
+        href="https://www.instagram.com/hamplee.gifting"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="follow-btn"
+      >
+        Follow Us on Instagram
+      </a>
+    </div>
+
+    <div class="checkbox-wrapper">
+      <label for="followCheckbox">
+        <input type="checkbox" id="followCheckbox" />
+        I have followed the Instagram page
+      </label>
+    </div>
+
+    <button id="submitBtn" class="submit-btn" type="submit" disabled>Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('userForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const checkbox = document.getElementById('followCheckbox');
+    const inputs = form.querySelectorAll('input[required]');
+
+    function validateForm() {
+      let allFilled = true;
+      inputs.forEach(input => {
+        if (!input.value.trim()) allFilled = false;
+      });
+
+      submitBtn.disabled = !(allFilled && checkbox.checked);
+    }
+
+    form.addEventListener('input', validateForm);
+    checkbox.addEventListener('change', validateForm);
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const villa = document.getElementById('villa').value.trim();
+      const contact = document.getElementById('contact').value.trim();
+
+      alert("Thank you! Your details have been recorded.\n\nVilla: " + villa + "\nContact: " + contact);
+
+      // TODO: Send data to backend, Google Sheets, etc.
+    });
+  </script>
+</body>
+</html>
