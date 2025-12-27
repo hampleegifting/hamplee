@@ -1,0 +1,3219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Our Premium Product Collection | Hamplee - Corporate Gift SKUs</title>
+    <meta name="description" content="Browse 55+ premium SKUs for corporate gifting. Wellness, gourmet, sustainable, office utilities & more. Filter by category, budget, occasion & recipient.">
+    <meta name="keywords" content="corporate gift SKUs, bulk gifting products, employee gifts, client gifts, premium products, custom hamper items">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Premium Product Collection | Hamplee">
+    <meta property="og:description" content="Discover 55+ premium SKUs for corporate gifting - wellness, gourmet, sustainable & more">
+    <meta property="og:type" content="website">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #C9A959;
+            --dark: #1A1A1A;
+            --light: #F8F7F4;
+            --white: #FFFFFF;
+            --grey: #6B6B6B;
+            --text: #333333;
+        }
+    </style>
+    
+    <!-- Reusable Navigation Styles -->
+    <link rel="stylesheet" href="nav.css">
+    
+    <!-- Load navigation script early to prevent flicker -->
+    <script src="nav.js" defer></script>
+    
+    <style>
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--light);
+            color: var(--text);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        /* Hero Section */
+        .page-hero {
+            padding: 80px 40px 60px;
+            text-align: center;
+            background: linear-gradient(135deg, #F8F7F4 0%, #FFFFFF 100%);
+            position: relative;
+        }
+        
+        /* Hero image for selection mode */
+        .page-hero.selection-mode {
+            background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), 
+                        url('asset/moodboard/AdobeStock_1476270645%20(1).jpeg') center center / cover no-repeat;
+            padding: 100px 40px 80px;
+        }
+        
+        .page-hero.selection-mode h1,
+        .page-hero.selection-mode p {
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-hero h1 {
+            font-size: 42px;
+            color: var(--dark);
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 1.5px;
+            line-height: 1.3;
+        }
+
+        .page-hero p {
+            font-size: 16px;
+            color: var(--grey);
+            max-width: 900px;
+            margin: 0 auto;
+            letter-spacing: 0.8px;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 60px 40px 80px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        /* Filter Sidebar */
+        .filter-sidebar {
+            position: sticky;
+            top: 200px;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            max-height: calc(100vh - 220px);
+            overflow-y: auto;
+        }
+
+        .filter-sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .filter-sidebar::-webkit-scrollbar-track {
+            background: var(--light);
+            border-radius: 10px;
+        }
+
+        .filter-sidebar::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 10px;
+        }
+
+        .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .filter-header h3 {
+            font-size: 20px;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .clear-filters {
+            font-size: 12px;
+            color: var(--gold);
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .clear-filters:hover {
+            color: var(--dark);
+        }
+
+        .filter-group {
+            margin-bottom: 30px;
+        }
+
+        .filter-group-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 12px 0;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .filter-group-title:hover {
+            color: var(--gold);
+        }
+
+        .filter-group-title .toggle-icon {
+            font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .filter-group-title.collapsed .toggle-icon {
+            transform: rotate(-90deg);
+        }
+
+        .filter-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 12px;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        .filter-options.collapsed {
+            display: none;
+        }
+
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 6px;
+            transition: background 0.2s ease;
+        }
+
+        .filter-option:hover {
+            background: var(--light);
+        }
+
+        .filter-option input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            accent-color: var(--gold);
+        }
+
+        .filter-option label {
+            font-size: 13px;
+            color: var(--text);
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .filter-count {
+            font-size: 11px;
+            color: var(--grey);
+            background: var(--light);
+            padding: 2px 8px;
+            border-radius: 12px;
+        }
+
+        /* Products Section */
+        .products-section {
+            min-height: 500px;
+        }
+
+        .products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+
+        .results-count {
+            font-size: 14px;
+            color: var(--grey);
+        }
+
+        .sort-dropdown {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .sort-dropdown label {
+            font-size: 13px;
+            color: var(--grey);
+            font-weight: 500;
+        }
+
+        .sort-dropdown select {
+            padding: 10px 16px;
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            font-size: 13px;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark);
+            cursor: pointer;
+            background: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .sort-dropdown select:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(201, 169, 89, 0.1);
+        }
+
+        /* Active Filters */
+        .active-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .filter-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--gold);
+            color: var(--white);
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-tag:hover {
+            background: var(--dark);
+        }
+
+        .filter-tag .remove {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            background: var(--light);
+            position: relative;
+        }
+
+        .product-image-slider {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .product-image-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+
+        .product-image-slide.active {
+            opacity: 1;
+        }
+
+        .product-image-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .product-card:hover .product-image-slide.active img {
+            transform: scale(1.08);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--gold);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .wishlist-heart {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .wishlist-heart:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(201, 169, 89, 0.4);
+        }
+
+        .wishlist-heart.liked {
+            background: var(--gold);
+            color: white;
+        }
+
+        .wishlist-heart:not(.liked) {
+            color: var(--grey);
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-category {
+            font-size: 11px;
+            color: var(--grey);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 8px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .product-description {
+            font-size: 13px;
+            color: var(--grey);
+            line-height: 1.6;
+            margin-bottom: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+
+        .product-tag {
+            font-size: 10px;
+            padding: 4px 10px;
+            background: var(--light);
+            color: var(--grey);
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid var(--light);
+        }
+
+        .product-price {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--gold);
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .product-cta {
+            font-size: 12px;
+            color: var(--gold);
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.3s ease;
+        }
+
+        .product-card:hover .product-cta {
+            gap: 10px;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 80px 40px;
+        }
+
+        .empty-state h3 {
+            font-size: 32px;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .empty-state p {
+            font-size: 16px;
+            color: var(--grey);
+            margin-bottom: 32px;
+        }
+
+        /* Mobile Filter Toggle */
+        .mobile-filter-toggle {
+            display: none;
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            padding: 16px 32px;
+            background: var(--gold);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 8px 32px rgba(201, 169, 89, 0.4);
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 968px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .filter-sidebar {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 320px;
+                height: 100vh;
+                max-height: 100vh;
+                z-index: 1001;
+                transition: left 0.4s ease;
+                border-radius: 0;
+            }
+
+            .filter-sidebar.active {
+                left: 0;
+            }
+
+            .mobile-filter-toggle {
+                display: block;
+            }
+
+            .filter-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 1000;
+                backdrop-filter: blur(4px);
+            }
+
+            .filter-overlay.active {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 42px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .products-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .main-content {
+                padding: 40px 20px 80px;
+            }
+
+            .nav-container {
+                padding: 0 20px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .product-card {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .product-card:nth-child(1) { animation-delay: 0.1s; }
+        .product-card:nth-child(2) { animation-delay: 0.2s; }
+        .product-card:nth-child(3) { animation-delay: 0.3s; }
+        .product-card:nth-child(4) { animation-delay: 0.4s; }
+        .product-card:nth-child(5) { animation-delay: 0.5s; }
+        .product-card:nth-child(6) { animation-delay: 0.6s; }
+
+        /* Product Detail Modal */
+        .product-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .product-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-modal .modal-content {
+            background: var(--white);
+            border-radius: 16px;
+            max-width: 1200px;
+            width: 95%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: fadeUp 0.4s ease;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 36px;
+            color: var(--dark);
+            cursor: pointer;
+            z-index: 10;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.95);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-close:hover {
+            background: var(--gold);
+            color: var(--white);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 0;
+        }
+
+        .modal-image-section {
+            padding: 40px;
+            background: var(--light);
+            border-radius: 16px 0 0 16px;
+        }
+
+        .modal-main-image {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 12px;
+            background: var(--white);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-main-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            cursor: zoom-in;
+        }
+
+        .modal-main-image img.zoomed {
+            transform: scale(1.5);
+            cursor: zoom-out;
+        }
+
+        .modal-image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 12px;
+        }
+
+        .modal-thumbnail {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .modal-thumbnail:hover {
+            border-color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        .modal-thumbnail.active {
+            border-color: var(--gold);
+            box-shadow: 0 4px 12px rgba(201, 169, 89, 0.3);
+        }
+
+        .modal-details {
+            padding: 60px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .modal-category {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+
+        .modal-details h2 {
+            font-size: 42px;
+            margin-bottom: 16px;
+            color: var(--dark);
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+        }
+
+        .modal-price {
+            font-size: 28px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 24px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .modal-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .modal-tag {
+            font-size: 11px;
+            padding: 6px 14px;
+            background: var(--light);
+            color: var(--grey);
+            border-radius: 20px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .modal-description {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--grey);
+            margin-bottom: 40px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .modal-btn {
+            flex: 1;
+            min-width: 180px;
+            text-align: center;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid var(--gold);
+            background: var(--gold);
+            color: white;
+        }
+
+        .modal-btn:hover {
+            background: var(--dark);
+            border-color: var(--dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 26, 26, 0.3);
+        }
+
+        .modal-btn.liked {
+            background: var(--dark);
+            border-color: var(--dark);
+        }
+
+        /* Liked Wishlist Styles */
+        .wishlist-badge {
+            position: absolute;
+            top: -8px;
+            right: -12px;
+            background: var(--accent-color);
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 10px;
+            min-width: 18px;
+            text-align: center;
+        }
+
+        .wishlist-notification {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--gold);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            font-size: 15px;
+            font-weight: 600;
+            z-index: 10000;
+            opacity: 1;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: var(--white);
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 968px) {
+            .modal-body {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-image-section {
+                border-radius: 16px 16px 0 0;
+            }
+
+            .modal-main-image {
+                height: 350px;
+            }
+
+            .modal-details {
+                padding: 40px 30px;
+            }
+
+            .modal-details h2 {
+                font-size: 32px;
+            }
+
+            .modal-actions {
+                flex-direction: column;
+            }
+
+            .modal-btn {
+                width: 100%;
+            }
+        }
+
+        /* Selection Mode Styles */
+        .product-selection-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 10;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .selection-mode .product-selection-overlay {
+            opacity: 1;
+        }
+
+        .selection-checkbox {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: 3px solid #ddd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-selection-overlay.selected .selection-checkbox {
+            background: var(--gold);
+            border-color: var(--gold);
+        }
+
+        .checkmark-icon {
+            width: 24px;
+            height: 24px;
+            fill: white;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.3s ease;
+        }
+
+        .product-selection-overlay.selected .checkmark-icon {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .product-card.product-selected {
+            border-color: var(--gold);
+            box-shadow: 0 8px 30px rgba(201, 169, 89, 0.4);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation placeholder to prevent layout shift -->
+    <div class="nav-placeholder"></div>
+    
+    <!-- Navigation loaded via nav.js -->
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <h1>Our Premium Product Collection</h1>
+        <p>Discover a wide selection of SKUs that empower you to curate refined gifting experiences—perfectly suited for every occasion, budget, and purpose.</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Filter Sidebar -->
+        <aside class="filter-sidebar" id="filterSidebar">
+            <div class="filter-header">
+                <h3>Filters</h3>
+                <a class="clear-filters" onclick="clearAllFilters()">Clear All</a>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="filter-group">
+                <div class="filter-group-title" onclick="toggleFilterGroup(this)">
+                    <span>Category</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="filter-options">
+                    <div class="filter-option">
+                        <input type="checkbox" id="cat-home" value="Home Décor & Lifestyle" onchange="applyFilters()">
+                        <label for="cat-home">Home Décor & Lifestyle</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="cat-gourmet" value="Gourmet & Edible" onchange="applyFilters()">
+                        <label for="cat-gourmet">Gourmet & Edible Delights</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="cat-wellness" value="Wellness" onchange="applyFilters()">
+                        <label for="cat-wellness">Wellness & Well-Being</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="cat-sustainable" value="Sustainable" onchange="applyFilters()">
+                        <label for="cat-sustainable">Sustainable & Eco-Friendly</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="cat-ngo" value="NGO & Artisan" onchange="applyFilters()">
+                        <label for="cat-ngo">NGO & Artisan Made</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="cat-festive" value="Festive" onchange="applyFilters()">
+                        <label for="cat-festive">Festive & Traditional</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="cat-office" value="Office Utility" onchange="applyFilters()">
+                        <label for="cat-office">Office & Corporate Utility</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="cat-luxury" value="Premium" onchange="applyFilters()">
+                        <label for="cat-luxury">Premium / Luxury Hampers</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Occasion Filter -->
+            <div class="filter-group">
+                <div class="filter-group-title" onclick="toggleFilterGroup(this)">
+                    <span>Occasion</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="filter-options">
+                    <div class="filter-option">
+                        <input type="checkbox" id="occ-festive" value="Festive Gifting" onchange="applyFilters()">
+                        <label for="occ-festive">Festive Gifting</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="occ-corporate" value="Corporate Events" onchange="applyFilters()">
+                        <label for="occ-corporate">Corporate Events</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="occ-employee" value="Employee Appreciation" onchange="applyFilters()">
+                        <label for="occ-employee">Employee Appreciation</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="occ-client" value="Client Gifting" onchange="applyFilters()">
+                        <label for="occ-client">Client Gifting</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="occ-onboarding" value="Onboarding" onchange="applyFilters()">
+                        <label for="occ-onboarding">Onboarding / Welcome Kits</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="occ-milestone" value="Milestones" onchange="applyFilters()">
+                        <label for="occ-milestone">Milestones & Achievements</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Budget Filter -->
+            <div class="filter-group">
+                <div class="filter-group-title" onclick="toggleFilterGroup(this)">
+                    <span>Budget Range</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="filter-options">
+                    <div class="filter-option">
+                        <input type="checkbox" id="budget-1" value="Under ₹1500" onchange="applyFilters()">
+                        <label for="budget-1">Under ₹1,500</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="budget-2" value="₹1500-₹2000" onchange="applyFilters()">
+                        <label for="budget-2">₹1,500 – ₹2,000</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="budget-3" value="₹2000-₹2500" onchange="applyFilters()">
+                        <label for="budget-3">₹2,000 – ₹2,500</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="budget-4" value="₹2500+" onchange="applyFilters()">
+                        <label for="budget-4">₹2,500 & Above</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contents Filter -->
+            <div class="filter-group">
+                <div class="filter-group-title" onclick="toggleFilterGroup(this)">
+                    <span>What's Inside</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="filter-options">
+                    <div class="filter-option">
+                        <input type="checkbox" id="content-food" value="Food & Beverage" onchange="applyFilters()">
+                        <label for="content-food">Food & Beverage</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="content-chocolate" value="Chocolates" onchange="applyFilters()">
+                        <label for="content-chocolate">Chocolates</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="content-candles" value="Candles" onchange="applyFilters()">
+                        <label for="content-candles">Candles</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="content-tea" value="Premium Tea" onchange="applyFilters()">
+                        <label for="content-tea">Premium Tea</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="content-dryfruits" value="Dry Fruits" onchange="applyFilters()">
+                        <label for="content-dryfruits">Dry Fruits</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="content-desk" value="Desk Accessories" onchange="applyFilters()">
+                        <label for="content-desk">Desk Accessories</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="content-drinkware" value="Drinkware" onchange="applyFilters()">
+                        <label for="content-drinkware">Tumblers & Drinkware</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sustainability Filter -->
+            <div class="filter-group">
+                <div class="filter-group-title" onclick="toggleFilterGroup(this)">
+                    <span>Sustainability</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="filter-options">
+                    <div class="filter-option">
+                        <input type="checkbox" id="sus-eco" value="Eco-Friendly" onchange="applyFilters()">
+                        <label for="sus-eco">100% Eco-Friendly</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="sus-plastic" value="Plastic-Free" onchange="applyFilters()">
+                        <label for="sus-plastic">Plastic-Free</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="sus-reusable" value="Reusable" onchange="applyFilters()">
+                        <label for="sus-reusable">Reusable Products</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="sus-plantable" value="Plantable" onchange="applyFilters()">
+                        <label for="sus-plantable">Plantable Products</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="sus-handmade" value="Handmade" onchange="applyFilters()">
+                        <label for="sus-handmade">Handmade</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="sus-ngo" value="NGO Supported" onchange="applyFilters()">
+                        <label for="sus-ngo">NGO Supported</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mood Filter -->
+            <div class="filter-group">
+                <div class="filter-group-title" onclick="toggleFilterGroup(this)">
+                    <span>Mood & Experience</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="filter-options">
+                    <div class="filter-option">
+                        <input type="checkbox" id="mood-calm" value="Calm & Relaxing" onchange="applyFilters()">
+                        <label for="mood-calm">Calm & Relaxing</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="mood-festive" value="Festive & Joyful" onchange="applyFilters()">
+                        <label for="mood-festive">Festive & Joyful</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="mood-elegant" value="Elegant & Premium" onchange="applyFilters()">
+                        <label for="mood-elegant">Elegant & Premium</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="mood-warm" value="Warm & Cozy" onchange="applyFilters()">
+                        <label for="mood-warm">Warm & Cozy</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="mood-fresh" value="Fresh & Natural" onchange="applyFilters()">
+                        <label for="mood-fresh">Fresh & Natural</label>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="products-header">
+                <div class="results-count" id="resultsCount">Showing all products</div>
+                <div class="sort-dropdown">
+                    <label for="sortSelect">Sort by:</label>
+                    <select id="sortSelect" onchange="sortProducts()">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Active Filters -->
+            <div class="active-filters" id="activeFilters"></div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <h3>No Products Found</h3>
+                <p>Try adjusting your filters to see more results</p>
+                <a href="#" class="back-btn" onclick="clearAllFilters(); return false;">Clear All Filters</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Mobile Filter Toggle -->
+    <button class="mobile-filter-toggle" onclick="toggleMobileFilters()">
+        <span>🔍 Filters</span>
+    </button>
+
+    <!-- Filter Overlay -->
+    <div class="filter-overlay" id="filterOverlay" onclick="toggleMobileFilters()"></div>
+
+    <script>
+        // Product data from SKU folder
+        const products = [
+            // Candles & Home Décor
+            {
+                id: 1,
+                name: "Amber Jar Soy Wax Candle",
+                category: "Home Décor & Lifestyle",
+                price: 499,
+                images: [
+                    "asset/sku/Amber Jar  Soy Wax Candle/20230417_112146_0004_ff3c2482-7f62-4d12-9b62-ca3b3e9d91bc.webp",
+                    "asset/sku/Amber Jar  Soy Wax Candle/20230417_112146_0014.webp",
+                    "asset/sku/Amber Jar  Soy Wax Candle/ChatGPTImageJul31_2025_02_43_56PM.webp",
+                    "asset/sku/Amber Jar  Soy Wax Candle/WhatsAppImage2025-07-31at12.05.06PM_2.webp"
+                ],
+                description: "Premium fragranced 100gm soya wax candle in elegant amber jar",
+                tags: ["Candles", "Home Décor", "Premium"],
+                badge: "Bestseller",
+                filters: {
+                    category: ["Home Décor & Lifestyle", "Wellness"],
+                    occasion: ["Festive Gifting", "Client Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Candles"],
+                    sustainability: [],
+                    mood: ["Warm & Cozy", "Calm & Relaxing"]
+                }
+            },
+            {
+                id: 2,
+                name: "Lotus Urli Candle",
+                category: "Home Décor & Lifestyle",
+                price: 799,
+                images: [
+                    "asset/sku/Lotus Urli Candle/2_5a24dab5-cbf0-4545-9895-a38c81fb28f4.webp",
+                    "asset/sku/Lotus Urli Candle/IMG_6672.webp",
+                    "asset/sku/Lotus Urli Candle/IMG_6679_1.webp"
+                ],
+                description: "Traditional lotus design urli candle for festive and spiritual ambiance",
+                tags: ["Candles", "Festive", "Traditional"],
+                badge: "Festive",
+                filters: {
+                    category: ["Home Décor & Lifestyle", "Festive"],
+                    occasion: ["Festive Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Candles"],
+                    sustainability: [],
+                    mood: ["Festive & Joyful", "Warm & Cozy"]
+                }
+            },
+            {
+                id: 3,
+                name: "Scented Coconut Shell Candle",
+                category: "Sustainable",
+                price: 449,
+                image: "asset/sku/Scented Coconut Shell Candle/51h9fzZNbmL._SL1080_.jpg",
+                description: "Eco-friendly scented candle in natural coconut shell",
+                tags: ["Eco-Friendly", "Candles", "Sustainable"],
+                badge: "Eco-Friendly",
+                filters: {
+                    category: ["Sustainable", "Home Décor & Lifestyle"],
+                    occasion: ["Client Gifting", "Employee Appreciation"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Candles"],
+                    sustainability: ["Eco-Friendly", "Reusable"],
+                    mood: ["Fresh & Natural", "Calm & Relaxing"]
+                }
+            },
+            {
+                id: 4,
+                name: "Candle Warmer Lamp",
+                category: "Home Décor & Lifestyle",
+                price: 1299,
+                image: ["asset/sku/Candle Warmer Lamp/71LjHGIl68L._SL1500__1.webp", "asset/sku/Candle Warmer Lamp/ChatGPT_Image_Dec_13_2025_11_48_48_AM.webp"],
+                description: "Elegant candle warmer lamp for flameless fragrance experience",
+                tags: ["Home Décor", "Candles", "Modern"],
+                badge: "New",
+                filters: {
+                    category: ["Home Décor & Lifestyle"],
+                    occasion: ["Client Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Candles"],
+                    sustainability: [],
+                    mood: ["Elegant & Premium", "Warm & Cozy"]
+                }
+            },
+            {
+                id: 5,
+                name: "Aromatherapy Flame Humidifier",
+                category: "Wellness",
+                price: 1499,
+                image: ["asset/sku/Aromatherapy Flame Humidifier/1_1.webp", "asset/sku/Aromatherapy Flame Humidifier/5_91601cb7-cdfd-495e-9c64-8b4478bb6994.webp", "asset/sku/Aromatherapy Flame Humidifier/6_1_1f04ed3f-5cde-4354-813b-b6d644ca4ba6.webp"],
+                description: "Modern flame humidifier with aromatherapy for relaxation and wellness",
+                tags: ["Wellness", "Aromatherapy", "Modern"],
+                badge: "Popular",
+                filters: {
+                    category: ["Wellness", "Home Décor & Lifestyle"],
+                    occasion: ["Employee Appreciation", "Client Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: [],
+                    mood: ["Calm & Relaxing"]
+                }
+            },
+            {
+                id: 6,
+                name: "Luxe Reed Diffuser",
+                category: "Home Décor & Lifestyle",
+                price: 899,
+                image: ["asset/sku/Luxe Reed Diffuser/02.webp", "asset/sku/Luxe Reed Diffuser/d_8940224f-6144-408d-90b0-0dae715ad773.webp"],
+                description: "Premium reed diffuser for continuous elegant fragrance",
+                tags: ["Home Décor", "Fragrance", "Premium"],
+                badge: "Premium",
+                filters: {
+                    category: ["Home Décor & Lifestyle", "Wellness"],
+                    occasion: ["Client Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: [],
+                    mood: ["Elegant & Premium", "Calm & Relaxing"]
+                }
+            },
+            
+            // Drinkware
+            {
+                id: 7,
+                name: "Ceramic Coffee Mug",
+                category: "Home Décor & Lifestyle",
+                price: 399,
+                image: ["asset/sku/Ceramic Coffee Mug/712uiWAmysL._SL1500_.jpg", "asset/sku/Ceramic Coffee Mug/71Qmq+Z-efL._SL1500_.jpg", "asset/sku/Ceramic Coffee Mug/FullSizeRender_6.webp", "asset/sku/Ceramic Coffee Mug/IMG-20251125-WA0159.webp"],
+                description: "Rustic earthen brew artisan ceramic mug, 400ml capacity",
+                tags: ["Drinkware", "Ceramic", "Handcrafted"],
+                badge: "Bestseller",
+                filters: {
+                    category: ["Home Décor & Lifestyle", "Office Utility"],
+                    occasion: ["Employee Appreciation", "Onboarding"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Drinkware"],
+                    sustainability: [],
+                    mood: ["Warm & Cozy"]
+                }
+            },
+            {
+                id: 8,
+                name: "Copper Bottle",
+                category: "Wellness",
+                price: 799,
+                image: ["asset/sku/Copper Bottle/CopperCulture-28AUG25-756-Retouched.webp", "asset/sku/Copper Bottle/CopperCulture-28AUG25-776-Retouched.webp", "asset/sku/Copper Bottle/CopperCulture-28AUG25-782-Retouched.webp"],
+                description: "Pure copper water bottle for health and wellness benefits",
+                tags: ["Wellness", "Copper", "Health"],
+                badge: "Wellness",
+                filters: {
+                    category: ["Wellness", "Office Utility"],
+                    occasion: ["Employee Appreciation", "Client Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Drinkware"],
+                    sustainability: ["Reusable"],
+                    mood: ["Fresh & Natural"]
+                }
+            },
+            {
+                id: 9,
+                name: "Travel Tumbler",
+                category: "Office Utility",
+                price: 699,
+                image: "asset/sku/Travel Tumbler/41aHZe9L-tL.jpg",
+                description: "Insulated travel tumbler for hot and cold beverages on the go",
+                tags: ["Drinkware", "Travel", "Insulated"],
+                badge: "Popular",
+                filters: {
+                    category: ["Office Utility"],
+                    occasion: ["Employee Appreciation", "Onboarding"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Drinkware"],
+                    sustainability: ["Reusable"],
+                    mood: ["Elegant & Premium"]
+                }
+            },
+            {
+                id: 10,
+                name: "Glass Sipper",
+                category: "Sustainable",
+                price: 549,
+                image: "asset/sku/Glass Sipper/jay-gatrad-seller-glass-tumbler-with-lid-and-straw-wide-mouth-mason-jar-drinking-glasses-product-images-orv8v966vck-p604674213-1-202309201411.jpg",
+                description: "Eco-friendly glass sipper with bamboo lid and straw",
+                tags: ["Eco-Friendly", "Glass", "Reusable"],
+                badge: "Eco-Friendly",
+                filters: {
+                    category: ["Sustainable", "Office Utility"],
+                    occasion: ["Employee Appreciation", "Client Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Drinkware"],
+                    sustainability: ["Eco-Friendly", "Reusable", "Plastic-Free"],
+                    mood: ["Fresh & Natural"]
+                }
+            },
+            {
+                id: 11,
+                name: "Moscow Mule Mug",
+                category: "Premium",
+                price: 899,
+                image: "asset/sku/Moscow Mule Mug/3_d9fe00c9-c2fb-4f69-9fe1-12a7be844157-2025-01-08-113332-m18kf982b7s.jpg-2025-10-08-112514-q8bjg1bv4wj.jpeg",
+                description: "Premium copper moscow mule mug for sophisticated beverage service",
+                tags: ["Premium", "Copper", "Barware"],
+                badge: "Premium",
+                filters: {
+                    category: ["Premium", "Home Décor & Lifestyle"],
+                    occasion: ["Client Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Drinkware"],
+                    sustainability: [],
+                    mood: ["Elegant & Premium"]
+                }
+            },
+            {
+                id: 12,
+                name: "Brass Glass",
+                category: "Premium",
+                price: 649,
+                image: ["asset/sku/Brass Glass/71Y5S-zA5jL._SL1500_.jpg", "asset/sku/Brass Glass/71Zl-tYUCpL._SL1500_.jpg", "asset/sku/Brass Glass/81a137-9KPL._SL1500_.webp"],
+                description: "Traditional brass drinking glass with elegant finish",
+                tags: ["Brass", "Traditional", "Premium"],
+                badge: "",
+                filters: {
+                    category: ["Premium", "Home Décor & Lifestyle"],
+                    occasion: ["Festive Gifting", "Client Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Drinkware"],
+                    sustainability: [],
+                    mood: ["Elegant & Premium", "Festive & Joyful"]
+                }
+            },
+            {
+                id: 13,
+                name: "Pure Copper Glass with Embossed",
+                category: "Premium",
+                price: 749,
+                image: "asset/sku/Pure Copper Glass with Embossed/IAV-CC-3-136-EA.webp",
+                description: "Handcrafted embossed copper glass for health and elegance",
+                tags: ["Copper", "Handcrafted", "Premium"],
+                badge: "",
+                filters: {
+                    category: ["Premium", "Wellness"],
+                    occasion: ["Client Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Drinkware"],
+                    sustainability: ["Handmade"],
+                    mood: ["Elegant & Premium"]
+                }
+            },
+            {
+                id: 14,
+                name: "Steel Wine Glass - Unbreakable Gold",
+                category: "Premium",
+                price: 999,
+                image: "asset/sku/Steel Wine Glass - Unbreakable Gold/51FY1bbDvqL._SL1500_.jpg",
+                description: "Luxurious gold-finish unbreakable steel wine glasses",
+                tags: ["Premium", "Steel", "Gold"],
+                badge: "Luxury",
+                filters: {
+                    category: ["Premium"],
+                    occasion: ["Client Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Drinkware"],
+                    sustainability: ["Reusable"],
+                    mood: ["Elegant & Premium"]
+                }
+            },
+            {
+                id: 15,
+                name: "Rice Husk Wine Glasses",
+                category: "Sustainable",
+                price: 599,
+                image: "asset/sku/Rice Husk Wine Glasses/ppxfqmrc-Rice husk Wine glasses set of 2.jpg",
+                description: "Eco-friendly wine glasses made from rice husk composite",
+                tags: ["Eco-Friendly", "Sustainable", "Innovative"],
+                badge: "Eco-Friendly",
+                filters: {
+                    category: ["Sustainable"],
+                    occasion: ["Client Gifting", "Employee Appreciation"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Drinkware"],
+                    sustainability: ["Eco-Friendly", "Plastic-Free"],
+                    mood: ["Fresh & Natural"]
+                }
+            },
+            {
+                id: 16,
+                name: "Ceramic Tea Cups",
+                category: "Home Décor & Lifestyle",
+                price: 449,
+                image: ["asset/sku/Ceramic Tea Cups/712uiWAmysL._SL1500_.jpg", "asset/sku/Ceramic Tea Cups/81L69pADibL._SL1500_.jpg", "asset/sku/Ceramic Tea Cups/81phKoYB+1L._SL1500_.jpg"],
+                description: "Elegant ceramic tea cups set for traditional tea service",
+                tags: ["Ceramic", "Tea", "Traditional"],
+                badge: "",
+                filters: {
+                    category: ["Home Décor & Lifestyle"],
+                    occasion: ["Client Gifting", "Festive Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Drinkware", "Premium Tea"],
+                    sustainability: [],
+                    mood: ["Warm & Cozy"]
+                }
+            },
+            {
+                id: 17,
+                name: "Dabara Set",
+                category: "Home Décor & Lifestyle",
+                price: 599,
+                image: "asset/sku/Dabara Set/1712711596308_618HLm0PvpL.webp",
+                description: "Traditional South Indian dabara set for filter coffee",
+                tags: ["Traditional", "Coffee", "Cultural"],
+                badge: "",
+                filters: {
+                    category: ["Home Décor & Lifestyle", "Gourmet & Edible"],
+                    occasion: ["Festive Gifting", "Client Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Drinkware"],
+                    sustainability: [],
+                    mood: ["Warm & Cozy"]
+                }
+            },
+            {
+                id: 18,
+                name: "Stainless Steel Mug",
+                category: "Office Utility",
+                price: 349,
+                image: "asset/sku/Stainley Mug/41JXjvuj2sL._SL1500_.jpg",
+                description: "Durable stainless steel mug for everyday office use",
+                tags: ["Office", "Durable", "Stainless Steel"],
+                badge: "Bestseller",
+                filters: {
+                    category: ["Office Utility"],
+                    occasion: ["Employee Appreciation", "Onboarding"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Drinkware"],
+                    sustainability: ["Reusable"],
+                    mood: []
+                }
+            },
+            
+            // Gourmet & Food
+            {
+                id: 19,
+                name: "Organic Honey",
+                category: "Gourmet & Edible",
+                price: 599,
+                image: ["asset/sku/Organic Honey/719px3TvM3L._SL1500_.jpg", "asset/sku/Organic Honey/71HZbCXEfNL._SL1500_.jpg", "asset/sku/Organic Honey/81mCc-1bFVL._SL1500_.jpg"],
+                description: "Raw Jamun honey - organic, unprocessed, and NMR tested pure honey",
+                tags: ["Organic", "Honey", "Health"],
+                badge: "Organic",
+                filters: {
+                    category: ["Gourmet & Edible", "Wellness"],
+                    occasion: ["Client Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Food & Beverage"],
+                    sustainability: [],
+                    mood: ["Fresh & Natural"]
+                }
+            },
+            {
+                id: 20,
+                name: "Baklava Assortment",
+                category: "Gourmet & Edible",
+                price: 899,
+                image: ["asset/sku/Baklava Assortment/Baklava-Classic-assortment-9-Pcs.webp", "asset/sku/Baklava Assortment/DSC01482_copy_1_1.webp", "asset/sku/Baklava Assortment/DSC01523_copy_1.webp"],
+                description: "Premium baklava classic assortment - 9 pieces of exquisite sweetness",
+                tags: ["Gourmet", "Sweets", "Premium"],
+                badge: "Premium",
+                filters: {
+                    category: ["Gourmet & Edible"],
+                    occasion: ["Client Gifting", "Corporate Events", "Festive Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Food & Beverage"],
+                    sustainability: [],
+                    mood: ["Festive & Joyful", "Elegant & Premium"]
+                }
+            },
+            {
+                id: 21,
+                name: "GoDesi Kaju Katli Sweet",
+                category: "Gourmet & Edible",
+                price: 799,
+                image: "asset/sku/GoDesi Kaju Katli Sweet/01_2d2594ba-0887-40d4-9ba5-0e8327fb0673_700x.webp",
+                description: "Traditional Indian kaju katli sweet made with premium cashews",
+                tags: ["Indian Sweets", "Traditional", "Festive"],
+                badge: "Festive",
+                filters: {
+                    category: ["Gourmet & Edible", "Festive"],
+                    occasion: ["Festive Gifting", "Client Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Food & Beverage", "Indian Sweets"],
+                    sustainability: [],
+                    mood: ["Festive & Joyful"]
+                }
+            },
+            {
+                id: 22,
+                name: "GoDesi Kaju Bar",
+                category: "Gourmet & Edible",
+                price: 699,
+                image: "asset/sku/GoDesi Kaju Bar/81-ipXnMDSL._SX679_.jpg",
+                description: "Premium cashew bars - healthy and delicious snacking option",
+                tags: ["Dry Fruits", "Healthy", "Snacks"],
+                badge: "",
+                filters: {
+                    category: ["Gourmet & Edible"],
+                    occasion: ["Employee Appreciation", "Client Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Food & Beverage", "Dry Fruits"],
+                    sustainability: [],
+                    mood: []
+                }
+            },
+            {
+                id: 23,
+                name: "Sensational Chocolate Box",
+                category: "Gourmet & Edible",
+                price: 1299,
+                image: "asset/sku/Sensational Chocolate Box/4pcschocolatebox-3_800x.webp",
+                description: "Luxurious assorted chocolate box for special occasions",
+                tags: ["Chocolates", "Premium", "Luxury"],
+                badge: "Premium",
+                filters: {
+                    category: ["Gourmet & Edible", "Premium"],
+                    occasion: ["Client Gifting", "Corporate Events", "Milestones"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Chocolates"],
+                    sustainability: [],
+                    mood: ["Elegant & Premium"]
+                }
+            },
+            {
+                id: 24,
+                name: "The Gourmet Jar",
+                category: "Gourmet & Edible",
+                price: 849,
+                image: "asset/sku/The Gourmet Jar/61BQC9NYA6L._SL1080_.jpg",
+                description: "Curated gourmet jar with premium condiments and preserves",
+                tags: ["Gourmet", "Condiments", "Premium"],
+                badge: "",
+                filters: {
+                    category: ["Gourmet & Edible"],
+                    occasion: ["Client Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Food & Beverage", "Gourmet Jars"],
+                    sustainability: [],
+                    mood: ["Elegant & Premium"]
+                }
+            },
+            {
+                id: 25,
+                name: "Bee Wax Candle & Honey Set",
+                category: "Gourmet & Edible",
+                price: 999,
+                image: ["asset/sku/Bee Wax Candle & Honey Set/DK10-Graphic-BioQ-Eco-Sustainability-scaled.webp", "asset/sku/Bee Wax Candle & Honey Set/HN04-BioQ-Eco-Sustainability-scaled.webp", "asset/sku/Bee Wax Candle & Honey Set/hn02-3-250x250.webp"],
+                description: "Natural bee wax candle paired with organic honey gift set",
+                tags: ["Natural", "Honey", "Candles"],
+                badge: "Eco-Friendly",
+                filters: {
+                    category: ["Gourmet & Edible", "Sustainable", "Wellness"],
+                    occasion: ["Client Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Food & Beverage", "Candles"],
+                    sustainability: ["Eco-Friendly"],
+                    mood: ["Fresh & Natural", "Warm & Cozy"]
+                }
+            },
+            {
+                id: 26,
+                name: "Brass Coffee Filter Drip Brewer",
+                category: "Premium",
+                price: 1499,
+                image: ["asset/sku/Brass Coffee Filter Drip Brewer/617jWilffGL._SL1500_.jpg", "asset/sku/Brass Coffee Filter Drip Brewer/718KdNDQIbL._SL1500_.jpg", "asset/sku/Brass Coffee Filter Drip Brewer/81-eTf1k01L._SL1500_.jpg"],
+                description: "Traditional brass coffee filter for authentic South Indian filter coffee",
+                tags: ["Coffee", "Brass", "Traditional"],
+                badge: "Premium",
+                filters: {
+                    category: ["Premium", "Home Décor & Lifestyle"],
+                    occasion: ["Client Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: [],
+                    mood: ["Warm & Cozy", "Elegant & Premium"]
+                }
+            },
+            
+            // Sustainable & Eco-friendly
+            {
+                id: 27,
+                name: "Eco-friendly Plantable Pencils",
+                category: "Sustainable",
+                price: 299,
+                image: "asset/sku/Eco-friendly Plantable Pencils/61BQlxCgnYL._SL1500_.jpg",
+                description: "Plant these pencils after use and grow herbs or flowers",
+                tags: ["Plantable", "Eco-Friendly", "Stationery"],
+                badge: "Eco-Friendly",
+                filters: {
+                    category: ["Sustainable", "Office Utility"],
+                    occasion: ["Employee Appreciation", "Onboarding"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Desk Accessories"],
+                    sustainability: ["Eco-Friendly", "Plantable"],
+                    mood: ["Fresh & Natural"]
+                }
+            },
+            {
+                id: 28,
+                name: "Nature Inspired Plantable Notebook",
+                category: "Sustainable",
+                price: 449,
+                image: "asset/sku/Nature Inspired Plantable Notebook/8-57.png",
+                description: "Handmade plantable notebook with seed-embedded pages",
+                tags: ["Plantable", "Notebook", "Handmade"],
+                badge: "Eco-Friendly",
+                filters: {
+                    category: ["Sustainable", "Office Utility"],
+                    occasion: ["Employee Appreciation", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Desk Accessories"],
+                    sustainability: ["Eco-Friendly", "Plantable", "Handmade"],
+                    mood: ["Fresh & Natural"]
+                }
+            },
+            {
+                id: 29,
+                name: "Eco-friendly Playing Cards",
+                category: "Sustainable",
+                price: 349,
+                image: "asset/sku/Eco-friendly Playing Cards/61e69ItyzaL._SL1000_.jpg",
+                description: "Playing cards made from recycled and eco-friendly materials",
+                tags: ["Eco-Friendly", "Entertainment", "Recycled"],
+                badge: "Eco-Friendly",
+                filters: {
+                    category: ["Sustainable", "Office Utility"],
+                    occasion: ["Employee Appreciation"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: ["Eco-Friendly", "Plastic-Free"],
+                    mood: []
+                }
+            },
+            {
+                id: 30,
+                name: "Earth-Friendly Cutting Chai Cups",
+                category: "Sustainable",
+                price: 399,
+                image: "asset/sku/Earth-Friendly Cutting Chai Cups/718-K1qyp3L._SL1500_.jpg",
+                description: "Biodegradable cutting chai cups for authentic chai experience",
+                tags: ["Eco-Friendly", "Biodegradable", "Tea"],
+                badge: "Eco-Friendly",
+                filters: {
+                    category: ["Sustainable", "Home Décor & Lifestyle"],
+                    occasion: ["Corporate Events", "Employee Appreciation"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Drinkware"],
+                    sustainability: ["Eco-Friendly", "Plastic-Free"],
+                    mood: ["Warm & Cozy"]
+                }
+            },
+            {
+                id: 31,
+                name: "Mini Magnetic Planter",
+                category: "Sustainable",
+                price: 399,
+                image: "asset/sku/Mini magnetic planter/Minimagneticplanter-2_800x.webp",
+                description: "Magnetic mini planter for desk or fridge - grow herbs indoors",
+                tags: ["Planter", "Magnetic", "Sustainable"],
+                badge: "New",
+                filters: {
+                    category: ["Sustainable", "Office Utility"],
+                    occasion: ["Employee Appreciation", "Onboarding"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: ["Eco-Friendly"],
+                    mood: ["Fresh & Natural"]
+                }
+            },
+            {
+                id: 32,
+                name: "Eco-friendly Incense Sticks",
+                category: "Sustainable",
+                price: 299,
+                image: "asset/sku/Eco-friendly Incense Sticks/1.-3.webp",
+                description: "Natural incense sticks made from organic ingredients",
+                tags: ["Incense", "Organic", "Wellness"],
+                badge: "Eco-Friendly",
+                filters: {
+                    category: ["Sustainable", "Wellness"],
+                    occasion: ["Festive Gifting", "Client Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: ["Eco-Friendly"],
+                    mood: ["Calm & Relaxing", "Fresh & Natural"]
+                }
+            },
+            
+            // NGO & Artisan
+            {
+                id: 33,
+                name: "Crochet Evil Eye Key Chain",
+                category: "NGO & Artisan",
+                price: 199,
+                image: "asset/sku/Crochet Evil Eye Key Chain/3_8f4d8c5b-22dc-4c70-8331-ea6e4cb28775.webp",
+                description: "Handmade crochet evil eye keychain by skilled artisans",
+                tags: ["Handmade", "Crochet", "Artisan"],
+                badge: "Impact",
+                filters: {
+                    category: ["NGO & Artisan"],
+                    occasion: ["Employee Appreciation"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: ["Handmade", "NGO Supported"],
+                    mood: []
+                }
+            },
+            {
+                id: 34,
+                name: "Crochet Heart Key Chain",
+                category: "NGO & Artisan",
+                price: 199,
+                image: "asset/sku/Crochet Heart Key Chain/1_b4fac700-ab42-4a6f-a22f-bf69d2976722.jpg",
+                description: "Adorable handcrafted crochet heart keychain",
+                tags: ["Handmade", "Crochet", "Artisan"],
+                badge: "Impact",
+                filters: {
+                    category: ["NGO & Artisan"],
+                    occasion: ["Employee Appreciation", "Thank You Gifts"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: ["Handmade", "NGO Supported"],
+                    mood: []
+                }
+            },
+            {
+                id: 35,
+                name: "Crochet Rose Stick",
+                category: "NGO & Artisan",
+                price: 249,
+                image: ["asset/sku/Crochet Rose Stick /il_1140xN.6686974189_cgd0.webp", "asset/sku/Crochet Rose Stick /il_1140xN.6686974199_5wyr.webp", "asset/sku/Crochet Rose Stick /il_1140xN.7267596520_qtg2.webp"],
+                description: "Beautiful handmade crochet rose on stick - perfect gift",
+                tags: ["Handmade", "Crochet", "Flowers"],
+                badge: "Impact",
+                filters: {
+                    category: ["NGO & Artisan", "Home Décor & Lifestyle"],
+                    occasion: ["Client Gifting", "Thank You Gifts"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: ["Handmade", "NGO Supported"],
+                    mood: []
+                }
+            },
+            {
+                id: 36,
+                name: "Crochet Sun Flower Stick",
+                category: "NGO & Artisan",
+                price: 249,
+                image: "asset/sku/Crochet Sun Flower Stick/PDP-6_730dfe1d-ca50-4b39-ad6f-2f9af3fdb298.webp",
+                description: "Cheerful handmade crochet sunflower on stick",
+                tags: ["Handmade", "Crochet", "Flowers"],
+                badge: "Impact",
+                filters: {
+                    category: ["NGO & Artisan", "Home Décor & Lifestyle"],
+                    occasion: ["Employee Appreciation", "Thank You Gifts"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: ["Handmade", "NGO Supported"],
+                    mood: ["Festive & Joyful"]
+                }
+            },
+            {
+                id: 37,
+                name: "Crochet Sun Flower Pot",
+                category: "NGO & Artisan",
+                price: 349,
+                image: "asset/sku/Crochet Sun Flower Pot /61MzjzH7TbL._SL1213_.jpg",
+                description: "Handcrafted crochet sunflower in decorative pot",
+                tags: ["Handmade", "Crochet", "Décor"],
+                badge: "Impact",
+                filters: {
+                    category: ["NGO & Artisan", "Home Décor & Lifestyle"],
+                    occasion: ["Client Gifting", "Employee Appreciation"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: ["Handmade", "NGO Supported"],
+                    mood: ["Festive & Joyful"]
+                }
+            },
+            {
+                id: 38,
+                name: "Crochet Pear Message Toy",
+                category: "NGO & Artisan",
+                price: 299,
+                image: "asset/sku/Crochet Pear Message Toy/IMG_2746.webp",
+                description: "Cute handmade crochet pear with personalized message",
+                tags: ["Handmade", "Crochet", "Gift"],
+                badge: "Impact",
+                filters: {
+                    category: ["NGO & Artisan"],
+                    occasion: ["Thank You Gifts", "Employee Appreciation"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: ["Handmade", "NGO Supported"],
+                    mood: []
+                }
+            },
+            {
+                id: 39,
+                name: "Handpainted Clay Tealight Holders",
+                category: "NGO & Artisan",
+                price: 449,
+                image: "asset/sku/Handpainted Clay Tealight Holders/03_79a83d38-ecd4-47e6-8ceb-1d94c7ee4f50_1800x1800.webp",
+                description: "Beautiful handpainted clay tealight holders by artisans",
+                tags: ["Handmade", "Clay", "Candles"],
+                badge: "Impact",
+                filters: {
+                    category: ["NGO & Artisan", "Festive"],
+                    occasion: ["Festive Gifting", "Client Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Candles"],
+                    sustainability: ["Handmade", "NGO Supported"],
+                    mood: ["Festive & Joyful", "Warm & Cozy"]
+                }
+            },
+            
+            // Festive & Traditional
+            {
+                id: 40,
+                name: "Metallic Flower Diyas",
+                category: "Festive",
+                price: 399,
+                image: "asset/sku/Metallic Flower Diyas/7175vqBafYL._SL1500_.jpg",
+                description: "Elegant metallic flower-shaped diyas for festive celebrations",
+                tags: ["Diwali", "Diyas", "Traditional"],
+                badge: "Festive",
+                filters: {
+                    category: ["Festive"],
+                    occasion: ["Festive Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: [],
+                    mood: ["Festive & Joyful"]
+                }
+            },
+            {
+                id: 41,
+                name: "Terracotta Painted Diya Set",
+                category: "Festive",
+                price: 349,
+                image: "asset/sku/Terracotta Painted Diya Set/68382Decoreer-Handmade-Handicraft-Home-Decor-Terracotta-Zero-Diya-set-of-12-3.png",
+                description: "Traditional terracotta diyas with beautiful hand-painted designs",
+                tags: ["Diwali", "Terracotta", "Handpainted"],
+                badge: "Festive",
+                filters: {
+                    category: ["Festive", "NGO & Artisan"],
+                    occasion: ["Festive Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: ["Handmade"],
+                    mood: ["Festive & Joyful"]
+                }
+            },
+            {
+                id: 42,
+                name: "Metal Lantern Light Candle Holder",
+                category: "Festive",
+                price: 699,
+                image: ["asset/sku/Metal-lantern-Light-Candle-Holder/1000007250861-1000007250860_01-1200.jpg", "asset/sku/Metal-lantern-Light-Candle-Holder/1000007250861-1000007250860_03-1200.jpg", "asset/sku/Metal-lantern-Light-Candle-Holder/1000007250861-1000007250860_06-1200.jpg"],
+                description: "Decorative metal lantern candle holder for festive ambiance",
+                tags: ["Lantern", "Metal", "Décor"],
+                badge: "Festive",
+                filters: {
+                    category: ["Festive", "Home Décor & Lifestyle"],
+                    occasion: ["Festive Gifting", "Client Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Candles"],
+                    sustainability: [],
+                    mood: ["Festive & Joyful", "Warm & Cozy"]
+                }
+            },
+            {
+                id: 43,
+                name: "Wooden Flower Tea Light Candle Holder",
+                category: "Festive",
+                price: 549,
+                image: "asset/sku/Wooden Flower Tea Light Candle Holder/713qzvnA0XL._SL1201_.jpg",
+                description: "Handcrafted wooden flower design tealight holder",
+                tags: ["Wood", "Handcrafted", "Candles"],
+                badge: "",
+                filters: {
+                    category: ["Festive", "Home Décor & Lifestyle"],
+                    occasion: ["Festive Gifting", "Client Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Candles"],
+                    sustainability: ["Handmade"],
+                    mood: ["Warm & Cozy"]
+                }
+            },
+            
+            // Office & Corporate
+            {
+                id: 44,
+                name: "Mini Umbrella",
+                category: "Office Utility",
+                price: 399,
+                image: ["asset/sku/Mini-umbrella/415sjPcUSlL.jpg", "asset/sku/Mini-umbrella/41IDJrw1JWL.jpg", "asset/sku/Mini-umbrella/41QhSQy09-L.jpg", "asset/sku/Mini-umbrella/41SkbeECfcL.jpg"],
+                description: "Compact foldable umbrella - perfect for daily commute",
+                tags: ["Umbrella", "Utility", "Travel"],
+                badge: "Popular",
+                filters: {
+                    category: ["Office Utility"],
+                    occasion: ["Employee Appreciation", "Onboarding"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: [],
+                    mood: []
+                }
+            },
+            
+            // Premium Home Décor
+            {
+                id: 45,
+                name: "Ceramic Bowl With Handle",
+                category: "Home Décor & Lifestyle",
+                price: 599,
+                image: "asset/sku/Ceramic Bowl With Handle/712uiWAmysL._SL1500_.jpg",
+                description: "Elegant ceramic bowl with handle for serving or décor",
+                tags: ["Ceramic", "Serving", "Home"],
+                badge: "",
+                filters: {
+                    category: ["Home Décor & Lifestyle"],
+                    occasion: ["Client Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: [],
+                    mood: ["Elegant & Premium"]
+                }
+            },
+            {
+                id: 46,
+                name: "Ceramic Pitcher Vase",
+                category: "Home Décor & Lifestyle",
+                price: 799,
+                image: "asset/sku/Ceramic Pitcher Vase/51+fT5hqltL._SL1184_.jpg",
+                description: "Artistic ceramic pitcher vase for flowers or décor",
+                tags: ["Ceramic", "Vase", "Décor"],
+                badge: "",
+                filters: {
+                    category: ["Home Décor & Lifestyle"],
+                    occasion: ["Client Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: [],
+                    mood: ["Elegant & Premium"]
+                }
+            },
+            {
+                id: 47,
+                name: "Marble & Wooden Coaster",
+                category: "Home Décor & Lifestyle",
+                price: 649,
+                image: ["asset/sku/Marble & Wooden Coaster/D2-01.webp", "asset/sku/Marble & Wooden Coaster/DSC09798_-_Copy.webp", "asset/sku/Marble & Wooden Coaster/Untitled-14-01-01.webp"],
+                description: "Premium marble and wooden coaster set",
+                tags: ["Marble", "Wood", "Coasters"],
+                badge: "Premium",
+                filters: {
+                    category: ["Home Décor & Lifestyle", "Premium"],
+                    occasion: ["Client Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: [],
+                    mood: ["Elegant & Premium"]
+                }
+            },
+            {
+                id: 48,
+                name: "Hand-Painted Ceramic Coaster Set",
+                category: "Home Décor & Lifestyle",
+                price: 549,
+                image: "asset/sku/Hand-Painted Ceramic Coaster Set with Artistic Design/IMG_4989_2400x2400.webp",
+                description: "Artistic hand-painted ceramic coaster set",
+                tags: ["Ceramic", "Handpainted", "Coasters"],
+                badge: "",
+                filters: {
+                    category: ["Home Décor & Lifestyle", "NGO & Artisan"],
+                    occasion: ["Client Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: ["Handmade"],
+                    mood: ["Elegant & Premium"]
+                }
+            },
+            {
+                id: 49,
+                name: "Ceramic Evil Eye Mug & Saucer",
+                category: "Home Décor & Lifestyle",
+                price: 599,
+                image: "asset/sku/Ceramic Evil Eye Mug & Saurcer/61M+IEJGfSL._SL1170_.jpg",
+                description: "Unique evil eye design ceramic mug with saucer",
+                tags: ["Ceramic", "Evil Eye", "Mug"],
+                badge: "New",
+                filters: {
+                    category: ["Home Décor & Lifestyle"],
+                    occasion: ["Client Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Drinkware"],
+                    sustainability: [],
+                    mood: []
+                }
+            },
+            {
+                id: 50,
+                name: "Porcelain XL Coffee Cappuccino Cup With Saucer",
+                category: "Premium",
+                price: 749,
+                image: "asset/sku/Porcelein XL Coffee Cappuccino Cup With Suucer/7192JITSETL._SL1500_.jpg",
+                description: "Extra large porcelain cappuccino cup with saucer",
+                tags: ["Porcelain", "Coffee", "Premium"],
+                badge: "Premium",
+                filters: {
+                    category: ["Premium", "Home Décor & Lifestyle"],
+                    occasion: ["Client Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Drinkware"],
+                    sustainability: [],
+                    mood: ["Elegant & Premium"]
+                }
+            },
+            {
+                id: 51,
+                name: "Ceramic Heart Mug & Saucer",
+                category: "Home Décor & Lifestyle",
+                price: 549,
+                image: ["asset/sku/Ceramic Heart Mug & Saurcer/712uiWAmysL._SL1500_.jpg", "asset/sku/Ceramic Heart Mug & Saurcer/61GHeVtGYnL._SL1024_.jpg", "asset/sku/Ceramic Heart Mug & Saurcer/61wFrKqiFlL._SL1024_.jpg", "asset/sku/Ceramic Heart Mug & Saurcer/51J7Md9uTcL.jpg"],
+                description: "Elegant ceramic mug with heart design and matching saucer",
+                tags: ["Ceramic", "Mug", "Heart Design"],
+                badge: "",
+                filters: {
+                    category: ["Home Décor & Lifestyle"],
+                    occasion: ["Personal Celebrations", "Thank You Gifts"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Drinkware"],
+                    sustainability: [],
+                    mood: ["Warm & Cozy"],
+                    recipient: ["Personal Gifting", "Friends"]
+                }
+            },
+            {
+                id: 52,
+                name: "Frosted Lid Jar Candle",
+                category: "Home Décor & Lifestyle",
+                price: 649,
+                image: ["asset/sku/Frosted Lid jar candle/IMG_9683.webp", "asset/sku/Frosted Lid jar candle/IMG_9692.webp", "asset/sku/Frosted Lid jar candle/d_4bf44807-01dc-4d4e-9f28-e61485605820.webp"],
+                description: "Premium scented candle in frosted glass jar with lid",
+                tags: ["Candle", "Scented", "Frosted Glass"],
+                badge: "Premium",
+                filters: {
+                    category: ["Home Décor & Lifestyle", "Wellness & Well-Being"],
+                    occasion: ["Client Gifting", "Housewarming"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Candles"],
+                    sustainability: [],
+                    mood: ["Calm & Relaxing", "Elegant & Premium"],
+                    recipient: ["Clients", "Personal Gifting"]
+                }
+            },
+            {
+                id: 53,
+                name: "Scented Lado Candle",
+                category: "Festive & Traditional",
+                price: 449,
+                image: ["asset/sku/Scented Lado Candle copy/81S7Oz5GmIL._SL1500_.jpg", "asset/sku/Scented Lado Candle copy/814BXYnwVkL._SX679_.jpg"],
+                description: "Traditional Lado shaped scented candle for festive occasions",
+                tags: ["Candle", "Festive", "Traditional"],
+                badge: "Festive",
+                filters: {
+                    category: ["Festive & Traditional", "Home Décor & Lifestyle"],
+                    occasion: ["Festive Gifting (Diwali, Celebrations)"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Candles"],
+                    sustainability: [],
+                    mood: ["Festive & Joyful", "Warm & Cozy"],
+                    recipient: ["Families", "Personal Gifting"]
+                }
+            },
+            {
+                id: 54,
+                name: "Scented Tomb Lid Jar Candle",
+                category: "Premium",
+                price: 799,
+                image: ["asset/sku/Scented Tomb Lid Jar Candle/TombLidScentedAmberJarCandle_3.webp", "asset/sku/Scented Tomb Lid Jar Candle/TombLidScentedAmberJarCandle_4.webp", "asset/sku/Scented Tomb Lid Jar Candle/ScentedJarCandle_13.webp"],
+                description: "Luxury scented candle in amber jar with distinctive tomb lid design",
+                tags: ["Candle", "Luxury", "Amber Jar"],
+                badge: "Premium",
+                filters: {
+                    category: ["Premium", "Home Décor & Lifestyle"],
+                    occasion: ["Client Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Candles"],
+                    sustainability: [],
+                    mood: ["Elegant & Premium", "Calm & Relaxing"],
+                    recipient: ["Clients", "CXOs & Leadership"]
+                }
+            },
+            {
+                id: 55,
+                name: "Insulated Travel Tumbler",
+                category: "Office & Corporate Utility",
+                price: 599,
+                image: ["asset/sku/Travel Tubmler/51HwHLMyhuL._SL1500_.jpg", "asset/sku/Travel Tubmler/51guPKKR2VL._SL1000_.jpg", "asset/sku/Travel Tubmler/51ihCmGe65L._SL1500_.jpg"],
+                description: "Double-walled insulated travel tumbler for hot and cold beverages",
+                tags: ["Tumbler", "Insulated", "Travel"],
+                badge: "Eco-Friendly",
+                filters: {
+                    category: ["Office & Corporate Utility", "Sustainable & Eco-Friendly"],
+                    occasion: ["Employee Appreciation", "Onboarding / Welcome Kits"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Drinkware", "Utility"],
+                    sustainability: ["Reusable Products"],
+                    mood: ["Fresh & Natural"],
+                    recipient: ["Employees", "Teams"]
+                }
+            },
+            
+            // New Products Added
+            {
+                id: 56,
+                name: "12 Months Notebook Planner",
+                category: "Office & Corporate Utility",
+                price: 699,
+                images: [
+                    "asset/sku/12 Months Planner/Planner_1.jpg",
+                    "asset/sku/12 Months Planner/Planner_2.jpg",
+                    "asset/sku/12 Months Planner/Planner_3.jpg",
+                    "asset/sku/12 Months Planner/Planner_4.jpg",
+                    "asset/sku/12 Months Planner/Planner_5.jpg"
+                ],
+                description: "Floral notebook with 12 monthly spreads, 52 weekly spreads, and habit tracker - craft your year with intentional planning",
+                tags: ["Planner", "Notebook", "Productivity"],
+                badge: "Bestseller",
+                filters: {
+                    category: ["Office & Corporate Utility"],
+                    occasion: ["Employee Appreciation", "Onboarding / Welcome Kits", "Year-End Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Desk Accessories"],
+                    sustainability: [],
+                    mood: [],
+                    recipient: ["Employees", "Teams"]
+                }
+            },
+            {
+                id: 57,
+                name: "Dessert Bowl with Spoon",
+                category: "Premium",
+                price: 649,
+                images: [
+                    "asset/sku/Dessert Bowl with Spoon/Ice Cream Cups_1.png",
+                    "asset/sku/Dessert Bowl with Spoon/Ice Cream Cups_2.png.jpg"
+                ],
+                description: "Stainless steel dessert bowl with golden finish and elegant goblet design - perfect for ice cream and desserts",
+                tags: ["Stainless Steel", "Dessert", "Golden"],
+                badge: "Premium",
+                filters: {
+                    category: ["Premium", "Home Décor & Lifestyle"],
+                    occasion: ["Client Gifting", "Corporate Events", "Housewarming"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: ["Reusable Products"],
+                    mood: ["Elegant & Premium"],
+                    recipient: ["Clients", "Families"]
+                }
+            },
+            {
+                id: 58,
+                name: "Golden Heart Spoons",
+                category: "Premium",
+                price: 449,
+                images: [
+                    "asset/sku/Heart Spoons/Heart_spoons_1.jpg",
+                    "asset/sku/Heart Spoons/Heart_spoons_2.jpg",
+                    "asset/sku/Heart Spoons/Heart_spoons_3.jpg",
+                    "asset/sku/Heart Spoons/Heart_spoons_4.jpg"
+                ],
+                description: "Elegant golden stainless steel spoons with heart-shaped handles - trendy and pinterest-worthy",
+                tags: ["Spoons", "Golden", "Elegant"],
+                badge: "New",
+                filters: {
+                    category: ["Premium", "Home Décor & Lifestyle"],
+                    occasion: ["Client Gifting", "Personal Celebrations"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: ["Reusable Products"],
+                    mood: ["Elegant & Premium"],
+                    recipient: ["Personal Gifting", "Friends"]
+                }
+            },
+            {
+                id: 59,
+                name: "His Her Shawl Gift Set",
+                category: "Premium",
+                price: 2499,
+                images: [
+                    "asset/sku/HisHer Shawl/Shawls1.png",
+                    "asset/sku/HisHer Shawl/Shawls2.png",
+                    "asset/sku/HisHer Shawl/Shawls3.png",
+                    "asset/sku/HisHer Shawl/Shawls4.png",
+                    "asset/sku/HisHer Shawl/Shawls5.png",
+                    "asset/sku/HisHer Shawl/Shawls6.png"
+                ],
+                description: "Exquisite Jamawar and Kaani shawls gift set for him and her - presented in a stylish wooden premium box",
+                tags: ["Shawl", "Luxury", "Handcrafted"],
+                badge: "Luxury",
+                filters: {
+                    category: ["Premium", "NGO & Artisan"],
+                    occasion: ["Client Gifting", "Corporate Events", "Milestones"],
+                    budget: ["₹2500+"],
+                    contents: [],
+                    sustainability: ["Handmade"],
+                    mood: ["Elegant & Premium", "Warm & Cozy"],
+                    recipient: ["CXOs & Leadership", "Clients"]
+                }
+            },
+            {
+                id: 60,
+                name: "Luxury Jewellery Organizer Box",
+                category: "Premium",
+                price: 899,
+                images: [
+                    "asset/sku/Jewellery organizer box/Jewellery_box_1.jpg",
+                    "asset/sku/Jewellery organizer box/Jewellery_box_2.jpg",
+                    "asset/sku/Jewellery organizer box/Jewellery_box_3.jpg",
+                    "asset/sku/Jewellery organizer box/Jewellery_box_4.jpg"
+                ],
+                description: "Travel-friendly PU leather jewellery organizer with soft velvet interior and customizable storage",
+                tags: ["Jewellery", "Organizer", "Travel"],
+                badge: "Popular",
+                filters: {
+                    category: ["Premium", "Home Décor & Lifestyle"],
+                    occasion: ["Personal Celebrations", "Client Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: [],
+                    mood: ["Elegant & Premium"],
+                    recipient: ["Personal Gifting", "Families"]
+                }
+            },
+            {
+                id: 61,
+                name: "Kashmiri Kahwa Green Tea",
+                category: "Gourmet & Edible",
+                price: 549,
+                images: [
+                    "asset/sku/Kashmiri Kahwa Tea/kashmiri-kahwa.jpg",
+                    "asset/sku/Kashmiri Kahwa Tea/kashmiri-kahwa2.jpg.png",
+                    "asset/sku/Kashmiri Kahwa Tea/Kashmiri-Kahwa-Green-Tea-Infusion.jpg",
+                    "asset/sku/Kashmiri Kahwa Tea/Kashmiri-Kahwa-Green-Tea-3-Liquor.jpg"
+                ],
+                description: "Exotic blend of fine green tea with almonds, cardamom, cinnamon, cloves and rose petals - popular Kashmiri breakfast tea",
+                tags: ["Tea", "Kahwa", "Wellness"],
+                badge: "Premium",
+                filters: {
+                    category: ["Gourmet & Edible", "Wellness"],
+                    occasion: ["Client Gifting", "Corporate Events"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Premium Tea"],
+                    sustainability: [],
+                    mood: ["Warm & Cozy", "Fresh & Natural"],
+                    recipient: ["Clients", "Employees"]
+                }
+            },
+            {
+                id: 62,
+                name: "Masala Cashew Cookies",
+                category: "Gourmet & Edible",
+                price: 399,
+                images: [
+                    "asset/sku/Masala Cashew Cookies/masala-cashew-cookies.jpg",
+                    "asset/sku/Masala Cashew Cookies/masala-kaju-cookies-500x500.webp"
+                ],
+                description: "Crunchy cashew cookies with a hint of spice - perfect blend of bold flavor and buttery goodness",
+                tags: ["Cookies", "Cashew", "Snacks"],
+                badge: "",
+                filters: {
+                    category: ["Gourmet & Edible"],
+                    occasion: ["Employee Appreciation", "Client Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Food & Beverage"],
+                    sustainability: [],
+                    mood: [],
+                    recipient: ["Employees", "Teams"]
+                }
+            },
+            {
+                id: 63,
+                name: "Vanilla Choco Chip Cookies",
+                category: "Gourmet & Edible",
+                price: 399,
+                images: [
+                    "asset/sku/Vanilla Chocochip Cookies/rodelle-chocolate-chip-cookies-4996-2.jpg",
+                    "asset/sku/Vanilla Chocochip Cookies/Homemade-Chocolate-Chip-Cookies-best-recipe-43-close.webp"
+                ],
+                description: "Crispy, chewy cookies loaded with choco chips - rich vanilla flavor with generous chocolate chips",
+                tags: ["Cookies", "Chocolate", "Vanilla"],
+                badge: "Popular",
+                filters: {
+                    category: ["Gourmet & Edible"],
+                    occasion: ["Employee Appreciation", "Personal Celebrations"],
+                    budget: ["Under ₹1500"],
+                    contents: ["Food & Beverage", "Chocolates"],
+                    sustainability: [],
+                    mood: ["Warm & Cozy"],
+                    recipient: ["Employees", "Teams", "Families"]
+                }
+            },
+            {
+                id: 64,
+                name: "Unisex Shawl",
+                category: "Premium",
+                price: 1499,
+                images: [
+                    "asset/sku/Unisex Shawl/Shawl Gifting.png",
+                    "asset/sku/Unisex Shawl/Shawl Gifting2.png",
+                    "asset/sku/Unisex Shawl/Shawl Gifting3.png",
+                    "asset/sku/Unisex Shawl/Shawl Gifting4.png"
+                ],
+                description: "Handcrafted shawl with intricate paisley design - combines traditional artistry with superior comfort",
+                tags: ["Shawl", "Handcrafted", "Traditional"],
+                badge: "Premium",
+                filters: {
+                    category: ["Premium", "NGO & Artisan"],
+                    occasion: ["Client Gifting", "Corporate Events", "Festive Gifting"],
+                    budget: ["₹1500-₹2000"],
+                    contents: [],
+                    sustainability: ["Handmade"],
+                    mood: ["Elegant & Premium", "Warm & Cozy"],
+                    recipient: ["CXOs & Leadership", "Clients"]
+                }
+            },
+            {
+                id: 65,
+                name: "Unisex Stole",
+                category: "Premium",
+                price: 1299,
+                images: [
+                    "asset/sku/Unisex Stole/Unisex Gifting Lookbook.png",
+                    "asset/sku/Unisex Stole/Unisex Gifting Lookbook2.png",
+                    "asset/sku/Unisex Stole/Unisex Gifting Lookbook3.png",
+                    "asset/sku/Unisex Stole/Unisex Gifting Lookbook4.png",
+                    "asset/sku/Unisex Stole/Unisex Gifting Lookbook5.png"
+                ],
+                description: "Premium unisex stole with antique jamawar look - exceptional softness and warmth with intricate printed patterns",
+                tags: ["Stole", "Jamawar", "Elegant"],
+                badge: "Premium",
+                filters: {
+                    category: ["Premium", "NGO & Artisan"],
+                    occasion: ["Client Gifting", "Corporate Events", "Festive Gifting"],
+                    budget: ["Under ₹1500"],
+                    contents: [],
+                    sustainability: ["Handmade"],
+                    mood: ["Elegant & Premium", "Warm & Cozy"],
+                    recipient: ["CXOs & Leadership", "Clients", "Employees"]
+                }
+            }
+        ];
+
+        let filteredProducts = [...products];
+
+        // Image slider functionality
+        let imageSliderIntervals = [];
+
+        function initializeImageSliders() {
+            // Clear existing intervals
+            imageSliderIntervals.forEach(interval => clearInterval(interval));
+            imageSliderIntervals = [];
+            
+            const sliders = document.querySelectorAll('.product-image-slider');
+            
+            sliders.forEach(slider => {
+                const totalSlides = parseInt(slider.dataset.totalSlides);
+                
+                if (totalSlides > 1) {
+                    // Start auto-slide for this product
+                    const interval = setInterval(() => {
+                        const currentSlide = parseInt(slider.dataset.currentSlide);
+                        const nextSlide = (currentSlide + 1) % totalSlides;
+                        
+                        // Hide current slide
+                        const slides = slider.querySelectorAll('.product-image-slide');
+                        slides[currentSlide].classList.remove('active');
+                        slides[nextSlide].classList.add('active');
+                        
+                        slider.dataset.currentSlide = nextSlide;
+                    }, 3000); // Change image every 3 seconds
+                    
+                    imageSliderIntervals.push(interval);
+                }
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for search parameter in URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchTerm = urlParams.get('search');
+            const selectionMode = urlParams.get('mode');
+            const selectionType = urlParams.get('type');
+            
+            // Enable selection mode if opened from mood board
+            if (selectionMode === 'selection') {
+                enableSelectionMode(selectionType);
+            }
+            
+            if (searchTerm) {
+                // Apply search filter
+                filterBySearch(searchTerm);
+            }
+            
+            renderProducts();
+            updateResultsCount();
+            updateLikedWishlistCount();
+        });
+
+        // Selection Mode Variables
+        let isSelectionMode = false;
+        let selectedProductsForMoodBoard = [];
+
+        function enableSelectionMode(type) {
+            isSelectionMode = true;
+            
+            // Hide navigation when in selection mode (inside iframe)
+            const nav = document.querySelector('nav');
+            const announcementBar = document.querySelector('.announcement-bar');
+            if (nav) nav.style.display = 'none';
+            if (announcementBar) announcementBar.style.display = 'none';
+            
+            // Add selection-mode class to page-hero for background image
+            const pageHero = document.querySelector('.page-hero');
+            if (pageHero) pageHero.classList.add('selection-mode');
+            
+            // Update page title
+            const pageTitle = document.querySelector('.page-hero h1');
+            if (pageTitle) {
+                pageTitle.textContent = type === 'include' 
+                    ? 'Select Products to Include' 
+                    : 'Select Products to Exclude';
+            }
+            
+            const pageSubtitle = document.querySelector('.page-hero p');
+            if (pageSubtitle) {
+                pageSubtitle.textContent = 'Click on products to select them for your hamper preferences';
+            }
+
+            // Add selection mode styles
+            document.body.classList.add('selection-mode');
+            
+            // Auto-select items from wishlist (only for include mode)
+            if (type === 'include') {
+                const wishlistItems = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+                
+                // Filter only products (not hampers) and map to selection format
+                wishlistItems.forEach(item => {
+                    if (item.type === 'product') {
+                        const productIndex = products.findIndex(p => p.id === item.id || `product-${products.indexOf(p)}` === item.id);
+                        if (productIndex !== -1) {
+                            const product = products[productIndex];
+                            const productId = product.id || `product-${productIndex}`;
+                            
+                            // Check if not already selected
+                            if (!selectedProductsForMoodBoard.some(p => p.id === productId)) {
+                                selectedProductsForMoodBoard.push({
+                                    id: productId,
+                                    name: product.name,
+                                    category: product.category
+                                });
+                            }
+                        }
+                    }
+                });
+                
+                console.log('Auto-selected wishlist items:', selectedProductsForMoodBoard);
+            }
+            
+            // Send updates to parent window
+            window.addEventListener('beforeunload', sendSelectionToParent);
+        }
+
+        function sendSelectionToParent() {
+            if (window.parent && isSelectionMode) {
+                console.log('Sending to parent:', selectedProductsForMoodBoard);
+                window.parent.postMessage({
+                    type: 'productSelection',
+                    products: selectedProductsForMoodBoard
+                }, '*');
+            }
+        }
+
+        function filterBySearch(searchTerm) {
+            const term = searchTerm.toLowerCase().trim();
+            
+            filteredProducts = products.filter(product => {
+                return product.name.toLowerCase().includes(term) ||
+                       product.description.toLowerCase().includes(term) ||
+                       product.category.toLowerCase().includes(term) ||
+                       product.tags.some(tag => tag.toLowerCase().includes(term));
+            });
+            
+            // Update page title to show search term
+            const pageTitle = document.querySelector('.page-hero h1');
+            if (pageTitle) {
+                pageTitle.textContent = `Search Results for "${searchTerm}"`;
+            }
+            
+            const pageSubtitle = document.querySelector('.page-hero p');
+            if (pageSubtitle) {
+                pageSubtitle.textContent = `Found ${filteredProducts.length} products matching your search`;
+            }
+        }
+
+        function renderProducts() {
+            const grid = document.getElementById('productsGrid');
+            const emptyState = document.getElementById('emptyState');
+            
+            if (filteredProducts.length === 0) {
+                grid.style.display = 'none';
+                emptyState.style.display = 'block';
+                return;
+            }
+            
+            grid.style.display = 'grid';
+            emptyState.style.display = 'none';
+            
+            grid.innerHTML = filteredProducts.map((product, index) => {
+                // Handle both image (string/array) and images (array) properties
+                let imagesList = [];
+                if (product.images) {
+                    imagesList = product.images;
+                } else if (product.image) {
+                    imagesList = Array.isArray(product.image) ? product.image : [product.image];
+                }
+                
+                const imagesHTML = imagesList.map((img, imgIndex) => `
+                    <div class="product-image-slide ${imgIndex === 0 ? 'active' : ''}" data-slide="${imgIndex}">
+                        <img src="${img}" alt="${product.name}">
+                    </div>
+                `).join('');
+                
+                // Check if product is selected in mood board mode
+                const productId = product.id || `product-${index}`;
+                const isSelected = isSelectionMode && selectedProductsForMoodBoard.some(p => p.id === productId);
+                
+                // Check if product is in wishlist
+                const likedItems = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+                const isLiked = likedItems.some(item => item.id === productId);
+                
+                const selectionOverlay = isSelectionMode ? `
+                    <div class="product-selection-overlay ${isSelected ? 'selected' : ''}">
+                        <div class="selection-checkbox">
+                            <svg viewBox="0 0 24 24" class="checkmark-icon">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                        </div>
+                    </div>
+                ` : '';
+                
+                const clickHandler = isSelectionMode ? `toggleProductForMoodBoard(${index})` : `openProductModal(${index})`;
+                
+                return `
+                <div class="product-card ${isSelected ? 'product-selected' : ''}" data-product-index="${index}" onclick="${clickHandler};" style="cursor: pointer; position: relative;">
+                    ${selectionOverlay}
+                    <div class="product-image">
+                        <div class="product-image-slider" data-current-slide="0" data-total-slides="${imagesList.length}">
+                            ${imagesHTML}
+                        </div>
+                        ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
+                        ${!isSelectionMode ? `<div class="wishlist-heart ${isLiked ? 'liked' : ''}" onclick="event.stopPropagation(); toggleWishlistProduct(${index});">♥</div>` : ''}
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">${product.category}</div>
+                        <h3 class="product-name">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-tags">
+                            ${product.tags.map(tag => `<span class="product-tag">${tag}</span>`).join('')}
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">₹${product.price.toLocaleString()}</div>
+                            <a href="#" class="product-cta" onclick="event.stopPropagation(); event.preventDefault(); openProductModal(${index});">View Details →</a>
+                        </div>
+                    </div>
+                </div>
+            `}).join('');
+            
+            // Initialize image sliders
+            initializeImageSliders();
+        }
+
+        function toggleProductForMoodBoard(index) {
+            if (!isSelectionMode) return;
+            
+            const product = filteredProducts[index];
+            const productId = product.id || `product-${index}`;
+            const existingIndex = selectedProductsForMoodBoard.findIndex(p => p.id === productId);
+            
+            // Get current wishlist
+            let wishlistItems = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+            
+            if (existingIndex > -1) {
+                // Deselecting - remove from mood board selection
+                selectedProductsForMoodBoard.splice(existingIndex, 1);
+                
+                // Also remove from wishlist if in "include" mode
+                const urlParams = new URLSearchParams(window.location.search);
+                const selectionType = urlParams.get('type');
+                
+                if (selectionType === 'include') {
+                    const wishlistIndex = wishlistItems.findIndex(item => item.id === productId);
+                    
+                    if (wishlistIndex > -1) {
+                        wishlistItems.splice(wishlistIndex, 1);
+                        localStorage.setItem('likedWishlist', JSON.stringify(wishlistItems));
+                        console.log('Removed from wishlist, new count:', wishlistItems.length);
+                        updateWishlistCounters(wishlistItems.length);
+                    }
+                }
+            } else {
+                // Selecting - add to mood board selection
+                selectedProductsForMoodBoard.push({
+                    id: productId,
+                    name: product.name,
+                    category: product.category
+                });
+                
+                // Also add to wishlist if in "include" mode
+                const urlParams = new URLSearchParams(window.location.search);
+                const selectionType = urlParams.get('type');
+                
+                if (selectionType === 'include') {
+                    // Check if not already in wishlist
+                    const wishlistIndex = wishlistItems.findIndex(item => item.id === productId);
+                    
+                    if (wishlistIndex === -1) {
+                        // Get image for the wishlist item
+                        let imageSrc = '';
+                        if (product.images) {
+                            imageSrc = product.images[0];
+                        } else if (product.image) {
+                            imageSrc = Array.isArray(product.image) ? product.image[0] : product.image;
+                        }
+                        
+                        wishlistItems.push({
+                            id: productId,
+                            name: product.name,
+                            category: product.category,
+                            image: imageSrc,
+                            price: product.price,
+                            type: 'product'
+                        });
+                        
+                        localStorage.setItem('likedWishlist', JSON.stringify(wishlistItems));
+                        console.log('Added to wishlist, new count:', wishlistItems.length);
+                        updateWishlistCounters(wishlistItems.length);
+                    }
+                }
+            }
+            
+            // Re-render to update selection state
+            renderProducts();
+            
+            // Send update to parent immediately
+            sendSelectionToParent();
+            
+            console.log('Selected products:', selectedProductsForMoodBoard);
+        }
+        
+        function updateWishlistCounters(count) {
+            // Update counter in current window
+            if (typeof updateWishlistCount === 'function') {
+                updateWishlistCount();
+            } else if (typeof window.updateWishlistCount === 'function') {
+                window.updateWishlistCount();
+            }
+            
+            // Try to update parent window counter
+            try {
+                if (window.parent && window.parent !== window) {
+                    // Try multiple function names
+                    if (typeof window.parent.updateWishlistCount === 'function') {
+                        window.parent.updateWishlistCount();
+                    } else if (typeof window.parent.updateLikedWishlistCount === 'function') {
+                        window.parent.updateLikedWishlistCount();
+                    }
+                    
+                    // Force parent to reload count by posting message
+                    window.parent.postMessage({
+                        type: 'wishlistUpdate',
+                        count: count
+                    }, '*');
+                }
+            } catch (e) {
+                console.log('Could not update parent counter:', e);
+            }
+        }
+
+        function applyFilters() {
+            const activeFilters = getActiveFilters();
+            
+            filteredProducts = products.filter(product => {
+                return Object.keys(activeFilters).every(filterType => {
+                    if (activeFilters[filterType].length === 0) return true;
+                    
+                    return activeFilters[filterType].some(filterValue => {
+                        return product.filters[filterType].includes(filterValue);
+                    });
+                });
+            });
+            
+            renderProducts();
+            updateResultsCount();
+            updateActiveFiltersTags();
+        }
+
+        function getActiveFilters() {
+            const filters = {
+                category: [],
+                occasion: [],
+                budget: [],
+                contents: [],
+                sustainability: [],
+                mood: []
+            };
+            
+            document.querySelectorAll('.filter-option input[type="checkbox"]:checked').forEach(checkbox => {
+                const value = checkbox.value;
+                
+                // Determine filter type based on checkbox id
+                if (checkbox.id.startsWith('cat-')) filters.category.push(value);
+                else if (checkbox.id.startsWith('occ-')) filters.occasion.push(value);
+                else if (checkbox.id.startsWith('budget-')) filters.budget.push(value);
+                else if (checkbox.id.startsWith('content-')) filters.contents.push(value);
+                else if (checkbox.id.startsWith('sus-')) filters.sustainability.push(value);
+                else if (checkbox.id.startsWith('mood-')) filters.mood.push(value);
+            });
+            
+            return filters;
+        }
+
+        function updateResultsCount() {
+            const count = filteredProducts.length;
+            const total = products.length;
+            document.getElementById('resultsCount').textContent = 
+                count === total ? `Showing all ${total} products` : `Showing ${count} of ${total} products`;
+        }
+
+        function updateActiveFiltersTags() {
+            const container = document.getElementById('activeFilters');
+            const activeCheckboxes = document.querySelectorAll('.filter-option input[type="checkbox"]:checked');
+            
+            if (activeCheckboxes.length === 0) {
+                container.innerHTML = '';
+                return;
+            }
+            
+            container.innerHTML = Array.from(activeCheckboxes).map(checkbox => {
+                const label = checkbox.nextElementSibling.textContent;
+                return `
+                    <div class="filter-tag" onclick="removeFilter('${checkbox.id}')">
+                        <span>${label}</span>
+                        <span class="remove">×</span>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function removeFilter(checkboxId) {
+            document.getElementById(checkboxId).checked = false;
+            applyFilters();
+        }
+
+        function clearAllFilters() {
+            document.querySelectorAll('.filter-option input[type="checkbox"]').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            filteredProducts = [...products];
+            renderProducts();
+            updateResultsCount();
+            updateActiveFiltersTags();
+        }
+
+        function sortProducts() {
+            const sortValue = document.getElementById('sortSelect').value;
+            
+            switch(sortValue) {
+                case 'price-low':
+                    filteredProducts.sort((a, b) => a.price - b.price);
+                    break;
+                case 'price-high':
+                    filteredProducts.sort((a, b) => b.price - a.price);
+                    break;
+                case 'name':
+                    filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
+                    break;
+                default:
+                    // Featured - use original order
+                    applyFilters();
+                    return;
+            }
+            
+            renderProducts();
+        }
+
+        function toggleFilterGroup(element) {
+            element.classList.toggle('collapsed');
+            const options = element.nextElementSibling;
+            options.classList.toggle('collapsed');
+        }
+
+        function toggleMobileFilters() {
+            document.getElementById('filterSidebar').classList.toggle('active');
+            document.getElementById('filterOverlay').classList.toggle('active');
+        }
+
+        // Product Detail Modal Functions
+        function openProductModal(productIndex) {
+            const product = filteredProducts[productIndex];
+            const modal = document.getElementById('productModal');
+            
+            // Store current product index for liked wishlist
+            currentModalProductIndex = productIndex;
+            
+            // Get all images for the product
+            let imagesList = [];
+            if (product.images) {
+                imagesList = product.images;
+            } else if (product.image) {
+                imagesList = Array.isArray(product.image) ? product.image : [product.image];
+            }
+            
+            // Set modal content
+            document.getElementById('modalTitle').textContent = product.name;
+            document.getElementById('modalCategory').textContent = product.category;
+            document.getElementById('modalPrice').textContent = `₹${product.price.toLocaleString()}`;
+            document.getElementById('modalDescription').textContent = product.description;
+            
+            // Set product tags
+            const tagsHtml = product.tags.map(tag => `<span class="modal-tag">${tag}</span>`).join('');
+            document.getElementById('modalTags').innerHTML = tagsHtml;
+            
+            // Setup image gallery
+            const modalGallery = document.getElementById('modalImageGallery');
+            const modalMainImage = document.getElementById('modalMainImage');
+            
+            // Show loading state
+            modalMainImage.style.opacity = '0.5';
+            
+            // Set main image
+            modalMainImage.src = imagesList[0];
+            
+            // Handle image load
+            modalMainImage.onload = function() {
+                modalMainImage.style.opacity = '1';
+            };
+            
+            modalMainImage.onerror = function() {
+                modalMainImage.style.opacity = '1';
+                modalMainImage.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect fill="%23f0f0f0" width="400" height="300"/%3E%3Ctext fill="%23999" x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle"%3EImage not available%3C/text%3E%3C/svg%3E';
+            };
+            
+            // Create thumbnails if multiple images
+            if (imagesList.length > 1) {
+                modalGallery.innerHTML = imagesList.map((img, index) => `
+                    <img src="${img}" alt="${product.name}" 
+                         class="modal-thumbnail ${index === 0 ? 'active' : ''}" 
+                         onclick="changeModalImage('${img}', this)"
+                         loading="lazy">
+                `).join('');
+                modalGallery.style.display = 'grid';
+            } else {
+                modalGallery.style.display = 'none';
+            }
+            
+            // Update liked button state
+            const productId = product.id || `product-${productIndex}`;
+            updateLikedButtonState(productId);
+            
+            // Show modal
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProductModal() {
+            const modal = document.getElementById('productModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Liked Wishlist Functionality
+        let likedWishlist = JSON.parse(localStorage.getItem('likedWishlist')) || [];
+        let currentModalProductIndex = null;
+
+        function addToLikedWishlist() {
+            const product = filteredProducts[currentModalProductIndex];
+            if (!product) return;
+            
+            const productId = product.id || `product-${currentModalProductIndex}`;
+            let likedItems = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+            
+            // Check if already in wishlist
+            const existingIndex = likedItems.findIndex(p => p.id === productId);
+            
+            if (existingIndex === -1) {
+                // Add to wishlist
+                likedItems.push({
+                    id: productId,
+                    name: product.name,
+                    category: product.category,
+                    image: product.images ? product.images[0] : product.image,
+                    price: product.price,
+                    type: 'product'
+                });
+                localStorage.setItem('likedWishlist', JSON.stringify(likedItems));
+                
+                // Update button
+                const btn = document.getElementById('addToLikedBtn');
+                btn.textContent = '✓ Added to Wishlist';
+                btn.classList.add('liked');
+                
+                // Show notification
+                showNotification('✓ Added to Wishlist!');
+            } else {
+                // Remove from wishlist
+                likedItems.splice(existingIndex, 1);
+                localStorage.setItem('likedWishlist', JSON.stringify(likedItems));
+                
+                // Update button
+                const btn = document.getElementById('addToLikedBtn');
+                btn.textContent = '♥ Add to Wishlist';
+                btn.classList.remove('liked');
+                
+                // Show notification
+                showNotification('Removed from Wishlist');
+            }
+            
+            // Update wishlist count
+            if (typeof updateWishlistCount === 'function') {
+                updateWishlistCount();
+            }
+
+            // Update the global likedWishlist array for consistency
+            likedWishlist = likedItems;
+        }
+
+        function updateLikedButtonState(productId) {
+            const isLiked = likedWishlist.some(p => p.id === productId);
+            const btn = document.getElementById('addToLikedBtn');
+            
+            if (isLiked) {
+                btn.textContent = '✓ Added to Wishlist';
+                btn.classList.add('liked');
+            } else {
+                btn.textContent = '♥ Add to Wishlist';
+                btn.classList.remove('liked');
+            }
+        }
+
+        // updateLikedWishlistCount is now handled by nav.js
+
+        // Toggle wishlist from product card
+        function toggleWishlistProduct(productIndex) {
+            const product = filteredProducts[productIndex];
+            if (!product) return;
+
+            const productId = product.id || `product-${productIndex}`;
+            let likedItems = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+            const index = likedItems.findIndex(item => item.id === productId);
+            
+            if (index === -1) {
+                // Add to wishlist
+                likedItems.push({
+                    id: productId,
+                    name: product.name,
+                    category: product.category,
+                    image: product.images ? product.images[0] : product.image,
+                    price: product.price,
+                    type: 'product'
+                });
+                localStorage.setItem('likedWishlist', JSON.stringify(likedItems));
+                showNotification('✓ Added to Wishlist');
+            } else {
+                // Remove from wishlist
+                likedItems.splice(index, 1);
+                localStorage.setItem('likedWishlist', JSON.stringify(likedItems));
+                showNotification('Removed from Wishlist');
+            }
+
+            // Update wishlist count in nav
+            if (typeof updateWishlistCount === 'function') {
+                updateWishlistCount();
+            }
+
+            // Re-render products to update heart icon
+            renderProducts();
+        }
+
+        function showNotification(message) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = 'wishlist-notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            // Show notification
+            setTimeout(() => notification.classList.add('show'), 10);
+            
+            // Hide and remove after 3 seconds
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        function changeModalImage(imageSrc, thumbnail) {
+            document.getElementById('modalMainImage').src = imageSrc;
+            
+            // Update active thumbnail
+            document.querySelectorAll('.modal-thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            thumbnail.classList.add('active');
+        }
+
+        // Close modal on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeProductModal();
+            }
+        });
+
+        // Close modal on backdrop click
+        document.addEventListener('click', function(e) {
+            if (e.target.id === 'productModal') {
+                closeProductModal();
+            }
+        });
+    </script>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="product-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeProductModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image-section">
+                    <div class="modal-main-image">
+                        <img id="modalMainImage" src="" alt="" onclick="this.classList.toggle('zoomed')">
+                    </div>
+                    <div id="modalImageGallery" class="modal-image-gallery"></div>
+                </div>
+                <div class="modal-details">
+                    <div class="modal-category" id="modalCategory"></div>
+                    <h2 id="modalTitle"></h2>
+                    <p class="modal-price" id="modalPrice"></p>
+                    <div class="modal-tags" id="modalTags"></div>
+                    <p class="modal-description" id="modalDescription"></p>
+                    <div class="modal-actions">
+                        <button id="addToLikedBtn" class="modal-btn" onclick="addToLikedWishlist()">
+                            ♥ Add to Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

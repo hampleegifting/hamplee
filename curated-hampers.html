@@ -1,0 +1,2226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Gift Boxes & Hampers | Hamplee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #C9A959;
+            --dark: #1A1A1A;
+            --light: #F8F7F4;
+            --white: #FFFFFF;
+            --grey: #6B6B6B;
+            --text: #333333;
+        }
+    </style>
+    
+    <!-- Reusable Navigation Styles -->
+    <link rel="stylesheet" href="nav.css">
+    
+    <!-- Load navigation script early to prevent flicker -->
+    <script src="nav.js" defer></script>
+    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--light);
+            color: var(--text);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        /* Hero Section */
+        .page-hero {
+            padding: 80px 40px 60px;
+            text-align: center;
+            background: linear-gradient(135deg, #F8F7F4 0%, #FFFFFF 100%);
+        }
+
+        .page-hero h1 {
+            font-size: 42px;
+            color: var(--dark);
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 1.5px;
+            line-height: 1.3;
+        }
+
+        .page-hero p {
+            font-size: 16px;
+            color: var(--grey);
+            max-width: 900px;
+            margin: 0 auto;
+            letter-spacing: 0.8px;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* Main Content */
+        .page-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 60px 40px 80px;
+        }
+
+        /* Filters & Products Layout */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        /* Filters Sidebar */
+        .filters-sidebar {
+            position: sticky;
+            top: 200px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            max-height: calc(100vh - 220px);
+            overflow-y: auto;
+        }
+
+        .filters-sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .filters-sidebar::-webkit-scrollbar-track {
+            background: var(--light);
+            border-radius: 10px;
+        }
+
+        .filters-sidebar::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 10px;
+        }
+
+        .filters-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .filters-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .clear-all {
+            font-size: 12px;
+            color: var(--gold);
+            cursor: pointer;
+            text-decoration: underline;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .clear-all:hover {
+            color: var(--dark);
+        }
+
+        .filter-group {
+            margin-bottom: 30px;
+        }
+
+        .filter-group-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 12px 0;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .filter-group-header:hover {
+            color: var(--gold);
+        }
+
+        .filter-toggle {
+            font-size: 12px;
+            color: var(--grey);
+            transition: transform 0.3s ease;
+        }
+
+        .filter-group.collapsed .filter-toggle {
+            transform: rotate(-90deg);
+        }
+
+        .filter-options {
+            padding: 10px 0;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .filter-group.collapsed .filter-options {
+            display: none;
+        }
+
+        .filter-option {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .filter-option:hover {
+            padding-left: 5px;
+        }
+
+        .filter-option input[type="checkbox"] {
+            margin-right: 10px;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            accent-color: var(--gold);
+        }
+
+        .filter-option label {
+            cursor: pointer;
+            font-size: 13px;
+            color: var(--text);
+            flex: 1;
+        }
+
+        .filter-count {
+            font-size: 11px;
+            color: var(--grey);
+            margin-left: 5px;
+        }
+
+        /* Products Grid */
+        .products-section {
+            min-height: 500px;
+        }
+
+        .products-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+
+        }
+
+        .results-count {
+            font-size: 14px;
+            color: var(--grey);
+            font-weight: 500;
+        }
+
+        .sort-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sort-label {
+            font-size: 13px;
+            color: var(--grey);
+            font-weight: 500;
+        }
+
+        .sort-select {
+            padding: 8px 15px;
+            border: 1px solid var(--gold);
+            border-radius: 6px;
+            font-size: 13px;
+            background: white;
+            color: var(--dark);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .sort-select:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(201, 169, 89, 0.3);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Product Card */
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+        }
+
+        .product-image {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+            background: var(--light);
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--gold);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .wishlist-heart {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .wishlist-heart:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(201, 169, 89, 0.4);
+        }
+
+        .wishlist-heart.liked {
+            background: var(--gold);
+            color: white;
+        }
+
+        .wishlist-heart:not(.liked) {
+            color: var(--grey);
+        }
+
+        .product-details {
+            padding: 25px;
+        }
+
+        .product-category {
+            font-size: 11px;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .product-name {
+            font-size: 20px;
+            color: var(--dark);
+            margin-bottom: 12px;
+            font-weight: 400;
+            min-height: 50px;
+        }
+
+        .product-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 15px;
+        }
+
+        .product-tag {
+            font-size: 10px;
+            background: var(--light);
+            color: var(--grey);
+            padding: 4px 10px;
+            border-radius: 12px;
+            border: 1px solid rgba(201, 169, 89, 0.2);
+        }
+
+        .product-price {
+            font-size: 22px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .product-cta {
+            display: inline-block;
+            width: 100%;
+            padding: 12px 24px;
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            border-radius: 50px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .product-cta:hover {
+            background: var(--gold);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 169, 89, 0.3);
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--grey);
+        }
+
+        .empty-state h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .empty-state p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .empty-state button {
+            padding: 14px 32px;
+            background: var(--gold);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .empty-state button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 169, 89, 0.4);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 2000;
+            backdrop-filter: blur(10px);
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 1200px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: modalSlideIn 0.4s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            font-size: 32px;
+            color: var(--dark);
+            cursor: pointer;
+            z-index: 10;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: var(--gold);
+            color: white;
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            padding: 50px;
+        }
+
+        .modal-image-section {
+            position: relative;
+        }
+
+        .modal-main-image {
+            width: 100%;
+            height: 500px;
+            background: var(--light);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            cursor: zoom-in;
+        }
+
+        .modal-main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .modal-main-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .modal-details-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-category {
+            font-size: 12px;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .modal-name {
+            font-size: 38px;
+            color: var(--dark);
+            margin-bottom: 20px;
+            font-weight: 300;
+            line-height: 1.3;
+        }
+
+        .modal-price {
+            font-size: 32px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .modal-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .modal-tag {
+            font-size: 11px;
+            background: var(--light);
+            color: var(--text);
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid rgba(201, 169, 89, 0.3);
+        }
+
+        .modal-description {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 40px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: auto;
+        }
+
+        .modal-btn {
+            flex: 1;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid var(--gold);
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .modal-btn-primary {
+            background: var(--gold);
+            color: white;
+        }
+
+        .modal-btn-primary:hover {
+            background: var(--dark);
+            border-color: var(--dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 26, 26, 0.3);
+        }
+
+        .modal-btn-primary.liked {
+            background: var(--dark);
+            border-color: var(--dark);
+        }
+
+        /* Lightbox */
+        .image-lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .image-lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 95vw;
+            max-height: 95vh;
+            animation: lightboxZoom 0.3s ease;
+        }
+
+        @keyframes lightboxZoom {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.1);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            background: var(--gold);
+            transform: rotate(90deg);
+        }
+
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 95vh;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        /* Notification */
+        .wishlist-notification {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--gold);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            z-index: 3000;
+            animation: slideInUp 0.4s ease, slideOutDown 0.4s ease 2.6s;
+            font-weight: 600;
+            font-size: 15px;
+            display: none;
+            opacity: 1;
+        }
+
+        .wishlist-notification.show {
+            display: block;
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOutDown {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 40px 30px;
+            margin-top: 100px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h3 {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 13px;
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .filters-sidebar {
+                position: relative;
+                top: 0;
+            }
+
+            .modal-body {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-container {
+                padding: 40px 20px;
+            }
+
+            .page-hero h1 {
+                font-size: 32px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .secondary-nav-links {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation placeholder to prevent layout shift -->
+    <div class="nav-placeholder"></div>
+    
+    <!-- Navigation loaded via nav.js -->
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <h1>Luxury Gift Boxes & Hampers for Every Celebration</h1>
+        <p>Experience refined gifting at its finest. Our curated collection of luxury gift boxes and hampers blends elegance, quality and purpose</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="page-container">
+        <div class="content-wrapper">
+            <!-- Filters Sidebar -->
+            <aside class="filters-sidebar">
+                <div class="filters-header">
+                    <h2 class="filters-title">Filters</h2>
+                    <span class="clear-all" onclick="clearAllFilters()">Clear All</span>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="filter-group" id="categoryFilter">
+                    <div class="filter-group-header" onclick="toggleFilterGroup('categoryFilter')">
+                        <span>Category</span>
+                        <span class="filter-toggle">▼</span>
+                    </div>
+                    <div class="filter-options">
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-sustainable" value="Sustainable" onchange="applyFilters()">
+                            <label for="cat-sustainable">Sustainable & Eco-Friendly <span class="filter-count">(9)</span></label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-ngo" value="NGO" onchange="applyFilters()">
+                            <label for="cat-ngo">NGO & Artisan Made <span class="filter-count">(4)</span></label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-gourmet" value="Gourmet" onchange="applyFilters()">
+                            <label for="cat-gourmet">Gourmet & Edible Delights <span class="filter-count">(9)</span></label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-offiswag" value="Offi Swag" onchange="applyFilters()">
+                            <label for="cat-offiswag">Office & Corporate Utility <span class="filter-count">(5)</span></label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-festive" value="Festive" onchange="applyFilters()">
+                            <label for="cat-festive">Festive & Traditional <span class="filter-count">(9)</span></label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-value" value="Value Packed" onchange="applyFilters()">
+                            <label for="cat-value">Value Packed Quick Grab <span class="filter-count">(7)</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Occasion Filter -->
+                <div class="filter-group" id="occasionFilter">
+                    <div class="filter-group-header" onclick="toggleFilterGroup('occasionFilter')">
+                        <span>Occasion</span>
+                        <span class="filter-toggle">▼</span>
+                    </div>
+                    <div class="filter-options">
+                        <div class="filter-option">
+                            <input type="checkbox" id="occ-corporate" value="Corporate Events" onchange="applyFilters()">
+                            <label for="occ-corporate">Corporate Events</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="occ-employee" value="Employee Appreciation" onchange="applyFilters()">
+                            <label for="occ-employee">Employee Appreciation</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="occ-client" value="Client Gifting" onchange="applyFilters()">
+                            <label for="occ-client">Client Gifting</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="occ-festive" value="Festive Gifting" onchange="applyFilters()">
+                            <label for="occ-festive">Festive Gifting</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Budget Filter -->
+                <div class="filter-group" id="budgetFilter">
+                    <div class="filter-group-header" onclick="toggleFilterGroup('budgetFilter')">
+                        <span>Budget Range</span>
+                        <span class="filter-toggle">▼</span>
+                    </div>
+                    <div class="filter-options">
+                        <div class="filter-option">
+                            <input type="checkbox" id="budget-1" value="Under ₹1500" onchange="applyFilters()">
+                            <label for="budget-1">Under ₹1500</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="budget-2" value="₹1500 - ₹2000" onchange="applyFilters()">
+                            <label for="budget-2">₹1500 - ₹2000</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="budget-3" value="₹2000 - ₹2500" onchange="applyFilters()">
+                            <label for="budget-3">₹2000 - ₹2500</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="budget-4" value="₹2500 & Above" onchange="applyFilters()">
+                            <label for="budget-4">₹2500 & Above</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sustainability Filter -->
+                <div class="filter-group" id="sustainabilityFilter">
+                    <div class="filter-group-header" onclick="toggleFilterGroup('sustainabilityFilter')">
+                        <span>Sustainability</span>
+                        <span class="filter-toggle">▼</span>
+                    </div>
+                    <div class="filter-options">
+                        <div class="filter-option">
+                            <input type="checkbox" id="sust-eco" value="100% Eco-Friendly" onchange="applyFilters()">
+                            <label for="sust-eco">100% Eco-Friendly</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="sust-plastic" value="Plastic-Free" onchange="applyFilters()">
+                            <label for="sust-plastic">Plastic-Free</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="sust-handmade" value="Handmade" onchange="applyFilters()">
+                            <label for="sust-handmade">Handmade</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="sust-ngo" value="NGO Supported" onchange="applyFilters()">
+                            <label for="sust-ngo">NGO Supported</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contents Filter -->
+                <div class="filter-group" id="contentsFilter">
+                    <div class="filter-group-header" onclick="toggleFilterGroup('contentsFilter')">
+                        <span>What's Inside</span>
+                        <span class="filter-toggle">▼</span>
+                    </div>
+                    <div class="filter-options">
+                        <div class="filter-option">
+                            <input type="checkbox" id="cont-gourmet" value="Gourmet" onchange="applyFilters()">
+                            <label for="cont-gourmet">Gourmet & Edibles</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cont-wellness" value="Wellness" onchange="applyFilters()">
+                            <label for="cont-wellness">Wellness Items</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cont-home" value="Home Decor" onchange="applyFilters()">
+                            <label for="cont-home">Home Décor</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cont-utility" value="Utility" onchange="applyFilters()">
+                            <label for="cont-utility">Utility Items</label>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Products Section -->
+            <section class="products-section">
+                <div class="products-controls">
+                    <div class="results-count" id="resultsCount">Showing 43 hampers</div>
+                    <div class="sort-controls">
+                        <label class="sort-label">Sort by:</label>
+                        <select class="sort-select" id="sortSelect" onchange="sortProducts()">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name: A-Z</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be dynamically inserted here -->
+                </div>
+
+                <div class="empty-state" id="emptyState" style="display: none;">
+                    <h3>No hampers found</h3>
+                    <p>Try adjusting your filters to see more results</p>
+                    <button onclick="clearAllFilters()">Clear All Filters</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeProductModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image-section">
+                    <div class="modal-main-image" id="modalMainImage">
+                        <img src="" alt="" id="modalImage">
+                    </div>
+                </div>
+                <div class="modal-details-section">
+                    <div class="modal-category" id="modalCategory"></div>
+                    <h2 class="modal-name" id="modalName"></h2>
+                    <div class="modal-price" id="modalPrice"></div>
+                    <div class="modal-tags" id="modalTags"></div>
+                    <p class="modal-description" id="modalDescription"></p>
+                    <div class="modal-actions">
+                        <button class="modal-btn modal-btn-primary" id="likeButton" onclick="addToLikedWishlist()">
+                            ♥ Add to Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div id="imageLightbox" class="image-lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img src="" alt="Full size image" class="lightbox-image" id="lightboxImage">
+        </div>
+    </div>
+
+    <!-- Wishlist Notification -->
+    <div class="wishlist-notification" id="wishlistNotification">
+        ✓ Added to Liked Wishlist
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>HAMPLEE</h3>
+                <p style="color: rgba(255,255,255,0.7); font-size: 14px; line-height: 1.6;">
+                    Curating thoughtful corporate gifting experiences that leave lasting impressions.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#collections">Collections</a></li>
+                    <li><a href="curated-hampers.html">All Hampers</a></li>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="index.html#custom-cta">Custom Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="mood-board.html">Contact Us</a></li>
+                    <li><a href="#">Bulk Orders</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="https://instagram.com/hampleeofficial" target="_blank">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hamplee. All rights reserved. Crafted with ♥ for meaningful gifting.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hampers Data
+        const hampers = [
+            // Sustainable Hampers (9)
+            {
+                id: 'sust-1',
+                name: 'Eco Harmony Hamper',
+                category: 'Sustainable',
+                image: 'asset/sustainable/IMG20250803113138.jpg',
+                price: 1899,
+                badge: 'Eco-Friendly',
+                tags: ['Plastic-Free', 'Reusable', 'Organic'],
+                description: 'A thoughtfully curated hamper featuring sustainable products that care for the planet. Includes eco-friendly essentials, organic treats, and reusable items perfect for conscious gifting.',
+                filters: {
+                    category: ['Sustainable'],
+                    occasion: ['Corporate Events', 'Employee Appreciation', 'Client Gifting'],
+                    budget: ['₹1500 - ₹2000'],
+                    sustainability: ['100% Eco-Friendly', 'Plastic-Free'],
+                    contents: ['Gourmet', 'Wellness', 'Utility']
+                }
+            },
+            {
+                id: 'sust-2',
+                name: 'Green Living Essentials',
+                category: 'Sustainable',
+                image: 'asset/sustainable/IMG20250803114730.jpg',
+                price: 2199,
+                badge: 'Premium',
+                tags: ['Handmade', 'Sustainable', 'Natural'],
+                description: 'Embrace sustainable living with this premium collection of eco-conscious products. Features artisanal handmade items and natural wellness products.',
+                filters: {
+                    category: ['Sustainable'],
+                    occasion: ['Corporate Events', 'Client Gifting'],
+                    budget: ['₹2000 - ₹2500'],
+                    sustainability: ['100% Eco-Friendly', 'Handmade', 'Plastic-Free'],
+                    contents: ['Wellness', 'Home Decor']
+                }
+            },
+            {
+                id: 'sust-3',
+                name: 'Earth Warrior Pack',
+                category: 'Sustainable',
+                image: 'asset/sustainable/IMG20250809111104.jpg',
+                price: 1699,
+                badge: 'Bestseller',
+                tags: ['Zero-Waste', 'Eco-Friendly', 'Plantable'],
+                description: 'Make a statement with sustainable gifting. This hamper includes zero-waste products, plantable items, and eco-friendly essentials.',
+                filters: {
+                    category: ['Sustainable'],
+                    occasion: ['Employee Appreciation', 'Corporate Events'],
+                    budget: ['₹1500 - ₹2000'],
+                    sustainability: ['100% Eco-Friendly', 'Plastic-Free'],
+                    contents: ['Utility', 'Wellness']
+                }
+            },
+            {
+                id: 'sust-4',
+                name: 'Nature\'s Bounty Box',
+                category: 'Sustainable',
+                image: 'asset/sustainable/IMG20250809112157.jpg',
+                price: 2399,
+                badge: 'Luxury',
+                tags: ['Organic', 'Premium', 'Sustainable'],
+                description: 'Indulge in nature\'s finest offerings with this luxury sustainable hamper. Features premium organic products and handcrafted eco-friendly items.',
+                filters: {
+                    category: ['Sustainable'],
+                    occasion: ['Client Gifting', 'Corporate Events'],
+                    budget: ['₹2000 - ₹2500'],
+                    sustainability: ['100% Eco-Friendly', 'Handmade'],
+                    contents: ['Gourmet', 'Wellness', 'Home Decor']
+                }
+            },
+            {
+                id: 'sust-5',
+                name: 'Sustainable Serenity',
+                category: 'Sustainable',
+                image: 'asset/sustainable/IMG20250809112658.jpg',
+                price: 1799,
+                badge: 'Popular',
+                tags: ['Eco-Conscious', 'Wellness', 'Natural'],
+                description: 'Find peace and purpose with this serene collection of sustainable wellness products. Perfect for promoting mindful living.',
+                filters: {
+                    category: ['Sustainable'],
+                    occasion: ['Employee Appreciation', 'Client Gifting'],
+                    budget: ['₹1500 - ₹2000'],
+                    sustainability: ['100% Eco-Friendly', 'Plastic-Free'],
+                    contents: ['Wellness', 'Gourmet']
+                }
+            },
+            {
+                id: 'sust-6',
+                name: 'Eco Elite Collection',
+                category: 'Sustainable',
+                image: 'asset/sustainable/IMG20250809113725.jpg',
+                price: 2599,
+                badge: 'Premium',
+                tags: ['Luxury', 'Sustainable', 'Handcrafted'],
+                description: 'An elite selection of sustainable luxury items. Handcrafted with care and designed to impress while caring for the environment.',
+                filters: {
+                    category: ['Sustainable'],
+                    occasion: ['Client Gifting', 'Corporate Events'],
+                    budget: ['₹2500 & Above'],
+                    sustainability: ['100% Eco-Friendly', 'Handmade'],
+                    contents: ['Home Decor', 'Wellness', 'Gourmet']
+                }
+            },
+            {
+                id: 'sust-7',
+                name: 'Green Goodness Hamper',
+                category: 'Sustainable',
+                image: 'asset/sustainable/IMG20250809114320.jpg',
+                price: 1599,
+                badge: 'Value',
+                tags: ['Affordable', 'Eco-Friendly', 'Practical'],
+                description: 'Quality sustainable products at an affordable price. Perfect for bulk corporate gifting without compromising on values.',
+                filters: {
+                    category: ['Sustainable'],
+                    occasion: ['Corporate Events', 'Employee Appreciation'],
+                    budget: ['₹1500 - ₹2000'],
+                    sustainability: ['100% Eco-Friendly', 'Plastic-Free'],
+                    contents: ['Utility', 'Gourmet']
+                }
+            },
+            {
+                id: 'sust-8',
+                name: 'Conscious Choice Box',
+                category: 'Sustainable',
+                image: 'asset/sustainable/IMG20250809114928.jpg',
+                price: 1899,
+                badge: 'Eco-Friendly',
+                tags: ['Sustainable', 'Thoughtful', 'Quality'],
+                description: 'Make a conscious choice with this carefully selected hamper of high-quality sustainable products.',
+                filters: {
+                    category: ['Sustainable'],
+                    occasion: ['Client Gifting', 'Employee Appreciation'],
+                    budget: ['₹1500 - ₹2000'],
+                    sustainability: ['100% Eco-Friendly', 'Plastic-Free'],
+                    contents: ['Wellness', 'Home Decor']
+                }
+            },
+            {
+                id: 'sust-9',
+                name: 'Pure Planet Hamper',
+                category: 'Sustainable',
+                image: 'asset/sustainable/IMG20250809115349.jpg',
+                price: 2199,
+                badge: 'Premium',
+                tags: ['Natural', 'Organic', 'Pure'],
+                description: 'Celebrate purity with products that honor our planet. Features organic, natural, and sustainable items.',
+                filters: {
+                    category: ['Sustainable'],
+                    occasion: ['Corporate Events', 'Client Gifting'],
+                    budget: ['₹2000 - ₹2500'],
+                    sustainability: ['100% Eco-Friendly', 'Handmade'],
+                    contents: ['Gourmet', 'Wellness']
+                }
+            },
+
+            // NGO Hampers (4)
+            {
+                id: 'ngo-1',
+                name: 'Artisan Heritage Box',
+                category: 'NGO',
+                image: 'asset/ngo/IMG20250803121743.jpg',
+                price: 1999,
+                badge: 'Social Impact',
+                tags: ['Handmade', 'Artisan', 'NGO-Supported'],
+                description: 'Support local artisans while gifting beautifully handcrafted items. Each purchase directly benefits NGO partners and traditional craftspeople.',
+                filters: {
+                    category: ['NGO'],
+                    occasion: ['Corporate Events', 'Client Gifting', 'Festive Gifting'],
+                    budget: ['₹1500 - ₹2000'],
+                    sustainability: ['Handmade', 'NGO Supported'],
+                    contents: ['Home Decor', 'Gourmet']
+                }
+            },
+            {
+                id: 'ngo-2',
+                name: 'Share & Care Collection',
+                category: 'NGO',
+                image: 'asset/ngo/IMG20250803122408.jpg',
+                price: 2299,
+                badge: 'Premium',
+                tags: ['Social Good', 'Handcrafted', 'Meaningful'],
+                description: 'Gift with purpose. This premium hamper features exquisite handcrafted items made by skilled artisans from our NGO partners.',
+                filters: {
+                    category: ['NGO'],
+                    occasion: ['Client Gifting', 'Corporate Events'],
+                    budget: ['₹2000 - ₹2500'],
+                    sustainability: ['Handmade', 'NGO Supported'],
+                    contents: ['Home Decor', 'Wellness', 'Gourmet']
+                }
+            },
+            {
+                id: 'ngo-3',
+                name: 'Empowerment Hamper',
+                category: 'NGO',
+                image: 'asset/ngo/IMG20250809110254.jpg',
+                price: 1799,
+                badge: 'Impactful',
+                tags: ['Women-Made', 'Fair Trade', 'Traditional'],
+                description: 'Empower communities with every gift. Features products made by women artisans through fair trade practices.',
+                filters: {
+                    category: ['NGO'],
+                    occasion: ['Employee Appreciation', 'Corporate Events', 'Festive Gifting'],
+                    budget: ['₹1500 - ₹2000'],
+                    sustainability: ['Handmade', 'NGO Supported'],
+                    contents: ['Home Decor', 'Utility']
+                }
+            },
+            {
+                id: 'ngo-4',
+                name: 'Crafted with Heart',
+                category: 'NGO',
+                image: 'asset/ngo/IMG20250809120255.jpg',
+                price: 2499,
+                badge: 'Luxury',
+                tags: ['Artisan', 'Premium', 'Meaningful'],
+                description: 'Luxury meets social responsibility. This premium hamper showcases the finest artisan craftsmanship from our NGO partners.',
+                filters: {
+                    category: ['NGO'],
+                    occasion: ['Client Gifting', 'Corporate Events'],
+                    budget: ['₹2000 - ₹2500'],
+                    sustainability: ['Handmade', 'NGO Supported'],
+                    contents: ['Home Decor', 'Wellness', 'Gourmet']
+                }
+            },
+
+            // Gourmet Hampers (9)
+            {
+                id: 'gourmet-1',
+                name: 'Culinary Excellence Box',
+                category: 'Gourmet',
+                image: 'asset/gourmet/IMG20250803114127.jpg',
+                price: 2299,
+                badge: 'Premium',
+                tags: ['Gourmet', 'Artisan', 'Luxury'],
+                description: 'Indulge in a world of exquisite flavors with this premium gourmet hamper. Features carefully selected artisan delicacies, premium chocolates, and gourmet treats.',
+                filters: {
+                    category: ['Gourmet'],
+                    occasion: ['Client Gifting', 'Corporate Events', 'Festive Gifting'],
+                    budget: ['₹2000 - ₹2500'],
+                    sustainability: [],
+                    contents: ['Gourmet']
+                }
+            },
+            {
+                id: 'gourmet-2',
+                name: 'Epicurean Delight Hamper',
+                category: 'Gourmet',
+                image: 'asset/gourmet/IMG20250803115903.jpg',
+                price: 1999,
+                badge: 'Bestseller',
+                tags: ['Gourmet', 'Premium', 'Delicious'],
+                description: 'A delightful collection of gourmet treats perfect for food connoisseurs. Includes premium snacks, artisan chocolates, and exotic flavors.',
+                filters: {
+                    category: ['Gourmet'],
+                    occasion: ['Corporate Events', 'Client Gifting', 'Employee Appreciation'],
+                    budget: ['₹1500 - ₹2000'],
+                    sustainability: [],
+                    contents: ['Gourmet']
+                }
+            },
+            {
+                id: 'gourmet-3',
+                name: 'Gourmet Treasures Collection',
+                category: 'Gourmet',
+                image: 'asset/gourmet/IMG20250809115537.jpg',
+                price: 2499,
+                badge: 'Luxury',
+                tags: ['Premium', 'Imported', 'Exquisite'],
+                description: 'Discover treasured gourmet delights from around the world. This luxury hamper features imported treats, premium beverages, and artisan creations.',
+                filters: {
+                    category: ['Gourmet'],
+                    occasion: ['Client Gifting', 'Corporate Events'],
+                    budget: ['₹2000 - ₹2500'],
+                    sustainability: [],
+                    contents: ['Gourmet']
+                }
+            },
+            {
+                id: 'gourmet-4',
+                name: 'Flavors of India Hamper',
+                category: 'Gourmet',
+                image: 'asset/gourmet/IMG20250809122610.jpg',
+                price: 1799,
+                badge: 'Traditional',
+                tags: ['Indian', 'Authentic', 'Gourmet'],
+                description: 'Celebrate Indian culinary heritage with authentic gourmet treats. Features traditional sweets, savory snacks, and regional specialties.',
+                filters: {
+                    category: ['Gourmet'],
+                    occasion: ['Festive Gifting', 'Corporate Events', 'Client Gifting'],
+                    budget: ['₹1500 - ₹2000'],
+                    sustainability: [],
+                    contents: ['Gourmet']
+                }
+            },
+            {
+                id: 'gourmet-5',
+                name: 'Premium Snack Collection',
+                category: 'Gourmet',
+                image: 'asset/gourmet/IMG20250815113228.jpg',
+                price: 1899,
+                badge: 'Popular',
+                tags: ['Snacks', 'Gourmet', 'Quality'],
+                description: 'A premium assortment of gourmet snacks perfect for any occasion. Features crunchy delights, sweet treats, and savory bites.',
+                filters: {
+                    category: ['Gourmet'],
+                    occasion: ['Employee Appreciation', 'Corporate Events'],
+                    budget: ['₹1500 - ₹2000'],
+                    sustainability: [],
+                    contents: ['Gourmet']
+                }
+            },
+            {
+                id: 'gourmet-6',
+                name: 'Chocolate Paradise Box',
+                category: 'Gourmet',
+                image: 'asset/gourmet/IMG20250815114410.jpg',
+                price: 2199,
+                badge: 'Premium',
+                tags: ['Chocolate', 'Luxury', 'Indulgent'],
+                description: 'A chocolate lover\'s dream hamper filled with premium chocolates, truffles, and confections. Perfect for sweet indulgence.',
+                filters: {
+                    category: ['Gourmet'],
+                    occasion: ['Client Gifting', 'Employee Appreciation', 'Festive Gifting'],
+                    budget: ['₹2000 - ₹2500'],
+                    sustainability: [],
+                    contents: ['Gourmet']
+                }
+            },
+            {
+                id: 'gourmet-7',
+                name: 'Tea & Treats Hamper',
+                category: 'Gourmet',
+                image: 'asset/gourmet/IMG20250820160828.jpg',
+                price: 1699,
+                badge: 'Value',
+                tags: ['Tea', 'Snacks', 'Gourmet'],
+                description: 'Perfect pairing of premium teas and gourmet snacks. Ideal for tea enthusiasts who appreciate quality flavors.',
+                filters: {
+                    category: ['Gourmet'],
+                    occasion: ['Employee Appreciation', 'Corporate Events'],
+                    budget: ['₹1500 - ₹2000'],
+                    sustainability: [],
+                    contents: ['Gourmet', 'Wellness']
+                }
+            },
+            {
+                id: 'gourmet-8',
+                name: 'Artisan Food Collection',
+                category: 'Gourmet',
+                image: 'asset/gourmet/IMG20250820161626.jpg',
+                price: 2399,
+                badge: 'Premium',
+                tags: ['Artisan', 'Handcrafted', 'Gourmet'],
+                description: 'Celebrate artisan craftsmanship with handcrafted gourmet delights. Features small-batch creations and unique flavors.',
+                filters: {
+                    category: ['Gourmet'],
+                    occasion: ['Client Gifting', 'Corporate Events'],
+                    budget: ['₹2000 - ₹2500'],
+                    sustainability: ['Handmade'],
+                    contents: ['Gourmet']
+                }
+            },
+            {
+                id: 'gourmet-9',
+                name: 'Festive Food Hamper',
+                category: 'Gourmet',
+                image: 'asset/gourmet/IMG20250820162742.jpg',
+                price: 2599,
+                badge: 'Festive',
+                tags: ['Festive', 'Premium', 'Celebration'],
+                description: 'Celebrate in style with this festive gourmet hamper. Features premium sweets, savories, and special treats perfect for celebrations.',
+                filters: {
+                    category: ['Gourmet'],
+                    occasion: ['Festive Gifting', 'Corporate Events', 'Client Gifting'],
+                    budget: ['₹2500 & Above'],
+                    sustainability: [],
+                    contents: ['Gourmet']
+                }
+            },
+
+            // Offi Swag Hampers (5)
+            {
+                id: 'offi-1',
+                name: 'Desk Essentials Kit',
+                category: 'Offi Swag',
+                image: 'asset/offineeds/IMG20250803124522.jpg',
+                price: 1599,
+                badge: 'Practical',
+                tags: ['Office', 'Utility', 'Professional'],
+                description: 'Elevate your 9-5 with this practical desk essentials kit. Features quality stationery, organizers, and office accessories.',
+                filters: {
+                    category: ['Offi Swag'],
+                    occasion: ['Corporate Events', 'Employee Appreciation'],
+                    budget: ['₹1500 - ₹2000'],
+                    sustainability: [],
+                    contents: ['Utility']
+                }
+            },
+            {
+                id: 'offi-2',
+                name: 'Corporate Wellness Pack',
+                category: 'Offi Swag',
+                image: 'asset/offineeds/IMG20250803124555.jpg',
+                price: 1899,
+                badge: 'Wellness',
+                tags: ['Wellness', 'Office', 'Health'],
+                description: 'Promote workplace wellness with this thoughtful hamper. Includes desk accessories, wellness items, and healthy snacks.',
+                filters: {
+                    category: ['Offi Swag'],
+                    occasion: ['Employee Appreciation', 'Corporate Events'],
+                    budget: ['₹1500 - ₹2000'],
+                    sustainability: [],
+                    contents: ['Wellness', 'Utility']
+                }
+            },
+            {
+                id: 'offi-3',
+                name: 'Professional Starter Kit',
+                category: 'Offi Swag',
+                image: 'asset/offineeds/IMG20250803124642.jpg',
+                price: 2199,
+                badge: 'Premium',
+                tags: ['Professional', 'Quality', 'Comprehensive'],
+                description: 'Perfect for onboarding new team members. This comprehensive kit includes premium office supplies and welcome essentials.',
+                filters: {
+                    category: ['Offi Swag'],
+                    occasion: ['Corporate Events', 'Employee Appreciation'],
+                    budget: ['₹2000 - ₹2500'],
+                    sustainability: [],
+                    contents: ['Utility']
+                }
+            },
+            {
+                id: 'offi-4',
+                name: 'Executive Office Set',
+                category: 'Offi Swag',
+                image: 'asset/offineeds/IMG20250803124725.jpg',
+                price: 2499,
+                badge: 'Executive',
+                tags: ['Premium', 'Executive', 'Luxury'],
+                description: 'An executive-level hamper featuring premium office accessories, luxury stationery, and sophisticated desk items.',
+                filters: {
+                    category: ['Offi Swag'],
+                    occasion: ['Client Gifting', 'Corporate Events'],
+                    budget: ['₹2000 - ₹2500'],
+                    sustainability: [],
+                    contents: ['Utility', 'Home Decor']
+                }
+            },
+            {
+                id: 'offi-5',
+                name: 'Work From Home Bundle',
+                category: 'Offi Swag',
+                image: 'asset/offineeds/IMG20250803125051.jpg',
+                price: 1799,
+                badge: 'Bestseller',
+                tags: ['WFH', 'Comfort', 'Practical'],
+                description: 'Perfect for remote workers. Includes desk organizers, comfort items, and productivity tools for the home office.',
+                filters: {
+                    category: ['Offi Swag'],
+                    occasion: ['Employee Appreciation', 'Corporate Events'],
+                    budget: ['₹1500 - ₹2000'],
+                    sustainability: [],
+                    contents: ['Utility', 'Wellness']
+                }
+            },
+
+            // Festive Hampers (9)
+            {
+                id: 'festive-1',
+                name: 'Diwali Celebration Box',
+                category: 'Festive',
+                image: 'asset/festivity/IMG20250803120821.jpg',
+                price: 2299,
+                badge: 'Festive',
+                tags: ['Diwali', 'Traditional', 'Premium'],
+                description: 'Celebrate the festival of lights with this magnificent Diwali hamper. Features traditional sweets, decorative diyas, and festive essentials.',
+                filters: {
+                    category: ['Festive'],
+                    occasion: ['Festive Gifting', 'Corporate Events', 'Client Gifting'],
+                    budget: ['₹2000 - ₹2500'],
+                    sustainability: [],
+                    contents: ['Gourmet', 'Home Decor']
+                }
+            },
+            {
+                id: 'festive-2',
+                name: 'Traditional Treasures Hamper',
+                category: 'Festive',
+                image: 'asset/festivity/IMG20250803121345.jpg',
+                price: 2499,
+                badge: 'Premium',
+                tags: ['Traditional', 'Cultural', 'Elegant'],
+                description: 'Honor traditions with this elegant festive hamper. Includes traditional artifacts, sweets, and decorative items perfect for celebrations.',
+                filters: {
+                    category: ['Festive'],
+                    occasion: ['Festive Gifting', 'Client Gifting', 'Corporate Events'],
+                    budget: ['₹2000 - ₹2500'],
+                    sustainability: [],
+                    contents: ['Gourmet', 'Home Decor']
+                }
+            },
+            {
+                id: 'festive-3',
+                name: 'Festival of Joy Box',
+                category: 'Festive',
+                image: 'asset/festivity/IMG20250803123105.jpg',
+                price: 1999,
+                badge: 'Popular',
+                tags: ['Celebration', 'Joyful', 'Festive'],
+                description: 'Spread joy and happiness with this vibrant festive hamper. Perfect for any celebration with a mix of treats and decorative items.',
+                filters: {
+                    category: ['Festive'],
+                    occasion: ['Festive Gifting', 'Corporate Events', 'Employee Appreciation'],
+                    budget: ['₹1500 - ₹2000'],
+                    sustainability: [],
+                    contents: ['Gourmet', 'Home Decor']
+                }
+            },
+            {
+                id: 'festive-4',
+                name: 'Sacred Celebrations Hamper',
+                category: 'Festive',
+                image: 'asset/festivity/IMG20250809105119.jpg',
+                price: 2199,
+                badge: 'Traditional',
+                tags: ['Sacred', 'Spiritual', 'Blessed'],
+                description: 'A sacred hamper for spiritual celebrations. Includes traditional puja items, incense, and blessed treats for auspicious occasions.',
+                filters: {
+                    category: ['Festive'],
+                    occasion: ['Festive Gifting', 'Corporate Events'],
+                    budget: ['₹2000 - ₹2500'],
+                    sustainability: [],
+                    contents: ['Gourmet', 'Home Decor', 'Wellness']
+                }
+            },
+            {
+                id: 'festive-5',
+                name: 'Golden Festival Collection',
+                category: 'Festive',
+                image: 'asset/festivity/IMG20250809105613.jpg',
+                price: 2599,
+                badge: 'Luxury',
+                tags: ['Luxury', 'Golden', 'Exquisite'],
+                description: 'An exquisite luxury festive hamper adorned with golden accents. Premium selection for high-value corporate gifting.',
+                filters: {
+                    category: ['Festive'],
+                    occasion: ['Client Gifting', 'Corporate Events', 'Festive Gifting'],
+                    budget: ['₹2500 & Above'],
+                    sustainability: [],
+                    contents: ['Gourmet', 'Home Decor']
+                }
+            },
+            {
+                id: 'festive-6',
+                name: 'Heritage Festival Box',
+                category: 'Festive',
+                image: 'asset/festivity/IMG20250809123829.jpg',
+                price: 1899,
+                badge: 'Heritage',
+                tags: ['Heritage', 'Authentic', 'Cultural'],
+                description: 'Celebrate cultural heritage with authentic traditional items. A perfect blend of heritage and festive spirit.',
+                filters: {
+                    category: ['Festive'],
+                    occasion: ['Festive Gifting', 'Corporate Events', 'Employee Appreciation'],
+                    budget: ['₹1500 - ₹2000'],
+                    sustainability: ['Handmade'],
+                    contents: ['Gourmet', 'Home Decor']
+                }
+            },
+            {
+                id: 'festive-7',
+                name: 'Prosperity & Blessings Hamper',
+                category: 'Festive',
+                image: 'asset/festivity/IMG20250809125810.jpg',
+                price: 2399,
+                badge: 'Premium',
+                tags: ['Prosperity', 'Blessings', 'Auspicious'],
+                description: 'Share prosperity and blessings with this premium festive hamper. Includes lucky symbols, sweets, and traditional items.',
+                filters: {
+                    category: ['Festive'],
+                    occasion: ['Festive Gifting', 'Client Gifting', 'Corporate Events'],
+                    budget: ['₹2000 - ₹2500'],
+                    sustainability: [],
+                    contents: ['Gourmet', 'Home Decor']
+                }
+            },
+            {
+                id: 'festive-8',
+                name: 'Grand Celebration Pack',
+                category: 'Festive',
+                image: 'asset/festivity/IMG20250809131510.jpg',
+                price: 2799,
+                badge: 'Grand',
+                tags: ['Grand', 'Comprehensive', 'Premium'],
+                description: 'The ultimate grand celebration hamper with everything needed for a memorable festive occasion. Our most comprehensive festive offering.',
+                filters: {
+                    category: ['Festive'],
+                    occasion: ['Client Gifting', 'Corporate Events', 'Festive Gifting'],
+                    budget: ['₹2500 & Above'],
+                    sustainability: [],
+                    contents: ['Gourmet', 'Home Decor', 'Wellness']
+                }
+            },
+            {
+                id: 'festive-9',
+                name: 'Festive Elegance Hamper',
+                category: 'Festive',
+                image: 'asset/festivity/IMG20250815114935.jpg',
+                price: 2199,
+                badge: 'Elegant',
+                tags: ['Elegant', 'Sophisticated', 'Premium'],
+                description: 'Sophisticated elegance meets festive cheer in this refined hamper. Perfect for discerning clients who appreciate subtle luxury.',
+                filters: {
+                    category: ['Festive'],
+                    occasion: ['Client Gifting', 'Corporate Events', 'Festive Gifting'],
+                    budget: ['₹2000 - ₹2500'],
+                    sustainability: [],
+                    contents: ['Gourmet', 'Home Decor']
+                }
+            },
+            
+            // Value Packed Quick Grab Hampers (7)
+            {
+                id: 'value-1',
+                name: 'Quick Value Hamper 1',
+                category: 'Value Packed',
+                image: 'asset/valuepack/WhatsApp Image 2025-12-15 at 11.48.50 (1).jpeg',
+                price: 899,
+                badge: 'Best Value',
+                tags: ['Quick Grab', 'Value', 'Corporate'],
+                description: 'Perfect quick-grab hamper offering exceptional value. Ideal for bulk corporate gifting with thoughtfully selected items.',
+                filters: {
+                    category: ['Value Packed'],
+                    occasion: ['Corporate Events', 'Employee Appreciation'],
+                    budget: ['Under ₹1500'],
+                    sustainability: [],
+                    contents: ['Gourmet', 'Utility']
+                }
+            },
+            {
+                id: 'value-2',
+                name: 'Quick Value Hamper 2',
+                category: 'Value Packed',
+                image: 'asset/valuepack/WhatsApp Image 2025-12-15 at 11.48.50.jpeg',
+                price: 899,
+                badge: 'Best Value',
+                tags: ['Quick Grab', 'Value', 'Corporate'],
+                description: 'Exceptional value hamper designed for corporate gifting. Contains premium essentials at an affordable price point.',
+                filters: {
+                    category: ['Value Packed'],
+                    occasion: ['Corporate Events', 'Employee Appreciation'],
+                    budget: ['Under ₹1500'],
+                    sustainability: [],
+                    contents: ['Gourmet', 'Utility']
+                }
+            },
+            {
+                id: 'value-3',
+                name: 'Quick Value Hamper 3',
+                category: 'Value Packed',
+                image: 'asset/valuepack/WhatsApp Image 2025-12-15 at 11.48.51 (1).jpeg',
+                price: 899,
+                badge: 'Best Value',
+                tags: ['Quick Grab', 'Value', 'Corporate'],
+                description: 'Value-packed hamper with carefully curated items. Perfect for large-scale corporate events and employee rewards.',
+                filters: {
+                    category: ['Value Packed'],
+                    occasion: ['Corporate Events', 'Employee Appreciation'],
+                    budget: ['Under ₹1500'],
+                    sustainability: [],
+                    contents: ['Gourmet', 'Utility']
+                }
+            },
+            {
+                id: 'value-4',
+                name: 'Quick Value Hamper 4',
+                category: 'Value Packed',
+                image: 'asset/valuepack/WhatsApp Image 2025-12-15 at 11.48.51 (2).jpeg',
+                price: 899,
+                badge: 'Best Value',
+                tags: ['Quick Grab', 'Value', 'Corporate'],
+                description: 'Budget-friendly hamper without compromising on quality. Ideal for volume gifting with style.',
+                filters: {
+                    category: ['Value Packed'],
+                    occasion: ['Corporate Events', 'Employee Appreciation'],
+                    budget: ['Under ₹1500'],
+                    sustainability: [],
+                    contents: ['Gourmet', 'Utility']
+                }
+            },
+            {
+                id: 'value-5',
+                name: 'Quick Value Hamper 5',
+                category: 'Value Packed',
+                image: 'asset/valuepack/WhatsApp Image 2025-12-15 at 11.48.51.jpeg',
+                price: 899,
+                badge: 'Best Value',
+                tags: ['Quick Grab', 'Value', 'Corporate'],
+                description: 'Smart value hamper featuring essentials that make an impact. Perfect for employee recognition programs.',
+                filters: {
+                    category: ['Value Packed'],
+                    occasion: ['Corporate Events', 'Employee Appreciation'],
+                    budget: ['Under ₹1500'],
+                    sustainability: [],
+                    contents: ['Gourmet', 'Utility']
+                }
+            },
+            {
+                id: 'value-6',
+                name: 'Quick Value Hamper 6',
+                category: 'Value Packed',
+                image: 'asset/valuepack/WhatsApp Image 2025-12-15 at 11.48.52 (1).jpeg',
+                price: 899,
+                badge: 'Best Value',
+                tags: ['Quick Grab', 'Value', 'Corporate'],
+                description: 'Thoughtfully assembled value hamper for corporate needs. Great for festival gifting and employee engagement.',
+                filters: {
+                    category: ['Value Packed'],
+                    occasion: ['Corporate Events', 'Employee Appreciation', 'Festive Gifting'],
+                    budget: ['Under ₹1500'],
+                    sustainability: [],
+                    contents: ['Gourmet', 'Utility']
+                }
+            },
+            {
+                id: 'value-7',
+                name: 'Quick Value Hamper 7',
+                category: 'Value Packed',
+                image: 'asset/valuepack/WhatsApp Image 2025-12-15 at 11.48.52.jpeg',
+                price: 899,
+                badge: 'Best Value',
+                tags: ['Quick Grab', 'Value', 'Corporate'],
+                description: 'Premium quality at an accessible price. Designed for businesses looking for impactful bulk gifting solutions.',
+                filters: {
+                    category: ['Value Packed'],
+                    occasion: ['Corporate Events', 'Employee Appreciation'],
+                    budget: ['Under ₹1500'],
+                    sustainability: [],
+                    contents: ['Gourmet', 'Utility']
+                }
+            }
+        ];
+
+        let filteredHampers = [...hampers];
+        let currentModalHamperId = null;
+
+        // Initialize page
+        function init() {
+            renderProducts();
+            // updateLikedWishlistCount is now handled by nav.js
+            
+            // Search functionality - wait for nav to load
+            setTimeout(() => {
+                const searchInput = document.getElementById('navSearch');
+                if (searchInput) {
+                    searchInput.addEventListener('keypress', function(e) {
+                        if (e.key === 'Enter') {
+                            performSearch();
+                        }
+                    });
+                }
+            }, 100);
+
+            // Check for search parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchTerm = urlParams.get('search');
+            if (searchTerm) {
+                const searchInput = document.getElementById('navSearch');
+                if (searchInput) {
+                    searchInput.value = searchTerm;
+                }
+                performSearchWithTerm(searchTerm);
+            }
+        }
+
+        // Perform search from button or enter key
+        function performSearch() {
+            const searchInput = document.getElementById('navSearch');
+            const searchTerm = searchInput ? searchInput.value : '';
+            if (searchTerm) {
+                window.location.href = `curated-hampers.html?search=${encodeURIComponent(searchTerm)}`;
+            }
+        }
+
+        // Perform search with term
+        function performSearchWithTerm(searchTerm) {
+            const term = searchTerm.toLowerCase();
+            filteredHampers = hampers.filter(hamper => {
+                return hamper.name.toLowerCase().includes(term) ||
+                       hamper.description.toLowerCase().includes(term) ||
+                       hamper.category.toLowerCase().includes(term) ||
+                       hamper.tags.some(tag => tag.toLowerCase().includes(term));
+            });
+            renderProducts();
+            
+            // Update page title
+            document.querySelector('.page-title').textContent = `Search Results for "${searchTerm}"`;
+            document.querySelector('.page-subtitle').textContent = `Found ${filteredHampers.length} hamper(s)`;
+        }
+
+        // Render products
+        function renderProducts() {
+            const grid = document.getElementById('productsGrid');
+            const emptyState = document.getElementById('emptyState');
+            const resultsCount = document.getElementById('resultsCount');
+
+            if (filteredHampers.length === 0) {
+                grid.style.display = 'none';
+                emptyState.style.display = 'block';
+                resultsCount.textContent = 'No hampers found';
+                return;
+            }
+
+            grid.style.display = 'grid';
+            emptyState.style.display = 'none';
+            resultsCount.textContent = `Showing ${filteredHampers.length} hamper${filteredHampers.length !== 1 ? 's' : ''}`;
+
+            grid.innerHTML = filteredHampers.map((hamper, index) => {
+                const likedItems = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+                const isLiked = likedItems.some(item => item.id === hamper.id);
+                
+                return `
+                <div class="product-card" onclick="openProductModal('${hamper.id}');">
+                    <div class="product-image">
+                        <img src="${hamper.image}" alt="${hamper.name}">
+                        <span class="product-badge">${hamper.badge}</span>
+                        <div class="wishlist-heart ${isLiked ? 'liked' : ''}" onclick="event.stopPropagation(); toggleWishlist('${hamper.id}');">
+                            ♥
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="product-category">${hamper.category}</div>
+                        <h3 class="product-name">${hamper.name}</h3>
+                        <div class="product-tags">
+                            ${hamper.tags.slice(0, 3).map(tag => `<span class="product-tag">${tag}</span>`).join('')}
+                        </div>
+                        <div class="product-price">₹${hamper.price.toLocaleString()}</div>
+                        <a href="#" class="product-cta" onclick="event.stopPropagation(); openProductModal('${hamper.id}');">View Details →</a>
+                    </div>
+                </div>
+            `}).join('');
+        }
+
+        // Apply filters
+        function applyFilters() {
+            const activeFilters = {
+                category: [],
+                occasion: [],
+                budget: [],
+                sustainability: [],
+                contents: []
+            };
+
+            // Collect active filters
+            document.querySelectorAll('.filter-option input[type="checkbox"]:checked').forEach(checkbox => {
+                const value = checkbox.value;
+                const filterType = checkbox.id.split('-')[0];
+                
+                if (filterType === 'cat') activeFilters.category.push(value);
+                else if (filterType === 'occ') activeFilters.occasion.push(value);
+                else if (filterType === 'budget') activeFilters.budget.push(value);
+                else if (filterType === 'sust') activeFilters.sustainability.push(value);
+                else if (filterType === 'cont') activeFilters.contents.push(value);
+            });
+
+            // Filter hampers
+            filteredHampers = hampers.filter(hamper => {
+                // If no filters are active, show all
+                const hasActiveFilters = Object.values(activeFilters).some(arr => arr.length > 0);
+                if (!hasActiveFilters) return true;
+
+                // Check each filter type
+                const matchesCategory = activeFilters.category.length === 0 || 
+                    activeFilters.category.some(cat => hamper.filters.category.includes(cat));
+                
+                const matchesOccasion = activeFilters.occasion.length === 0 || 
+                    activeFilters.occasion.some(occ => hamper.filters.occasion.includes(occ));
+                
+                const matchesBudget = activeFilters.budget.length === 0 || 
+                    activeFilters.budget.some(bud => hamper.filters.budget.includes(bud));
+                
+                const matchesSustainability = activeFilters.sustainability.length === 0 || 
+                    activeFilters.sustainability.some(sus => hamper.filters.sustainability.includes(sus));
+                
+                const matchesContents = activeFilters.contents.length === 0 || 
+                    activeFilters.contents.some(con => hamper.filters.contents.includes(con));
+
+                return matchesCategory && matchesOccasion && matchesBudget && matchesSustainability && matchesContents;
+            });
+
+            renderProducts();
+        }
+
+        // Clear all filters
+        function clearAllFilters() {
+            document.querySelectorAll('.filter-option input[type="checkbox"]').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            filteredHampers = [...hampers];
+            renderProducts();
+            
+            // Clear search if present
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('search')) {
+                window.location.href = 'curated-hampers.html';
+            }
+        }
+
+        // Toggle filter group
+        function toggleFilterGroup(groupId) {
+            const group = document.getElementById(groupId);
+            group.classList.toggle('collapsed');
+        }
+
+        // Sort products
+        function sortProducts() {
+            const sortValue = document.getElementById('sortSelect').value;
+
+            switch(sortValue) {
+                case 'price-low':
+                    filteredHampers.sort((a, b) => a.price - b.price);
+                    break;
+                case 'price-high':
+                    filteredHampers.sort((a, b) => b.price - a.price);
+                    break;
+                case 'name':
+                    filteredHampers.sort((a, b) => a.name.localeCompare(b.name));
+                    break;
+                default: // featured
+                    filteredHampers = hampers.filter(h => 
+                        filteredHampers.find(fh => fh.id === h.id)
+                    );
+            }
+
+            renderProducts();
+        }
+
+        // Open product modal
+        function openProductModal(hamperId) {
+            const hamper = hampers.find(h => h.id === hamperId);
+            if (!hamper) return;
+
+            currentModalHamperId = hamperId;
+
+            document.getElementById('modalImage').src = hamper.image;
+            document.getElementById('modalCategory').textContent = hamper.category;
+            document.getElementById('modalName').textContent = hamper.name;
+            document.getElementById('modalPrice').textContent = `₹${hamper.price.toLocaleString()}`;
+            document.getElementById('modalDescription').textContent = hamper.description;
+            document.getElementById('modalTags').innerHTML = hamper.tags.map(tag => 
+                `<span class="modal-tag">${tag}</span>`
+            ).join('');
+
+            updateLikedButtonState(hamperId);
+
+            document.getElementById('productModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            // Add click to zoom
+            document.getElementById('modalMainImage').onclick = function() {
+                openLightbox(hamper.image);
+            };
+        }
+
+        // Close product modal
+        function closeProductModal() {
+            document.getElementById('productModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+            currentModalHamperId = null;
+        }
+
+        // Add to liked wishlist
+        function addToLikedWishlist() {
+            if (!currentModalHamperId) return;
+
+            const hamper = hampers.find(h => h.id === currentModalHamperId);
+            if (!hamper) return;
+
+            let likedItems = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+            
+            // Check if already liked
+            const index = likedItems.findIndex(item => item.id === hamper.id);
+            
+            if (index === -1) {
+                // Add to liked
+                likedItems.push({
+                    id: hamper.id,
+                    name: hamper.name,
+                    category: hamper.category,
+                    image: hamper.image,
+                    price: hamper.price,
+                    type: 'hamper'
+                });
+                localStorage.setItem('likedWishlist', JSON.stringify(likedItems));
+                showNotification('✓ Added to Wishlist');
+            } else {
+                // Remove from liked
+                likedItems.splice(index, 1);
+                localStorage.setItem('likedWishlist', JSON.stringify(likedItems));
+                showNotification('Removed from Wishlist');
+            }
+
+            updateLikedButtonState(currentModalHamperId);
+            updateLikedWishlistCount();
+        }
+
+        // Update liked button state
+        function updateLikedButtonState(hamperId) {
+            const likedItems = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+            const isLiked = likedItems.some(item => item.id === hamperId);
+            
+            const likeButton = document.getElementById('likeButton');
+            if (isLiked) {
+                likeButton.textContent = '✓ Added to Wishlist';
+                likeButton.classList.add('liked');
+            } else {
+                likeButton.textContent = '♥ Add to Wishlist';
+                likeButton.classList.remove('liked');
+            }
+        }
+
+        // Update liked wishlist count
+        // updateLikedWishlistCount is now handled by nav.js
+
+        // Toggle wishlist from card
+        function toggleWishlist(hamperId) {
+            const hamper = hampers.find(h => h.id === hamperId);
+            if (!hamper) return;
+
+            let likedItems = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+            const index = likedItems.findIndex(item => item.id === hamper.id);
+            
+            if (index === -1) {
+                // Add to wishlist
+                likedItems.push({
+                    id: hamper.id,
+                    name: hamper.name,
+                    category: hamper.category,
+                    image: hamper.image,
+                    price: hamper.price,
+                    type: 'hamper'
+                });
+                localStorage.setItem('likedWishlist', JSON.stringify(likedItems));
+                showNotification('✓ Added to Wishlist');
+            } else {
+                // Remove from wishlist
+                likedItems.splice(index, 1);
+                localStorage.setItem('likedWishlist', JSON.stringify(likedItems));
+                showNotification('Removed from Wishlist');
+            }
+
+            // Update wishlist count in nav
+            if (typeof updateWishlistCount === 'function') {
+                updateWishlistCount();
+            }
+
+            // Re-render products to update heart icon
+            renderProducts();
+        }
+
+        // Show notification
+        function showNotification(message) {
+            const notification = document.getElementById('wishlistNotification');
+            notification.textContent = message;
+            notification.classList.add('show');
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Open lightbox
+        function openLightbox(imageSrc) {
+            document.getElementById('lightboxImage').src = imageSrc;
+            document.getElementById('imageLightbox').classList.add('active');
+        }
+
+        // Close lightbox
+        function closeLightbox() {
+            document.getElementById('imageLightbox').classList.remove('active');
+        }
+
+        // Close modals on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                if (document.getElementById('imageLightbox').classList.contains('active')) {
+                    closeLightbox();
+                } else if (document.getElementById('productModal').classList.contains('active')) {
+                    closeProductModal();
+                }
+            }
+        });
+
+        // Close lightbox on background click
+        document.getElementById('imageLightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Close modal on background click
+        document.getElementById('productModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeProductModal();
+            }
+        });
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
+
+

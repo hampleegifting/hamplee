@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet - Exquisite Flavors Curated | Hamplee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">HAMPLEE</a>
+            <ul class="nav-links">
+                <li><a href="index.html#collections">Collections</a></li>
+                <li><a href="index.html#hampers">Hampers</a></li>
+                <li><a href="index.html#custom">Custom Orders</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="collection-header">
+        <div class="container">
+            <h1 class="fade-up delay-1">Gourmet - Exquisite Flavors Curated</h1>
+            <p class="collection-intro fade-up delay-2">A symphony of the finest culinary delights from around the world</p>
+            <div class="divider fade-up delay-3"></div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                <div class="product-card fade-up delay-1" onclick="openProductModal('The Epicurean Collection', 'asset/gourmet/IMG20250803114127.jpg', '₹6,999', 'A carefully curated selection of premium artisanal foods and beverages. This collection brings together the finest flavors from renowned producers, perfect for discerning palates and special occasions.', ['Artisanal selections', 'Premium ingredients', 'Gourmet presentation', 'International delicacies', 'Perfect for connoisseurs'])">
+                    <div class="product-image">
+                        <img src="asset/gourmet/IMG20250803114127.jpg" alt="The Epicurean Collection">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Epicurean Collection</h3>
+                        <p class="product-desc">Refined taste, exquisite selection</p>
+                        <p class="product-price">Starting from ₹6,999</p>
+                        <button class="btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="product-card fade-up delay-2" onclick="openProductModal('Culinary Treasures', 'asset/gourmet/IMG20250803115903.jpg', '₹7,999', 'Discover rare and exceptional gourmet items that elevate every dining experience. From exotic spices to premium preserves, this hamper is a journey through world-class flavors.', ['Rare finds', 'World-class quality', 'Luxury ingredients', 'Chef-approved', 'Gift of sophistication'])">
+                    <div class="product-image">
+                        <img src="asset/gourmet/IMG20250803115903.jpg" alt="Culinary Treasures">
+                    </div>
+                    <div class="product-info">
+                        <h3>Culinary Treasures</h3>
+                        <p class="product-desc">Rare flavors, exceptional quality</p>
+                        <p class="product-price">Starting from ₹7,999</p>
+                        <button class="btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="product-card fade-up delay-3" onclick="openProductModal('Taste of Luxury', 'asset/gourmet/IMG20250809115537.jpg', '₹8,999', 'Indulge in the ultimate gourmet experience with premium chocolates, fine teas, specialty coffees, and artisan treats. Each item is handpicked for its exceptional quality and taste.', ['Premium chocolates', 'Fine beverages', 'Artisan treats', 'Luxury packaging', 'Memorable gifting'])">
+                    <div class="product-image">
+                        <img src="asset/gourmet/IMG20250809115537.jpg" alt="Taste of Luxury">
+                    </div>
+                    <div class="product-info">
+                        <h3>Taste of Luxury</h3>
+                        <p class="product-desc">Premium indulgence redefined</p>
+                        <p class="product-price">Starting from ₹8,999</p>
+                        <button class="btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="product-card fade-up delay-4" onclick="openProductModal('Grand Gastronome', 'asset/gourmet/IMG20250809122610.jpg', '₹9,999', 'The pinnacle of gourmet gifting featuring award-winning products, limited editions, and exclusive imports. This collection represents the very best in culinary excellence.', ['Award-winning products', 'Limited editions', 'Exclusive imports', 'Unmatched quality', 'Ultimate luxury'])">
+                    <div class="product-image">
+                        <img src="asset/gourmet/IMG20250809122610.jpg" alt="Grand Gastronome">
+                    </div>
+                    <div class="product-info">
+                        <h3>Grand Gastronome</h3>
+                        <p class="product-desc">The pinnacle of culinary gifting</p>
+                        <p class="product-price">Starting from ₹9,999</p>
+                        <button class="btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="product-card fade-up delay-1" onclick="openProductModal('Heritage Flavors', 'asset/gourmet/IMG20250815113228.jpg', '₹11,999', 'A celebration of timeless recipes and heritage brands that have perfected their craft over generations. This premium collection honors tradition while delivering contemporary elegance.', ['Heritage brands', 'Traditional recipes', 'Generational expertise', 'Premium presentation', 'Timeless elegance'])">
+                    <div class="product-image">
+                        <img src="asset/gourmet/IMG20250815113228.jpg" alt="Heritage Flavors">
+                    </div>
+                    <div class="product-info">
+                        <h3>Heritage Flavors</h3>
+                        <p class="product-desc">Tradition meets luxury</p>
+                        <p class="product-price">Starting from ₹11,999</p>
+                        <button class="btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="product-card fade-up delay-2" onclick="openProductModal('Imperial Feast', 'asset/gourmet/IMG20250815114410.jpg', '₹14,999', 'Our most prestigious gourmet collection featuring rare delicacies, vintage selections, and the finest products money can buy. Perfect for celebrating milestone occasions.', ['Ultra-premium selection', 'Rare delicacies', 'Vintage items', 'Museum-quality presentation', 'Once-in-a-lifetime gifting'])">
+                    <div class="product-image">
+                        <img src="asset/gourmet/IMG20250815114410.jpg" alt="Imperial Feast">
+                    </div>
+                    <div class="product-info">
+                        <h3>Imperial Feast</h3>
+                        <p class="product-desc">The ultimate gourmet experience</p>
+                        <p class="product-price">Starting from ₹14,999</p>
+                        <button class="btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="fade-up">Craving Something Unique?</h2>
+            <p class="fade-up delay-1">Let us craft a bespoke gourmet hamper tailored to your refined tastes</p>
+            <a href="mood-board.html" class="btn fade-up delay-2">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Hamplee</h4>
+                    <p style="font-size: 14px; line-height: 1.8;">Elevating corporate gifting with curated hampers that make lasting impressions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#collections">Collections</a></li>
+                        <li><a href="index.html#hampers">Featured Hampers</a></li>
+                        <li><a href="index.html#custom">Custom Orders</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="sustainable.html">Sustainable</a></li>
+                        <li><a href="ngo.html">NGO - Share & Care</a></li>
+                        <li><a href="offswag.html">Offi Swag</a></li>
+                        <li><a href="gourmet.html">Gourmet</a></li>
+                        <li><a href="festivity.html">Festivity</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:hamplee.gifting@gmail.com">hamplee.gifting@gmail.com</a></li>
+                        <li><a href="tel:+917970765884">+91 7970765884</a></li>
+                        <li><a href="https://instagram.com/hamplee.gifting" target="_blank">@hamplee.gifting</a></li>
+                        <li style="color: var(--grey); font-size: 14px;">Bangalore, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hamplee. All rights reserved. Crafted with care.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://instagram.com/hamplee.gifting" class="instagram-float" target="_blank" aria-label="Follow on Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+    </a>
+
+    <a href="https://wa.me/917970765884" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.247 1.407 1.407-5.228-0.321-0.527c-1.369-2.247-2.095-4.842-2.095-7.49 0-7.72 6.28-14 14-14s14 6.28 14 14-6.28 14-14 14zM21.305 18.421c-0.208-0.104-1.229-0.607-1.42-0.676-0.191-0.069-0.329-0.104-0.467 0.104s-0.537 0.676-0.659 0.815c-0.121 0.138-0.243 0.156-0.45 0.052s-0.881-0.325-1.677-1.035c-0.62-0.553-1.039-1.235-1.161-1.443s-0.013-0.32 0.091-0.423c0.093-0.093 0.208-0.243 0.312-0.364s0.139-0.208 0.208-0.347c0.069-0.138 0.035-0.26-0.017-0.364s-0.467-1.125-0.641-1.541c-0.169-0.405-0.341-0.35-0.467-0.357-0.121-0.006-0.26-0.007-0.398-0.007s-0.364 0.052-0.555 0.26c-0.191 0.208-0.729 0.712-0.729 1.738s0.746 2.016 0.85 2.154c0.104 0.138 1.463 2.232 3.545 3.131 0.495 0.214 0.881 0.341 1.181 0.437 0.497 0.157 0.949 0.135 1.307 0.082 0.399-0.060 1.229-0.502 1.402-0.987s0.173-0.902 0.121-0.987c-0.052-0.085-0.191-0.138-0.398-0.243z"/>
+        </svg>
+    </a>
+
+    <div id="productModal" class="product-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeProductModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalTitle"></h2>
+                    <p class="modal-price" id="modalPrice"></p>
+                    <p class="modal-description" id="modalDescription"></p>
+                    <ul class="modal-features" id="modalFeatures"></ul>
+                    <div class="modal-actions">
+                        <a href="index.html#contact" class="btn" onclick="closeProductModal()">Enquire Now</a>
+                        <a href="https://wa.me/917970765884" target="_blank" class="btn btn-outline">WhatsApp Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div id="imageLightbox" class="image-lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightboxImage" src="" alt="Full size image">
+    </div>
+
+    <script src="collection-script.js"></script>
+</body>
+</html>
+

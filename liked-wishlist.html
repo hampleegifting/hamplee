@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist | Hamplee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #C9A959;
+            --dark: #1A1A1A;
+            --light: #F8F7F4;
+            --white: #FFFFFF;
+            --grey: #6B6B6B;
+            --text: #333333;
+            --accent-color: #C9A959;
+        }
+    </style>
+    
+    <!-- Reusable Navigation Styles -->
+    <link rel="stylesheet" href="nav.css">
+    
+    <!-- Load navigation script early to prevent flicker -->
+    <script src="nav.js" defer></script>
+    
+    <style>
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--light);
+            color: var(--text);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        /* Page Content */
+        .page-content {
+            padding-top: 60px;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 80px 40px 60px;
+            background: linear-gradient(135deg, #F8F7F4 0%, #FFFFFF 100%);
+            margin-bottom: 60px;
+        }
+
+        .page-header h1 {
+            font-size: 42px;
+            color: var(--dark);
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 1.5px;
+            line-height: 1.3;
+        }
+
+        .page-header p {
+            font-size: 16px;
+            color: var(--grey);
+            max-width: 900px;
+            margin: 0 auto;
+            letter-spacing: 0.8px;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .wishlist-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            max-width: 1400px;
+        }
+
+        .wishlist-count {
+            font-size: 18px;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            background: var(--gold);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: var(--dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: white;
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 32px;
+            margin: 0 auto 60px;
+            max-width: 1400px;
+            padding: 0 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .product-image {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            background: var(--light);
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .remove-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 36px;
+            height: 36px;
+            background: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: var(--dark);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .remove-btn:hover {
+            background: #ff4444;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            padding: 24px;
+        }
+
+        .product-category {
+            font-size: 12px;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .product-name {
+            font-size: 22px;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .product-description {
+            font-size: 14px;
+            color: var(--grey);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .product-price {
+            font-size: 24px;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 120px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .empty-state-icon {
+            font-size: 80px;
+            margin-bottom: 24px;
+            opacity: 0.3;
+        }
+
+        .empty-state h2 {
+            font-size: 36px;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .empty-state p {
+            font-size: 18px;
+            color: var(--grey);
+            margin-bottom: 32px;
+        }
+
+        /* Notification */
+        .wishlist-notification {
+            position: fixed;
+            top: 100px;
+            right: 30px;
+            background: var(--accent-color);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            z-index: 10000;
+        }
+
+        .wishlist-notification.show {
+            transform: translateX(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 36px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .wishlist-actions {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation placeholder to prevent layout shift -->
+    <div class="nav-placeholder"></div>
+    
+    <!-- Navigation loaded via nav.js -->
+
+    <div class="page-content">
+        <div class="page-header">
+            <h1>♥ Your Wishlist</h1>
+            <p>Your curated selection of favorite products</p>
+        </div>
+
+        <div id="wishlistActions" class="wishlist-actions" style="display: none;">
+            <div class="wishlist-count">
+                <span id="wishlistCount">0</span> items in your wishlist
+            </div>
+            <div style="display: flex; gap: 16px;">
+                <button class="btn btn-outline" onclick="clearWishlist()">Clear All</button>
+                <a href="mood-board.html?skip=true" class="btn">Request Quote for Selected Items</a>
+            </div>
+        </div>
+
+        <div id="productsGrid" class="products-grid"></div>
+
+        <div id="emptyState" class="empty-state">
+            <div class="empty-state-icon">♡</div>
+            <h2>Your Wishlist is Empty</h2>
+            <p>Start adding products you love to create your perfect collection</p>
+            <a href="products.html" class="btn">Browse Products</a>
+        </div>
+    </div>
+
+    <script>
+        let likedWishlist = JSON.parse(localStorage.getItem('likedWishlist')) || [];
+
+        function renderWishlist() {
+            const grid = document.getElementById('productsGrid');
+            const emptyState = document.getElementById('emptyState');
+            const wishlistActions = document.getElementById('wishlistActions');
+            const wishlistCount = document.getElementById('wishlistCount');
+            const pageHeader = document.querySelector('.page-header');
+
+            if (likedWishlist.length === 0) {
+                grid.style.display = 'none';
+                wishlistActions.style.display = 'none';
+                pageHeader.style.display = 'none';
+                emptyState.style.display = 'block';
+                return;
+            }
+
+            grid.style.display = 'grid';
+            wishlistActions.style.display = 'flex';
+            pageHeader.style.display = 'block';
+            emptyState.style.display = 'none';
+            wishlistCount.textContent = likedWishlist.length;
+
+            grid.innerHTML = likedWishlist.map((product, index) => {
+                // Get first image
+                let imageSrc = '';
+                if (product.images) {
+                    imageSrc = product.images[0];
+                } else if (product.image) {
+                    imageSrc = Array.isArray(product.image) ? product.image[0] : product.image;
+                }
+
+                return `
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="${imageSrc}" alt="${product.name}">
+                        <button class="remove-btn" onclick="removeFromWishlist(${product.id})" title="Remove from wishlist">×</button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">${product.category}</div>
+                        <h3 class="product-name">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-price">₹${product.price.toLocaleString()}</div>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        function removeFromWishlist(productId) {
+            const index = likedWishlist.findIndex(p => p.id === productId);
+            if (index !== -1) {
+                likedWishlist.splice(index, 1);
+                localStorage.setItem('likedWishlist', JSON.stringify(likedWishlist));
+                renderWishlist();
+                
+                // Update navigation counter
+                if (typeof updateWishlistCount === 'function') {
+                    updateWishlistCount();
+                }
+                
+                showNotification('Removed from wishlist');
+            }
+        }
+
+        function clearWishlist() {
+            if (confirm('Are you sure you want to clear all items from your wishlist?')) {
+                likedWishlist = [];
+                localStorage.setItem('likedWishlist', JSON.stringify(likedWishlist));
+                renderWishlist();
+                
+                // Update navigation counter
+                if (typeof updateWishlistCount === 'function') {
+                    updateWishlistCount();
+                }
+                
+                showNotification('Wishlist cleared');
+            }
+        }
+
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'wishlist-notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => notification.classList.add('show'), 10);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', renderWishlist);
+    </script>
+</body>
+</html>
+
