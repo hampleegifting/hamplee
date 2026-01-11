@@ -21,12 +21,6 @@ function loadNavigation() {
                 <a href="index.html" class="logo">HAMPLEE</a>
                 
                 <div class="nav-right">
-                    <div class="search-box">
-                        <input type="text" placeholder="Search for gifts..." id="navSearch">
-                        <button class="search-clear-btn" id="searchClearBtn" onclick="clearNavSearch()" style="display: none;">×</button>
-                        <span class="search-divider" id="searchDivider" style="display: none;"></span>
-                        <button class="search-btn" onclick="performNavSearch()">🔍</button>
-                    </div>
                     <a href="liked-wishlist.html" class="nav-icon" id="likedWishlistIcon" title="Liked Wishlist">
                         ♥
                         <span class="liked-wishlist-badge" id="likedWishlistBadge">0</span>
@@ -35,6 +29,14 @@ function loadNavigation() {
                         👤
                     </a>
                 </div>
+            </div>
+            
+            <!-- Search Box - Separate for mobile positioning -->
+            <div class="search-box">
+                <input type="text" placeholder="Search for gifts..." id="navSearch">
+                <button class="search-clear-btn" id="searchClearBtn" onclick="clearNavSearch()" style="display: none;">×</button>
+                <span class="search-divider" id="searchDivider" style="display: none;"></span>
+                <button class="search-btn" onclick="performNavSearch()">🔍</button>
             </div>
         </div>
         
@@ -53,7 +55,6 @@ function loadNavigation() {
             
             <!-- Navigation Menu -->
             <div class="drawer-section">
-                <h3 class="drawer-section-title">Navigation</h3>
                 <ul class="nav-links">
                     <li><a href="index.html#collections" onclick="closeMobileMenu()">CURATED COLLECTIONS</a></li>
                     <li><a href="curated-hampers.html" onclick="closeMobileMenu()">CURATED HAMPERS</a></li>
