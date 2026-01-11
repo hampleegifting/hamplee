@@ -43,67 +43,75 @@ function loadNavigation() {
     `;
 
     // Insert navigation at the beginning of body
-    document.body.insertAdjacentHTML('afterbegin', navHTML);
-    
-    // Highlight active navigation link
-    highlightActiveNavLink();
-    
-    // Update liked basket count
-    updateLikedWishlistCount();
-    
-    // Restore search term from URL if present
-    restoreSearchTerm();
-    
-    // Add search functionality
-    const searchInput = document.getElementById('navSearch');
-    if (searchInput) {
-        searchInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                performNavSearch();
-            }
-        });
-        
-        // Show/hide clear button based on input
-        searchInput.addEventListener('input', function() {
-            toggleClearButton();
-        });
+    const navPlaceholder = document.querySelector('.nav-placeholder');
+    if (navPlaceholder) {
+        navPlaceholder.insertAdjacentHTML('afterend', navHTML);
+    } else {
+        document.body.insertAdjacentHTML('afterbegin', navHTML);
     }
     
-    // Add smooth scroll for anchor links
-    document.querySelectorAll('a[href*="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            
-            // Check if it's an anchor link to index.html
-            if (href.includes('index.html#')) {
-                const targetId = href.split('#')[1];
-                const currentPage = window.location.pathname.split('/').pop();
-                
-                // If we're on index.html, smooth scroll
-                if (currentPage === 'index.html' || currentPage === '') {
-                    e.preventDefault();
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) {
-                        // Calculate offset for fixed navigation (nav height + announcement bar)
-                        const navHeight = document.querySelector('nav')?.offsetHeight || 0;
-                        const announcementHeight = document.querySelector('.announcement-bar')?.offsetHeight || 0;
-                        const offset = navHeight + announcementHeight + 20; // 20px extra padding
-                        
-                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                }
-                // Otherwise, let the browser navigate normally
-            }
-        });
-    });
-    
-    // Mark navigation as loaded
+    // Mark navigation as loaded immediately
     document.body.classList.add('nav-loaded');
+    
+    // Initialize navigation functionality
+    setTimeout(() => {
+        // Highlight active navigation link
+        highlightActiveNavLink();
+        
+        // Update liked basket count
+        updateLikedWishlistCount();
+        
+        // Restore search term from URL if present
+        restoreSearchTerm();
+        
+        // Add search functionality
+        const searchInput = document.getElementById('navSearch');
+        if (searchInput) {
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performNavSearch();
+                }
+            });
+            
+            // Show/hide clear button based on input
+            searchInput.addEventListener('input', function() {
+                toggleClearButton();
+            });
+        }
+        
+        // Add smooth scroll for anchor links
+        document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                
+                // Check if it's an anchor link to index.html
+                if (href.includes('index.html#')) {
+                    const targetId = href.split('#')[1];
+                    const currentPage = window.location.pathname.split('/').pop();
+                    
+                    // If we're on index.html, smooth scroll
+                    if (currentPage === 'index.html' || currentPage === '') {
+                        e.preventDefault();
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            // Calculate offset for fixed navigation (nav height + announcement bar)
+                            const navHeight = document.querySelector('nav')?.offsetHeight || 0;
+                            const announcementHeight = document.querySelector('.announcement-bar')?.offsetHeight || 0;
+                            const offset = navHeight + announcementHeight + 20; // 20px extra padding
+                            
+                            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+                            
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                    // Otherwise, let the browser navigate normally
+                }
+            });
+        });
+    }, 0);
 }
 
 // Restore search term from URL parameters

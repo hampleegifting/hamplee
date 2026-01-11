@@ -4,26 +4,19 @@
 .nav-placeholder {
     height: 120px;
     background: var(--light);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 /* Hide placeholder once nav loads */
 body.nav-loaded .nav-placeholder {
     display: none;
+    height: 0;
 }
 
-/* Initially hide injected nav */
+/* Show nav immediately - no opacity transitions on mobile */
 .announcement-bar,
 nav {
-    opacity: 0;
-}
-
-/* Show nav once loaded */
-body.nav-loaded .announcement-bar,
-body.nav-loaded nav {
     opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 /* Announcement Bar */
@@ -256,17 +249,21 @@ nav {
 
     .nav-main {
         padding: 16px 20px;
+        flex-direction: column;
+        gap: 12px;
     }
 
     .logo {
-        font-size: 32px !important;
-        letter-spacing: 4px !important;
-        position: static;
-        transform: none;
+        font-size: 28px !important;
+        letter-spacing: 3px !important;
+        position: static !important;
+        transform: none !important;
+        margin: 0 auto;
     }
 
     .nav-right {
         gap: 8px;
+        justify-content: center;
     }
 
     .search-box {
@@ -279,16 +276,23 @@ nav {
         font-size: 16px;
     }
 
+    .nav-wrapper {
+        border-bottom: none;
+    }
+
     .nav-links {
+        display: flex !important;
         flex-direction: column;
         gap: 0;
         padding: 0;
         background: var(--white);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .nav-links li {
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        margin: 0;
     }
 
     .nav-links li:last-child {
@@ -298,8 +302,9 @@ nav {
     .nav-links a {
         display: block;
         padding: 16px 20px;
-        font-size: 14px;
-        letter-spacing: 1px;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        text-align: center;
     }
 
     .nav-links a::after {
@@ -308,6 +313,10 @@ nav {
 
     .nav-links a.active {
         background: rgba(201, 169, 89, 0.1);
+    }
+
+    .liked-wishlist-badge {
+        border: 2px solid var(--white);
     }
 }
 
