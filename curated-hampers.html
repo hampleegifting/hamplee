@@ -796,14 +796,109 @@
             font-size: 13px;
         }
 
+        /* Mobile Filter Toggle */
+        .mobile-filter-toggle {
+            display: none;
+            position: fixed;
+            bottom: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            padding: 0;
+            background: linear-gradient(135deg, var(--gold), #d4a853);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 12px 40px rgba(201, 169, 89, 0.35), 
+                        0 4px 12px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            min-width: 160px;
+            backdrop-filter: blur(10px);
+        }
+
+        .mobile-filter-toggle span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            position: relative;
+        }
+
+        .mobile-filter-toggle span::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50px;
+            padding: 2px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .mobile-filter-toggle:hover {
+            transform: translateX(-50%) translateY(-4px);
+            box-shadow: 0 16px 48px rgba(201, 169, 89, 0.45), 
+                        0 6px 16px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #d4a853, var(--gold));
+        }
+
+        .mobile-filter-toggle:active {
+            transform: translateX(-50%) translateY(-1px);
+            box-shadow: 0 8px 24px rgba(201, 169, 89, 0.35), 
+                        0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Filter Overlay */
+        .filter-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            backdrop-filter: blur(4px);
+        }
+
+        .filter-overlay.active {
+            display: block;
+        }
+
         @media (max-width: 1024px) {
             .content-wrapper {
                 grid-template-columns: 1fr;
+                gap: 0;
             }
 
             .filters-sidebar {
-                position: relative;
+                position: fixed;
                 top: 0;
+                left: -100%;
+                width: 320px;
+                height: 100vh;
+                max-height: 100vh;
+                z-index: 1001;
+                transition: left 0.4s ease;
+                border-radius: 0;
+                overflow-y: auto;
+                box-shadow: 2px 0 24px rgba(0, 0, 0, 0.15);
+            }
+
+            .filters-sidebar.active {
+                left: 0;
+            }
+
+            .mobile-filter-toggle {
+                display: block;
             }
 
             .modal-body {
@@ -813,7 +908,7 @@
 
         @media (max-width: 768px) {
             .page-container {
-                padding: 40px 20px;
+                padding: 40px 20px 80px;
             }
 
             .page-hero h1 {
@@ -853,7 +948,7 @@
     <div class="page-container">
         <div class="content-wrapper">
             <!-- Filters Sidebar -->
-            <aside class="filters-sidebar">
+            <aside class="filters-sidebar" id="filterSidebar">
                 <div class="filters-header">
                     <h2 class="filters-title">Filters</h2>
                     <span class="clear-all" onclick="clearAllFilters()">Clear All</span>
@@ -1025,6 +1120,14 @@
             </section>
         </div>
     </div>
+
+    <!-- Mobile Filter Toggle -->
+    <button class="mobile-filter-toggle" onclick="toggleMobileFilters()">
+        <span>🔍 Filters</span>
+    </button>
+
+    <!-- Filter Overlay -->
+    <div class="filter-overlay" id="filterOverlay" onclick="toggleMobileFilters()"></div>
 
     <!-- Product Modal -->
     <div class="modal" id="productModal">
@@ -2192,6 +2295,21 @@
             document.getElementById('imageLightbox').classList.remove('active');
         }
 
+        // Toggle Mobile Filters
+        function toggleMobileFilters() {
+            const sidebar = document.getElementById('filterSidebar');
+            const overlay = document.getElementById('filterOverlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Prevent body scroll when filters are open
+            if (sidebar.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
         // Close modals on ESC key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
@@ -2199,6 +2317,8 @@
                     closeLightbox();
                 } else if (document.getElementById('productModal').classList.contains('active')) {
                     closeProductModal();
+                } else if (document.getElementById('filterSidebar').classList.contains('active')) {
+                    toggleMobileFilters();
                 }
             }
         });

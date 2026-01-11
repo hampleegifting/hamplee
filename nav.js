@@ -11,6 +11,13 @@ function loadNavigation() {
     <nav>
         <div class="nav-wrapper">
             <div class="nav-main">
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
                 <a href="index.html" class="logo">HAMPLEE</a>
                 
                 <div class="nav-right">
@@ -31,14 +38,32 @@ function loadNavigation() {
             </div>
         </div>
         
-        <ul class="nav-links">
-            <li><a href="index.html#collections">CURATED COLLECTIONS</a></li>
-            <li><a href="curated-hampers.html">CURATED HAMPERS</a></li>
-            <li><a href="products.html">ALL PRODUCTS</a></li>
-            <li><a href="mood-board.html">CRAFT YOUR SIGNATURE CORPORATE GIFT</a></li>
-            <li><a href="index.html#about">ABOUT</a></li>
-            <li><a href="index.html#contact">CONTACT</a></li>
-        </ul>
+        <!-- Mobile Drawer Overlay -->
+        <div class="mobile-drawer-overlay" onclick="toggleMobileMenu()"></div>
+        
+        <!-- Navigation Links (Desktop) & Mobile Drawer -->
+        <div class="nav-links-wrapper">
+            <!-- Close button inside drawer -->
+            <button class="drawer-close-btn" onclick="toggleMobileMenu()" aria-label="Close Menu">×</button>
+            
+            <!-- Drawer Header -->
+            <div class="drawer-header">
+                <a href="index.html" class="drawer-logo">HAMPLEE</a>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <div class="drawer-section">
+                <h3 class="drawer-section-title">Navigation</h3>
+                <ul class="nav-links">
+                    <li><a href="index.html#collections" onclick="closeMobileMenu()">CURATED COLLECTIONS</a></li>
+                    <li><a href="curated-hampers.html" onclick="closeMobileMenu()">CURATED HAMPERS</a></li>
+                    <li><a href="products.html" onclick="closeMobileMenu()">ALL PRODUCTS</a></li>
+                    <li><a href="mood-board.html" onclick="closeMobileMenu()">CRAFT YOUR SIGNATURE CORPORATE GIFT</a></li>
+                    <li><a href="index.html#about" onclick="closeMobileMenu()">ABOUT</a></li>
+                    <li><a href="index.html#contact" onclick="closeMobileMenu()">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
     `;
 
@@ -113,6 +138,23 @@ function loadNavigation() {
         });
     }, 0);
 }
+
+// Toggle Mobile Menu
+function toggleMobileMenu() {
+    document.body.classList.toggle('mobile-menu-open');
+}
+
+// Close Mobile Menu
+function closeMobileMenu() {
+    document.body.classList.remove('mobile-menu-open');
+}
+
+// Close mobile menu on window resize
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 1000 && document.body.classList.contains('mobile-menu-open')) {
+        closeMobileMenu();
+    }
+});
 
 // Restore search term from URL parameters
 function restoreSearchTerm() {

@@ -523,19 +523,60 @@
         .mobile-filter-toggle {
             display: none;
             position: fixed;
-            bottom: 24px;
+            bottom: 28px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 999;
-            padding: 16px 32px;
-            background: var(--gold);
+            padding: 0;
+            background: linear-gradient(135deg, var(--gold), #d4a853);
             color: var(--white);
             border: none;
             border-radius: 50px;
             font-weight: 600;
             font-size: 14px;
-            box-shadow: 0 8px 32px rgba(201, 169, 89, 0.4);
+            letter-spacing: 0.5px;
+            box-shadow: 0 12px 40px rgba(201, 169, 89, 0.35), 
+                        0 4px 12px rgba(0, 0, 0, 0.15);
             cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            min-width: 160px;
+            backdrop-filter: blur(10px);
+        }
+
+        .mobile-filter-toggle span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            position: relative;
+        }
+
+        .mobile-filter-toggle span::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50px;
+            padding: 2px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .mobile-filter-toggle:hover {
+            transform: translateX(-50%) translateY(-4px);
+            box-shadow: 0 16px 48px rgba(201, 169, 89, 0.45), 
+                        0 6px 16px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #d4a853, var(--gold));
+        }
+
+        .mobile-filter-toggle:active {
+            transform: translateX(-50%) translateY(-1px);
+            box-shadow: 0 8px 24px rgba(201, 169, 89, 0.35), 
+                        0 2px 8px rgba(0, 0, 0, 0.15);
         }
 
         /* Responsive */
