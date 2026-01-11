@@ -261,6 +261,12 @@ nav {
     .logo {
         font-size: 32px !important;
         letter-spacing: 4px !important;
+        position: static;
+        transform: none;
+    }
+
+    .nav-right {
+        gap: 8px;
     }
 
     .search-box {
@@ -274,7 +280,34 @@ nav {
     }
 
     .nav-links {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        background: var(--white);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links li {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 16px 20px;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .nav-links a::after {
         display: none;
+    }
+
+    .nav-links a.active {
+        background: rgba(201, 169, 89, 0.1);
     }
 }
 
