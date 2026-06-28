@@ -635,7 +635,40 @@
       "price": { "amount": 6999, "display": "Starting from ₹6,999" },
       "badge": "Premium",
       "description": "Upgrade your desk game with luxury office accessories. This premium collection transforms any workspace into an inspiring environment for peak performance.",
-      "highlights": ["Luxury desk organizers", "Designer accessories", "Premium materials", "Functional elegance", "Executive appeal"],
+      "highlights": [
+        "Premium Rigid Box with Logo",
+        "Laptop Riser Stand Holder",
+        "Rechargeable LED Study Lamp",
+        "Notebook & Pen Set",
+        "Wooden Photo Frame",
+        "Smart Water Bottle"
+      ],
+      "items": [
+        {
+          "name": "Premium Rigid Box with Logo",
+          "description": "Premium Rigid Packaging · Custom Logo Branding"
+        },
+        {
+          "name": "Laptop Riser Stand Holder",
+          "description": "Ergonomic · Foldable Portable Tabletop · 8 Angles Adjustable · Premium Aluminum"
+        },
+        {
+          "name": "Rechargeable LED Study Lamp",
+          "description": "With Pen Stand & Mobile Holder · Touch Control · 3 Light Modes · USB Charging"
+        },
+        {
+          "name": "Notebook & Pen Set",
+          "description": "Eco-Friendly · 100 Pages"
+        },
+        {
+          "name": "Wooden Photo Frame",
+          "description": "Premium Finish · Tabletop & Wall Mount · Ideal for Home & Office · Motivational Message"
+        },
+        {
+          "name": "Smart Water Bottle",
+          "description": "LED Temperature Display · Double Wall Vacuum Insulated · Stainless Steel · Hot & Cold 24 Hours · Leak Proof · 750ml"
+        }
+      ],
       "image": "asset/offineeds/IMG20250803124725.jpg",
       "gallery": [],
       "moq": 10,
