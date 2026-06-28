@@ -22,7 +22,7 @@
   --font-serif: 'Cormorant Garamond', serif;
   --font-sans:  'Montserrat', sans-serif;
 
-  --max-width:   1380px;
+  --max-width:   1580px;
   --nav-offset:  108px; /* announcement bar + nav height */
 
   --ease-out:    cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -987,7 +987,7 @@ section { overflow: hidden; }
 
 .hamper-card-image {
   position: relative;
-  width: 52%;
+  width: 62%;
   flex-shrink: 0;
   overflow: hidden;
   background: var(--cream);
@@ -1201,7 +1201,7 @@ section { overflow: hidden; }
   position: fixed;
   top: 0;
   right: 0;
-  width: min(640px, 100vw);
+  width: min(900px, 100vw);
   height: 100vh;
   background: var(--white);
   z-index: 901;
