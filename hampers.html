@@ -16,6 +16,15 @@
   <link rel="stylesheet" href="styles.css">
   <script src="nav.js" defer></script>
   <script src="data/hampers-data.js"></script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JEV1LX1E06"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JEV1LX1E06');
+  </script>
 </head>
 <body>
 
@@ -167,6 +176,11 @@
 //  Hamplee Hampers Catalog — hampers.html
 // ══════════════════════════════════════════════════════
 
+// ── Analytics helper ──────────────────────────────────
+function track(event, params) {
+  if (typeof gtag === 'function') gtag('event', event, params || {});
+}
+
 let ALL_HAMPERS = [];
 let CONTACT    = {};
 let activeCategory = 'all';
@@ -286,6 +300,7 @@ function initFilters() {
       document.querySelectorAll('[data-category]').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       activeCategory = btn.dataset.category;
+      track('filter_category', { category: btn.dataset.category });
       renderGrid();
     });
   });
@@ -295,6 +310,7 @@ function initFilters() {
       document.querySelectorAll('[data-budget]').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       activeBudget = btn.dataset.budget;
+      track('filter_budget', { budget: btn.dataset.budget });
       renderGrid();
     });
   });
@@ -304,6 +320,8 @@ function initFilters() {
 function openPanel(id) {
   const h = ALL_HAMPERS.find(x => x.id === id);
   if (!h) return;
+
+  track('hamper_view', { hamper_name: h.name, hamper_category: h.category, hamper_price: h.price.amount, page: 'catalog' });
 
   const wishlist = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
   const wished   = wishlist.some(w => w.id === h.id);
@@ -366,6 +384,8 @@ Best regards`
     `<strong>Minimum order:</strong> ${h.moq || 10} pieces${h.customizable ? ' · Custom branding available' : ''}`;
   document.getElementById('panelWA').href    = `https://wa.me/${CONTACT.whatsapp}?text=${waText}`;
   document.getElementById('panelEmail').href = `mailto:${CONTACT.email}?subject=${mailSub}&body=${mailBody}`;
+  document.getElementById('panelWA').onclick    = () => track('whatsapp_enquiry', { hamper_name: h.name, hamper_category: h.category, hamper_price: h.price.amount, page: 'catalog' });
+  document.getElementById('panelEmail').onclick = () => track('email_enquiry', { hamper_name: h.name, hamper_category: h.category, hamper_price: h.price.amount, page: 'catalog' });
 
   const wishBtn = document.getElementById('panelWishBtn');
   wishBtn.classList.toggle('active', wished);
@@ -397,12 +417,14 @@ function toggleWishlist(id, btn) {
     btn.textContent = '♥';
     btn.setAttribute('aria-label', 'Remove from wishlist');
     showToast('Added to wishlist');
+    track('wishlist_add', { hamper_name: h.name, hamper_category: h.category, hamper_price: h.price.amount });
   } else {
     wishlist.splice(idx, 1);
     btn.classList.remove('wishlisted');
     btn.textContent = '♡';
     btn.setAttribute('aria-label', 'Add to wishlist');
     showToast('Removed from wishlist');
+    track('wishlist_remove', { hamper_name: h.name, hamper_category: h.category });
   }
   localStorage.setItem('likedWishlist', JSON.stringify(wishlist));
   if (typeof updateLikedWishlistCount === 'function') updateLikedWishlistCount();
@@ -419,11 +441,13 @@ function toggleWishlistPanel(id) {
     wishBtn.classList.add('active');
     wishBtn.textContent = '♥ In Wishlist';
     showToast('Added to wishlist');
+    track('wishlist_add', { hamper_name: h.name, hamper_category: h.category, hamper_price: h.price.amount });
   } else {
     wishlist.splice(idx, 1);
     wishBtn.classList.remove('active');
     wishBtn.textContent = '♡ Add to Wishlist';
     showToast('Removed from wishlist');
+    track('wishlist_remove', { hamper_name: h.name, hamper_category: h.category });
   }
   localStorage.setItem('likedWishlist', JSON.stringify(wishlist));
   // Also update the card button on the grid

@@ -2,17 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Mood Board - Create Your Perfect Hamper | Hamplee</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"></noscript>
     
     <!-- Reusable Navigation Styles -->
     <link rel="stylesheet" href="nav.css">
     
     <!-- Load navigation script early to prevent flicker -->
     <script src="nav.js" defer></script>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JEV1LX1E06"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JEV1LX1E06');
+    </script>
     
     <style>
         * {
@@ -46,7 +56,10 @@
         /* Hero Section */
         .hero-section {
             text-align: center;
-            padding: 80px 40px 60px;
+            padding-top: 80px;
+            padding-bottom: 60px;
+            padding-left: max(24px, env(safe-area-inset-left, 0px));
+            padding-right: max(24px, env(safe-area-inset-right, 0px));
             background: linear-gradient(135deg, #F8F7F4 0%, #FFFFFF 100%);
             animation: fadeInDown 0.8s ease;
         }
@@ -538,11 +551,11 @@
         /* Responsive */
         @media (max-width: 768px) {
             .hero-section {
-                padding: 80px 20px 40px;
+                padding: 36px 16px 20px;
             }
 
             .hero-section h1 {
-                font-size: 32px;
+                font-size: 28px;
             }
 
             .hero-section p {
@@ -550,7 +563,7 @@
             }
 
             .form-card {
-                padding: 40px 30px;
+                padding: 24px 18px;
             }
 
             .form-row,
@@ -573,7 +586,7 @@
 
             .preference-card {
                 flex-direction: column;
-                padding: 24px;
+                padding: 16px;
             }
 
             .preference-icon {
@@ -595,7 +608,7 @@
             }
 
             .vision-section {
-                padding: 28px;
+                padding: 18px;
             }
 
             .vision-header label {
@@ -1157,10 +1170,10 @@
                             <div class="preference-icon">🎯</div>
                             <div class="preference-content">
                                 <label for="includeItems">Items You'd Love to Include</label>
-                                <p class="preference-hint">Select products from our catalog that align with your vision</p>
+                                <p class="preference-hint">Select hampers from our catalog that align with your vision</p>
                                 <div class="selection-input-wrapper">
                                     <div class="selection-display" id="includeItemsDisplay" onclick="openProductSelector('include')">
-                                        <span class="placeholder">Browse & Select Products</span>
+                                        <span class="placeholder">Browse & Select Hampers</span>
                                         <span class="browse-icon">→</span>
                                     </div>
                                     <textarea id="includeItems" name="includeItems" style="display: none;"></textarea>
@@ -1414,29 +1427,26 @@
             const likedItems = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
             
             if (likedItems.length > 0) {
-                // Filter only products (not hampers)
-                const products = likedItems.filter(item => item.type !== 'hamper');
+                const hampersFromWishlist = likedItems.filter(item => item.type === 'hamper');
                 
-                if (products.length > 0) {
-                    // Convert to our selection format
-                    selectedProducts.include = products.map(item => ({
+                if (hampersFromWishlist.length > 0) {
+                    selectedProducts.include = hampersFromWishlist.map(item => ({
                         id: item.id,
                         name: item.name,
-                        category: item.category || 'Product'
+                        category: item.category || 'Hamper'
                     }));
                     
                     // Update the display
                     const display = document.getElementById('includeItemsDisplay');
                     const textarea = document.getElementById('includeItems');
                     
-                    display.innerHTML = selectedProducts.include.map(product => 
+                    display.innerHTML = selectedProducts.include.map(product =>
                         `<span class="selected-tag">${product.name} <span class="remove-tag" onclick="removeItem(event, 'include', '${product.id}')">×</span></span>`
                     ).join('');
                     
                     textarea.value = selectedProducts.include.map(p => p.name).join(', ');
                     
-                    // Show notification
-                    showLikedWishlistNotification(products.length);
+                    showLikedWishlistNotification(hampersFromWishlist.length);
                 }
             }
         }
@@ -1473,7 +1483,7 @@
     <div class="product-selector-modal" id="productSelectorModal">
         <div class="product-selector-content">
             <div class="product-selector-header">
-                <h3 id="selectorTitle">Select Products to Include</h3>
+                <h3 id="selectorTitle">Select Hampers to Include</h3>
                 <button class="close-selector" onclick="closeProductSelector()">&times;</button>
             </div>
             
@@ -1503,28 +1513,25 @@
             const iframe = document.getElementById('productsIframe');
             
             title.textContent = type === 'include' 
-                ? 'Browse & Select Products to Include' 
-                : 'Browse & Select Products to Exclude';
+                ? 'Browse & Select Hampers to Include' 
+                : 'Browse & Select Hampers to Exclude';
             
-            // If opening "include" and wishlist items are already loaded, ensure they're in selectedProducts
             if (type === 'include' && !selectedProducts.include.length) {
                 const likedItems = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
-                const products = likedItems.filter(item => item.type !== 'hamper');
+                const hampersOnly = likedItems.filter(item => item.type === 'hamper');
                 
-                if (products.length > 0) {
-                    selectedProducts.include = products.map(item => ({
+                if (hampersOnly.length > 0) {
+                    selectedProducts.include = hampersOnly.map(item => ({
                         id: item.id,
                         name: item.name,
-                        category: item.category || 'Product'
+                        category: item.category || 'Hamper'
                     }));
                 }
             }
             
-            // Add modal-open class to body
             document.body.classList.add('modal-open');
             
-            // Load products page with selection mode
-            iframe.src = `products.html?mode=selection&type=${type}`;
+            iframe.src = `curated-hampers.html?mode=selection&type=${type}`;
             
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -1594,7 +1601,7 @@
                 textarea.value = products.map(p => p.name).join(', ');
             } else {
                 display.classList.remove('has-items');
-                display.innerHTML = '<span class="placeholder">Browse & Select Products</span><span class="browse-icon">→</span>';
+                display.innerHTML = '<span class="placeholder">Browse & Select Hampers</span><span class="browse-icon">→</span>';
                 textarea.value = '';
             }
             

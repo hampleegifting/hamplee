@@ -15,6 +15,15 @@
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="styles.css">
   <script src="nav.js" defer></script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JEV1LX1E06"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JEV1LX1E06');
+  </script>
 </head>
 <body>
 
@@ -104,6 +113,11 @@
 //  Hamplee Wishlist Page
 // ══════════════════════════════════════════════════════
 
+// ── Analytics helper ──────────────────────────────────
+function track(event, params) {
+  if (typeof gtag === 'function') gtag('event', event, params || {});
+}
+
 const WHATSAPP = '917970765884';
 const EMAIL    = 'hamplee.gifting@gmail.com';
 
@@ -191,6 +205,8 @@ function render() {
   const emailD = buildEmailBody(wishlist);
   document.getElementById('waEnquireBtn').href    = `https://wa.me/${WHATSAPP}?text=${waMsg}`;
   document.getElementById('emailEnquireBtn').href = `mailto:${EMAIL}?subject=${emailD.subject}&body=${emailD.body}`;
+  document.getElementById('waEnquireBtn').onclick    = () => track('wishlist_enquiry_wa', { item_count: wishlist.length });
+  document.getElementById('emailEnquireBtn').onclick = () => track('wishlist_enquiry_email', { item_count: wishlist.length });
 
   // Render cards
   grid.innerHTML = wishlist.map(h => {
@@ -211,7 +227,7 @@ function render() {
         <p class="hamper-card-tagline">${h.tagline || ''}</p>
         <div class="hamper-card-footer">
           <span class="hamper-card-price">${price}</span>
-          <a href="${buildSingleWALink(h)}" target="_blank" class="hamper-enquire-btn" onclick="event.stopPropagation()">Enquire →</a>
+          <a href="${buildSingleWALink(h)}" target="_blank" class="hamper-enquire-btn" onclick="event.stopPropagation(); track('whatsapp_enquiry', { hamper_name: '${h.name.replace(/'/g,"\\'")}', hamper_category: '${h.category}', page: 'wishlist' })">Enquire →</a>
         </div>
       </div>
     </div>`;

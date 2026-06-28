@@ -36,6 +36,15 @@
   <link rel="stylesheet" href="styles.css">
   <script src="nav.js" defer></script>
   <script src="data/hampers-data.js"></script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JEV1LX1E06"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JEV1LX1E06');
+  </script>
 </head>
 <body>
 
@@ -370,6 +379,11 @@
 </a>
 
 <script>
+// ── Analytics helper ──────────────────────────────
+function track(event, params) {
+  if (typeof gtag === 'function') gtag('event', event, params || {});
+}
+
 // ── Featured hampers from preloaded data ─────────
 (function loadFeatured() {
   try {
@@ -428,11 +442,13 @@ function toggleWishlist(hamper, btn) {
     btn.classList.add('wishlisted');
     btn.textContent = '♥';
     showToast('Added to wishlist');
+    track('wishlist_add', { hamper_name: hamper.name, hamper_category: hamper.category, hamper_price: hamper.price.amount });
   } else {
     wishlist.splice(idx, 1);
     btn.classList.remove('wishlisted');
     btn.textContent = '♡';
     showToast('Removed from wishlist');
+    track('wishlist_remove', { hamper_name: hamper.name, hamper_category: hamper.category });
   }
   localStorage.setItem('likedWishlist', JSON.stringify(wishlist));
   if (typeof updateWishlistBadge === 'function') updateWishlistBadge();
@@ -441,6 +457,8 @@ function toggleWishlist(hamper, btn) {
 
 // ── Detail Panel (re-used from hampers.html via inline) ────
 function openPanel(h, contact) {
+  track('hamper_view', { hamper_name: h.name, hamper_category: h.category, hamper_price: h.price.amount, page: 'home' });
+
   const wishlist = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
   const wished   = wishlist.some(w => w.id === h.id);
 
@@ -504,6 +522,8 @@ Best regards`
   document.getElementById('homePanelImage').alt            = h.name;
   document.getElementById('homePanelWA').href              = `https://wa.me/${contact.whatsapp}?text=${waText}`;
   document.getElementById('homePanelEmail').href           = `mailto:${contact.email}?subject=${mailSub}&body=${mailBody}`;
+  document.getElementById('homePanelWA').onclick           = () => track('whatsapp_enquiry', { hamper_name: h.name, hamper_category: h.category, hamper_price: h.price.amount, page: 'home' });
+  document.getElementById('homePanelEmail').onclick        = () => track('email_enquiry', { hamper_name: h.name, hamper_category: h.category, hamper_price: h.price.amount, page: 'home' });
 
   const wishBtn = document.getElementById('homePanelWishBtn');
   wishBtn.classList.toggle('active', wished);
