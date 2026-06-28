@@ -378,8 +378,19 @@ Best regards`
   document.getElementById('panelName').textContent  = h.name;
   document.getElementById('panelPrice').textContent = h.price.display;
   document.getElementById('panelDesc').textContent  = h.description;
-  document.getElementById('panelHighlights').innerHTML =
-    (h.highlights || []).map(hl => `<li class="panel-highlight-item">${hl}</li>`).join('');
+  if (h.items && h.items.length) {
+    document.getElementById('panelHighlights').innerHTML =
+      h.items.map(item => `
+        <li class="panel-item-card">
+          <div class="panel-item-name">${item.name}</div>
+          <div class="panel-item-desc">${item.description}</div>
+        </li>`).join('');
+    document.getElementById('panelHighlights').className = 'panel-items';
+  } else {
+    document.getElementById('panelHighlights').innerHTML =
+      (h.highlights || []).map(hl => `<li class="panel-highlight-item">${hl}</li>`).join('');
+    document.getElementById('panelHighlights').className = 'panel-highlights';
+  }
   document.getElementById('panelMOQ').innerHTML =
     `<strong>Minimum order:</strong> ${h.moq || 10} pieces${h.customizable ? ' · Custom branding available' : ''}`;
   document.getElementById('panelWA').href    = `https://wa.me/${CONTACT.whatsapp}?text=${waText}`;

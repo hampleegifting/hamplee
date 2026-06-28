@@ -516,7 +516,18 @@ Best regards`
   document.getElementById('homePanelName').textContent     = h.name;
   document.getElementById('homePanelPrice').textContent    = h.price.display;
   document.getElementById('homePanelDesc').textContent     = h.description;
-  document.getElementById('homePanelHighlights').innerHTML = highlights;
+  if (h.items && h.items.length) {
+    document.getElementById('homePanelHighlights').innerHTML =
+      h.items.map(item => `
+        <li class="panel-item-card">
+          <div class="panel-item-name">${item.name}</div>
+          <div class="panel-item-desc">${item.description}</div>
+        </li>`).join('');
+    document.getElementById('homePanelHighlights').className = 'panel-items';
+  } else {
+    document.getElementById('homePanelHighlights').innerHTML = highlights;
+    document.getElementById('homePanelHighlights').className = 'panel-highlights';
+  }
   document.getElementById('homePanelMOQ').innerHTML        = `<strong>Minimum order:</strong> ${h.moq || 10} pieces · ${h.customizable ? 'Custom branding available' : ''}`;
   document.getElementById('homePanelImage').src            = h.image;
   document.getElementById('homePanelImage').alt            = h.name;

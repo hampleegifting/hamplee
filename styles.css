@@ -1168,6 +1168,37 @@ section { overflow: hidden; }
   flex-shrink: 0;
 }
 
+/* ── Panel item cards (rich product descriptions) ── */
+.panel-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.panel-item-card {
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  padding: 12px 14px;
+  background: var(--white);
+}
+
+.panel-item-name {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--dark);
+  margin-bottom: 5px;
+}
+
+.panel-item-desc {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--grey);
+  line-height: 1.6;
+}
+
 .panel-moq {
   padding: 12px 16px;
   background: var(--cream);
