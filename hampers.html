@@ -292,7 +292,7 @@ function renderGrid() {
   const total = ALL_HAMPERS.length;
   const shown = hampers.length;
 
-  countEl.textContent  = `${shown} hamper${shown !== 1 ? 's' : ''}`;
+  countEl.innerHTML    = `<span>${shown}</span> hamper${shown !== 1 ? 's' : ''} shown`;
   headerEl.textContent = `${total} curated hampers across 5 collections`;
 
   if (hampers.length === 0) {
