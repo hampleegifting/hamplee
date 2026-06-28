@@ -538,15 +538,43 @@
 
     {
       "id": "office-002",
-      "name": "Productivity Pro Pack",
-      "tagline": "Designed for peak performance",
+      "name": "Believe & Begin",
+      "tagline": "Designed for new beginnings",
       "category": "Office",
-      "occasions": ["Employee Gifting", "Corporate Gifting"],
+      "occasions": ["Employee Gifting", "Corporate Gifting", "New Joiner"],
       "price": { "amount": 4499, "display": "Starting from ₹4,499" },
       "badge": "Most Popular",
       "description": "Boost productivity with carefully curated office essentials. Perfect for welcoming new team members or celebrating work anniversaries with style and utility.",
-      "highlights": ["High-quality stationery", "Tech accessories", "Ergonomic designs", "Professional packaging", "Team morale boosters"],
-      "image": "asset/offineeds/IMG20250803124555.jpg",
+      "highlights": [
+        "Premium Rigid Box with Logo",
+        "Bamboo Stainless Steel Bottle (750ml)",
+        "Branded Wireless Headphones",
+        "Bamboo Notebook & Pen Set",
+        "Luxury Couverture Chocolates Box"
+      ],
+      "items": [
+        {
+          "name": "Premium Rigid Box with Logo",
+          "description": "Premium Rigid Packaging · Custom Logo Branding"
+        },
+        {
+          "name": "Bamboo Stainless Steel Bottle",
+          "description": "Digital Vacuum Insulated & Double Wall · Capacity 750ml · Leak-Proof · Digital Temperature Sensor"
+        },
+        {
+          "name": "Branded Wireless Headphones",
+          "description": "With Mic · Up to 40 Hours Playtime · Quick Charging · Bluetooth 5.0"
+        },
+        {
+          "name": "Bamboo Notebook & Pen Set",
+          "description": "Eco-Friendly · 100 Pages"
+        },
+        {
+          "name": "Luxury Couverture Assorted Chocolates Box",
+          "description": "Premium Couverture Chocolate · Assorted Selection"
+        }
+      ],
+      "image": "asset/offineeds/office-002.png",
       "gallery": [],
       "moq": 25,
       "customizable": true,
