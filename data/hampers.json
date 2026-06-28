@@ -631,7 +631,7 @@
       "name": "Desk Deluxe",
       "tagline": "Luxury for the modern professional",
       "category": "Office",
-      "occasions": ["Corporate Gifting", "Client Gifting", "Employee Gifting"],
+      "occasions": ["Corporate Gifting", "Client Gifting", "Employee Gifting", "New Joiner"],
       "price": { "amount": 6999, "display": "Starting from ₹6,999" },
       "badge": "Premium",
       "description": "Upgrade your desk game with luxury office accessories. This premium collection transforms any workspace into an inspiring environment for peak performance.",
@@ -669,7 +669,7 @@
           "description": "LED Temperature Display · Double Wall Vacuum Insulated · Stainless Steel · Hot & Cold 24 Hours · Leak Proof · 750ml"
         }
       ],
-      "image": "asset/offineeds/IMG20250803124725.jpg",
+      "image": "asset/offineeds/office-004.png",
       "gallery": [],
       "moq": 10,
       "customizable": true,
@@ -685,7 +685,35 @@
       "price": { "amount": 7999, "display": "Starting from ₹7,999" },
       "badge": "Premium",
       "description": "The ultimate professional starter pack featuring premium tech accessories, elegant stationery, and executive essentials. Perfect for making powerful first impressions.",
-      "highlights": ["Complete professional kit", "Tech-ready accessories", "Premium quality", "Customizable options", "Leadership approved"],
+      "highlights": [
+        "Luxury Laptop Backpack",
+        "Copper Water Bottle",
+        "Universal Mobile Holder Stand",
+        "Handmade Crochet Sunflower Pot",
+        "Premium Coffee Mug"
+      ],
+      "items": [
+        {
+          "name": "Luxury Laptop Backpack",
+          "description": "Premium Build · Spacious Compartments · Ergonomic Design · Fits Laptops up to 15.6\""
+        },
+        {
+          "name": "Copper Water Bottle",
+          "description": "100% Pure Copper · BPA Free · Leak Proof · Boosts Immunity · 750ml"
+        },
+        {
+          "name": "Universal Mobile Holder Stand",
+          "description": "Metal Body · Anti-Skid Design · Lightweight · Compatible with All Smartphones, Tablets, Kindle & iPad"
+        },
+        {
+          "name": "Handmade Crochet Sunflower Pot",
+          "description": "Eco-Friendly · Office Desk Decor · Height 6 Inches"
+        },
+        {
+          "name": "Coffee Mug",
+          "description": "Microwave & Dishwasher Safe · Premium Porcelain · 300ml"
+        }
+      ],
       "image": "asset/offineeds/IMG20250803125051.jpg",
       "gallery": [],
       "moq": 10,
