@@ -583,10 +583,10 @@
 
     {
       "id": "office-003",
-      "name": "Corporate Classics",
-      "tagline": "Timeless style for every occasion",
+      "name": "Hustler Kit",
+      "tagline": "For those who hustle hard",
       "category": "Office",
-      "occasions": ["Corporate Gifting", "Client Gifting"],
+      "occasions": ["Corporate Gifting", "Client Gifting", "Employee Gifting", "New Joiner"],
       "price": { "amount": 5499, "display": "Starting from ₹5,499" },
       "badge": "Corporate Pick",
       "description": "Timeless corporate gifts that never go out of style. This collection features premium branded merchandise perfect for client meetings and corporate events.",
@@ -619,7 +619,7 @@
           "description": "Gadget Safety Kit · Vegan Leather · Premium Finish"
         }
       ],
-      "image": "asset/offineeds/IMG20250803124642.jpg",
+      "image": "asset/offineeds/office-003.png",
       "gallery": [],
       "moq": 25,
       "customizable": true,
