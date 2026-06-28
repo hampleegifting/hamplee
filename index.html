@@ -535,8 +535,10 @@ Best regards`
     document.getElementById('homePanelHighlights').innerHTML =
       h.items.map(item => `
         <li class="panel-item-card">
-          <div class="panel-item-name">${item.name}</div>
-          <div class="panel-item-desc">${item.description}</div>
+          <div class="panel-item-body">
+            <div class="panel-item-name">${item.name}</div>
+            <div class="panel-item-desc">${item.description}</div>
+          </div>
         </li>`).join('');
     document.getElementById('homePanelHighlights').className = 'panel-items';
   } else {
