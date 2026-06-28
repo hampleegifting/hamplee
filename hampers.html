@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <title>Our Hampers — Hamplee Luxury Gifting</title>
+  <meta name="description" content="Browse Hamplee's full collection of 30+ luxury curated hampers. Gourmet, Festive, Sustainable, NGO, and Office collections. Filter by occasion and budget.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap"></noscript>
+
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="nav.js" defer></script>
+  <script src="data/hampers-data.js"></script>
+</head>
+<body>
+
+<div class="nav-placeholder"></div>
+
+<!-- ── Page Header ── -->
+<section class="catalog-header">
+  <div class="container">
+    <span class="section-label">Hamplee Collections</span>
+    <h1 class="fade-up">Our Hampers</h1>
+    <p class="fade-up delay-1" id="headerCount">Loading hampers…</p>
+  </div>
+</section>
+
+<!-- ── Filter Bar ── -->
+<div class="filter-bar" id="filterBar">
+  <div class="container">
+    <div class="filter-row">
+      <span class="filter-group-label">Collection</span>
+      <div class="filter-pills" id="categoryPills">
+        <button class="pill active" data-category="all">All</button>
+        <button class="pill" data-category="Gourmet">Gourmet</button>
+        <button class="pill" data-category="Festive">Festive</button>
+        <button class="pill" data-category="Sustainable">Sustainable</button>
+        <button class="pill" data-category="NGO">NGO</button>
+        <button class="pill" data-category="Office">Office</button>
+      </div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-group-label">Budget</span>
+      <div class="filter-pills" id="budgetPills">
+        <button class="pill active" data-budget="all">All</button>
+        <button class="pill" data-budget="5000">Under ₹5,000</button>
+        <button class="pill" data-budget="10000">₹5k – ₹10k</button>
+        <button class="pill" data-budget="15000">₹10k – ₹15k</button>
+        <button class="pill" data-budget="99999">₹15k+</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Results & Grid ── -->
+<section class="hampers-section">
+  <div class="container">
+    <div class="results-bar">
+      <span class="results-count" id="resultsCount"></span>
+    </div>
+    <div class="hampers-grid" id="hampersGrid">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact Band ── -->
+<section class="cta-band">
+  <div class="container">
+    <span class="section-label fade-up" style="color:var(--gold-light)">Can't Decide?</span>
+    <h2 class="section-title fade-up delay-1" style="color:var(--white);margin-bottom:16px">Let Us Curate For You</h2>
+    <p class="section-subtitle fade-up delay-2" style="color:rgba(255,255,255,0.6);margin:0 auto 40px">
+      Tell us the occasion, budget, and recipient — we'll build the perfect hamper from scratch.
+    </p>
+    <div class="fade-up delay-3">
+      <a href="mood-board.html" class="btn">Start Custom Order</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-logo">HAMPLEE</span>
+        <p class="footer-tagline">Elevating gifting through curation, craft, and care. Your end-to-end gifting partner for B2B and B2C.</p>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Collections</h4>
+        <ul class="footer-links">
+          <li><a href="hampers.html?category=Gourmet">Gourmet</a></li>
+          <li><a href="hampers.html?category=Festive">Festive</a></li>
+          <li><a href="hampers.html?category=Sustainable">Sustainable</a></li>
+          <li><a href="hampers.html?category=NGO">NGO &amp; Social</a></li>
+          <li><a href="hampers.html?category=Office">Office</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Services</h4>
+        <ul class="footer-links">
+          <li><a href="mood-board.html">Custom Order</a></li>
+          <li><a href="liked-wishlist.html">My Wishlist</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Connect</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:hamplee.gifting@gmail.com">hamplee.gifting@gmail.com</a></li>
+          <li><a href="https://wa.me/917970765884" target="_blank">+91 79707 65884</a></li>
+          <li><a href="https://instagram.com/hamplee.gifting" target="_blank">@hamplee.gifting</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2025 Hamplee. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/917970765884?text=Hi%20Hamplee!%20I'd%20like%20to%20enquire%20about%20your%20hampers." class="wa-float" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Detail Panel -->
+<div class="panel-backdrop" onclick="closePanel()" id="panelBackdrop"></div>
+<aside class="detail-panel" id="detailPanel" role="dialog" aria-modal="true" aria-label="Hamper details">
+  <button class="panel-close-btn" onclick="closePanel()" aria-label="Close panel">×</button>
+  <div class="panel-scroll">
+    <div class="panel-image-wrap">
+      <img id="panelImg" src="" alt="">
+    </div>
+    <div class="panel-details">
+      <div class="panel-meta">
+        <span class="panel-category-tag" id="panelCat"></span>
+        <span class="panel-badge-tag"     id="panelBadge"></span>
+      </div>
+      <h2 class="panel-name"  id="panelName"></h2>
+      <p class="panel-price"  id="panelPrice"></p>
+      <p class="panel-desc"   id="panelDesc"></p>
+      <p class="panel-highlights-title">What's Inside</p>
+      <ul class="panel-highlights" id="panelHighlights"></ul>
+      <div class="panel-moq" id="panelMOQ"></div>
+      <div class="panel-actions">
+        <button class="panel-wish-btn" id="panelWishBtn">♡ Add to Wishlist</button>
+        <a class="panel-wa-btn"    id="panelWA"    href="#" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Enquiry
+        </a>
+        <a class="panel-email-btn" id="panelEmail" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email Enquiry
+        </a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<script>
+// ══════════════════════════════════════════════════════
+//  Hamplee Hampers Catalog — hampers.html
+// ══════════════════════════════════════════════════════
+
+let ALL_HAMPERS = [];
+let CONTACT    = {};
+let activeCategory = 'all';
+let activeBudget   = 'all';
+
+// ── Boot ─────────────────────────────────────────────
+(function init() {
+  try {
+    const data  = window.HAMPLEE_DATA;
+    if (!data) { throw new Error('Data not loaded'); }
+    ALL_HAMPERS = data.hampers;
+    CONTACT     = data.contact;
+
+    // Read URL param for pre-selected category
+    const params = new URLSearchParams(window.location.search);
+    const cat    = params.get('category');
+    if (cat) {
+      activeCategory = cat;
+      const btn = document.querySelector(`[data-category="${cat}"]`);
+      if (btn) {
+        document.querySelectorAll('[data-category]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+    }
+
+    renderGrid();
+    initFilters();
+    initFadeObserver();
+  } catch(e) {
+    const g = document.getElementById('hampersGrid');
+    if (g) g.innerHTML = '<div class="no-results"><h3>Unable to load hampers</h3><p>Please refresh the page.</p></div>';
+    console.error('Hamplee data error:', e);
+  }
+})();
+
+// ── Filter Logic ──────────────────────────────────────
+function getFiltered() {
+  return ALL_HAMPERS.filter(h => {
+    const catOk = activeCategory === 'all' || h.category === activeCategory;
+    let   budOk = true;
+    if (activeBudget !== 'all') {
+      const amt = parseInt(activeBudget);
+      if (amt === 5000)  budOk = h.price.amount < 5000;
+      else if (amt === 10000) budOk = h.price.amount >= 5000  && h.price.amount <= 10000;
+      else if (amt === 15000) budOk = h.price.amount > 10000  && h.price.amount <= 15000;
+      else if (amt === 99999) budOk = h.price.amount > 15000;
+    }
+    return catOk && budOk;
+  });
+}
+
+// ── Render Grid ───────────────────────────────────────
+function renderGrid() {
+  const hampers   = getFiltered();
+  const wishlist  = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+  const isWished  = id => wishlist.some(w => w.id === id);
+  const grid      = document.getElementById('hampersGrid');
+  const countEl   = document.getElementById('resultsCount');
+  const headerEl  = document.getElementById('headerCount');
+
+  const total = ALL_HAMPERS.length;
+  const shown = hampers.length;
+
+  countEl.textContent  = `${shown} hamper${shown !== 1 ? 's' : ''}`;
+  headerEl.textContent = `${total} curated hampers across 5 collections`;
+
+  if (hampers.length === 0) {
+    grid.innerHTML = `
+      <div class="no-results">
+        <h3>No hampers match your filter</h3>
+        <p>Try a different collection or budget range.</p>
+      </div>`;
+    return;
+  }
+
+  grid.innerHTML = hampers.map((h, i) => {
+    const wished = isWished(h.id);
+    const delay  = (i % 4) + 1;
+    const hJSON  = JSON.stringify(h).replace(/"/g, '&quot;');
+    return `
+    <div class="hamper-card fade-up delay-${delay}" onclick="openPanel('${h.id}')">
+      <div class="hamper-card-image">
+        ${h.badge ? `<span class="hamper-badge ${getBadgeClass(h.badge)}">${h.badge}</span>` : ''}
+        <button class="hamper-wish-btn ${wished ? 'wishlisted' : ''}"
+          onclick="event.stopPropagation(); toggleWishlist('${h.id}', this)"
+          aria-label="${wished ? 'Remove from wishlist' : 'Add to wishlist'}">
+          ${wished ? '♥' : '♡'}
+        </button>
+        <img loading="lazy" decoding="async" src="${h.image}" alt="${h.name}">
+      </div>
+      <div class="hamper-card-info">
+        <div class="hamper-card-category">${h.category}</div>
+        <h3 class="hamper-card-name">${h.name}</h3>
+        <p class="hamper-card-tagline">${h.tagline}</p>
+        <div class="hamper-card-footer">
+          <span class="hamper-card-price">${h.price.display}</span>
+          <span class="hamper-enquire-btn">Details →</span>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  initFadeObserver();
+}
+
+function getBadgeClass(badge) {
+  if (!badge) return '';
+  if (badge === 'Bestseller' || badge === 'Most Popular') return 'gold';
+  if (badge === 'Eco-Friendly') return 'green';
+  return '';
+}
+
+// ── Filter Pills ──────────────────────────────────────
+function initFilters() {
+  document.querySelectorAll('[data-category]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-category]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCategory = btn.dataset.category;
+      renderGrid();
+    });
+  });
+
+  document.querySelectorAll('[data-budget]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-budget]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeBudget = btn.dataset.budget;
+      renderGrid();
+    });
+  });
+}
+
+// ── Detail Panel ──────────────────────────────────────
+function openPanel(id) {
+  const h = ALL_HAMPERS.find(x => x.id === id);
+  if (!h) return;
+
+  const wishlist = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+  const wished   = wishlist.some(w => w.id === h.id);
+
+  const highlights = (h.highlights || []).map(hl => `• ${hl}`).join('\n');
+  const waText = encodeURIComponent(
+`Hi Hamplee! I'm interested in this hamper:
+
+*${h.name}*
+Collection: ${h.category}
+Price: ${h.price.display}
+
+What's inside:
+${highlights}
+
+MOQ: ${h.moq || 10} pieces${h.customizable ? ' | Custom branding available' : ''}
+
+Please share availability and bulk pricing. Thank you!`
+  );
+  const mailSub  = encodeURIComponent(`Hamper Enquiry — ${h.name} | Hamplee`);
+  const mailBody = encodeURIComponent(
+`Hi Hamplee Team,
+
+I am interested in the following hamper and would like to know more:
+
+────────────────────────────
+HAMPER DETAILS
+────────────────────────────
+Name:        ${h.name}
+Collection:  ${h.category}
+Price:       ${h.price.display}
+
+Description:
+${h.description}
+
+What's Inside:
+${highlights}
+
+Minimum Order: ${h.moq || 10} pieces
+Custom Branding: ${h.customizable ? 'Available' : 'Not available'}
+────────────────────────────
+
+Could you please share bulk pricing, availability, and customisation options?
+
+Looking forward to hearing from you.
+
+Best regards`
+  );
+
+  document.getElementById('panelImg').src          = h.image;
+  document.getElementById('panelImg').alt          = h.name;
+  document.getElementById('panelCat').textContent  = h.category;
+  document.getElementById('panelBadge').textContent = h.badge || '';
+  document.getElementById('panelName').textContent  = h.name;
+  document.getElementById('panelPrice').textContent = h.price.display;
+  document.getElementById('panelDesc').textContent  = h.description;
+  document.getElementById('panelHighlights').innerHTML =
+    (h.highlights || []).map(hl => `<li class="panel-highlight-item">${hl}</li>`).join('');
+  document.getElementById('panelMOQ').innerHTML =
+    `<strong>Minimum order:</strong> ${h.moq || 10} pieces${h.customizable ? ' · Custom branding available' : ''}`;
+  document.getElementById('panelWA').href    = `https://wa.me/${CONTACT.whatsapp}?text=${waText}`;
+  document.getElementById('panelEmail').href = `mailto:${CONTACT.email}?subject=${mailSub}&body=${mailBody}`;
+
+  const wishBtn = document.getElementById('panelWishBtn');
+  wishBtn.classList.toggle('active', wished);
+  wishBtn.textContent = wished ? '♥ In Wishlist' : '♡ Add to Wishlist';
+  wishBtn.onclick = () => toggleWishlistPanel(h.id);
+
+  document.getElementById('detailPanel').dataset.hamper = h.id;
+  document.body.classList.add('panel-open');
+  document.getElementById('detailPanel').focus();
+}
+
+function closePanel() {
+  document.body.classList.remove('panel-open');
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closePanel();
+});
+
+// ── Wishlist ──────────────────────────────────────────
+function toggleWishlist(id, btn) {
+  const h = ALL_HAMPERS.find(x => x.id === id);
+  if (!h) return;
+  let wishlist = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+  const idx = wishlist.findIndex(w => w.id === id);
+  if (idx === -1) {
+    wishlist.push(h);
+    btn.classList.add('wishlisted');
+    btn.textContent = '♥';
+    btn.setAttribute('aria-label', 'Remove from wishlist');
+    showToast('Added to wishlist');
+  } else {
+    wishlist.splice(idx, 1);
+    btn.classList.remove('wishlisted');
+    btn.textContent = '♡';
+    btn.setAttribute('aria-label', 'Add to wishlist');
+    showToast('Removed from wishlist');
+  }
+  localStorage.setItem('likedWishlist', JSON.stringify(wishlist));
+  if (typeof updateLikedWishlistCount === 'function') updateLikedWishlistCount();
+}
+
+function toggleWishlistPanel(id) {
+  const h = ALL_HAMPERS.find(x => x.id === id);
+  if (!h) return;
+  let wishlist = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+  const idx = wishlist.findIndex(w => w.id === id);
+  const wishBtn = document.getElementById('panelWishBtn');
+  if (idx === -1) {
+    wishlist.push(h);
+    wishBtn.classList.add('active');
+    wishBtn.textContent = '♥ In Wishlist';
+    showToast('Added to wishlist');
+  } else {
+    wishlist.splice(idx, 1);
+    wishBtn.classList.remove('active');
+    wishBtn.textContent = '♡ Add to Wishlist';
+    showToast('Removed from wishlist');
+  }
+  localStorage.setItem('likedWishlist', JSON.stringify(wishlist));
+  // Also update the card button on the grid
+  const cardBtn = document.querySelector(`.hamper-card[onclick*="'${id}'"] .hamper-wish-btn`);
+  if (cardBtn) {
+    const wished = wishlist.some(w => w.id === id);
+    cardBtn.classList.toggle('wishlisted', wished);
+    cardBtn.textContent = wished ? '♥' : '♡';
+  }
+  if (typeof updateLikedWishlistCount === 'function') updateLikedWishlistCount();
+}
+
+// ── Toast ─────────────────────────────────────────────
+function showToast(msg) {
+  let t = document.getElementById('siteToast');
+  if (!t) {
+    t = document.createElement('div');
+    t.id = 'siteToast';
+    t.className = 'toast';
+    document.body.appendChild(t);
+  }
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// ── Fade observer ─────────────────────────────────────
+function initFadeObserver() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-up:not(.visible), .fade-in:not(.visible)').forEach(el => observer.observe(el));
+}
+
+document.addEventListener('DOMContentLoaded', initFadeObserver);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+Hamplee product catalog — edit catalog/products.json
+=====================================================
+
+Each entry is one object in the top-level JSON array.
+
+Required if you maintain the SKU dataset (the public “All Products” page redirects to curated hampers):
+  slug          Unique string id (e.g. "gourmet-002"). Used for wishlist & stability.
+  name          Display name.
+  category      Primary category label shown on the card (must stay consistent with your filters).
+  description   Full copy for the product modal.
+
+Pricing:
+  priceAmount   Number used for sorting (e.g. 1200).
+  priceLabel    Optional. If set, shown on cards/modal instead of auto-formatted ₹priceAmount.
+                Example: "Starting from ₹1,200"
+
+Images (pick one style):
+  A) image       Single primary image path.
+     gallery     Optional array of extra paths (carousel + modal thumbs).
+  B) images      Legacy: array of paths [ primary, ...extras ] — still supported by the loader.
+
+Optional:
+  badge         Short pill text, e.g. "New".
+  shortDesc     One-line teaser on the grid; if omitted, description is truncated.
+  tags          String array for chips and search.
+  legacyNumericId  Optional; kept when exporting from the old inline list.
+
+filters (required for sidebar filters — use [] if none):
+  category, occasion, budget, contents, sustainability, mood, recipient, packaging
+  Each value must match the checkbox values in products.html filter markup.
+
+After editing JSON, use a local HTTP server if you still load this file in any internal page (local file open will not load JSON).
+
+Re-export from old embedded data (if you temporarily put the array back):
+  node scripts/export-products-html-to-json.mjs

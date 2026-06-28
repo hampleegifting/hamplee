@@ -1,421 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishlist | Hamplee</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-        :root {
-            --gold: #C9A959;
-            --dark: #1A1A1A;
-            --light: #F8F7F4;
-            --white: #FFFFFF;
-            --grey: #6B6B6B;
-            --text: #333333;
-            --accent-color: #C9A959;
-        }
-    </style>
-    
-    <!-- Reusable Navigation Styles -->
-    <link rel="stylesheet" href="nav.css">
-    
-    <!-- Load navigation script early to prevent flicker -->
-    <script src="nav.js" defer></script>
-    
-    <style>
+  <title>My Wishlist — Hamplee</title>
+  <meta name="description" content="Your saved hampers from Hamplee. Enquire about your wishlist via WhatsApp or email.">
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: var(--light);
-            color: var(--text);
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap"></noscript>
 
-        h1, h2, h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 400;
-            line-height: 1.2;
-        }
-
-        /* Page Content */
-        .page-content {
-            padding-top: 60px;
-        }
-
-        .page-header {
-            text-align: center;
-            padding: 80px 40px 60px;
-            background: linear-gradient(135deg, #F8F7F4 0%, #FFFFFF 100%);
-            margin-bottom: 60px;
-        }
-
-        .page-header h1 {
-            font-size: 42px;
-            color: var(--dark);
-            margin-bottom: 20px;
-            font-weight: 300;
-            letter-spacing: 1.5px;
-            line-height: 1.3;
-        }
-
-        .page-header p {
-            font-size: 16px;
-            color: var(--grey);
-            max-width: 900px;
-            margin: 0 auto;
-            letter-spacing: 0.8px;
-            line-height: 1.6;
-            font-weight: 400;
-        }
-
-        .wishlist-actions {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 0 auto 40px;
-            padding: 20px;
-            background: white;
-            border-radius: 12px;
-            max-width: 1400px;
-        }
-
-        .wishlist-count {
-            font-size: 18px;
-            color: var(--dark);
-            font-weight: 600;
-        }
-
-        .btn {
-            padding: 14px 32px;
-            background: var(--gold);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn:hover {
-            background: var(--dark);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--gold);
-            border: 2px solid var(--gold);
-        }
-
-        .btn-outline:hover {
-            background: var(--gold);
-            color: white;
-        }
-
-        /* Products Grid */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 32px;
-            margin: 0 auto 60px;
-            max-width: 1400px;
-            padding: 0 40px;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        }
-
-        .product-image {
-            position: relative;
-            width: 100%;
-            height: 300px;
-            overflow: hidden;
-            background: var(--light);
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-
-        .product-card:hover .product-image img {
-            transform: scale(1.05);
-        }
-
-        .remove-btn {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            width: 36px;
-            height: 36px;
-            background: white;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            color: var(--dark);
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
-
-        .remove-btn:hover {
-            background: #ff4444;
-            color: white;
-            transform: scale(1.1);
-        }
-
-        .product-info {
-            padding: 24px;
-        }
-
-        .product-category {
-            font-size: 12px;
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .product-name {
-            font-size: 22px;
-            color: var(--dark);
-            margin-bottom: 12px;
-        }
-
-        .product-description {
-            font-size: 14px;
-            color: var(--grey);
-            line-height: 1.6;
-            margin-bottom: 16px;
-        }
-
-        .product-price {
-            font-size: 24px;
-            color: var(--gold);
-            font-weight: 700;
-        }
-
-        .empty-state {
-            text-align: center;
-            padding: 120px 40px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .empty-state-icon {
-            font-size: 80px;
-            margin-bottom: 24px;
-            opacity: 0.3;
-        }
-
-        .empty-state h2 {
-            font-size: 36px;
-            color: var(--dark);
-            margin-bottom: 16px;
-        }
-
-        .empty-state p {
-            font-size: 18px;
-            color: var(--grey);
-            margin-bottom: 32px;
-        }
-
-        /* Notification */
-        .wishlist-notification {
-            position: fixed;
-            top: 100px;
-            right: 30px;
-            background: var(--accent-color);
-            color: white;
-            padding: 16px 24px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 500;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            transform: translateX(400px);
-            transition: transform 0.3s ease;
-            z-index: 10000;
-        }
-
-        .wishlist-notification.show {
-            transform: translateX(0);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .page-header h1 {
-                font-size: 36px;
-            }
-
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .wishlist-actions {
-                flex-direction: column;
-                gap: 16px;
-            }
-        }
-    </style>
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="nav.js" defer></script>
 </head>
 <body>
-    <!-- Navigation placeholder to prevent layout shift -->
-    <div class="nav-placeholder"></div>
-    
-    <!-- Navigation loaded via nav.js -->
 
-    <div class="page-content">
-        <div class="page-header">
-            <h1>♥ Your Wishlist</h1>
-            <p>Your curated selection of favorite products</p>
-        </div>
+<div class="nav-placeholder"></div>
 
-        <div id="wishlistActions" class="wishlist-actions" style="display: none;">
-            <div class="wishlist-count">
-                <span id="wishlistCount">0</span> items in your wishlist
-            </div>
-            <div style="display: flex; gap: 16px;">
-                <button class="btn btn-outline" onclick="clearWishlist()">Clear All</button>
-                <a href="mood-board.html?skip=true" class="btn">Request Quote for Selected Items</a>
-            </div>
-        </div>
+<!-- ── Page Header ── -->
+<section class="wishlist-header">
+  <div class="container">
+    <span class="section-label">My Wishlist</span>
+    <h1 class="fade-up">Your Saved Hampers</h1>
+    <p class="fade-up delay-1" id="wishlistSubtitle">Loading your wishlist…</p>
+  </div>
+</section>
 
-        <div id="productsGrid" class="products-grid"></div>
-
-        <div id="emptyState" class="empty-state">
-            <div class="empty-state-icon">♡</div>
-            <h2>Your Wishlist is Empty</h2>
-            <p>Start adding products you love to create your perfect collection</p>
-            <a href="products.html" class="btn">Browse Products</a>
-        </div>
+<!-- ── Actions Bar ── -->
+<div class="wishlist-actions-bar" id="actionsBar" style="display:none">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <span class="wishlist-count-label" id="wishlistCountLabel"></span>
+    <div class="wishlist-enquire-bar">
+      <a href="#" class="btn btn-wa" id="waEnquireBtn" target="_blank">
+        <svg viewBox="0 0 24 24" width="16" height="16" style="fill:white;flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Enquire via WhatsApp
+      </a>
+      <a href="#" class="btn btn-outline" id="emailEnquireBtn">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Enquire via Email
+      </a>
+      <button class="btn-outline" onclick="clearWishlist()" style="padding:14px 20px;font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;background:transparent;color:var(--grey);border:1.5px solid rgba(0,0,0,0.12);cursor:pointer">
+        Clear All
+      </button>
     </div>
+  </div>
+</div>
 
-    <script>
-        let likedWishlist = JSON.parse(localStorage.getItem('likedWishlist')) || [];
+<!-- ── Grid ── -->
+<section class="wishlist-section">
+  <div class="container">
+    <div class="wishlist-grid" id="wishlistGrid"></div>
+    <div class="wishlist-empty" id="wishlistEmpty" style="display:none">
+      <span class="wishlist-empty-icon">♡</span>
+      <h2>Your Wishlist is Empty</h2>
+      <p>Browse our hampers and save the ones you love.</p>
+      <a href="hampers.html" class="btn">Browse Hampers</a>
+    </div>
+  </div>
+</section>
 
-        function renderWishlist() {
-            const grid = document.getElementById('productsGrid');
-            const emptyState = document.getElementById('emptyState');
-            const wishlistActions = document.getElementById('wishlistActions');
-            const wishlistCount = document.getElementById('wishlistCount');
-            const pageHeader = document.querySelector('.page-header');
+<!-- ── Footer ── -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-logo">HAMPLEE</span>
+        <p class="footer-tagline">Elevating gifting through curation, craft, and care.</p>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Browse</h4>
+        <ul class="footer-links">
+          <li><a href="hampers.html">All Hampers</a></li>
+          <li><a href="mood-board.html">Custom Order</a></li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Connect</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:hamplee.gifting@gmail.com">hamplee.gifting@gmail.com</a></li>
+          <li><a href="https://wa.me/917970765884" target="_blank">+91 79707 65884</a></li>
+          <li><a href="https://instagram.com/hamplee.gifting" target="_blank">@hamplee.gifting</a></li>
+        </ul>
+      </div>
+      <div></div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2025 Hamplee. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
 
-            if (likedWishlist.length === 0) {
-                grid.style.display = 'none';
-                wishlistActions.style.display = 'none';
-                pageHeader.style.display = 'none';
-                emptyState.style.display = 'block';
-                return;
-            }
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/917970765884?text=Hi%20Hamplee!%20I'd%20like%20to%20enquire%20about%20your%20hampers." class="wa-float" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 
-            grid.style.display = 'grid';
-            wishlistActions.style.display = 'flex';
-            pageHeader.style.display = 'block';
-            emptyState.style.display = 'none';
-            wishlistCount.textContent = likedWishlist.length;
+<script>
+// ══════════════════════════════════════════════════════
+//  Hamplee Wishlist Page
+// ══════════════════════════════════════════════════════
 
-            grid.innerHTML = likedWishlist.map((product, index) => {
-                // Get first image
-                let imageSrc = '';
-                if (product.images) {
-                    imageSrc = product.images[0];
-                } else if (product.image) {
-                    imageSrc = Array.isArray(product.image) ? product.image[0] : product.image;
-                }
+const WHATSAPP = '917970765884';
+const EMAIL    = 'hamplee.gifting@gmail.com';
 
-                return `
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="${imageSrc}" alt="${product.name}">
-                        <button class="remove-btn" onclick="removeFromWishlist(${product.id})" title="Remove from wishlist">×</button>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-category">${product.category}</div>
-                        <h3 class="product-name">${product.name}</h3>
-                        <p class="product-description">${product.description}</p>
-                        <div class="product-price">₹${product.price.toLocaleString()}</div>
-                    </div>
-                </div>
-                `;
-            }).join('');
-        }
+function getWishlist() {
+  return JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+}
 
-        function removeFromWishlist(productId) {
-            const index = likedWishlist.findIndex(p => p.id === productId);
-            if (index !== -1) {
-                likedWishlist.splice(index, 1);
-                localStorage.setItem('likedWishlist', JSON.stringify(likedWishlist));
-                renderWishlist();
-                
-                // Update navigation counter
-                if (typeof updateWishlistCount === 'function') {
-                    updateWishlistCount();
-                }
-                
-                showNotification('Removed from wishlist');
-            }
-        }
+function saveWishlist(list) {
+  localStorage.setItem('likedWishlist', JSON.stringify(list));
+  if (typeof updateLikedWishlistCount === 'function') updateLikedWishlistCount();
+}
 
-        function clearWishlist() {
-            if (confirm('Are you sure you want to clear all items from your wishlist?')) {
-                likedWishlist = [];
-                localStorage.setItem('likedWishlist', JSON.stringify(likedWishlist));
-                renderWishlist();
-                
-                // Update navigation counter
-                if (typeof updateWishlistCount === 'function') {
-                    updateWishlistCount();
-                }
-                
-                showNotification('Wishlist cleared');
-            }
-        }
+// ── Build enquiry messages from wishlist ────────────
+function buildWAMessage(items) {
+  const list = items.map((h, i) => {
+    const price      = h.price ? h.price.display : (h.priceLabel || '');
+    const highlights = (h.highlights || []).map(hl => `   • ${hl}`).join('\n');
+    return `${i + 1}. *${h.name}*\n   Collection: ${h.category || ''} | Price: ${price}${highlights ? '\n' + highlights : ''}`;
+  }).join('\n\n');
+  return encodeURIComponent(
+`Hi Hamplee! I've shortlisted the following hampers and would like to enquire:
 
-        function showNotification(message) {
-            const notification = document.createElement('div');
-            notification.className = 'wishlist-notification';
-            notification.textContent = message;
-            document.body.appendChild(notification);
-            
-            setTimeout(() => notification.classList.add('show'), 10);
-            
-            setTimeout(() => {
-                notification.classList.remove('show');
-                setTimeout(() => notification.remove(), 300);
-            }, 3000);
-        }
+${list}
 
-        // Initialize
-        document.addEventListener('DOMContentLoaded', renderWishlist);
-    </script>
+Could you please share bulk pricing, availability, and customisation options for all items? Thank you!`
+  );
+}
+
+function buildEmailBody(items) {
+  const list = items.map((h, i) => {
+    const price      = h.price ? h.price.display : (h.priceLabel || '');
+    const highlights = (h.highlights || []).map(hl => `     • ${hl}`).join('\n');
+    const moq        = h.moq ? `\n   MOQ: ${h.moq} pieces` : '';
+    return `${i + 1}. ${h.name}\n   Collection: ${h.category || ''} | Price: ${price}${moq}${highlights ? `\n   What's inside:\n${highlights}` : ''}`;
+  }).join('\n\n');
+  return {
+    subject: encodeURIComponent(`Hamplee Wishlist Enquiry — ${items.length} Hamper${items.length > 1 ? 's' : ''}`),
+    body: encodeURIComponent(
+`Hi Hamplee Team,
+
+I've shortlisted the following hampers and would like to enquire about pricing, availability, and customisation options:
+
+────────────────────────────
+WISHLIST (${items.length} hamper${items.length > 1 ? 's' : ''})
+────────────────────────────
+
+${list}
+
+────────────────────────────
+
+Please get in touch with bulk pricing and delivery details.
+
+Best regards`
+    )
+  };
+}
+
+// ── Render ────────────────────────────────────────────
+function render() {
+  const wishlist  = getWishlist();
+  const grid      = document.getElementById('wishlistGrid');
+  const empty     = document.getElementById('wishlistEmpty');
+  const actionsBar = document.getElementById('actionsBar');
+  const subtitle  = document.getElementById('wishlistSubtitle');
+  const countLabel = document.getElementById('wishlistCountLabel');
+
+  if (wishlist.length === 0) {
+    grid.innerHTML = '';
+    grid.style.display = 'none';
+    empty.style.display = 'block';
+    actionsBar.style.display = 'none';
+    subtitle.textContent = 'Save hampers while browsing to build your personal collection.';
+    return;
+  }
+
+  // Show actions bar
+  actionsBar.style.display = 'flex';
+  grid.style.display = 'grid';
+  empty.style.display = 'none';
+  countLabel.textContent = `${wishlist.length} hamper${wishlist.length !== 1 ? 's' : ''} saved`;
+  subtitle.textContent   = `${wishlist.length} hamper${wishlist.length !== 1 ? 's' : ''} in your wishlist`;
+
+  // Wire up enquiry buttons
+  const waMsg  = buildWAMessage(wishlist);
+  const emailD = buildEmailBody(wishlist);
+  document.getElementById('waEnquireBtn').href    = `https://wa.me/${WHATSAPP}?text=${waMsg}`;
+  document.getElementById('emailEnquireBtn').href = `mailto:${EMAIL}?subject=${emailD.subject}&body=${emailD.body}`;
+
+  // Render cards
+  grid.innerHTML = wishlist.map(h => {
+    const img   = h.image || (h.images && h.images[0]) || '';
+    const price = h.price ? h.price.display : (h.priceLabel || '');
+    const cat   = h.category || '';
+    const badge = h.badge || '';
+    return `
+    <div class="hamper-card">
+      <div class="hamper-card-image">
+        ${badge ? `<span class="hamper-badge ${getBadgeClass(badge)}">${badge}</span>` : ''}
+        <button class="hamper-wish-btn wishlisted" onclick="removeFromWishlist('${h.id}', this)" aria-label="Remove from wishlist" title="Remove from wishlist">♥</button>
+        <img loading="lazy" src="${img}" alt="${h.name}">
+      </div>
+      <div class="hamper-card-info">
+        <div class="hamper-card-category">${cat}</div>
+        <h3 class="hamper-card-name">${h.name}</h3>
+        <p class="hamper-card-tagline">${h.tagline || ''}</p>
+        <div class="hamper-card-footer">
+          <span class="hamper-card-price">${price}</span>
+          <a href="${buildSingleWALink(h)}" target="_blank" class="hamper-enquire-btn" onclick="event.stopPropagation()">Enquire →</a>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function buildSingleWALink(h) {
+  const price      = h.price ? h.price.display : (h.priceLabel || '');
+  const highlights = (h.highlights || []).map(hl => `• ${hl}`).join('\n');
+  const msg = encodeURIComponent(
+`Hi Hamplee! I'm interested in this hamper:
+
+*${h.name}*
+Collection: ${h.category || ''}
+Price: ${price}
+
+What's inside:
+${highlights}
+
+MOQ: ${h.moq || 10} pieces${h.customizable ? ' | Custom branding available' : ''}
+
+Please share availability and bulk pricing. Thank you!`
+  );
+  return `https://wa.me/${WHATSAPP}?text=${msg}`;
+}
+
+function getBadgeClass(badge) {
+  if (badge === 'Bestseller' || badge === 'Most Popular') return 'gold';
+  if (badge === 'Eco-Friendly') return 'green';
+  return '';
+}
+
+// ── Actions ────────────────────────────────────────────
+function removeFromWishlist(id, btn) {
+  let wishlist = getWishlist();
+  wishlist = wishlist.filter(h => h.id !== id);
+  saveWishlist(wishlist);
+  showToast('Removed from wishlist');
+  render();
+}
+
+function clearWishlist() {
+  if (!confirm('Remove all hampers from your wishlist?')) return;
+  saveWishlist([]);
+  render();
+  showToast('Wishlist cleared');
+}
+
+// ── Toast ─────────────────────────────────────────────
+function showToast(msg) {
+  let t = document.getElementById('siteToast');
+  if (!t) {
+    t = document.createElement('div');
+    t.id = 'siteToast';
+    t.className = 'toast';
+    document.body.appendChild(t);
+  }
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// ── Fade observer ─────────────────────────────────────
+function initFadeObserver() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up, .fade-in').forEach(el => observer.observe(el));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  render();
+  initFadeObserver();
+});
+</script>
+
 </body>
 </html>
-

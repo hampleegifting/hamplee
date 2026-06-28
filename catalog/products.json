@@ -1,0 +1,3128 @@
+[
+  {
+    "slug": "sku-1",
+    "legacyNumericId": 1,
+    "name": "Amber Jar Soy Wax Candle",
+    "category": "Home Décor & Lifestyle",
+    "badge": "Bestseller",
+    "image": "asset/sku/Amber Jar  Soy Wax Candle/20230417_112146_0004_ff3c2482-7f62-4d12-9b62-ca3b3e9d91bc.webp",
+    "gallery": [
+      "asset/sku/Amber Jar  Soy Wax Candle/20230417_112146_0014.webp",
+      "asset/sku/Amber Jar  Soy Wax Candle/ChatGPTImageJul31_2025_02_43_56PM.webp",
+      "asset/sku/Amber Jar  Soy Wax Candle/WhatsAppImage2025-07-31at12.05.06PM_2.webp"
+    ],
+    "priceAmount": 499,
+    "priceLabel": null,
+    "shortDesc": "Premium fragranced 100gm soya wax candle in elegant amber jar",
+    "description": "Premium fragranced 100gm soya wax candle in elegant amber jar",
+    "tags": [
+      "Candles",
+      "Home Décor",
+      "Premium"
+    ],
+    "filters": {
+      "category": [
+        "Home Décor & Lifestyle",
+        "Wellness"
+      ],
+      "occasion": [
+        "Festive Gifting",
+        "Client Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Candles"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Warm & Cozy",
+        "Calm & Relaxing"
+      ]
+    }
+  },
+  {
+    "slug": "sku-2",
+    "legacyNumericId": 2,
+    "name": "Lotus Urli Candle",
+    "category": "Home Décor & Lifestyle",
+    "badge": "Festive",
+    "image": "asset/sku/Lotus Urli Candle/2_5a24dab5-cbf0-4545-9895-a38c81fb28f4.webp",
+    "gallery": [
+      "asset/sku/Lotus Urli Candle/IMG_6672.webp",
+      "asset/sku/Lotus Urli Candle/IMG_6679_1.webp"
+    ],
+    "priceAmount": 799,
+    "priceLabel": null,
+    "shortDesc": "Traditional lotus design urli candle for festive and spiritual ambiance",
+    "description": "Traditional lotus design urli candle for festive and spiritual ambiance",
+    "tags": [
+      "Candles",
+      "Festive",
+      "Traditional"
+    ],
+    "filters": {
+      "category": [
+        "Home Décor & Lifestyle",
+        "Festive"
+      ],
+      "occasion": [
+        "Festive Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Candles"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Festive & Joyful",
+        "Warm & Cozy"
+      ]
+    }
+  },
+  {
+    "slug": "sku-3",
+    "legacyNumericId": 3,
+    "name": "Scented Coconut Shell Candle",
+    "category": "Sustainable",
+    "badge": "Eco-Friendly",
+    "image": "asset/sku/Scented Coconut Shell Candle/51h9fzZNbmL._SL1080_.jpg",
+    "gallery": [],
+    "priceAmount": 449,
+    "priceLabel": null,
+    "shortDesc": "Eco-friendly scented candle in natural coconut shell",
+    "description": "Eco-friendly scented candle in natural coconut shell",
+    "tags": [
+      "Eco-Friendly",
+      "Candles",
+      "Sustainable"
+    ],
+    "filters": {
+      "category": [
+        "Sustainable",
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Employee Appreciation"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Candles"
+      ],
+      "sustainability": [
+        "Eco-Friendly",
+        "Reusable"
+      ],
+      "mood": [
+        "Fresh & Natural",
+        "Calm & Relaxing"
+      ]
+    }
+  },
+  {
+    "slug": "sku-4",
+    "legacyNumericId": 4,
+    "name": "Candle Warmer Lamp",
+    "category": "Home Décor & Lifestyle",
+    "badge": "New",
+    "image": "asset/sku/Candle Warmer Lamp/71LjHGIl68L._SL1500__1.webp",
+    "gallery": [
+      "asset/sku/Candle Warmer Lamp/ChatGPT_Image_Dec_13_2025_11_48_48_AM.webp"
+    ],
+    "priceAmount": 1299,
+    "priceLabel": null,
+    "shortDesc": "Elegant candle warmer lamp for flameless fragrance experience",
+    "description": "Elegant candle warmer lamp for flameless fragrance experience",
+    "tags": [
+      "Home Décor",
+      "Candles",
+      "Modern"
+    ],
+    "filters": {
+      "category": [
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Candles"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Elegant & Premium",
+        "Warm & Cozy"
+      ]
+    }
+  },
+  {
+    "slug": "sku-5",
+    "legacyNumericId": 5,
+    "name": "Aromatherapy Flame Humidifier",
+    "category": "Wellness",
+    "badge": "Popular",
+    "image": "asset/sku/Aromatherapy Flame Humidifier/1_1.webp",
+    "gallery": [
+      "asset/sku/Aromatherapy Flame Humidifier/5_91601cb7-cdfd-495e-9c64-8b4478bb6994.webp",
+      "asset/sku/Aromatherapy Flame Humidifier/6_1_1f04ed3f-5cde-4354-813b-b6d644ca4ba6.webp"
+    ],
+    "priceAmount": 1499,
+    "priceLabel": null,
+    "shortDesc": "Modern flame humidifier with aromatherapy for relaxation and wellness",
+    "description": "Modern flame humidifier with aromatherapy for relaxation and wellness",
+    "tags": [
+      "Wellness",
+      "Aromatherapy",
+      "Modern"
+    ],
+    "filters": {
+      "category": [
+        "Wellness",
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Client Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [],
+      "mood": [
+        "Calm & Relaxing"
+      ]
+    }
+  },
+  {
+    "slug": "sku-6",
+    "legacyNumericId": 6,
+    "name": "Luxe Reed Diffuser",
+    "category": "Home Décor & Lifestyle",
+    "badge": "Premium",
+    "image": "asset/sku/Luxe Reed Diffuser/02.webp",
+    "gallery": [
+      "asset/sku/Luxe Reed Diffuser/d_8940224f-6144-408d-90b0-0dae715ad773.webp"
+    ],
+    "priceAmount": 899,
+    "priceLabel": null,
+    "shortDesc": "Premium reed diffuser for continuous elegant fragrance",
+    "description": "Premium reed diffuser for continuous elegant fragrance",
+    "tags": [
+      "Home Décor",
+      "Fragrance",
+      "Premium"
+    ],
+    "filters": {
+      "category": [
+        "Home Décor & Lifestyle",
+        "Wellness"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [],
+      "mood": [
+        "Elegant & Premium",
+        "Calm & Relaxing"
+      ]
+    }
+  },
+  {
+    "slug": "sku-7",
+    "legacyNumericId": 7,
+    "name": "Ceramic Coffee Mug",
+    "category": "Home Décor & Lifestyle",
+    "badge": "Bestseller",
+    "image": "asset/sku/Ceramic Coffee Mug/712uiWAmysL._SL1500_.jpg",
+    "gallery": [
+      "asset/sku/Ceramic Coffee Mug/71Qmq+Z-efL._SL1500_.jpg",
+      "asset/sku/Ceramic Coffee Mug/FullSizeRender_6.webp",
+      "asset/sku/Ceramic Coffee Mug/IMG-20251125-WA0159.webp"
+    ],
+    "priceAmount": 399,
+    "priceLabel": null,
+    "shortDesc": "Rustic earthen brew artisan ceramic mug, 400ml capacity",
+    "description": "Rustic earthen brew artisan ceramic mug, 400ml capacity",
+    "tags": [
+      "Drinkware",
+      "Ceramic",
+      "Handcrafted"
+    ],
+    "filters": {
+      "category": [
+        "Home Décor & Lifestyle",
+        "Office Utility"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Onboarding"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Warm & Cozy"
+      ]
+    }
+  },
+  {
+    "slug": "sku-8",
+    "legacyNumericId": 8,
+    "name": "Copper Bottle",
+    "category": "Wellness",
+    "badge": "Wellness",
+    "image": "asset/sku/Copper Bottle/CopperCulture-28AUG25-756-Retouched.webp",
+    "gallery": [
+      "asset/sku/Copper Bottle/CopperCulture-28AUG25-776-Retouched.webp",
+      "asset/sku/Copper Bottle/CopperCulture-28AUG25-782-Retouched.webp"
+    ],
+    "priceAmount": 799,
+    "priceLabel": null,
+    "shortDesc": "Pure copper water bottle for health and wellness benefits",
+    "description": "Pure copper water bottle for health and wellness benefits",
+    "tags": [
+      "Wellness",
+      "Copper",
+      "Health"
+    ],
+    "filters": {
+      "category": [
+        "Wellness",
+        "Office Utility"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Client Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware"
+      ],
+      "sustainability": [
+        "Reusable"
+      ],
+      "mood": [
+        "Fresh & Natural"
+      ]
+    }
+  },
+  {
+    "slug": "sku-9",
+    "legacyNumericId": 9,
+    "name": "Travel Tumbler",
+    "category": "Office Utility",
+    "badge": "Popular",
+    "image": "asset/sku/Travel Tumbler/41aHZe9L-tL.jpg",
+    "gallery": [],
+    "priceAmount": 699,
+    "priceLabel": null,
+    "shortDesc": "Insulated travel tumbler for hot and cold beverages on the go",
+    "description": "Insulated travel tumbler for hot and cold beverages on the go",
+    "tags": [
+      "Drinkware",
+      "Travel",
+      "Insulated"
+    ],
+    "filters": {
+      "category": [
+        "Office Utility"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Onboarding"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware"
+      ],
+      "sustainability": [
+        "Reusable"
+      ],
+      "mood": [
+        "Elegant & Premium"
+      ]
+    }
+  },
+  {
+    "slug": "sku-10",
+    "legacyNumericId": 10,
+    "name": "Glass Sipper",
+    "category": "Sustainable",
+    "badge": "Eco-Friendly",
+    "image": "asset/sku/Glass Sipper/jay-gatrad-seller-glass-tumbler-with-lid-and-straw-wide-mouth-mason-jar-drinking-glasses-product-images-orv8v966vck-p604674213-1-202309201411.jpg",
+    "gallery": [],
+    "priceAmount": 549,
+    "priceLabel": null,
+    "shortDesc": "Eco-friendly glass sipper with bamboo lid and straw",
+    "description": "Eco-friendly glass sipper with bamboo lid and straw",
+    "tags": [
+      "Eco-Friendly",
+      "Glass",
+      "Reusable"
+    ],
+    "filters": {
+      "category": [
+        "Sustainable",
+        "Office Utility"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Client Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware"
+      ],
+      "sustainability": [
+        "Eco-Friendly",
+        "Reusable",
+        "Plastic-Free"
+      ],
+      "mood": [
+        "Fresh & Natural"
+      ]
+    }
+  },
+  {
+    "slug": "sku-11",
+    "legacyNumericId": 11,
+    "name": "Moscow Mule Mug",
+    "category": "Premium",
+    "badge": "Premium",
+    "image": "asset/sku/Moscow Mule Mug/3_d9fe00c9-c2fb-4f69-9fe1-12a7be844157-2025-01-08-113332-m18kf982b7s.jpg-2025-10-08-112514-q8bjg1bv4wj.jpeg",
+    "gallery": [],
+    "priceAmount": 899,
+    "priceLabel": null,
+    "shortDesc": "Premium copper moscow mule mug for sophisticated beverage service",
+    "description": "Premium copper moscow mule mug for sophisticated beverage service",
+    "tags": [
+      "Premium",
+      "Copper",
+      "Barware"
+    ],
+    "filters": {
+      "category": [
+        "Premium",
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Elegant & Premium"
+      ]
+    }
+  },
+  {
+    "slug": "sku-12",
+    "legacyNumericId": 12,
+    "name": "Brass Glass",
+    "category": "Premium",
+    "badge": null,
+    "image": "asset/sku/Brass Glass/71Y5S-zA5jL._SL1500_.jpg",
+    "gallery": [
+      "asset/sku/Brass Glass/71Zl-tYUCpL._SL1500_.jpg",
+      "asset/sku/Brass Glass/81a137-9KPL._SL1500_.webp"
+    ],
+    "priceAmount": 649,
+    "priceLabel": null,
+    "shortDesc": "Traditional brass drinking glass with elegant finish",
+    "description": "Traditional brass drinking glass with elegant finish",
+    "tags": [
+      "Brass",
+      "Traditional",
+      "Premium"
+    ],
+    "filters": {
+      "category": [
+        "Premium",
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Festive Gifting",
+        "Client Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Elegant & Premium",
+        "Festive & Joyful"
+      ]
+    }
+  },
+  {
+    "slug": "sku-13",
+    "legacyNumericId": 13,
+    "name": "Pure Copper Glass with Embossed",
+    "category": "Premium",
+    "badge": null,
+    "image": "asset/sku/Pure Copper Glass with Embossed/IAV-CC-3-136-EA.webp",
+    "gallery": [],
+    "priceAmount": 749,
+    "priceLabel": null,
+    "shortDesc": "Handcrafted embossed copper glass for health and elegance",
+    "description": "Handcrafted embossed copper glass for health and elegance",
+    "tags": [
+      "Copper",
+      "Handcrafted",
+      "Premium"
+    ],
+    "filters": {
+      "category": [
+        "Premium",
+        "Wellness"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware"
+      ],
+      "sustainability": [
+        "Handmade"
+      ],
+      "mood": [
+        "Elegant & Premium"
+      ]
+    }
+  },
+  {
+    "slug": "sku-14",
+    "legacyNumericId": 14,
+    "name": "Steel Wine Glass - Unbreakable Gold",
+    "category": "Premium",
+    "badge": "Luxury",
+    "image": "asset/sku/Steel Wine Glass - Unbreakable Gold/51FY1bbDvqL._SL1500_.jpg",
+    "gallery": [],
+    "priceAmount": 999,
+    "priceLabel": null,
+    "shortDesc": "Luxurious gold-finish unbreakable steel wine glasses",
+    "description": "Luxurious gold-finish unbreakable steel wine glasses",
+    "tags": [
+      "Premium",
+      "Steel",
+      "Gold"
+    ],
+    "filters": {
+      "category": [
+        "Premium"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware"
+      ],
+      "sustainability": [
+        "Reusable"
+      ],
+      "mood": [
+        "Elegant & Premium"
+      ]
+    }
+  },
+  {
+    "slug": "sku-15",
+    "legacyNumericId": 15,
+    "name": "Rice Husk Wine Glasses",
+    "category": "Sustainable",
+    "badge": "Eco-Friendly",
+    "image": "asset/sku/Rice Husk Wine Glasses/ppxfqmrc-Rice husk Wine glasses set of 2.jpg",
+    "gallery": [],
+    "priceAmount": 599,
+    "priceLabel": null,
+    "shortDesc": "Eco-friendly wine glasses made from rice husk composite",
+    "description": "Eco-friendly wine glasses made from rice husk composite",
+    "tags": [
+      "Eco-Friendly",
+      "Sustainable",
+      "Innovative"
+    ],
+    "filters": {
+      "category": [
+        "Sustainable"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Employee Appreciation"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware"
+      ],
+      "sustainability": [
+        "Eco-Friendly",
+        "Plastic-Free"
+      ],
+      "mood": [
+        "Fresh & Natural"
+      ]
+    }
+  },
+  {
+    "slug": "sku-16",
+    "legacyNumericId": 16,
+    "name": "Ceramic Tea Cups",
+    "category": "Home Décor & Lifestyle",
+    "badge": null,
+    "image": "asset/sku/Ceramic Tea Cups/712uiWAmysL._SL1500_.jpg",
+    "gallery": [
+      "asset/sku/Ceramic Tea Cups/81L69pADibL._SL1500_.jpg",
+      "asset/sku/Ceramic Tea Cups/81phKoYB+1L._SL1500_.jpg"
+    ],
+    "priceAmount": 449,
+    "priceLabel": null,
+    "shortDesc": "Elegant ceramic tea cups set for traditional tea service",
+    "description": "Elegant ceramic tea cups set for traditional tea service",
+    "tags": [
+      "Ceramic",
+      "Tea",
+      "Traditional"
+    ],
+    "filters": {
+      "category": [
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Festive Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware",
+        "Premium Tea"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Warm & Cozy"
+      ]
+    }
+  },
+  {
+    "slug": "sku-17",
+    "legacyNumericId": 17,
+    "name": "Dabara Set",
+    "category": "Home Décor & Lifestyle",
+    "badge": null,
+    "image": "asset/sku/Dabara Set/1712711596308_618HLm0PvpL.webp",
+    "gallery": [],
+    "priceAmount": 599,
+    "priceLabel": null,
+    "shortDesc": "Traditional South Indian dabara set for filter coffee",
+    "description": "Traditional South Indian dabara set for filter coffee",
+    "tags": [
+      "Traditional",
+      "Coffee",
+      "Cultural"
+    ],
+    "filters": {
+      "category": [
+        "Home Décor & Lifestyle",
+        "Gourmet & Edible"
+      ],
+      "occasion": [
+        "Festive Gifting",
+        "Client Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Warm & Cozy"
+      ]
+    }
+  },
+  {
+    "slug": "sku-18",
+    "legacyNumericId": 18,
+    "name": "Stainless Steel Mug",
+    "category": "Office Utility",
+    "badge": "Bestseller",
+    "image": "asset/sku/Stainley Mug/41JXjvuj2sL._SL1500_.jpg",
+    "gallery": [],
+    "priceAmount": 349,
+    "priceLabel": null,
+    "shortDesc": "Durable stainless steel mug for everyday office use",
+    "description": "Durable stainless steel mug for everyday office use",
+    "tags": [
+      "Office",
+      "Durable",
+      "Stainless Steel"
+    ],
+    "filters": {
+      "category": [
+        "Office Utility"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Onboarding"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware"
+      ],
+      "sustainability": [
+        "Reusable"
+      ],
+      "mood": []
+    }
+  },
+  {
+    "slug": "sku-19",
+    "legacyNumericId": 19,
+    "name": "Organic Honey",
+    "category": "Gourmet & Edible",
+    "badge": "Organic",
+    "image": "asset/sku/Organic Honey/719px3TvM3L._SL1500_.jpg",
+    "gallery": [
+      "asset/sku/Organic Honey/71HZbCXEfNL._SL1500_.jpg",
+      "asset/sku/Organic Honey/81mCc-1bFVL._SL1500_.jpg"
+    ],
+    "priceAmount": 599,
+    "priceLabel": null,
+    "shortDesc": "Raw Jamun honey - organic, unprocessed, and NMR tested pure honey",
+    "description": "Raw Jamun honey - organic, unprocessed, and NMR tested pure honey",
+    "tags": [
+      "Organic",
+      "Honey",
+      "Health"
+    ],
+    "filters": {
+      "category": [
+        "Gourmet & Edible",
+        "Wellness"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Food & Beverage"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Fresh & Natural"
+      ]
+    }
+  },
+  {
+    "slug": "sku-20",
+    "legacyNumericId": 20,
+    "name": "Baklava Assortment",
+    "category": "Gourmet & Edible",
+    "badge": "Premium",
+    "image": "asset/sku/Baklava Assortment/Baklava-Classic-assortment-9-Pcs.webp",
+    "gallery": [
+      "asset/sku/Baklava Assortment/DSC01482_copy_1_1.webp",
+      "asset/sku/Baklava Assortment/DSC01523_copy_1.webp"
+    ],
+    "priceAmount": 899,
+    "priceLabel": null,
+    "shortDesc": "Premium baklava classic assortment - 9 pieces of exquisite sweetness",
+    "description": "Premium baklava classic assortment - 9 pieces of exquisite sweetness",
+    "tags": [
+      "Gourmet",
+      "Sweets",
+      "Premium"
+    ],
+    "filters": {
+      "category": [
+        "Gourmet & Edible"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events",
+        "Festive Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Food & Beverage"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Festive & Joyful",
+        "Elegant & Premium"
+      ]
+    }
+  },
+  {
+    "slug": "sku-21",
+    "legacyNumericId": 21,
+    "name": "GoDesi Kaju Katli Sweet",
+    "category": "Gourmet & Edible",
+    "badge": "Festive",
+    "image": "asset/sku/GoDesi Kaju Katli Sweet/01_2d2594ba-0887-40d4-9ba5-0e8327fb0673_700x.webp",
+    "gallery": [],
+    "priceAmount": 799,
+    "priceLabel": null,
+    "shortDesc": "Traditional Indian kaju katli sweet made with premium cashews",
+    "description": "Traditional Indian kaju katli sweet made with premium cashews",
+    "tags": [
+      "Indian Sweets",
+      "Traditional",
+      "Festive"
+    ],
+    "filters": {
+      "category": [
+        "Gourmet & Edible",
+        "Festive"
+      ],
+      "occasion": [
+        "Festive Gifting",
+        "Client Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Food & Beverage",
+        "Indian Sweets"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Festive & Joyful"
+      ]
+    }
+  },
+  {
+    "slug": "sku-22",
+    "legacyNumericId": 22,
+    "name": "GoDesi Kaju Bar",
+    "category": "Gourmet & Edible",
+    "badge": null,
+    "image": "asset/sku/GoDesi Kaju Bar/81-ipXnMDSL._SX679_.jpg",
+    "gallery": [],
+    "priceAmount": 699,
+    "priceLabel": null,
+    "shortDesc": "Premium cashew bars - healthy and delicious snacking option",
+    "description": "Premium cashew bars - healthy and delicious snacking option",
+    "tags": [
+      "Dry Fruits",
+      "Healthy",
+      "Snacks"
+    ],
+    "filters": {
+      "category": [
+        "Gourmet & Edible"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Client Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Food & Beverage",
+        "Dry Fruits"
+      ],
+      "sustainability": [],
+      "mood": []
+    }
+  },
+  {
+    "slug": "sku-23",
+    "legacyNumericId": 23,
+    "name": "Sensational Chocolate Box",
+    "category": "Gourmet & Edible",
+    "badge": "Premium",
+    "image": "asset/sku/Sensational Chocolate Box/4pcschocolatebox-3_800x.webp",
+    "gallery": [],
+    "priceAmount": 1299,
+    "priceLabel": null,
+    "shortDesc": "Luxurious assorted chocolate box for special occasions",
+    "description": "Luxurious assorted chocolate box for special occasions",
+    "tags": [
+      "Chocolates",
+      "Premium",
+      "Luxury"
+    ],
+    "filters": {
+      "category": [
+        "Gourmet & Edible",
+        "Premium"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events",
+        "Milestones"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Chocolates"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Elegant & Premium"
+      ]
+    }
+  },
+  {
+    "slug": "sku-24",
+    "legacyNumericId": 24,
+    "name": "The Gourmet Jar",
+    "category": "Gourmet & Edible",
+    "badge": null,
+    "image": "asset/sku/The Gourmet Jar/61BQC9NYA6L._SL1080_.jpg",
+    "gallery": [],
+    "priceAmount": 849,
+    "priceLabel": null,
+    "shortDesc": "Curated gourmet jar with premium condiments and preserves",
+    "description": "Curated gourmet jar with premium condiments and preserves",
+    "tags": [
+      "Gourmet",
+      "Condiments",
+      "Premium"
+    ],
+    "filters": {
+      "category": [
+        "Gourmet & Edible"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Food & Beverage",
+        "Gourmet Jars"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Elegant & Premium"
+      ]
+    }
+  },
+  {
+    "slug": "sku-25",
+    "legacyNumericId": 25,
+    "name": "Bee Wax Candle & Honey Set",
+    "category": "Gourmet & Edible",
+    "badge": "Eco-Friendly",
+    "image": "asset/sku/Bee Wax Candle & Honey Set/DK10-Graphic-BioQ-Eco-Sustainability-scaled.webp",
+    "gallery": [
+      "asset/sku/Bee Wax Candle & Honey Set/HN04-BioQ-Eco-Sustainability-scaled.webp",
+      "asset/sku/Bee Wax Candle & Honey Set/hn02-3-250x250.webp"
+    ],
+    "priceAmount": 999,
+    "priceLabel": null,
+    "shortDesc": "Natural bee wax candle paired with organic honey gift set",
+    "description": "Natural bee wax candle paired with organic honey gift set",
+    "tags": [
+      "Natural",
+      "Honey",
+      "Candles"
+    ],
+    "filters": {
+      "category": [
+        "Gourmet & Edible",
+        "Sustainable",
+        "Wellness"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Food & Beverage",
+        "Candles"
+      ],
+      "sustainability": [
+        "Eco-Friendly"
+      ],
+      "mood": [
+        "Fresh & Natural",
+        "Warm & Cozy"
+      ]
+    }
+  },
+  {
+    "slug": "sku-26",
+    "legacyNumericId": 26,
+    "name": "Brass Coffee Filter Drip Brewer",
+    "category": "Premium",
+    "badge": "Premium",
+    "image": "asset/sku/Brass Coffee Filter Drip Brewer/617jWilffGL._SL1500_.jpg",
+    "gallery": [
+      "asset/sku/Brass Coffee Filter Drip Brewer/718KdNDQIbL._SL1500_.jpg",
+      "asset/sku/Brass Coffee Filter Drip Brewer/81-eTf1k01L._SL1500_.jpg"
+    ],
+    "priceAmount": 1499,
+    "priceLabel": null,
+    "shortDesc": "Traditional brass coffee filter for authentic South Indian filter coffee",
+    "description": "Traditional brass coffee filter for authentic South Indian filter coffee",
+    "tags": [
+      "Coffee",
+      "Brass",
+      "Traditional"
+    ],
+    "filters": {
+      "category": [
+        "Premium",
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [],
+      "mood": [
+        "Warm & Cozy",
+        "Elegant & Premium"
+      ]
+    }
+  },
+  {
+    "slug": "sku-27",
+    "legacyNumericId": 27,
+    "name": "Eco-friendly Plantable Pencils",
+    "category": "Sustainable",
+    "badge": "Eco-Friendly",
+    "image": "asset/sku/Eco-friendly Plantable Pencils/61BQlxCgnYL._SL1500_.jpg",
+    "gallery": [],
+    "priceAmount": 299,
+    "priceLabel": null,
+    "shortDesc": "Plant these pencils after use and grow herbs or flowers",
+    "description": "Plant these pencils after use and grow herbs or flowers",
+    "tags": [
+      "Plantable",
+      "Eco-Friendly",
+      "Stationery"
+    ],
+    "filters": {
+      "category": [
+        "Sustainable",
+        "Office Utility"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Onboarding"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Desk Accessories"
+      ],
+      "sustainability": [
+        "Eco-Friendly",
+        "Plantable"
+      ],
+      "mood": [
+        "Fresh & Natural"
+      ]
+    }
+  },
+  {
+    "slug": "sku-28",
+    "legacyNumericId": 28,
+    "name": "Nature Inspired Plantable Notebook",
+    "category": "Sustainable",
+    "badge": "Eco-Friendly",
+    "image": "asset/sku/Nature Inspired Plantable Notebook/8-57.png",
+    "gallery": [],
+    "priceAmount": 449,
+    "priceLabel": null,
+    "shortDesc": "Handmade plantable notebook with seed-embedded pages",
+    "description": "Handmade plantable notebook with seed-embedded pages",
+    "tags": [
+      "Plantable",
+      "Notebook",
+      "Handmade"
+    ],
+    "filters": {
+      "category": [
+        "Sustainable",
+        "Office Utility"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Desk Accessories"
+      ],
+      "sustainability": [
+        "Eco-Friendly",
+        "Plantable",
+        "Handmade"
+      ],
+      "mood": [
+        "Fresh & Natural"
+      ]
+    }
+  },
+  {
+    "slug": "sku-29",
+    "legacyNumericId": 29,
+    "name": "Eco-friendly Playing Cards",
+    "category": "Sustainable",
+    "badge": "Eco-Friendly",
+    "image": "asset/sku/Eco-friendly Playing Cards/61e69ItyzaL._SL1000_.jpg",
+    "gallery": [],
+    "priceAmount": 349,
+    "priceLabel": null,
+    "shortDesc": "Playing cards made from recycled and eco-friendly materials",
+    "description": "Playing cards made from recycled and eco-friendly materials",
+    "tags": [
+      "Eco-Friendly",
+      "Entertainment",
+      "Recycled"
+    ],
+    "filters": {
+      "category": [
+        "Sustainable",
+        "Office Utility"
+      ],
+      "occasion": [
+        "Employee Appreciation"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [
+        "Eco-Friendly",
+        "Plastic-Free"
+      ],
+      "mood": []
+    }
+  },
+  {
+    "slug": "sku-30",
+    "legacyNumericId": 30,
+    "name": "Earth-Friendly Cutting Chai Cups",
+    "category": "Sustainable",
+    "badge": "Eco-Friendly",
+    "image": "asset/sku/Earth-Friendly Cutting Chai Cups/718-K1qyp3L._SL1500_.jpg",
+    "gallery": [],
+    "priceAmount": 399,
+    "priceLabel": null,
+    "shortDesc": "Biodegradable cutting chai cups for authentic chai experience",
+    "description": "Biodegradable cutting chai cups for authentic chai experience",
+    "tags": [
+      "Eco-Friendly",
+      "Biodegradable",
+      "Tea"
+    ],
+    "filters": {
+      "category": [
+        "Sustainable",
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Corporate Events",
+        "Employee Appreciation"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware"
+      ],
+      "sustainability": [
+        "Eco-Friendly",
+        "Plastic-Free"
+      ],
+      "mood": [
+        "Warm & Cozy"
+      ]
+    }
+  },
+  {
+    "slug": "sku-31",
+    "legacyNumericId": 31,
+    "name": "Mini Magnetic Planter",
+    "category": "Sustainable",
+    "badge": "New",
+    "image": "asset/sku/Mini magnetic planter/Minimagneticplanter-2_800x.webp",
+    "gallery": [],
+    "priceAmount": 399,
+    "priceLabel": null,
+    "shortDesc": "Magnetic mini planter for desk or fridge - grow herbs indoors",
+    "description": "Magnetic mini planter for desk or fridge - grow herbs indoors",
+    "tags": [
+      "Planter",
+      "Magnetic",
+      "Sustainable"
+    ],
+    "filters": {
+      "category": [
+        "Sustainable",
+        "Office Utility"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Onboarding"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [
+        "Eco-Friendly"
+      ],
+      "mood": [
+        "Fresh & Natural"
+      ]
+    }
+  },
+  {
+    "slug": "sku-32",
+    "legacyNumericId": 32,
+    "name": "Eco-friendly Incense Sticks",
+    "category": "Sustainable",
+    "badge": "Eco-Friendly",
+    "image": "asset/sku/Eco-friendly Incense Sticks/1.-3.webp",
+    "gallery": [],
+    "priceAmount": 299,
+    "priceLabel": null,
+    "shortDesc": "Natural incense sticks made from organic ingredients",
+    "description": "Natural incense sticks made from organic ingredients",
+    "tags": [
+      "Incense",
+      "Organic",
+      "Wellness"
+    ],
+    "filters": {
+      "category": [
+        "Sustainable",
+        "Wellness"
+      ],
+      "occasion": [
+        "Festive Gifting",
+        "Client Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [
+        "Eco-Friendly"
+      ],
+      "mood": [
+        "Calm & Relaxing",
+        "Fresh & Natural"
+      ]
+    }
+  },
+  {
+    "slug": "sku-33",
+    "legacyNumericId": 33,
+    "name": "Crochet Evil Eye Key Chain",
+    "category": "NGO & Artisan",
+    "badge": "Impact",
+    "image": "asset/sku/Crochet Evil Eye Key Chain/3_8f4d8c5b-22dc-4c70-8331-ea6e4cb28775.webp",
+    "gallery": [],
+    "priceAmount": 199,
+    "priceLabel": null,
+    "shortDesc": "Handmade crochet evil eye keychain by skilled artisans",
+    "description": "Handmade crochet evil eye keychain by skilled artisans",
+    "tags": [
+      "Handmade",
+      "Crochet",
+      "Artisan"
+    ],
+    "filters": {
+      "category": [
+        "NGO & Artisan"
+      ],
+      "occasion": [
+        "Employee Appreciation"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [
+        "Handmade",
+        "NGO Supported"
+      ],
+      "mood": []
+    }
+  },
+  {
+    "slug": "sku-34",
+    "legacyNumericId": 34,
+    "name": "Crochet Heart Key Chain",
+    "category": "NGO & Artisan",
+    "badge": "Impact",
+    "image": "asset/sku/Crochet Heart Key Chain/1_b4fac700-ab42-4a6f-a22f-bf69d2976722.jpg",
+    "gallery": [],
+    "priceAmount": 199,
+    "priceLabel": null,
+    "shortDesc": "Adorable handcrafted crochet heart keychain",
+    "description": "Adorable handcrafted crochet heart keychain",
+    "tags": [
+      "Handmade",
+      "Crochet",
+      "Artisan"
+    ],
+    "filters": {
+      "category": [
+        "NGO & Artisan"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Thank You Gifts"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [
+        "Handmade",
+        "NGO Supported"
+      ],
+      "mood": []
+    }
+  },
+  {
+    "slug": "sku-35",
+    "legacyNumericId": 35,
+    "name": "Crochet Rose Stick",
+    "category": "NGO & Artisan",
+    "badge": "Impact",
+    "image": "asset/sku/Crochet Rose Stick /il_1140xN.6686974189_cgd0.webp",
+    "gallery": [
+      "asset/sku/Crochet Rose Stick /il_1140xN.6686974199_5wyr.webp",
+      "asset/sku/Crochet Rose Stick /il_1140xN.7267596520_qtg2.webp"
+    ],
+    "priceAmount": 249,
+    "priceLabel": null,
+    "shortDesc": "Beautiful handmade crochet rose on stick - perfect gift",
+    "description": "Beautiful handmade crochet rose on stick - perfect gift",
+    "tags": [
+      "Handmade",
+      "Crochet",
+      "Flowers"
+    ],
+    "filters": {
+      "category": [
+        "NGO & Artisan",
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Thank You Gifts"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [
+        "Handmade",
+        "NGO Supported"
+      ],
+      "mood": []
+    }
+  },
+  {
+    "slug": "sku-36",
+    "legacyNumericId": 36,
+    "name": "Crochet Sun Flower Stick",
+    "category": "NGO & Artisan",
+    "badge": "Impact",
+    "image": "asset/sku/Crochet Sun Flower Stick/PDP-6_730dfe1d-ca50-4b39-ad6f-2f9af3fdb298.webp",
+    "gallery": [],
+    "priceAmount": 249,
+    "priceLabel": null,
+    "shortDesc": "Cheerful handmade crochet sunflower on stick",
+    "description": "Cheerful handmade crochet sunflower on stick",
+    "tags": [
+      "Handmade",
+      "Crochet",
+      "Flowers"
+    ],
+    "filters": {
+      "category": [
+        "NGO & Artisan",
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Thank You Gifts"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [
+        "Handmade",
+        "NGO Supported"
+      ],
+      "mood": [
+        "Festive & Joyful"
+      ]
+    }
+  },
+  {
+    "slug": "sku-37",
+    "legacyNumericId": 37,
+    "name": "Crochet Sun Flower Pot",
+    "category": "NGO & Artisan",
+    "badge": "Impact",
+    "image": "asset/sku/Crochet Sun Flower Pot /61MzjzH7TbL._SL1213_.jpg",
+    "gallery": [],
+    "priceAmount": 349,
+    "priceLabel": null,
+    "shortDesc": "Handcrafted crochet sunflower in decorative pot",
+    "description": "Handcrafted crochet sunflower in decorative pot",
+    "tags": [
+      "Handmade",
+      "Crochet",
+      "Décor"
+    ],
+    "filters": {
+      "category": [
+        "NGO & Artisan",
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Employee Appreciation"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [
+        "Handmade",
+        "NGO Supported"
+      ],
+      "mood": [
+        "Festive & Joyful"
+      ]
+    }
+  },
+  {
+    "slug": "sku-38",
+    "legacyNumericId": 38,
+    "name": "Crochet Pear Message Toy",
+    "category": "NGO & Artisan",
+    "badge": "Impact",
+    "image": "asset/sku/Crochet Pear Message Toy/IMG_2746.webp",
+    "gallery": [],
+    "priceAmount": 299,
+    "priceLabel": null,
+    "shortDesc": "Cute handmade crochet pear with personalized message",
+    "description": "Cute handmade crochet pear with personalized message",
+    "tags": [
+      "Handmade",
+      "Crochet",
+      "Gift"
+    ],
+    "filters": {
+      "category": [
+        "NGO & Artisan"
+      ],
+      "occasion": [
+        "Thank You Gifts",
+        "Employee Appreciation"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [
+        "Handmade",
+        "NGO Supported"
+      ],
+      "mood": []
+    }
+  },
+  {
+    "slug": "sku-39",
+    "legacyNumericId": 39,
+    "name": "Handpainted Clay Tealight Holders",
+    "category": "NGO & Artisan",
+    "badge": "Impact",
+    "image": "asset/sku/Handpainted Clay Tealight Holders/03_79a83d38-ecd4-47e6-8ceb-1d94c7ee4f50_1800x1800.webp",
+    "gallery": [],
+    "priceAmount": 449,
+    "priceLabel": null,
+    "shortDesc": "Beautiful handpainted clay tealight holders by artisans",
+    "description": "Beautiful handpainted clay tealight holders by artisans",
+    "tags": [
+      "Handmade",
+      "Clay",
+      "Candles"
+    ],
+    "filters": {
+      "category": [
+        "NGO & Artisan",
+        "Festive"
+      ],
+      "occasion": [
+        "Festive Gifting",
+        "Client Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Candles"
+      ],
+      "sustainability": [
+        "Handmade",
+        "NGO Supported"
+      ],
+      "mood": [
+        "Festive & Joyful",
+        "Warm & Cozy"
+      ]
+    }
+  },
+  {
+    "slug": "sku-40",
+    "legacyNumericId": 40,
+    "name": "Metallic Flower Diyas",
+    "category": "Festive",
+    "badge": "Festive",
+    "image": "asset/sku/Metallic Flower Diyas/7175vqBafYL._SL1500_.jpg",
+    "gallery": [],
+    "priceAmount": 399,
+    "priceLabel": null,
+    "shortDesc": "Elegant metallic flower-shaped diyas for festive celebrations",
+    "description": "Elegant metallic flower-shaped diyas for festive celebrations",
+    "tags": [
+      "Diwali",
+      "Diyas",
+      "Traditional"
+    ],
+    "filters": {
+      "category": [
+        "Festive"
+      ],
+      "occasion": [
+        "Festive Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [],
+      "mood": [
+        "Festive & Joyful"
+      ]
+    }
+  },
+  {
+    "slug": "sku-41",
+    "legacyNumericId": 41,
+    "name": "Terracotta Painted Diya Set",
+    "category": "Festive",
+    "badge": "Festive",
+    "image": "asset/sku/Terracotta Painted Diya Set/68382Decoreer-Handmade-Handicraft-Home-Decor-Terracotta-Zero-Diya-set-of-12-3.png",
+    "gallery": [],
+    "priceAmount": 349,
+    "priceLabel": null,
+    "shortDesc": "Traditional terracotta diyas with beautiful hand-painted designs",
+    "description": "Traditional terracotta diyas with beautiful hand-painted designs",
+    "tags": [
+      "Diwali",
+      "Terracotta",
+      "Handpainted"
+    ],
+    "filters": {
+      "category": [
+        "Festive",
+        "NGO & Artisan"
+      ],
+      "occasion": [
+        "Festive Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [
+        "Handmade"
+      ],
+      "mood": [
+        "Festive & Joyful"
+      ]
+    }
+  },
+  {
+    "slug": "sku-42",
+    "legacyNumericId": 42,
+    "name": "Metal Lantern Light Candle Holder",
+    "category": "Festive",
+    "badge": "Festive",
+    "image": "asset/sku/Metal-lantern-Light-Candle-Holder/1000007250861-1000007250860_01-1200.jpg",
+    "gallery": [
+      "asset/sku/Metal-lantern-Light-Candle-Holder/1000007250861-1000007250860_03-1200.jpg",
+      "asset/sku/Metal-lantern-Light-Candle-Holder/1000007250861-1000007250860_06-1200.jpg"
+    ],
+    "priceAmount": 699,
+    "priceLabel": null,
+    "shortDesc": "Decorative metal lantern candle holder for festive ambiance",
+    "description": "Decorative metal lantern candle holder for festive ambiance",
+    "tags": [
+      "Lantern",
+      "Metal",
+      "Décor"
+    ],
+    "filters": {
+      "category": [
+        "Festive",
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Festive Gifting",
+        "Client Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Candles"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Festive & Joyful",
+        "Warm & Cozy"
+      ]
+    }
+  },
+  {
+    "slug": "sku-43",
+    "legacyNumericId": 43,
+    "name": "Wooden Flower Tea Light Candle Holder",
+    "category": "Festive",
+    "badge": null,
+    "image": "asset/sku/Wooden Flower Tea Light Candle Holder/713qzvnA0XL._SL1201_.jpg",
+    "gallery": [],
+    "priceAmount": 549,
+    "priceLabel": null,
+    "shortDesc": "Handcrafted wooden flower design tealight holder",
+    "description": "Handcrafted wooden flower design tealight holder",
+    "tags": [
+      "Wood",
+      "Handcrafted",
+      "Candles"
+    ],
+    "filters": {
+      "category": [
+        "Festive",
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Festive Gifting",
+        "Client Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Candles"
+      ],
+      "sustainability": [
+        "Handmade"
+      ],
+      "mood": [
+        "Warm & Cozy"
+      ]
+    }
+  },
+  {
+    "slug": "sku-44",
+    "legacyNumericId": 44,
+    "name": "Mini Umbrella",
+    "category": "Office Utility",
+    "badge": "Popular",
+    "image": "asset/sku/Mini-umbrella/415sjPcUSlL.jpg",
+    "gallery": [
+      "asset/sku/Mini-umbrella/41IDJrw1JWL.jpg",
+      "asset/sku/Mini-umbrella/41QhSQy09-L.jpg",
+      "asset/sku/Mini-umbrella/41SkbeECfcL.jpg"
+    ],
+    "priceAmount": 399,
+    "priceLabel": null,
+    "shortDesc": "Compact foldable umbrella - perfect for daily commute",
+    "description": "Compact foldable umbrella - perfect for daily commute",
+    "tags": [
+      "Umbrella",
+      "Utility",
+      "Travel"
+    ],
+    "filters": {
+      "category": [
+        "Office Utility"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Onboarding"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [],
+      "mood": []
+    }
+  },
+  {
+    "slug": "sku-45",
+    "legacyNumericId": 45,
+    "name": "Ceramic Bowl With Handle",
+    "category": "Home Décor & Lifestyle",
+    "badge": null,
+    "image": "asset/sku/Ceramic Bowl With Handle/712uiWAmysL._SL1500_.jpg",
+    "gallery": [],
+    "priceAmount": 599,
+    "priceLabel": null,
+    "shortDesc": "Elegant ceramic bowl with handle for serving or décor",
+    "description": "Elegant ceramic bowl with handle for serving or décor",
+    "tags": [
+      "Ceramic",
+      "Serving",
+      "Home"
+    ],
+    "filters": {
+      "category": [
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [],
+      "mood": [
+        "Elegant & Premium"
+      ]
+    }
+  },
+  {
+    "slug": "sku-46",
+    "legacyNumericId": 46,
+    "name": "Ceramic Pitcher Vase",
+    "category": "Home Décor & Lifestyle",
+    "badge": null,
+    "image": "asset/sku/Ceramic Pitcher Vase/51+fT5hqltL._SL1184_.jpg",
+    "gallery": [],
+    "priceAmount": 799,
+    "priceLabel": null,
+    "shortDesc": "Artistic ceramic pitcher vase for flowers or décor",
+    "description": "Artistic ceramic pitcher vase for flowers or décor",
+    "tags": [
+      "Ceramic",
+      "Vase",
+      "Décor"
+    ],
+    "filters": {
+      "category": [
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [],
+      "mood": [
+        "Elegant & Premium"
+      ]
+    }
+  },
+  {
+    "slug": "sku-47",
+    "legacyNumericId": 47,
+    "name": "Marble & Wooden Coaster",
+    "category": "Home Décor & Lifestyle",
+    "badge": "Premium",
+    "image": "asset/sku/Marble & Wooden Coaster/D2-01.webp",
+    "gallery": [
+      "asset/sku/Marble & Wooden Coaster/DSC09798_-_Copy.webp",
+      "asset/sku/Marble & Wooden Coaster/Untitled-14-01-01.webp"
+    ],
+    "priceAmount": 649,
+    "priceLabel": null,
+    "shortDesc": "Premium marble and wooden coaster set",
+    "description": "Premium marble and wooden coaster set",
+    "tags": [
+      "Marble",
+      "Wood",
+      "Coasters"
+    ],
+    "filters": {
+      "category": [
+        "Home Décor & Lifestyle",
+        "Premium"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [],
+      "mood": [
+        "Elegant & Premium"
+      ]
+    }
+  },
+  {
+    "slug": "sku-48",
+    "legacyNumericId": 48,
+    "name": "Hand-Painted Ceramic Coaster Set",
+    "category": "Home Décor & Lifestyle",
+    "badge": null,
+    "image": "asset/sku/Hand-Painted Ceramic Coaster Set with Artistic Design/IMG_4989_2400x2400.webp",
+    "gallery": [],
+    "priceAmount": 549,
+    "priceLabel": null,
+    "shortDesc": "Artistic hand-painted ceramic coaster set",
+    "description": "Artistic hand-painted ceramic coaster set",
+    "tags": [
+      "Ceramic",
+      "Handpainted",
+      "Coasters"
+    ],
+    "filters": {
+      "category": [
+        "Home Décor & Lifestyle",
+        "NGO & Artisan"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [
+        "Handmade"
+      ],
+      "mood": [
+        "Elegant & Premium"
+      ]
+    }
+  },
+  {
+    "slug": "sku-49",
+    "legacyNumericId": 49,
+    "name": "Ceramic Evil Eye Mug & Saucer",
+    "category": "Home Décor & Lifestyle",
+    "badge": "New",
+    "image": "asset/sku/Ceramic Evil Eye Mug & Saurcer/61M+IEJGfSL._SL1170_.jpg",
+    "gallery": [],
+    "priceAmount": 599,
+    "priceLabel": null,
+    "shortDesc": "Unique evil eye design ceramic mug with saucer",
+    "description": "Unique evil eye design ceramic mug with saucer",
+    "tags": [
+      "Ceramic",
+      "Evil Eye",
+      "Mug"
+    ],
+    "filters": {
+      "category": [
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Client Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware"
+      ],
+      "sustainability": [],
+      "mood": []
+    }
+  },
+  {
+    "slug": "sku-50",
+    "legacyNumericId": 50,
+    "name": "Porcelain XL Coffee Cappuccino Cup With Saucer",
+    "category": "Premium",
+    "badge": "Premium",
+    "image": "asset/sku/Porcelein XL Coffee Cappuccino Cup With Suucer/7192JITSETL._SL1500_.jpg",
+    "gallery": [],
+    "priceAmount": 749,
+    "priceLabel": null,
+    "shortDesc": "Extra large porcelain cappuccino cup with saucer",
+    "description": "Extra large porcelain cappuccino cup with saucer",
+    "tags": [
+      "Porcelain",
+      "Coffee",
+      "Premium"
+    ],
+    "filters": {
+      "category": [
+        "Premium",
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Elegant & Premium"
+      ]
+    }
+  },
+  {
+    "slug": "sku-51",
+    "legacyNumericId": 51,
+    "name": "Ceramic Heart Mug & Saucer",
+    "category": "Home Décor & Lifestyle",
+    "badge": null,
+    "image": "asset/sku/Ceramic Heart Mug & Saurcer/712uiWAmysL._SL1500_.jpg",
+    "gallery": [
+      "asset/sku/Ceramic Heart Mug & Saurcer/61GHeVtGYnL._SL1024_.jpg",
+      "asset/sku/Ceramic Heart Mug & Saurcer/61wFrKqiFlL._SL1024_.jpg",
+      "asset/sku/Ceramic Heart Mug & Saurcer/51J7Md9uTcL.jpg"
+    ],
+    "priceAmount": 549,
+    "priceLabel": null,
+    "shortDesc": "Elegant ceramic mug with heart design and matching saucer",
+    "description": "Elegant ceramic mug with heart design and matching saucer",
+    "tags": [
+      "Ceramic",
+      "Mug",
+      "Heart Design"
+    ],
+    "filters": {
+      "category": [
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Personal Celebrations",
+        "Thank You Gifts"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Warm & Cozy"
+      ],
+      "recipient": [
+        "Personal Gifting",
+        "Friends"
+      ]
+    }
+  },
+  {
+    "slug": "sku-52",
+    "legacyNumericId": 52,
+    "name": "Frosted Lid Jar Candle",
+    "category": "Home Décor & Lifestyle",
+    "badge": "Premium",
+    "image": "asset/sku/Frosted Lid jar candle/IMG_9683.webp",
+    "gallery": [
+      "asset/sku/Frosted Lid jar candle/IMG_9692.webp",
+      "asset/sku/Frosted Lid jar candle/d_4bf44807-01dc-4d4e-9f28-e61485605820.webp"
+    ],
+    "priceAmount": 649,
+    "priceLabel": null,
+    "shortDesc": "Premium scented candle in frosted glass jar with lid",
+    "description": "Premium scented candle in frosted glass jar with lid",
+    "tags": [
+      "Candle",
+      "Scented",
+      "Frosted Glass"
+    ],
+    "filters": {
+      "category": [
+        "Home Décor & Lifestyle",
+        "Wellness & Well-Being"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Housewarming"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Candles"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Calm & Relaxing",
+        "Elegant & Premium"
+      ],
+      "recipient": [
+        "Clients",
+        "Personal Gifting"
+      ]
+    }
+  },
+  {
+    "slug": "sku-53",
+    "legacyNumericId": 53,
+    "name": "Scented Lado Candle",
+    "category": "Festive & Traditional",
+    "badge": "Festive",
+    "image": "asset/sku/Scented Lado Candle copy/81S7Oz5GmIL._SL1500_.jpg",
+    "gallery": [
+      "asset/sku/Scented Lado Candle copy/814BXYnwVkL._SX679_.jpg"
+    ],
+    "priceAmount": 449,
+    "priceLabel": null,
+    "shortDesc": "Traditional Lado shaped scented candle for festive occasions",
+    "description": "Traditional Lado shaped scented candle for festive occasions",
+    "tags": [
+      "Candle",
+      "Festive",
+      "Traditional"
+    ],
+    "filters": {
+      "category": [
+        "Festive & Traditional",
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Festive Gifting (Diwali, Celebrations)"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Candles"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Festive & Joyful",
+        "Warm & Cozy"
+      ],
+      "recipient": [
+        "Families",
+        "Personal Gifting"
+      ]
+    }
+  },
+  {
+    "slug": "sku-54",
+    "legacyNumericId": 54,
+    "name": "Scented Tomb Lid Jar Candle",
+    "category": "Premium",
+    "badge": "Premium",
+    "image": "asset/sku/Scented Tomb Lid Jar Candle/TombLidScentedAmberJarCandle_3.webp",
+    "gallery": [
+      "asset/sku/Scented Tomb Lid Jar Candle/TombLidScentedAmberJarCandle_4.webp",
+      "asset/sku/Scented Tomb Lid Jar Candle/ScentedJarCandle_13.webp"
+    ],
+    "priceAmount": 799,
+    "priceLabel": null,
+    "shortDesc": "Luxury scented candle in amber jar with distinctive tomb lid design",
+    "description": "Luxury scented candle in amber jar with distinctive tomb lid design",
+    "tags": [
+      "Candle",
+      "Luxury",
+      "Amber Jar"
+    ],
+    "filters": {
+      "category": [
+        "Premium",
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Candles"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Elegant & Premium",
+        "Calm & Relaxing"
+      ],
+      "recipient": [
+        "Clients",
+        "CXOs & Leadership"
+      ]
+    }
+  },
+  {
+    "slug": "sku-55",
+    "legacyNumericId": 55,
+    "name": "Insulated Travel Tumbler",
+    "category": "Office & Corporate Utility",
+    "badge": "Eco-Friendly",
+    "image": "asset/sku/Travel Tubmler/51HwHLMyhuL._SL1500_.jpg",
+    "gallery": [
+      "asset/sku/Travel Tubmler/51guPKKR2VL._SL1000_.jpg",
+      "asset/sku/Travel Tubmler/51ihCmGe65L._SL1500_.jpg"
+    ],
+    "priceAmount": 599,
+    "priceLabel": null,
+    "shortDesc": "Double-walled insulated travel tumbler for hot and cold beverages",
+    "description": "Double-walled insulated travel tumbler for hot and cold beverages",
+    "tags": [
+      "Tumbler",
+      "Insulated",
+      "Travel"
+    ],
+    "filters": {
+      "category": [
+        "Office & Corporate Utility",
+        "Sustainable & Eco-Friendly"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Onboarding / Welcome Kits"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware",
+        "Utility"
+      ],
+      "sustainability": [
+        "Reusable Products"
+      ],
+      "mood": [
+        "Fresh & Natural"
+      ],
+      "recipient": [
+        "Employees",
+        "Teams"
+      ]
+    }
+  },
+  {
+    "slug": "sku-56",
+    "legacyNumericId": 56,
+    "name": "12 Months Notebook Planner",
+    "category": "Office & Corporate Utility",
+    "badge": "Bestseller",
+    "image": "asset/sku/12 Months Planner/Planner_1.jpg",
+    "gallery": [
+      "asset/sku/12 Months Planner/Planner_2.jpg",
+      "asset/sku/12 Months Planner/Planner_3.jpg",
+      "asset/sku/12 Months Planner/Planner_4.jpg",
+      "asset/sku/12 Months Planner/Planner_5.jpg"
+    ],
+    "priceAmount": 699,
+    "priceLabel": null,
+    "shortDesc": "Floral notebook with 12 monthly spreads, 52 weekly spreads, and habit tracker - craft your year with intentional planning",
+    "description": "Floral notebook with 12 monthly spreads, 52 weekly spreads, and habit tracker - craft your year with intentional planning",
+    "tags": [
+      "Planner",
+      "Notebook",
+      "Productivity"
+    ],
+    "filters": {
+      "category": [
+        "Office & Corporate Utility"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Onboarding / Welcome Kits",
+        "Year-End Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Desk Accessories"
+      ],
+      "sustainability": [],
+      "mood": [],
+      "recipient": [
+        "Employees",
+        "Teams"
+      ]
+    }
+  },
+  {
+    "slug": "sku-57",
+    "legacyNumericId": 57,
+    "name": "Dessert Bowl with Spoon",
+    "category": "Premium",
+    "badge": "Premium",
+    "image": "asset/sku/Dessert Bowl with Spoon/Ice Cream Cups_1.png",
+    "gallery": [
+      "asset/sku/Dessert Bowl with Spoon/Ice Cream Cups_2.png.jpg"
+    ],
+    "priceAmount": 649,
+    "priceLabel": null,
+    "shortDesc": "Stainless steel dessert bowl with golden finish and elegant goblet design - perfect for ice cream and desserts",
+    "description": "Stainless steel dessert bowl with golden finish and elegant goblet design - perfect for ice cream and desserts",
+    "tags": [
+      "Stainless Steel",
+      "Dessert",
+      "Golden"
+    ],
+    "filters": {
+      "category": [
+        "Premium",
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events",
+        "Housewarming"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [
+        "Reusable Products"
+      ],
+      "mood": [
+        "Elegant & Premium"
+      ],
+      "recipient": [
+        "Clients",
+        "Families"
+      ]
+    }
+  },
+  {
+    "slug": "sku-58",
+    "legacyNumericId": 58,
+    "name": "Golden Heart Spoons",
+    "category": "Premium",
+    "badge": "New",
+    "image": "asset/sku/Heart Spoons/Heart_spoons_1.jpg",
+    "gallery": [
+      "asset/sku/Heart Spoons/Heart_spoons_2.jpg",
+      "asset/sku/Heart Spoons/Heart_spoons_3.jpg",
+      "asset/sku/Heart Spoons/Heart_spoons_4.jpg"
+    ],
+    "priceAmount": 449,
+    "priceLabel": null,
+    "shortDesc": "Elegant golden stainless steel spoons with heart-shaped handles - trendy and pinterest-worthy",
+    "description": "Elegant golden stainless steel spoons with heart-shaped handles - trendy and pinterest-worthy",
+    "tags": [
+      "Spoons",
+      "Golden",
+      "Elegant"
+    ],
+    "filters": {
+      "category": [
+        "Premium",
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Personal Celebrations"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [
+        "Reusable Products"
+      ],
+      "mood": [
+        "Elegant & Premium"
+      ],
+      "recipient": [
+        "Personal Gifting",
+        "Friends"
+      ]
+    }
+  },
+  {
+    "slug": "sku-59",
+    "legacyNumericId": 59,
+    "name": "His Her Shawl Gift Set",
+    "category": "Premium",
+    "badge": "Luxury",
+    "image": "asset/sku/HisHer Shawl/Shawls1.png",
+    "gallery": [
+      "asset/sku/HisHer Shawl/Shawls2.png",
+      "asset/sku/HisHer Shawl/Shawls3.png",
+      "asset/sku/HisHer Shawl/Shawls4.png",
+      "asset/sku/HisHer Shawl/Shawls5.png",
+      "asset/sku/HisHer Shawl/Shawls6.png"
+    ],
+    "priceAmount": 2499,
+    "priceLabel": null,
+    "shortDesc": "Exquisite Jamawar and Kaani shawls gift set for him and her - presented in a stylish wooden premium box",
+    "description": "Exquisite Jamawar and Kaani shawls gift set for him and her - presented in a stylish wooden premium box",
+    "tags": [
+      "Shawl",
+      "Luxury",
+      "Handcrafted"
+    ],
+    "filters": {
+      "category": [
+        "Premium",
+        "NGO & Artisan"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events",
+        "Milestones"
+      ],
+      "budget": [
+        "₹2500+"
+      ],
+      "contents": [],
+      "sustainability": [
+        "Handmade"
+      ],
+      "mood": [
+        "Elegant & Premium",
+        "Warm & Cozy"
+      ],
+      "recipient": [
+        "CXOs & Leadership",
+        "Clients"
+      ]
+    }
+  },
+  {
+    "slug": "sku-60",
+    "legacyNumericId": 60,
+    "name": "Luxury Jewellery Organizer Box",
+    "category": "Premium",
+    "badge": "Popular",
+    "image": "asset/sku/Jewellery organizer box/Jewellery_box_1.jpg",
+    "gallery": [
+      "asset/sku/Jewellery organizer box/Jewellery_box_2.jpg",
+      "asset/sku/Jewellery organizer box/Jewellery_box_3.jpg",
+      "asset/sku/Jewellery organizer box/Jewellery_box_4.jpg"
+    ],
+    "priceAmount": 899,
+    "priceLabel": null,
+    "shortDesc": "Travel-friendly PU leather jewellery organizer with soft velvet interior and customizable storage",
+    "description": "Travel-friendly PU leather jewellery organizer with soft velvet interior and customizable storage",
+    "tags": [
+      "Jewellery",
+      "Organizer",
+      "Travel"
+    ],
+    "filters": {
+      "category": [
+        "Premium",
+        "Home Décor & Lifestyle"
+      ],
+      "occasion": [
+        "Personal Celebrations",
+        "Client Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [],
+      "mood": [
+        "Elegant & Premium"
+      ],
+      "recipient": [
+        "Personal Gifting",
+        "Families"
+      ]
+    }
+  },
+  {
+    "slug": "sku-61",
+    "legacyNumericId": 61,
+    "name": "Kashmiri Kahwa Green Tea",
+    "category": "Gourmet & Edible",
+    "badge": "Premium",
+    "image": "asset/sku/Kashmiri Kahwa Tea/kashmiri-kahwa.jpg",
+    "gallery": [
+      "asset/sku/Kashmiri Kahwa Tea/kashmiri-kahwa2.jpg.png",
+      "asset/sku/Kashmiri Kahwa Tea/Kashmiri-Kahwa-Green-Tea-Infusion.jpg",
+      "asset/sku/Kashmiri Kahwa Tea/Kashmiri-Kahwa-Green-Tea-3-Liquor.jpg"
+    ],
+    "priceAmount": 549,
+    "priceLabel": null,
+    "shortDesc": "Exotic blend of fine green tea with almonds, cardamom, cinnamon, cloves and rose petals - popular Kashmiri breakfast tea",
+    "description": "Exotic blend of fine green tea with almonds, cardamom, cinnamon, cloves and rose petals - popular Kashmiri breakfast tea",
+    "tags": [
+      "Tea",
+      "Kahwa",
+      "Wellness"
+    ],
+    "filters": {
+      "category": [
+        "Gourmet & Edible",
+        "Wellness"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Premium Tea"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Warm & Cozy",
+        "Fresh & Natural"
+      ],
+      "recipient": [
+        "Clients",
+        "Employees"
+      ]
+    }
+  },
+  {
+    "slug": "sku-62",
+    "legacyNumericId": 62,
+    "name": "Masala Cashew Cookies",
+    "category": "Gourmet & Edible",
+    "badge": null,
+    "image": "asset/sku/Masala Cashew Cookies/masala-cashew-cookies.jpg",
+    "gallery": [
+      "asset/sku/Masala Cashew Cookies/masala-kaju-cookies-500x500.webp"
+    ],
+    "priceAmount": 399,
+    "priceLabel": null,
+    "shortDesc": "Crunchy cashew cookies with a hint of spice - perfect blend of bold flavor and buttery goodness",
+    "description": "Crunchy cashew cookies with a hint of spice - perfect blend of bold flavor and buttery goodness",
+    "tags": [
+      "Cookies",
+      "Cashew",
+      "Snacks"
+    ],
+    "filters": {
+      "category": [
+        "Gourmet & Edible"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Client Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Food & Beverage"
+      ],
+      "sustainability": [],
+      "mood": [],
+      "recipient": [
+        "Employees",
+        "Teams"
+      ]
+    }
+  },
+  {
+    "slug": "sku-63",
+    "legacyNumericId": 63,
+    "name": "Vanilla Choco Chip Cookies",
+    "category": "Gourmet & Edible",
+    "badge": "Popular",
+    "image": "asset/sku/Vanilla Chocochip Cookies/rodelle-chocolate-chip-cookies-4996-2.jpg",
+    "gallery": [
+      "asset/sku/Vanilla Chocochip Cookies/Homemade-Chocolate-Chip-Cookies-best-recipe-43-close.webp"
+    ],
+    "priceAmount": 399,
+    "priceLabel": null,
+    "shortDesc": "Crispy, chewy cookies loaded with choco chips - rich vanilla flavor with generous chocolate chips",
+    "description": "Crispy, chewy cookies loaded with choco chips - rich vanilla flavor with generous chocolate chips",
+    "tags": [
+      "Cookies",
+      "Chocolate",
+      "Vanilla"
+    ],
+    "filters": {
+      "category": [
+        "Gourmet & Edible"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Personal Celebrations"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Food & Beverage",
+        "Chocolates"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Warm & Cozy"
+      ],
+      "recipient": [
+        "Employees",
+        "Teams",
+        "Families"
+      ]
+    }
+  },
+  {
+    "slug": "sku-64",
+    "legacyNumericId": 64,
+    "name": "Unisex Shawl",
+    "category": "Premium",
+    "badge": "Premium",
+    "image": "asset/sku/Unisex Shawl/Shawl Gifting.png",
+    "gallery": [
+      "asset/sku/Unisex Shawl/Shawl Gifting2.png",
+      "asset/sku/Unisex Shawl/Shawl Gifting3.png",
+      "asset/sku/Unisex Shawl/Shawl Gifting4.png"
+    ],
+    "priceAmount": 1499,
+    "priceLabel": null,
+    "shortDesc": "Handcrafted shawl with intricate paisley design - combines traditional artistry with superior comfort",
+    "description": "Handcrafted shawl with intricate paisley design - combines traditional artistry with superior comfort",
+    "tags": [
+      "Shawl",
+      "Handcrafted",
+      "Traditional"
+    ],
+    "filters": {
+      "category": [
+        "Premium",
+        "NGO & Artisan"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events",
+        "Festive Gifting"
+      ],
+      "budget": [
+        "₹1500-₹2000"
+      ],
+      "contents": [],
+      "sustainability": [
+        "Handmade"
+      ],
+      "mood": [
+        "Elegant & Premium",
+        "Warm & Cozy"
+      ],
+      "recipient": [
+        "CXOs & Leadership",
+        "Clients"
+      ]
+    }
+  },
+  {
+    "slug": "sku-65",
+    "legacyNumericId": 65,
+    "name": "Unisex Stole",
+    "category": "Premium",
+    "badge": "Premium",
+    "image": "asset/sku/Unisex Stole/Unisex Gifting Lookbook.png",
+    "gallery": [
+      "asset/sku/Unisex Stole/Unisex Gifting Lookbook2.png",
+      "asset/sku/Unisex Stole/Unisex Gifting Lookbook3.png",
+      "asset/sku/Unisex Stole/Unisex Gifting Lookbook4.png",
+      "asset/sku/Unisex Stole/Unisex Gifting Lookbook5.png"
+    ],
+    "priceAmount": 1299,
+    "priceLabel": null,
+    "shortDesc": "Premium unisex stole with antique jamawar look - exceptional softness and warmth with intricate printed patterns",
+    "description": "Premium unisex stole with antique jamawar look - exceptional softness and warmth with intricate printed patterns",
+    "tags": [
+      "Stole",
+      "Jamawar",
+      "Elegant"
+    ],
+    "filters": {
+      "category": [
+        "Premium",
+        "NGO & Artisan"
+      ],
+      "occasion": [
+        "Client Gifting",
+        "Corporate Events",
+        "Festive Gifting"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [
+        "Handmade"
+      ],
+      "mood": [
+        "Elegant & Premium",
+        "Warm & Cozy"
+      ],
+      "recipient": [
+        "CXOs & Leadership",
+        "Clients",
+        "Employees"
+      ]
+    }
+  },
+  {
+    "slug": "sku-66",
+    "legacyNumericId": 66,
+    "name": "AGARO Elite French Press Coffee Maker",
+    "category": "Gourmet",
+    "badge": "Premium",
+    "image": "asset/sku/AGARO Elite French Press Coffee And Tea Maker/71L3OIREveL._SL1500_.jpg",
+    "gallery": [
+      "asset/sku/AGARO Elite French Press Coffee And Tea Maker/71UqEla2l3L._SL1500_.jpg",
+      "asset/sku/AGARO Elite French Press Coffee And Tea Maker/815MW6GwRLL._SL1500_.jpg"
+    ],
+    "priceAmount": 1499,
+    "priceLabel": null,
+    "shortDesc": "600ml Borosilicate glass French press with 4-level filtration, premium stainless steel plunger. Includes extra filters, coffee scoop & cl…",
+    "description": "600ml Borosilicate glass French press with 4-level filtration, premium stainless steel plunger. Includes extra filters, coffee scoop & cleaning brush",
+    "tags": [
+      "Coffee",
+      "Tea",
+      "Kitchen"
+    ],
+    "filters": {
+      "category": [
+        "Gourmet & Edible",
+        "Office & Corporate"
+      ],
+      "occasion": [
+        "Corporate Events",
+        "Client Gifting",
+        "Employee Appreciation"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Tea & Coffee"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Thoughtful & Purpose-Driven"
+      ],
+      "recipient": [
+        "Employees",
+        "Clients"
+      ],
+      "packaging": [
+        "Compact Box"
+      ]
+    }
+  },
+  {
+    "slug": "sku-67",
+    "legacyNumericId": 67,
+    "name": "AGARO Hair Dryer 1100W Foldable",
+    "category": "Wellness",
+    "badge": "New",
+    "image": "asset/sku/AGARO Hair Dryer 1100W, Heat-Cool Modes, Foldable Compact/71k4UVoMGHL._SL1500_.jpg",
+    "gallery": [
+      "asset/sku/AGARO Hair Dryer 1100W, Heat-Cool Modes, Foldable Compact/71MaVBRHC7L._SL1500_.jpg"
+    ],
+    "priceAmount": 1299,
+    "priceLabel": null,
+    "shortDesc": "Compact 1100W hair dryer with 2 heat speeds, cool mode, concentrator nozzle. Foldable design, auto shut-off protection. Travel-friendly w…",
+    "description": "Compact 1100W hair dryer with 2 heat speeds, cool mode, concentrator nozzle. Foldable design, auto shut-off protection. Travel-friendly with 2-year warranty",
+    "tags": [
+      "Wellness",
+      "Travel",
+      "Grooming"
+    ],
+    "filters": {
+      "category": [
+        "Wellness & Well-Being"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Personal Celebrations"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Wellness"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Fresh & Natural"
+      ],
+      "recipient": [
+        "Employees",
+        "Personal Gifting"
+      ],
+      "packaging": [
+        "Compact Box"
+      ]
+    }
+  },
+  {
+    "slug": "sku-68",
+    "legacyNumericId": 68,
+    "name": "Portronics Trifusion 16W Bluetooth Speaker",
+    "category": "Office & Corporate",
+    "badge": "Premium",
+    "image": "asset/sku/Bluetooth Speaker Portronics Trifusion/71cUEXDnbyL._SL1500_.jpg",
+    "gallery": [
+      "asset/sku/Bluetooth Speaker Portronics Trifusion/71gZ3QN9zkL._SL1500_.jpg",
+      "asset/sku/Bluetooth Speaker Portronics Trifusion/71qa3ebL8EL._SL1500_.jpg"
+    ],
+    "priceAmount": 3499,
+    "priceLabel": null,
+    "shortDesc": "16W HD sound speaker with 15W wireless charging, 360° RGB LED lights, digital alarm clock, white noise, USB/SD/AUX support. TWS connectiv…",
+    "description": "16W HD sound speaker with 15W wireless charging, 360° RGB LED lights, digital alarm clock, white noise, USB/SD/AUX support. TWS connectivity for stereo experience",
+    "tags": [
+      "Speaker",
+      "Tech",
+      "Wireless Charging"
+    ],
+    "filters": {
+      "category": [
+        "Office & Corporate"
+      ],
+      "occasion": [
+        "Corporate Events",
+        "Client Gifting",
+        "Employee Appreciation"
+      ],
+      "budget": [
+        "₹2500 & Above"
+      ],
+      "contents": [
+        "Tech Accessories"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Elegant & Premium"
+      ],
+      "recipient": [
+        "CXOs & Leadership",
+        "Employees",
+        "Clients"
+      ],
+      "packaging": [
+        "Premium Festive Box"
+      ]
+    }
+  },
+  {
+    "slug": "sku-69",
+    "legacyNumericId": 69,
+    "name": "Portronics SoundDrum Bluetooth Speaker",
+    "category": "Office & Corporate",
+    "badge": "New",
+    "image": "asset/sku/Bluetooth Speaker SoundDrum Portronics/612-67yAb0L._SL1500_.jpg",
+    "gallery": [
+      "asset/sku/Bluetooth Speaker SoundDrum Portronics/71cUEXDnbyL._SL1500_.jpg"
+    ],
+    "priceAmount": 1299,
+    "priceLabel": null,
+    "shortDesc": "12W portable Bluetooth speaker with powerful bass, Bluetooth 5.3, 360° surround sound, USB drive playback. Type-C fast charging, compact …",
+    "description": "12W portable Bluetooth speaker with powerful bass, Bluetooth 5.3, 360° surround sound, USB drive playback. Type-C fast charging, compact & travel-friendly",
+    "tags": [
+      "Speaker",
+      "Portable",
+      "Music"
+    ],
+    "filters": {
+      "category": [
+        "Office & Corporate"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Tech Accessories"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Fresh & Natural"
+      ],
+      "recipient": [
+        "Employees",
+        "Teams"
+      ],
+      "packaging": [
+        "Compact Box"
+      ]
+    }
+  },
+  {
+    "slug": "sku-70",
+    "legacyNumericId": 70,
+    "name": "Leather Laptop Sleeve with Stand",
+    "category": "Office & Corporate",
+    "badge": "Handmade",
+    "image": "asset/sku/Laptop Sleeves Trifold Stand/9_57093153-9216-4c16-b966-b98328ce07b5.webp",
+    "gallery": [
+      "asset/sku/Laptop Sleeves Trifold Stand/Artboard_1_0f32c8a0-40e4-4386-82b7-3b4762706566.jpg"
+    ],
+    "priceAmount": 1899,
+    "priceLabel": null,
+    "shortDesc": "Vegan leather laptop sleeve with case stand feature. Durable with polyester lining, minimalist design. Handcrafted, lightweight & fashion…",
+    "description": "Vegan leather laptop sleeve with case stand feature. Durable with polyester lining, minimalist design. Handcrafted, lightweight & fashionable protection",
+    "tags": [
+      "Laptop",
+      "Tech",
+      "Professional"
+    ],
+    "filters": {
+      "category": [
+        "Office & Corporate"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Onboarding/Welcome Kits"
+      ],
+      "budget": [
+        "₹1500 - ₹2000"
+      ],
+      "contents": [
+        "Tech Accessories",
+        "Desk Accessories"
+      ],
+      "sustainability": [
+        "Handmade"
+      ],
+      "mood": [
+        "Elegant & Premium"
+      ],
+      "recipient": [
+        "Employees",
+        "CXOs & Leadership"
+      ],
+      "packaging": [
+        "Compact Box"
+      ]
+    }
+  },
+  {
+    "slug": "sku-71",
+    "legacyNumericId": 71,
+    "name": "LED Temperature Display Water Bottle",
+    "category": "Wellness",
+    "badge": "Smart",
+    "image": "asset/sku/LED Temperature Display Water Bottle/51BVZsrizDL._SL1080_.jpg",
+    "gallery": [
+      "asset/sku/LED Temperature Display Water Bottle/61mfJueEmpL._SL1127_.jpg"
+    ],
+    "priceAmount": 899,
+    "priceLabel": null,
+    "shortDesc": "750ml stainless steel vacuum insulated water bottle with LED temperature display. Keep drinks hot or cold with smart temperature monitoring",
+    "description": "750ml stainless steel vacuum insulated water bottle with LED temperature display. Keep drinks hot or cold with smart temperature monitoring",
+    "tags": [
+      "Water Bottle",
+      "Tech",
+      "Hydration"
+    ],
+    "filters": {
+      "category": [
+        "Wellness & Well-Being",
+        "Office & Corporate"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Corporate Events"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Drinkware"
+      ],
+      "sustainability": [
+        "Reusable Products"
+      ],
+      "mood": [
+        "Fresh & Natural"
+      ],
+      "recipient": [
+        "Employees",
+        "Teams"
+      ],
+      "packaging": [
+        "Compact Box"
+      ]
+    }
+  },
+  {
+    "slug": "sku-72",
+    "legacyNumericId": 72,
+    "name": "Portronics Muffs M2 Bluetooth Headphones",
+    "category": "Office & Corporate",
+    "badge": "Premium",
+    "image": "asset/sku/Portronics Bluetooth Headphones/51cAGW++bTL._SL1200_.jpg",
+    "gallery": [
+      "asset/sku/Portronics Bluetooth Headphones/61DcgH9qJdL._SL1200_.jpg",
+      "asset/sku/Portronics Bluetooth Headphones/61HwezXavWL._SL1200_.jpg"
+    ],
+    "priceAmount": 1999,
+    "priceLabel": null,
+    "shortDesc": "Over-ear wireless headphones with 40 hours playtime, 40mm dynamic drivers, powerful bass. Bluetooth 5.3 & AUX port, foldable design with …",
+    "description": "Over-ear wireless headphones with 40 hours playtime, 40mm dynamic drivers, powerful bass. Bluetooth 5.3 & AUX port, foldable design with memory foam cushions",
+    "tags": [
+      "Headphones",
+      "Audio",
+      "Wireless"
+    ],
+    "filters": {
+      "category": [
+        "Office & Corporate"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Client Gifting"
+      ],
+      "budget": [
+        "₹1500 - ₹2000"
+      ],
+      "contents": [
+        "Tech Accessories"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Elegant & Premium"
+      ],
+      "recipient": [
+        "Employees",
+        "Clients"
+      ],
+      "packaging": [
+        "Compact Box"
+      ]
+    }
+  },
+  {
+    "slug": "sku-73",
+    "legacyNumericId": 73,
+    "name": "Boat Wave Call 3 Smartwatch",
+    "category": "Office & Corporate",
+    "badge": "Premium",
+    "image": "asset/sku/Smartwatch HD Display with  BT Calling/712FpAeU69L._SL1500_.jpg",
+    "gallery": [
+      "asset/sku/Smartwatch HD Display with  BT Calling/71gam4BCvHL._SL1500_.jpg",
+      "asset/sku/Smartwatch HD Display with  BT Calling/71vOS6kkgzL._SL1500_.jpg"
+    ],
+    "priceAmount": 2499,
+    "priceLabel": null,
+    "shortDesc": "1.83'' HD smartwatch with BT calling, functional crown, animated watch faces. Heart rate, SpO2, sleep tracking, multiple sports modes. IP…",
+    "description": "1.83'' HD smartwatch with BT calling, functional crown, animated watch faces. Heart rate, SpO2, sleep tracking, multiple sports modes. IP68 water resistant",
+    "tags": [
+      "Smartwatch",
+      "Fitness",
+      "Tech"
+    ],
+    "filters": {
+      "category": [
+        "Office & Corporate",
+        "Wellness & Well-Being"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Corporate Events",
+        "Client Gifting"
+      ],
+      "budget": [
+        "₹2000 - ₹2500"
+      ],
+      "contents": [
+        "Tech Accessories",
+        "Wellness"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Elegant & Premium",
+        "Fresh & Natural"
+      ],
+      "recipient": [
+        "Employees",
+        "CXOs & Leadership"
+      ],
+      "packaging": [
+        "Premium Festive Box"
+      ]
+    }
+  },
+  {
+    "slug": "sku-74",
+    "legacyNumericId": 74,
+    "name": "Travel Document Organiser",
+    "category": "Office & Corporate",
+    "badge": "Travel",
+    "image": "asset/sku/Travel Document Organiser/Travel-Doc-Organiser.png",
+    "gallery": [],
+    "priceAmount": 699,
+    "priceLabel": null,
+    "shortDesc": "Multi-purpose passport cover with 8 card slots & 1 passport slot. Made from durable faux leather. Perfect travel gift with organized comp…",
+    "description": "Multi-purpose passport cover with 8 card slots & 1 passport slot. Made from durable faux leather. Perfect travel gift with organized compartments (6\" x 3.8\")",
+    "tags": [
+      "Travel",
+      "Organiser",
+      "Passport"
+    ],
+    "filters": {
+      "category": [
+        "Office & Corporate"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Thank You Gifts"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [
+        "Desk Accessories"
+      ],
+      "sustainability": [],
+      "mood": [
+        "Thoughtful & Purpose-Driven"
+      ],
+      "recipient": [
+        "Employees",
+        "Clients"
+      ],
+      "packaging": [
+        "Compact Box"
+      ]
+    }
+  },
+  {
+    "slug": "sku-75",
+    "legacyNumericId": 75,
+    "name": "Unisex Travel Organiser Bag",
+    "category": "Office & Corporate",
+    "badge": "Unisex",
+    "image": "asset/sku/Travel Organiser Bag/Cad_563a10a0-3cb8-4823-8f77-c0f8a184ce2e.webp",
+    "gallery": [
+      "asset/sku/Travel Organiser Bag/Lifestyle_image-AI-new.webp"
+    ],
+    "priceAmount": 899,
+    "priceLabel": null,
+    "shortDesc": "Premium faux leather travel organiser with soft structure & wide opening. Perfect for toiletries, makeup or chargers. Lightweight, unisex…",
+    "description": "Premium faux leather travel organiser with soft structure & wide opening. Perfect for toiletries, makeup or chargers. Lightweight, unisex design (20.5cm x 8.5cm x 7cm)",
+    "tags": [
+      "Travel",
+      "Organiser",
+      "Storage"
+    ],
+    "filters": {
+      "category": [
+        "Office & Corporate"
+      ],
+      "occasion": [
+        "Employee Appreciation",
+        "Thank You Gifts"
+      ],
+      "budget": [
+        "Under ₹1500"
+      ],
+      "contents": [],
+      "sustainability": [],
+      "mood": [
+        "Thoughtful & Purpose-Driven"
+      ],
+      "recipient": [
+        "Employees",
+        "Teams",
+        "Personal Gifting"
+      ],
+      "packaging": [
+        "Compact Box"
+      ]
+    }
+  }
+]

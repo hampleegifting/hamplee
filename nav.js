@@ -1,275 +1,121 @@
-// Reusable Navigation Component for Hamplee
+// Hamplee — Shared Navigation Component
 
 function loadNavigation() {
-    const navHTML = `
-    <!-- Top Announcement Bar -->
+  const navHTML = `
     <div class="announcement-bar">
-        <a href="mood-board.html">Enquire Now</a> For Bulk & Corporate Gifting
+      Crafting luxury gifting experiences for B2B &amp; B2C &nbsp;·&nbsp;
+      <a href="mailto:hamplee.gifting@gmail.com">hamplee.gifting@gmail.com</a> &nbsp;·&nbsp;
+      <a href="https://wa.me/917970765884" target="_blank">+91 79707 65884</a>
     </div>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-wrapper">
-            <div class="nav-main">
-                <!-- Mobile Menu Toggle -->
-                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-                
-                <a href="index.html" class="logo">HAMPLEE</a>
-                
-                <div class="nav-right">
-                    <a href="liked-wishlist.html" class="nav-icon" id="likedWishlistIcon" title="Liked Wishlist">
-                        ♥
-                        <span class="liked-wishlist-badge" id="likedWishlistBadge">0</span>
-                    </a>
-                    <a href="#" class="nav-icon" onclick="alert('User profile coming soon!'); return false;" title="User Profile">
-                        👤
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Search Box - Separate for mobile positioning -->
-            <div class="search-box">
-                <input type="text" placeholder="Search for gifts..." id="navSearch">
-                <button class="search-clear-btn" id="searchClearBtn" onclick="clearNavSearch()" style="display: none;">×</button>
-                <span class="search-divider" id="searchDivider" style="display: none;"></span>
-                <button class="search-btn" onclick="performNavSearch()">🔍</button>
-            </div>
+    <nav id="mainNav">
+      <div class="nav-inner">
+
+        <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <a href="index.html" class="nav-logo">HAMPLEE</a>
+
+        <ul class="nav-menu">
+          <li><a href="hampers.html">Our Hampers</a></li>
+          <li><a href="mood-board.html">Custom Order</a></li>
+        </ul>
+
+        <div class="nav-icons">
+          <a href="liked-wishlist.html" class="nav-wish-icon" id="navWishIcon" title="Wishlist" aria-label="View wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            <span class="nav-wish-badge" id="navWishBadge" style="display:none">0</span>
+          </a>
         </div>
-        
-        <!-- Mobile Drawer Overlay -->
-        <div class="mobile-drawer-overlay" onclick="toggleMobileMenu()"></div>
-        
-        <!-- Navigation Links (Desktop) & Mobile Drawer -->
-        <div class="nav-links-wrapper">
-            <!-- Close button inside drawer -->
-            <button class="drawer-close-btn" onclick="toggleMobileMenu()" aria-label="Close Menu">×</button>
-            
-            <!-- Drawer Header -->
-            <div class="drawer-header">
-                <a href="index.html" class="drawer-logo">HAMPLEE</a>
-            </div>
-            
-            <!-- Navigation Menu -->
-            <div class="drawer-section">
-                <ul class="nav-links">
-                    <li><a href="index.html#collections" onclick="closeMobileMenu()">CURATED COLLECTIONS</a></li>
-                    <li><a href="curated-hampers.html" onclick="closeMobileMenu()">CURATED HAMPERS</a></li>
-                    <li><a href="products.html" onclick="closeMobileMenu()">ALL PRODUCTS</a></li>
-                    <li><a href="mood-board.html" onclick="closeMobileMenu()">CRAFT YOUR SIGNATURE CORPORATE GIFT</a></li>
-                    <li><a href="index.html#about" onclick="closeMobileMenu()">ABOUT</a></li>
-                    <li><a href="index.html#contact" onclick="closeMobileMenu()">CONTACT</a></li>
-                </ul>
-            </div>
+      </div>
+
+      <!-- Mobile Overlay -->
+      <div class="nav-overlay" onclick="closeMobileMenu()"></div>
+
+      <!-- Mobile Drawer -->
+      <div class="nav-drawer" id="navDrawer">
+        <button class="drawer-close" onclick="closeMobileMenu()" aria-label="Close menu">×</button>
+        <a href="index.html" class="drawer-logo">HAMPLEE</a>
+        <ul class="drawer-menu">
+          <li><a href="hampers.html"     onclick="closeMobileMenu()">Our Hampers</a></li>
+          <li><a href="mood-board.html"  onclick="closeMobileMenu()">Custom Order</a></li>
+          <li><a href="liked-wishlist.html" onclick="closeMobileMenu()">My Wishlist</a></li>
+        </ul>
+        <div class="drawer-contact">
+          <a href="https://wa.me/917970765884" target="_blank" class="drawer-contact-link">
+            <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16z"/></svg>
+            +91 79707 65884
+          </a>
+          <a href="mailto:hamplee.gifting@gmail.com" class="drawer-contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            hamplee.gifting@gmail.com
+          </a>
         </div>
+      </div>
     </nav>
-    `;
+  `;
 
-    // Insert navigation at the beginning of body
-    const navPlaceholder = document.querySelector('.nav-placeholder');
-    if (navPlaceholder) {
-        navPlaceholder.insertAdjacentHTML('afterend', navHTML);
-    } else {
-        document.body.insertAdjacentHTML('afterbegin', navHTML);
-    }
-    
-    // Mark navigation as loaded immediately
-    document.body.classList.add('nav-loaded');
-    
-    // Initialize navigation functionality
-    setTimeout(() => {
-        // Highlight active navigation link
-        highlightActiveNavLink();
-        
-        // Update liked basket count
-        updateLikedWishlistCount();
-        
-        // Restore search term from URL if present
-        restoreSearchTerm();
-        
-        // Add search functionality
-        const searchInput = document.getElementById('navSearch');
-        if (searchInput) {
-            searchInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    performNavSearch();
-                }
-            });
-            
-            // Show/hide clear button based on input
-            searchInput.addEventListener('input', function() {
-                toggleClearButton();
-            });
-        }
-        
-        // Add smooth scroll for anchor links
-        document.querySelectorAll('a[href*="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                
-                // Check if it's an anchor link to index.html
-                if (href.includes('index.html#')) {
-                    const targetId = href.split('#')[1];
-                    const currentPage = window.location.pathname.split('/').pop();
-                    
-                    // If we're on index.html, smooth scroll
-                    if (currentPage === 'index.html' || currentPage === '') {
-                        e.preventDefault();
-                        const targetElement = document.getElementById(targetId);
-                        if (targetElement) {
-                            // Calculate offset for fixed navigation (nav height + announcement bar)
-                            const navHeight = document.querySelector('nav')?.offsetHeight || 0;
-                            const announcementHeight = document.querySelector('.announcement-bar')?.offsetHeight || 0;
-                            const offset = navHeight + announcementHeight + 20; // 20px extra padding
-                            
-                            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
-                            
-                            window.scrollTo({
-                                top: targetPosition,
-                                behavior: 'smooth'
-                            });
-                        }
-                    }
-                    // Otherwise, let the browser navigate normally
-                }
-            });
-        });
-    }, 0);
+  const placeholder = document.querySelector('.nav-placeholder');
+  if (placeholder) {
+    placeholder.insertAdjacentHTML('afterend', navHTML);
+  } else {
+    document.body.insertAdjacentHTML('afterbegin', navHTML);
+  }
+
+  document.body.classList.add('nav-loaded');
+
+  // Defer non-critical init
+  setTimeout(() => {
+    highlightActiveNavLink();
+    updateWishlistBadge();
+  }, 0);
 }
 
-// Toggle Mobile Menu
+// ── Mobile Menu ──────────────────────────────────
 function toggleMobileMenu() {
-    document.body.classList.toggle('mobile-menu-open');
+  const isOpen = document.body.classList.toggle('nav-open');
+  const btn = document.querySelector('.nav-hamburger');
+  if (btn) btn.setAttribute('aria-expanded', isOpen);
 }
 
-// Close Mobile Menu
 function closeMobileMenu() {
-    document.body.classList.remove('mobile-menu-open');
+  document.body.classList.remove('nav-open');
+  const btn = document.querySelector('.nav-hamburger');
+  if (btn) btn.setAttribute('aria-expanded', 'false');
 }
 
-// Close mobile menu on window resize
-window.addEventListener('resize', function() {
-    if (window.innerWidth > 1000 && document.body.classList.contains('mobile-menu-open')) {
-        closeMobileMenu();
-    }
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 960) closeMobileMenu();
 });
 
-// Restore search term from URL parameters
-function restoreSearchTerm() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const searchTerm = urlParams.get('search');
-    const searchInput = document.getElementById('navSearch');
-    
-    if (searchTerm && searchInput) {
-        searchInput.value = searchTerm;
-        toggleClearButton();
-    }
+// ── Wishlist Badge ───────────────────────────────
+function updateWishlistBadge() {
+  const items = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+  const badge = document.getElementById('navWishBadge');
+  if (!badge) return;
+  badge.textContent  = items.length;
+  badge.style.display = items.length > 0 ? 'flex' : 'none';
 }
 
-// Toggle clear button visibility
-function toggleClearButton() {
-    const searchInput = document.getElementById('navSearch');
-    const clearBtn = document.getElementById('searchClearBtn');
-    const divider = document.getElementById('searchDivider');
-    
-    if (searchInput && clearBtn && divider) {
-        const hasValue = searchInput.value.trim();
-        clearBtn.style.display = hasValue ? 'flex' : 'none';
-        divider.style.display = hasValue ? 'block' : 'none';
-    }
-}
+// Public aliases
+window.updateLikedWishlistCount = updateWishlistBadge;
+window.updateWishlistCount      = updateWishlistBadge;
 
-// Clear search
-function clearNavSearch() {
-    const searchInput = document.getElementById('navSearch');
-    if (searchInput) {
-        searchInput.value = '';
-        toggleClearButton();
-        searchInput.focus();
-    }
-    
-    // If we're on a search results page, reload without search parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('search')) {
-        const currentPage = window.location.pathname.split('/').pop();
-        window.location.href = currentPage || 'index.html';
-    }
-}
-
-// Search functionality
-function performNavSearch() {
-    const searchInput = document.getElementById('navSearch');
-    const searchTerm = searchInput ? searchInput.value.trim() : '';
-    
-    if (searchTerm) {
-        // Determine which page to search on based on current page
-        const currentPage = window.location.pathname.split('/').pop();
-        
-        if (currentPage === 'curated-hampers.html' || currentPage === '') {
-            window.location.href = `curated-hampers.html?search=${encodeURIComponent(searchTerm)}`;
-        } else if (currentPage === 'products.html') {
-            window.location.href = `products.html?search=${encodeURIComponent(searchTerm)}`;
-        } else {
-            // Default to products page
-            window.location.href = `products.html?search=${encodeURIComponent(searchTerm)}`;
-        }
-    }
-}
-
-// Update liked basket count badge
-function updateLikedWishlistCount() {
-    const likedItems = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
-    const badge = document.getElementById('likedWishlistBadge');
-    if (badge) {
-        badge.textContent = likedItems.length;
-        badge.style.display = likedItems.length > 0 ? 'flex' : 'none';
-    }
-}
-
-// Alias for backward compatibility
-window.updateWishlistCount = updateLikedWishlistCount;
-window.updateLikedWishlistCount = updateLikedWishlistCount;
-
-// Highlight active navigation link based on current page
+// ── Active Link ───────────────────────────────────
 function highlightActiveNavLink() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('.nav-links a');
-    
-    navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        let isActive = false;
-        
-        // Only highlight for separate pages, not anchor links
-        if (href === currentPage) {
-            isActive = true;
-        } else if (href === 'index.html' && (currentPage === '' || currentPage === 'index.html')) {
-            isActive = true;
-        } else if (href === 'products.html' && currentPage === 'products.html') {
-            isActive = true;
-        } else if (href === 'curated-hampers.html' && currentPage === 'curated-hampers.html') {
-            isActive = true;
-        } else if (href === 'mood-board.html' && currentPage === 'mood-board.html') {
-            isActive = true;
-        } else if (href === 'liked-wishlist.html' && currentPage === 'liked-wishlist.html') {
-            isActive = true;
-        }
-        // Don't highlight ABOUT/CONTACT anchor links
-        
-        if (isActive) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
-        }
-    });
+  const page = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-menu a, .drawer-menu a').forEach(link => {
+    const href = link.getAttribute('href');
+    link.classList.toggle('active', href === page);
+  });
 }
 
-// Load navigation when DOM is ready
+// ── Boot ──────────────────────────────────────────
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadNavigation);
+  document.addEventListener('DOMContentLoaded', loadNavigation);
 } else {
-    loadNavigation();
+  loadNavigation();
 }
-
