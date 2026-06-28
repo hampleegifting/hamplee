@@ -753,101 +753,192 @@ section { overflow: hidden; }
    PAGE — HAMPERS CATALOG (hampers.html)
 ═══════════════════════════════════════════ */
 
+/* ── Catalog Header ── */
 .catalog-header {
-  padding: 80px 0 60px;
-  background: var(--white);
-  border-bottom: 1px solid var(--border-soft);
+  padding: 110px 0 80px;
+  background: var(--dark);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.catalog-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 100%, rgba(201,169,89,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.catalog-header .section-label {
+  color: var(--gold);
+  display: block;
+  margin-bottom: 20px;
 }
 
 .catalog-header h1 {
-  font-size: clamp(36px, 5vw, 64px);
+  font-family: var(--font-serif);
+  font-size: clamp(42px, 6vw, 80px);
   font-weight: 300;
-  margin-bottom: 12px;
+  color: var(--white);
+  margin-bottom: 0;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+}
+
+.catalog-header h1 em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.catalog-header .gold-rule {
+  display: block;
+  margin: 24px auto;
 }
 
 .catalog-header p {
-  font-size: 14px;
-  color: var(--grey);
-  letter-spacing: 0.3px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.5px;
+  margin-bottom: 40px;
 }
 
-/* Filter Bar */
+.catalog-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-top: 8px;
+}
+
+.catalog-stat {
+  padding: 0 32px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.catalog-stat:last-child { border-right: none; }
+
+.catalog-stat-num {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.catalog-stat-label {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ── Filter Bar ── */
 .filter-bar {
-  padding: 28px 0;
+  padding: 0;
   background: var(--white);
   position: sticky;
   top: 0;
   z-index: 100;
   border-bottom: 1px solid var(--border-soft);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  backdrop-filter: blur(12px);
 }
 
-.filter-row {
+.filter-inner {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+
+.filter-group {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 0;
+  padding: 18px 0;
+  flex: 1;
 }
 
-.filter-row + .filter-row {
-  margin-top: 12px;
+.filter-group + .filter-group {
+  border-left: 1px solid var(--border-soft);
+  padding-left: 32px;
 }
 
 .filter-group-label {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
   color: var(--grey-light);
-  min-width: 80px;
+  white-space: nowrap;
+  padding-right: 20px;
   flex-shrink: 0;
 }
 
 .filter-pills {
   display: flex;
-  gap: 8px;
+  gap: 2px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .pill {
-  padding: 7px 18px;
+  padding: 6px 16px;
   font-family: var(--font-sans);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   background: transparent;
-  border: 1px solid var(--border-soft);
+  border: none;
   color: var(--grey);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
   border-radius: 0;
+  position: relative;
 }
 
-.pill:hover {
-  border-color: var(--gold);
-  color: var(--gold);
+.pill::after {
+  content: '';
+  position: absolute;
+  bottom: -18px;
+  left: 16px;
+  right: 16px;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
 }
+
+.pill:hover { color: var(--dark); }
 
 .pill.active {
-  background: var(--dark);
-  border-color: var(--dark);
-  color: var(--white);
+  color: var(--gold);
+  background: transparent;
 }
 
-/* Results Bar */
+.pill.active::after {
+  transform: scaleX(1);
+}
+
+/* ── Results Bar ── */
 .results-bar {
-  padding: 20px 0;
+  padding: 28px 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .results-count {
-  font-size: 12px;
-  color: var(--grey);
+  font-size: 11px;
+  color: var(--grey-light);
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
@@ -880,35 +971,38 @@ section { overflow: hidden; }
 .hamper-card {
   background: var(--white);
   cursor: pointer;
-  transition: box-shadow 0.35s var(--ease-out), transform 0.35s var(--ease-out);
+  transition: box-shadow 0.4s var(--ease-out), transform 0.4s var(--ease-out);
   position: relative;
   display: flex;
   flex-direction: row;
   overflow: hidden;
+  border-left: 3px solid transparent;
 }
 
 .hamper-card:hover {
-  box-shadow: 0 16px 48px rgba(0,0,0,0.10);
-  transform: translateY(-3px);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.10);
+  transform: translateY(-4px);
+  border-left-color: var(--gold);
 }
 
 .hamper-card-image {
   position: relative;
-  width: 55%;
+  width: 52%;
   flex-shrink: 0;
   overflow: hidden;
   background: var(--cream);
+  min-height: 300px;
 }
 
 .hamper-card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s var(--ease-out);
+  transition: transform 0.7s var(--ease-out);
 }
 
 .hamper-card:hover .hamper-card-image img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 /* Badge on card image */
@@ -955,10 +1049,11 @@ section { overflow: hidden; }
 /* Card info — right side of horizontal card */
 .hamper-card-info {
   flex: 1;
-  padding: 32px 40px;
+  padding: 40px 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 0;
 }
 
 .hamper-card-category {
@@ -972,32 +1067,108 @@ section { overflow: hidden; }
 
 .hamper-card-name {
   font-family: var(--font-serif);
-  font-size: clamp(20px, 2vw, 26px);
+  font-size: clamp(22px, 2.2vw, 30px);
   color: var(--dark);
-  margin-bottom: 8px;
-  line-height: 1.2;
+  margin-bottom: 6px;
+  line-height: 1.15;
+  font-weight: 400;
 }
 
 .hamper-card-tagline {
-  font-size: 12px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 14px;
   color: var(--grey-light);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.hamper-card-desc {
+  font-size: 12px;
+  color: var(--grey);
+  line-height: 1.8;
   margin-bottom: 20px;
-  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.hamper-card-occasions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.occasion-tag {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--grey);
+  border: 1px solid var(--border-soft);
+  padding: 4px 10px;
 }
 
 .hamper-card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 14px;
+  padding-top: 20px;
   border-top: 1px solid var(--border-soft);
+  margin-top: auto;
+}
+
+.hamper-card-price-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hamper-card-price-label {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--grey-light);
 }
 
 .hamper-card-price {
   font-family: var(--font-serif);
-  font-size: 18px;
+  font-size: 22px;
   color: var(--dark);
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.hamper-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hamper-wish-inline {
+  background: none;
+  border: 1px solid var(--border-soft);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--grey-light);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.hamper-wish-inline:hover,
+.hamper-wish-inline.wishlisted {
+  color: var(--gold);
+  border-color: var(--gold);
 }
 
 .hamper-enquire-btn {

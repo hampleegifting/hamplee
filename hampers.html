@@ -33,34 +33,51 @@
 <!-- ── Page Header ── -->
 <section class="catalog-header">
   <div class="container">
-    <span class="section-label">Hamplee Collections</span>
-    <h1 class="fade-up">Our Hampers</h1>
-    <p class="fade-up delay-1" id="headerCount">Loading hampers…</p>
+    <span class="section-label fade-up">Hamplee Collections</span>
+    <h1 class="fade-up delay-1">Curated <em>Hampers</em></h1>
+    <span class="gold-rule fade-up delay-2"></span>
+    <p class="fade-up delay-2" id="headerCount">Explore our full collection</p>
+    <div class="catalog-stats fade-up delay-3">
+      <div class="catalog-stat">
+        <span class="catalog-stat-num">30+</span>
+        <span class="catalog-stat-label">Curated Hampers</span>
+      </div>
+      <div class="catalog-stat">
+        <span class="catalog-stat-num">5</span>
+        <span class="catalog-stat-label">Collections</span>
+      </div>
+      <div class="catalog-stat">
+        <span class="catalog-stat-num">₹3,999</span>
+        <span class="catalog-stat-label">Starting From</span>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ── Filter Bar ── -->
 <div class="filter-bar" id="filterBar">
   <div class="container">
-    <div class="filter-row">
-      <span class="filter-group-label">Collection</span>
-      <div class="filter-pills" id="categoryPills">
-        <button class="pill active" data-category="all">All</button>
-        <button class="pill" data-category="Gourmet">Gourmet</button>
-        <button class="pill" data-category="Festive">Festive</button>
-        <button class="pill" data-category="Sustainable">Sustainable</button>
-        <button class="pill" data-category="NGO">NGO</button>
-        <button class="pill" data-category="Office">Office</button>
+    <div class="filter-inner">
+      <div class="filter-group">
+        <span class="filter-group-label">Collection</span>
+        <div class="filter-pills" id="categoryPills">
+          <button class="pill active" data-category="all">All</button>
+          <button class="pill" data-category="Gourmet">Gourmet</button>
+          <button class="pill" data-category="Festive">Festive</button>
+          <button class="pill" data-category="Sustainable">Sustainable</button>
+          <button class="pill" data-category="NGO">NGO</button>
+          <button class="pill" data-category="Office">Office</button>
+        </div>
       </div>
-    </div>
-    <div class="filter-row">
-      <span class="filter-group-label">Budget</span>
-      <div class="filter-pills" id="budgetPills">
-        <button class="pill active" data-budget="all">All</button>
-        <button class="pill" data-budget="5000">Under ₹5,000</button>
-        <button class="pill" data-budget="10000">₹5k – ₹10k</button>
-        <button class="pill" data-budget="15000">₹10k – ₹15k</button>
-        <button class="pill" data-budget="99999">₹15k+</button>
+      <div class="filter-group">
+        <span class="filter-group-label">Budget</span>
+        <div class="filter-pills" id="budgetPills">
+          <button class="pill active" data-budget="all">All</button>
+          <button class="pill" data-budget="5000">Under ₹5k</button>
+          <button class="pill" data-budget="10000">₹5k – ₹10k</button>
+          <button class="pill" data-budget="15000">₹10k – ₹15k</button>
+          <button class="pill" data-budget="99999">₹15k+</button>
+        </div>
       </div>
     </div>
   </div>
@@ -257,27 +274,36 @@ function renderGrid() {
   }
 
   grid.innerHTML = hampers.map((h, i) => {
-    const wished = isWished(h.id);
-    const delay  = (i % 4) + 1;
-    const hJSON  = JSON.stringify(h).replace(/"/g, '&quot;');
+    const wished  = isWished(h.id);
+    const delay   = (i % 4) + 1;
+    const price   = h.price ? h.price.display : 'Price on Request';
+    const occasionsHtml = (h.occasions || []).slice(0, 3)
+      .map(o => `<span class="occasion-tag">${o}</span>`).join('');
     return `
     <div class="hamper-card fade-up delay-${delay}" onclick="openPanel('${h.id}')">
       <div class="hamper-card-image">
         ${h.badge ? `<span class="hamper-badge ${getBadgeClass(h.badge)}">${h.badge}</span>` : ''}
-        <button class="hamper-wish-btn ${wished ? 'wishlisted' : ''}"
-          onclick="event.stopPropagation(); toggleWishlist('${h.id}', this)"
-          aria-label="${wished ? 'Remove from wishlist' : 'Add to wishlist'}">
-          ${wished ? '♥' : '♡'}
-        </button>
         <img loading="lazy" decoding="async" src="${h.image}" alt="${h.name}">
       </div>
       <div class="hamper-card-info">
         <div class="hamper-card-category">${h.category}</div>
         <h3 class="hamper-card-name">${h.name}</h3>
         <p class="hamper-card-tagline">${h.tagline}</p>
+        <p class="hamper-card-desc">${h.description}</p>
+        ${occasionsHtml ? `<div class="hamper-card-occasions">${occasionsHtml}</div>` : ''}
         <div class="hamper-card-footer">
-          <span class="hamper-card-price">${h.price.display}</span>
-          <span class="hamper-enquire-btn">Details →</span>
+          <div class="hamper-card-price-wrap">
+            <span class="hamper-card-price-label">Starting from</span>
+            <span class="hamper-card-price">${price}</span>
+          </div>
+          <div class="hamper-card-actions">
+            <button class="hamper-wish-inline ${wished ? 'wishlisted' : ''}"
+              onclick="event.stopPropagation(); toggleWishlist('${h.id}', this)"
+              aria-label="${wished ? 'Remove from wishlist' : 'Add to wishlist'}">
+              ${wished ? '♥' : '♡'}
+            </button>
+            <span class="hamper-enquire-btn">View Details →</span>
+          </div>
         </div>
       </div>
     </div>`;
@@ -462,7 +488,7 @@ function toggleWishlistPanel(id) {
   }
   localStorage.setItem('likedWishlist', JSON.stringify(wishlist));
   // Also update the card button on the grid
-  const cardBtn = document.querySelector(`.hamper-card[onclick*="'${id}'"] .hamper-wish-btn`);
+  const cardBtn = document.querySelector(`.hamper-card[onclick*="'${id}'"] .hamper-wish-inline`);
   if (cardBtn) {
     const wished = wishlist.some(w => w.id === id);
     cardBtn.classList.toggle('wishlisted', wished);
