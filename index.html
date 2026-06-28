@@ -444,7 +444,7 @@ function openPanel(h, contact) {
   const wishlist = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
   const wished   = wishlist.some(w => w.id === h.id);
 
-  const highlights = (h.highlights || []).map(hl => `• ${hl}`).join('\n');
+  const highlightsText = (h.highlights || []).map(hl => `• ${hl}`).join('\n');
   const waText = encodeURIComponent(
 `Hi Hamplee! I'm interested in this hamper:
 
@@ -453,7 +453,7 @@ Collection: ${h.category}
 Price: ${h.price.display}
 
 What's inside:
-${highlights}
+${highlightsText}
 
 MOQ: ${h.moq || 10} pieces${h.customizable ? ' | Custom branding available' : ''}
 
@@ -476,7 +476,7 @@ Description:
 ${h.description}
 
 What's Inside:
-${highlights}
+${highlightsText}
 
 Minimum Order: ${h.moq || 10} pieces
 Custom Branding: ${h.customizable ? 'Available' : 'Not available'}
