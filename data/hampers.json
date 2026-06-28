@@ -723,7 +723,7 @@
 
     {
       "id": "office-006",
-      "name": "Brand Essentials Kit",
+      "name": "Brand Ambassador Kit",
       "tagline": "Wear the brand, own the story",
       "category": "Office",
       "occasions": ["Corporate Gifting", "Employee Gifting", "New Joiner", "Client Gifting"],
@@ -765,6 +765,51 @@
         }
       ],
       "image": "asset/offineeds/office-006.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "office-007",
+      "name": "The Coffee Connoisseur",
+      "tagline": "Brewed for the refined professional",
+      "category": "Office",
+      "occasions": ["Corporate Gifting", "Client Gifting", "Employee Gifting"],
+      "price": { "amount": 4499, "display": "Starting from ₹4,499" },
+      "badge": "New Arrival",
+      "description": "A curated kit for the coffee lover at the desk — pairing premium artisanal coffee with stylish drinkware and refined leather accessories. Every detail is designed to elevate the everyday.",
+      "highlights": [
+        "Premium Gift Tote Bag",
+        "TGL Co. Signature Coffee",
+        "Glass Can Tumbler with Straw",
+        "Leather Valet Tray",
+        "Leather Strap Accessory"
+      ],
+      "items": [
+        {
+          "name": "Premium Gift Tote Bag",
+          "description": "Structured Box Bag · Tan Leather Handles · Hamplee Branded · Reusable"
+        },
+        {
+          "name": "TGL Co. Signature Coffee",
+          "description": "Premium Artisanal Blend · Gold Jar Packaging · Rich & Bold Flavour"
+        },
+        {
+          "name": "Glass Can Tumbler with Bamboo Lid & Straw",
+          "description": "Borosilicate Glass · Black Neoprene Sleeve · Bamboo Lid · Reusable Straw"
+        },
+        {
+          "name": "Leather Valet Tray",
+          "description": "Premium Tan Leather · Desk Catch-All Organizer · Minimalist Design"
+        },
+        {
+          "name": "Leather Strap Accessory",
+          "description": "Premium Leather · Compact & Elegant · Everyday Carry Essential"
+        }
+      ],
+      "image": "asset/offineeds/office-007.png",
       "gallery": [],
       "moq": 25,
       "customizable": true,
