@@ -862,6 +862,66 @@
     },
 
     {
+      "id": "office-011",
+      "name": "The Botanist",
+      "tagline": "Inspired by nature, curated with care",
+      "category": "Office",
+      "occasions": ["Corporate Gifting", "Employee Gifting", "Client Gifting", "New Joiner"],
+      "price": { "amount": 6999, "display": "Starting from ₹6,999" },
+      "badge": "New Arrival",
+      "description": "A nature-inspired gifting set with an earthy, botanical soul. Pairing artisan chocolates, a luxury fragrance roller, and a glass tumbler with curated desk accents — all housed in a signature Hamplee dark gift box. A hamper that feels as good as it looks.",
+      "highlights": [
+        "Premium Hamplee Gift Box with Satin Ribbon",
+        "Green Leather Tech & Travel Pouch",
+        "Inspired by Nature Notebook",
+        "Luxury Fragrance Roller",
+        "Artisan Chocolate Truffles Box",
+        "Glass Tumbler with Handle & Lid",
+        "Botanical Candle / Reed Diffuser",
+        "Mini Decorative Plant"
+      ],
+      "items": [
+        {
+          "name": "Premium Hamplee Gift Box",
+          "description": "Dark Brown Rigid Box · Gold Hamplee Branding · Black Satin Ribbon · Premium Unboxing Experience"
+        },
+        {
+          "name": "Green Leather Tech & Travel Pouch",
+          "description": "Dark Green Vegan Leather · Zippered Closure · Fits Cables, Earphones & Accessories · Compact & Stylish"
+        },
+        {
+          "name": "Inspired by Nature Notebook",
+          "description": "Botanical Illustration Cover · Minimalist Design · Premium Ruled Pages · Soft-Touch Finish"
+        },
+        {
+          "name": "Luxury Fragrance Roller",
+          "description": "Premium Eau de Parfum · Roll-On Applicator · Long-Lasting Scent · Travel-Friendly · Elegant Packaging"
+        },
+        {
+          "name": "Artisan Chocolate Truffles",
+          "description": "5 Assorted Premium Truffles · Rose Gold Gift Box · Handcrafted · Indulgent Flavours"
+        },
+        {
+          "name": "Glass Tumbler with Handle & Lid",
+          "description": "Mason Jar Style · Borosilicate Glass · Matte Black Handle · Leak-Proof Lid · 500ml"
+        },
+        {
+          "name": "Botanical Candle / Reed Diffuser",
+          "description": "Nature-Print Wrap · Cork Top · Premium Fragrance · Long-Lasting · Desk & Home Accent"
+        },
+        {
+          "name": "Mini Decorative Plant",
+          "description": "Small Glass Vase · Live or Preserved Greenery · Desk Accent · Low Maintenance"
+        }
+      ],
+      "image": "asset/offineeds/office-011.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
       "id": "office-010",
       "name": "The Prestige Collection",
       "tagline": "For the person who deserves the finest",
