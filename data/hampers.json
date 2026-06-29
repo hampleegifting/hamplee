@@ -60,8 +60,62 @@
       "price": { "amount": 6999, "display": "Starting from ₹6,999" },
       "badge": "Bestseller",
       "description": "A carefully curated selection of premium artisanal foods and beverages. This collection brings together the finest flavors from renowned producers, perfect for discerning palates and special occasions.",
-      "highlights": ["Artisanal selections", "Premium ingredients", "Gourmet presentation", "International delicacies", "Perfect for connoisseurs"],
-      "image": "asset/gourmet/IMG20250803114127.jpg",
+      "highlights": [
+        "Premium Rigid Gift Box with Gold Ribbon",
+        "Berry Blast Superfood Herbal Mix",
+        "Premium Organic Ghee Jar",
+        "Artisan Chocolate Assortment Box",
+        "Gourmet Dip & Sauce Variety Pack",
+        "Premium Organic Fox-Nuts Jar",
+        "Peri Peri Mix Cachew", 
+        "Organic Honey",
+        "Artisan Cookies",
+        "Assorted Baklava Box",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Cream Rigid Gift Box with Gold Ribbon",
+          "description": "Premium Rigid Cream Box · Gold Satin Ribbon · Luxury Unboxing Experience · Reusable"
+        },
+        {
+          "name": "Berry Blast Superfood Herbal Mix",
+          "description": "Blackcurrant · Strawberry · Blueberry · Cherry · Antioxidant-Rich · Natural & Wholesome · 75g"
+        },
+        {
+          "name": "Premium Peanut Butter Jar",
+          "description": "Large Glass Jar · Rich & Creamy · No Preservatives · High Protein · Premium Artisanal Brand"
+        },
+        {
+          "name": "Dark Chocolate Bar with Nuts",
+          "description": "Premium Dark Chocolate · Whole Almonds & Nuts · Rich Cocoa · Indulgent & Gifting-Ready"
+        },
+        {
+          "name": "Artisan Chocolate Assortment Box",
+          "description": "Gold Gift Box · Black Ribbon · Assorted Handcrafted Chocolates · Premium Belgian/Couverture"
+        },
+        {
+          "name": "Gourmet Dip & Sauce Variety Pack",
+          "description": "Multiple Flavours · Mustard · French · Tomato Basil & More · Premium Sachets · Artisanal Blends"
+        },
+        {
+          "name": "Premium Preserve & Chutney Jar",
+          "description": "Glass Jar · Artisanal Recipe · Italian-Style Chutney · No Artificial Additives · Rich Flavour"
+        },
+        {
+          "name": "Artisan Cookies",
+          "description": "Premium Baked Biscuits · Buttery & Crisp · Gourmet Quality · Perfect Accompaniment"
+        },
+        {
+          "name": "Assorted Mithai & Chocolate Box",
+          "description": "9-Piece Selection · Assorted Indian Sweets & Chocolates · Elegant Square Box"
+        },
+        {
+          "name": "Wax Seal Greeting Card",
+          "description": "Premium Envelope · Gold Wax Seal · Personalised Message · Elegant Finishing Touch"
+        }
+      ],
+      "image": "asset/gourmet/gourmet-001.png",
       "gallery": [],
       "moq": 10,
       "customizable": true,
