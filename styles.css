@@ -1805,7 +1805,11 @@ a, button, .pill, .hamper-card, .collection-tile, .contact-card {
   .contact-card      { min-width: unset; }
   .footer-grid       { grid-template-columns: 1fr; gap: 32px; }
   .filter-row        { gap: 8px; }
-  .filter-group-label { min-width: 60px; }
+  .filter-group      { padding: 8px 0; }
+  .filter-group-label { min-width: 52px; font-size: 10px; letter-spacing: 1.5px; padding-right: 10px; margin-right: 10px; }
+  .filter-pills      { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .filter-pills::-webkit-scrollbar { display: none; }
+  .pill              { flex-shrink: 0; white-space: nowrap; }
   .detail-panel      { width: 100vw; }
   .panel-details     { padding: 24px 20px; }
   .collections-section,
@@ -1838,7 +1842,7 @@ a, button, .pill, .hamper-card, .collection-tile, .contact-card {
   .hamper-card-price      { font-size: 24px; }
 
   /* Filter pills */
-  .pill                   { font-size: 12px; padding: 9px 18px; }
+  .pill                   { font-size: 11px; padding: 7px 14px; }
 
   /* Process steps */
   .step-body              { font-size: 15px; }
