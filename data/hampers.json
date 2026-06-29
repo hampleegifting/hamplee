@@ -864,7 +864,7 @@
     {
       "id": "office-010",
       "name": "The Prestige Collection",
-      "tagline": "For the client who deserves the finest",
+      "tagline": "For the person who deserves the finest",
       "category": "Office",
       "occasions": ["Client Gifting", "Corporate Gifting", "Employee Gifting"],
       "price": { "amount": 9999, "display": "Starting from ₹9,999" },
@@ -876,8 +876,8 @@
         "Luxury Scented Candle",
         "Wrapped Gourmet Chocolate Box",
         "Premium Leather Notepad",
-        "Burgundy Silk Necktie",
-        "Gold Luxury Pen Set in Presentation Box",
+        "Silk Necktie",
+        "Gold Tie Clip Set in Presentation Box",
         "Wooden Chess / Strategy Board Game",
         "Handwritten Thank You Card"
       ],
@@ -903,12 +903,12 @@
           "description": "Tan Cognac Leather Cover · Embossed Finish · Elastic Strap · High-Quality Ruled Pages · Bookmark Ribbon"
         },
         {
-          "name": "Silk Necktie",
-          "description": "Burgundy · 100% Woven Silk · Classic Width · Premium Finish · Elegant Gift Packaging"
+          "name": "Silk Tie",
+          "description": "100% Woven Silk · Classic Width · Premium Finish · Elegant Gift Packaging"
         },
         {
-          "name": "Gold Luxury Pen Set",
-          "description": "Smooth Refillable Gold Pen · White Presentation Box · Sophisticated Design · Custom Engraving Available"
+          "name": "Gold Tie Clip Set",
+          "description": "Premium Gold-Finish Tie Clip · White Presentation Box · Sophisticated Design · Custom Engraving Available"
         },
         {
           "name": "Wooden Chess & Strategy Board Game",
