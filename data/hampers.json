@@ -772,6 +772,51 @@
     },
 
     {
+      "id": "office-008",
+      "name": "The Executive Suite",
+      "tagline": "Sleek essentials for the discerning professional",
+      "category": "Office",
+      "occasions": ["Corporate Gifting", "Client Gifting", "Employee Gifting"],
+      "price": { "amount": 5999, "display": "Starting from ₹5,999" },
+      "badge": "New Arrival",
+      "description": "A refined stationery and drinkware set crafted for the modern executive. Featuring a leather pen pouch, premium hardcover notebook, elegant metal pen, and a sleek vacuum flask — all presented in a signature Hamplee gift box.",
+      "highlights": [
+        "Leather Pen & Pencil Pouch",
+        "Executive Hardcover Notebook",
+        "Premium Metal Pen",
+        "Vacuum Insulated Flask",
+        "Premium Hamplee Gift Box with Ribbon"
+      ],
+      "items": [
+        {
+          "name": "Leather Pen & Pencil Pouch",
+          "description": "Premium Vegan Leather · Zippered Closure · Compact & Slim · Fits Pens, Stylus & Small Accessories · Custom Logo"
+        },
+        {
+          "name": "Executive Hardcover Notebook",
+          "description": "Charcoal Textured Cover · Elastic Closure Band · Built-in Pen Loop · A5 Size · 192 Ruled Pages · Premium Quality Paper"
+        },
+        {
+          "name": "Premium Metal Pen",
+          "description": "Gold Finish · Smooth Writing · Elegant Minimalist Design · Refillable"
+        },
+        {
+          "name": "Vacuum Insulated Flask",
+          "description": "Champagne Finish · Double-Wall Vacuum Insulated · Stainless Steel · Keeps Hot & Cold · Leak-Proof · 500ml · Hamplee Branded"
+        },
+        {
+          "name": "Premium Hamplee Gift Box",
+          "description": "Rigid Matte Grey Box · Satin Ribbon Closure · Hamplee Signature Branding · Reusable"
+        }
+      ],
+      "image": "asset/offineeds/office-008.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
       "id": "office-007",
       "name": "The Coffee Connoisseur",
       "tagline": "Brewed for the refined professional",
