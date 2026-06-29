@@ -1818,6 +1818,43 @@ a, button, .pill, .hamper-card, .collection-tile, .contact-card {
   .wishlist-header   { padding: 48px 0 36px; }
   .hampers-section,
   .wishlist-section  { padding: 24px 0 64px; }
+
+  /* ── Mobile typography scale-up ── */
+  /* Labels & tags: 9–10px → 12px minimum */
+  .section-label          { font-size: 12px; letter-spacing: 2.5px; }
+  .hamper-card-category   { font-size: 11px; }
+  .hamper-card-price-label{ font-size: 11px; }
+  .hamper-enquire-btn     { font-size: 12px; }
+  .occasion-tag           { font-size: 11px; padding: 5px 12px; }
+  .filter-group-label     { font-size: 11px; }
+  .catalog-stat-label     { font-size: 11px; }
+  .results-count          { font-size: 13px; }
+  .testimonial-author     { font-size: 13px; }
+  .testimonial-role       { font-size: 13px; }
+
+  /* Card body text */
+  .hamper-card-desc       { font-size: 14px; }
+  .hamper-card-tagline    { font-size: 15px; }
+  .hamper-card-price      { font-size: 24px; }
+
+  /* Filter pills */
+  .pill                   { font-size: 12px; padding: 9px 18px; }
+
+  /* Process steps */
+  .step-body              { font-size: 15px; }
+
+  /* Detail panel */
+  .panel-desc             { font-size: 15px; }
+  .panel-item-name        { font-size: 14px; }
+  .panel-item-desc        { font-size: 13px; }
+  .panel-wish-btn         { font-size: 13px; }
+  .panel-wa-btn,
+  .panel-email-btn        { font-size: 13px; padding: 17px 20px; }
+
+  /* Footer */
+  .footer-tagline         { font-size: 14px; }
+  .footer-links a         { font-size: 15px; }
+  .footer-copy            { font-size: 13px; }
 }
 
 @media (max-width: 480px) {
@@ -1834,5 +1871,15 @@ a, button, .pill, .hamper-card, .collection-tile, .contact-card {
     aspect-ratio: 16/9;
   }
   .hamper-card-info { padding: 20px 20px 24px; }
-  .hamper-card-name { font-size: 18px; }
+
+  /* Small-screen type: bumped further for 375px phones */
+  .hamper-card-name     { font-size: 20px; }
+  .hamper-card-desc     { font-size: 14px; }
+  .hamper-card-price    { font-size: 22px; }
+  .section-title        { font-size: clamp(26px, 8vw, 38px); }
+  .statement-title      { font-size: clamp(24px, 7vw, 36px); }
+  .statement-body       { font-size: 15px; line-height: 1.8; }
+  .step-title           { font-size: 20px; }
+  .step-body            { font-size: 15px; }
+  .contact-value        { font-size: 16px; }
 }

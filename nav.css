@@ -321,7 +321,12 @@ body.nav-open .nav-drawer {
   }
 }
 
+@media (max-width: 768px) {
+  .drawer-menu li a      { font-size: 13px; letter-spacing: 2px; }
+  .drawer-contact-link   { font-size: 14px; }
+}
+
 @media (max-width: 480px) {
-  .announcement-bar { font-size: 10px; }
+  .announcement-bar { font-size: 11px; }
   .nav-inner { padding: 0 16px; }
 }
