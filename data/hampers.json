@@ -862,6 +862,61 @@
     },
 
     {
+      "id": "office-012",
+      "name": "The Achiever Kit",
+      "tagline": "Dream it. Believe it. Achieve it.",
+      "category": "Office",
+      "occasions": ["Employee Gifting", "Corporate Gifting", "New Joiner"],
+      "price": { "amount": 4999, "display": "Starting from ₹4,999" },
+      "badge": "Most Popular",
+      "description": "A motivational gifting kit designed to inspire from day one. Packed with a goal planner, a dreamer's notebook, a reed diffuser for calm focus, and feel-good accessories — all in a premium frosted tote. The perfect hamper for new joiners, performance recognition, and team appreciation.",
+      "highlights": [
+        "Premium Frosted Gift Tote with Gold Bow",
+        "Win The Day Goal Planner",
+        "Dream. Believe. Achieve. Notebook",
+        "Navy Travel & Tech Organiser Bag",
+        "You Got This! Glass Tumbler",
+        "Reed Diffuser with Dried Flower",
+        "Motivational Vinyl Stickers (Set of 2)"
+      ],
+      "items": [
+        {
+          "name": "Premium Frosted Gift Tote",
+          "description": "Clear PVC Bag · Gold Satin Ribbon Bow · Gold Shredded Paper Filler · Reusable · Premium Presentation"
+        },
+        {
+          "name": "Win The Day Goal Planner",
+          "description": "Daily Goal Setting Pages · Habit Tracker · Reflection Sections · Premium Paper · Hardcover"
+        },
+        {
+          "name": "Dream. Believe. Achieve. Notebook",
+          "description": "Galaxy Print Cover · Motivational Quote · Ruled Pages · Compact Size · Premium Finish"
+        },
+        {
+          "name": "Navy Travel & Tech Organiser Bag",
+          "description": "Zippered Closure · Top Handle · Multiple Pockets · Fits Cables, Chargers & Accessories · Durable"
+        },
+        {
+          "name": "You Got This! Glass Tumbler",
+          "description": "Borosilicate Glass · Motivational Quote Print · Reusable · 300ml · Dishwasher Safe"
+        },
+        {
+          "name": "Reed Diffuser with Dried Flower",
+          "description": "Amber Glass Bottle · Premium Fragrance · Reed Sticks · Decorative Dried Rose · Long-Lasting Scent"
+        },
+        {
+          "name": "Motivational Vinyl Stickers",
+          "description": "Set of 2 · Never Give Up & Believe in Yourself · High-Quality Vinyl · Waterproof · For Laptop, Bottle or Journal"
+        }
+      ],
+      "image": "asset/offineeds/office-012.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
       "id": "office-011",
       "name": "The Botanist",
       "tagline": "Inspired by nature, curated with care",
