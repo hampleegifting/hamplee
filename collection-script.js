@@ -43,7 +43,7 @@ function closeProductModal() {
 // Close modal on outside click
 window.addEventListener('click', function(event) {
     const modal = document.getElementById('productModal');
-    if (event.target === modal) {
+    if (modal && event.target === modal) {
         closeProductModal();
     }
 });
@@ -73,36 +73,41 @@ function closeLightbox() {
     lightbox.classList.remove('active');
 }
 
-// Scroll Animation Observer
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+function initFadeAndAnchorEnhancements() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.animationPlayState = 'running';
-        }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-up, .fade-in').forEach(el => {
+        el.style.animationPlayState = 'paused';
+        observer.observe(el);
     });
-}, observerOptions);
 
-document.querySelectorAll('.fade-up, .fade-in').forEach(el => {
-    el.style.animationPlayState = 'paused';
-    observer.observe(el);
-});
-
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
     });
-});
+}
 
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFadeAndAnchorEnhancements);
+} else {
+    initFadeAndAnchorEnhancements();
+}

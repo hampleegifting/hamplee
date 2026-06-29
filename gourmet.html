@@ -2,26 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Gourmet - Exquisite Flavors Curated | Hamplee</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"></noscript>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
+    <script src="nav.js" defer></script>
 </head>
 <body>
-    <nav>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">HAMPLEE</a>
-            <ul class="nav-links">
-                <li><a href="index.html#collections">Collections</a></li>
-                <li><a href="index.html#hampers">Hampers</a></li>
-                <li><a href="index.html#custom">Custom Orders</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="nav-placeholder"></div>
 
     <section class="collection-header">
         <div class="container">
@@ -36,7 +28,7 @@
             <div class="products-grid">
                 <div class="product-card fade-up delay-1" onclick="openProductModal('The Epicurean Collection', 'asset/gourmet/IMG20250803114127.jpg', '₹6,999', 'A carefully curated selection of premium artisanal foods and beverages. This collection brings together the finest flavors from renowned producers, perfect for discerning palates and special occasions.', ['Artisanal selections', 'Premium ingredients', 'Gourmet presentation', 'International delicacies', 'Perfect for connoisseurs'])">
                     <div class="product-image">
-                        <img src="asset/gourmet/IMG20250803114127.jpg" alt="The Epicurean Collection">
+                        <img loading="lazy" decoding="async" src="asset/gourmet/IMG20250803114127.jpg" alt="The Epicurean Collection">
                     </div>
                     <div class="product-info">
                         <h3>The Epicurean Collection</h3>
@@ -48,7 +40,7 @@
 
                 <div class="product-card fade-up delay-2" onclick="openProductModal('Culinary Treasures', 'asset/gourmet/IMG20250803115903.jpg', '₹7,999', 'Discover rare and exceptional gourmet items that elevate every dining experience. From exotic spices to premium preserves, this hamper is a journey through world-class flavors.', ['Rare finds', 'World-class quality', 'Luxury ingredients', 'Chef-approved', 'Gift of sophistication'])">
                     <div class="product-image">
-                        <img src="asset/gourmet/IMG20250803115903.jpg" alt="Culinary Treasures">
+                        <img loading="lazy" decoding="async" src="asset/gourmet/IMG20250803115903.jpg" alt="Culinary Treasures">
                     </div>
                     <div class="product-info">
                         <h3>Culinary Treasures</h3>
@@ -60,7 +52,7 @@
 
                 <div class="product-card fade-up delay-3" onclick="openProductModal('Taste of Luxury', 'asset/gourmet/IMG20250809115537.jpg', '₹8,999', 'Indulge in the ultimate gourmet experience with premium chocolates, fine teas, specialty coffees, and artisan treats. Each item is handpicked for its exceptional quality and taste.', ['Premium chocolates', 'Fine beverages', 'Artisan treats', 'Luxury packaging', 'Memorable gifting'])">
                     <div class="product-image">
-                        <img src="asset/gourmet/IMG20250809115537.jpg" alt="Taste of Luxury">
+                        <img loading="lazy" decoding="async" src="asset/gourmet/IMG20250809115537.jpg" alt="Taste of Luxury">
                     </div>
                     <div class="product-info">
                         <h3>Taste of Luxury</h3>
@@ -72,7 +64,7 @@
 
                 <div class="product-card fade-up delay-4" onclick="openProductModal('Grand Gastronome', 'asset/gourmet/IMG20250809122610.jpg', '₹9,999', 'The pinnacle of gourmet gifting featuring award-winning products, limited editions, and exclusive imports. This collection represents the very best in culinary excellence.', ['Award-winning products', 'Limited editions', 'Exclusive imports', 'Unmatched quality', 'Ultimate luxury'])">
                     <div class="product-image">
-                        <img src="asset/gourmet/IMG20250809122610.jpg" alt="Grand Gastronome">
+                        <img loading="lazy" decoding="async" src="asset/gourmet/IMG20250809122610.jpg" alt="Grand Gastronome">
                     </div>
                     <div class="product-info">
                         <h3>Grand Gastronome</h3>
@@ -84,7 +76,7 @@
 
                 <div class="product-card fade-up delay-1" onclick="openProductModal('Heritage Flavors', 'asset/gourmet/IMG20250815113228.jpg', '₹11,999', 'A celebration of timeless recipes and heritage brands that have perfected their craft over generations. This premium collection honors tradition while delivering contemporary elegance.', ['Heritage brands', 'Traditional recipes', 'Generational expertise', 'Premium presentation', 'Timeless elegance'])">
                     <div class="product-image">
-                        <img src="asset/gourmet/IMG20250815113228.jpg" alt="Heritage Flavors">
+                        <img loading="lazy" decoding="async" src="asset/gourmet/IMG20250815113228.jpg" alt="Heritage Flavors">
                     </div>
                     <div class="product-info">
                         <h3>Heritage Flavors</h3>
@@ -96,7 +88,7 @@
 
                 <div class="product-card fade-up delay-2" onclick="openProductModal('Imperial Feast', 'asset/gourmet/IMG20250815114410.jpg', '₹14,999', 'Our most prestigious gourmet collection featuring rare delicacies, vintage selections, and the finest products money can buy. Perfect for celebrating milestone occasions.', ['Ultra-premium selection', 'Rare delicacies', 'Vintage items', 'Museum-quality presentation', 'Once-in-a-lifetime gifting'])">
                     <div class="product-image">
-                        <img src="asset/gourmet/IMG20250815114410.jpg" alt="Imperial Feast">
+                        <img loading="lazy" decoding="async" src="asset/gourmet/IMG20250815114410.jpg" alt="Imperial Feast">
                     </div>
                     <div class="product-info">
                         <h3>Imperial Feast</h3>
@@ -198,7 +190,7 @@
         <img id="lightboxImage" src="" alt="Full size image">
     </div>
 
-    <script src="collection-script.js"></script>
+    <script src="collection-script.js" defer></script>
 </body>
 </html>
 

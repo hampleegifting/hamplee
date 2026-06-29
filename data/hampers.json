@@ -61,7 +61,7 @@
       "badge": "Bestseller",
       "description": "A carefully curated selection of premium artisanal foods and beverages. This collection brings together the finest flavors from renowned producers, perfect for discerning palates and special occasions.",
       "highlights": [
-        "Premium Rigid Gift Box with Gold Ribbon",
+        "Premium Rigid Gift Box",
         "Berry Blast Superfood Herbal Mix",
         "Premium Organic Ghee Jar",
         "Artisan Chocolate Assortment Box",
@@ -75,44 +75,48 @@
       ],
       "items": [
         {
-          "name": "Cream Rigid Gift Box with Gold Ribbon",
-          "description": "Premium Rigid Cream Box · Gold Satin Ribbon · Luxury Unboxing Experience · Reusable"
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box · Magnetic Closure · Sophisticated Design"
         },
         {
           "name": "Berry Blast Superfood Herbal Mix",
-          "description": "Blackcurrant · Strawberry · Blueberry · Cherry · Antioxidant-Rich · Natural & Wholesome · 75g"
+          "description": "Blackcurrant · Strawberry · Cranberry · Blueberry · Cherry · Indian Spice Infusion · Sweet & Tangy · Antioxidant Rich · 50g"
         },
         {
-          "name": "Premium Peanut Butter Jar",
-          "description": "Large Glass Jar · Rich & Creamy · No Preservatives · High Protein · Premium Artisanal Brand"
-        },
-        {
-          "name": "Dark Chocolate Bar with Nuts",
-          "description": "Premium Dark Chocolate · Whole Almonds & Nuts · Rich Cocoa · Indulgent & Gifting-Ready"
+          "name": "Premium Organic Ghee Jar",
+          "description": "Organic Gir Cow A2 Bilona Ghee · Vedic Bilona Method · Natural Goodness · Highest Quality · 250ml"
         },
         {
           "name": "Artisan Chocolate Assortment Box",
-          "description": "Gold Gift Box · Black Ribbon · Assorted Handcrafted Chocolates · Premium Belgian/Couverture"
+          "description": "Box of 9 · Pure Couverture Chocolate · Signature Belgian Style · Milk, Dark & White Pralines · Pure Cocoa Butter · Egg-less · 99g"
         },
         {
           "name": "Gourmet Dip & Sauce Variety Pack",
-          "description": "Multiple Flavours · Mustard · French · Tomato Basil & More · Premium Sachets · Artisanal Blends"
+          "description": "Happiness Box · Assorted Dips & Spreads · 100% Natural · No Preservatives · Combo Box of 5 · 195g"
         },
         {
-          "name": "Premium Preserve & Chutney Jar",
-          "description": "Glass Jar · Artisanal Recipe · Italian-Style Chutney · No Artificial Additives · Rich Flavour"
+          "name": "Cheese & Herbs Quinoa Puffs",
+          "description": "Roasted Healthy Snack · High Protein · Super-Grain · Guilt-Free Enjoyment · Creamy & Crunchy · 100g"
+        },
+        {
+          "name": "Oregano Roasted Cashews",
+          "description": "Whole Roasted Cashews · Aromatic Oregano Herb · Handpicked Premium-Grade · Savory Gourmet · Healthy Snack · Crisp & Earthy · 100g"
+        },
+        {
+          "name": "Organic Honey",
+          "description": "Jamun Flavored · Pure & Natural · Unprocessed · Rich & Floral · 250g"
         },
         {
           "name": "Artisan Cookies",
-          "description": "Premium Baked Biscuits · Buttery & Crisp · Gourmet Quality · Perfect Accompaniment"
+          "description": "Exotic Spiced Handcrafted Cookies · No Maida · 100% Veg · Endless Delight · 100g"
         },
         {
-          "name": "Assorted Mithai & Chocolate Box",
-          "description": "9-Piece Selection · Assorted Indian Sweets & Chocolates · Elegant Square Box"
+          "name": "Assorted Baklava Box",
+          "description": "Authentic Middle Eastern · Flaky Pastry Layers · Honey & Nut Filling · Sweet Treat · 9 Pieces"
         },
         {
-          "name": "Wax Seal Greeting Card",
-          "description": "Premium Envelope · Gold Wax Seal · Personalised Message · Elegant Finishing Touch"
+          "name": "Customized Greeting Card",
+          "description": "Personalized Message · Brand-Stamped · Elegant Finishing Touch"
         }
       ],
       "image": "asset/gourmet/gourmet-001.png",

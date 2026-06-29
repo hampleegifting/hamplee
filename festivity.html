@@ -2,26 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Festivity - Celebrate in Style | Hamplee</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"></noscript>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
+    <script src="nav.js" defer></script>
 </head>
 <body>
-    <nav>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">HAMPLEE</a>
-            <ul class="nav-links">
-                <li><a href="index.html#collections">Collections</a></li>
-                <li><a href="index.html#hampers">Hampers</a></li>
-                <li><a href="index.html#custom">Custom Orders</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="nav-placeholder"></div>
 
     <section class="collection-header">
         <div class="container">
@@ -36,7 +28,7 @@
             <div class="products-grid">
                 <div class="product-card fade-up delay-1" onclick="openProductModal('Diwali Delights', 'asset/festivity/IMG20250803120821.jpg', '₹5,999', 'Illuminate festivities with this exquisite Diwali hamper featuring traditional sweets, premium dry fruits, decorative diyas, and artisan chocolates. Perfect for spreading joy and prosperity.', ['Traditional sweets', 'Premium dry fruits', 'Decorative diyas', 'Festival themed packaging', 'Spreading prosperity'])">
                     <div class="product-image">
-                        <img src="asset/festivity/IMG20250803120821.jpg" alt="Diwali Delights">
+                        <img loading="lazy" decoding="async" src="asset/festivity/IMG20250803120821.jpg" alt="Diwali Delights">
                     </div>
                     <div class="product-info">
                         <h3>Diwali Delights</h3>
@@ -48,7 +40,7 @@
 
                 <div class="product-card fade-up delay-2" onclick="openProductModal('Festival of Joy', 'asset/festivity/IMG20250803121345.jpg', '₹6,499', 'A vibrant celebration hamper perfect for any festive occasion. Curated with love, featuring gourmet treats, festive decorations, and premium gifting essentials.', ['Festive decorations', 'Gourmet treats', 'Premium packaging', 'Multi-occasion gifting', 'Celebration ready'])">
                     <div class="product-image">
-                        <img src="asset/festivity/IMG20250803121345.jpg" alt="Festival of Joy">
+                        <img loading="lazy" decoding="async" src="asset/festivity/IMG20250803121345.jpg" alt="Festival of Joy">
                     </div>
                     <div class="product-info">
                         <h3>Festival of Joy</h3>
@@ -60,7 +52,7 @@
 
                 <div class="product-card fade-up delay-3" onclick="openProductModal('New Year Elegance', 'asset/festivity/IMG20250803123105.jpg', '₹7,999', 'Welcome the new year in style with this luxurious hamper featuring imported wines, gourmet snacks, celebration essentials, and elegant gift presentation.', ['Celebration essentials', 'Gourmet snacks', 'Elegant presentation', 'New year themed', 'Premium quality'])">
                     <div class="product-image">
-                        <img src="asset/festivity/IMG20250803123105.jpg" alt="New Year Elegance">
+                        <img loading="lazy" decoding="async" src="asset/festivity/IMG20250803123105.jpg" alt="New Year Elegance">
                     </div>
                     <div class="product-info">
                         <h3>New Year Elegance</h3>
@@ -72,7 +64,7 @@
 
                 <div class="product-card fade-up delay-4" onclick="openProductModal('Grand Celebration', 'asset/festivity/IMG20250809105119.jpg', '₹8,999', 'A magnificent celebration hamper designed for grand occasions. Features luxury items, premium treats, and stunning presentation that leaves a lasting impression.', ['Luxury items', 'Premium treats', 'Stunning presentation', 'Grand occasions', 'Memorable gifting'])">
                     <div class="product-image">
-                        <img src="asset/festivity/IMG20250809105119.jpg" alt="Grand Celebration">
+                        <img loading="lazy" decoding="async" src="asset/festivity/IMG20250809105119.jpg" alt="Grand Celebration">
                     </div>
                     <div class="product-info">
                         <h3>Grand Celebration</h3>
@@ -84,7 +76,7 @@
 
                 <div class="product-card fade-up delay-1" onclick="openProductModal('Royal Festivities', 'asset/festivity/IMG20250809105613.jpg', '₹10,999', 'Celebrate like royalty with this opulent festival hamper. Handpicked premium products, traditional elegance, and contemporary style come together in perfect harmony.', ['Opulent selection', 'Traditional meets modern', 'Royal presentation', 'Premium quality', 'Festival grandeur'])">
                     <div class="product-image">
-                        <img src="asset/festivity/IMG20250809105613.jpg" alt="Royal Festivities">
+                        <img loading="lazy" decoding="async" src="asset/festivity/IMG20250809105613.jpg" alt="Royal Festivities">
                     </div>
                     <div class="product-info">
                         <h3>Royal Festivities</h3>
@@ -96,7 +88,7 @@
 
                 <div class="product-card fade-up delay-2" onclick="openProductModal('Heritage Celebration', 'asset/festivity/IMG20250809123829.jpg', '₹12,999', 'Honor traditions while embracing luxury. This heritage hamper showcases the finest festive offerings with cultural authenticity and premium quality.', ['Cultural authenticity', 'Heritage products', 'Luxury gifting', 'Traditional craftsmanship', 'Timeless elegance'])">
                     <div class="product-image">
-                        <img src="asset/festivity/IMG20250809123829.jpg" alt="Heritage Celebration">
+                        <img loading="lazy" decoding="async" src="asset/festivity/IMG20250809123829.jpg" alt="Heritage Celebration">
                     </div>
                     <div class="product-info">
                         <h3>Heritage Celebration</h3>
@@ -198,7 +190,7 @@
         <img id="lightboxImage" src="" alt="Full size image">
     </div>
 
-    <script src="collection-script.js"></script>
+    <script src="collection-script.js" defer></script>
 </body>
 </html>
 

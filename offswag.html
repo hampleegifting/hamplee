@@ -2,26 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Offi Swag - Elevate Your 9-5 | Hamplee</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"></noscript>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
+    <script src="nav.js" defer></script>
 </head>
 <body>
-    <nav>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">HAMPLEE</a>
-            <ul class="nav-links">
-                <li><a href="index.html#collections">Collections</a></li>
-                <li><a href="index.html#hampers">Hampers</a></li>
-                <li><a href="index.html#custom">Custom Orders</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="nav-placeholder"></div>
 
     <section class="collection-header">
         <div class="container">
@@ -36,7 +28,7 @@
             <div class="products-grid">
                 <div class="product-card fade-up delay-1" onclick="openProductModal('Executive Essentials', 'asset/offineeds/IMG20250803124522.jpg', '₹3,999', 'Transform your workspace with premium essentials designed for the modern executive. This collection features high-quality office accessories that blend functionality with sophistication.', ['Premium desk accessories', 'Branded corporate gifts', 'Professional presentation', 'Practical daily use', 'Custom branding available'])">
                     <div class="product-image">
-                        <img src="asset/offineeds/IMG20250803124522.jpg" alt="Executive Essentials">
+                        <img loading="lazy" decoding="async" src="asset/offineeds/IMG20250803124522.jpg" alt="Executive Essentials">
                     </div>
                     <div class="product-info">
                         <h3>Executive Essentials</h3>
@@ -48,7 +40,7 @@
 
                 <div class="product-card fade-up delay-2" onclick="openProductModal('Productivity Pro Pack', 'asset/offineeds/IMG20250803124555.jpg', '₹4,499', 'Boost productivity with carefully curated office essentials. Perfect for welcoming new team members or celebrating work anniversaries with style and utility.', ['High-quality stationery', 'Tech accessories', 'Ergonomic designs', 'Professional packaging', 'Team morale boosters'])">
                     <div class="product-image">
-                        <img src="asset/offineeds/IMG20250803124555.jpg" alt="Productivity Pro Pack">
+                        <img loading="lazy" decoding="async" src="asset/offineeds/IMG20250803124555.jpg" alt="Productivity Pro Pack">
                     </div>
                     <div class="product-info">
                         <h3>Productivity Pro Pack</h3>
@@ -60,7 +52,7 @@
 
                 <div class="product-card fade-up delay-3" onclick="openProductModal('Corporate Classics', 'asset/offineeds/IMG20250803124642.jpg', '₹5,499', 'Timeless corporate gifts that never go out of style. This collection features premium branded merchandise perfect for client meetings and corporate events.', ['Premium branded items', 'Classic designs', 'Corporate gifting staples', 'Quality materials', 'Impressive presentation'])">
                     <div class="product-image">
-                        <img src="asset/offineeds/IMG20250803124642.jpg" alt="Corporate Classics">
+                        <img loading="lazy" decoding="async" src="asset/offineeds/IMG20250803124642.jpg" alt="Corporate Classics">
                     </div>
                     <div class="product-info">
                         <h3>Corporate Classics</h3>
@@ -72,7 +64,7 @@
 
                 <div class="product-card fade-up delay-4" onclick="openProductModal('Desk Deluxe', 'asset/offineeds/IMG20250803124725.jpg', '₹6,999', 'Upgrade your desk game with luxury office accessories. This premium collection transforms any workspace into an inspiring environment for peak performance.', ['Luxury desk organizers', 'Designer accessories', 'Premium materials', 'Functional elegance', 'Executive appeal'])">
                     <div class="product-image">
-                        <img src="asset/offineeds/IMG20250803124725.jpg" alt="Desk Deluxe">
+                        <img loading="lazy" decoding="async" src="asset/offineeds/IMG20250803124725.jpg" alt="Desk Deluxe">
                     </div>
                     <div class="product-info">
                         <h3>Desk Deluxe</h3>
@@ -84,7 +76,7 @@
 
                 <div class="product-card fade-up delay-1" onclick="openProductModal('Power Professional Bundle', 'asset/offineeds/IMG20250803125051.jpg', '₹7,999', 'The ultimate professional starter pack featuring premium tech accessories, elegant stationery, and executive essentials. Perfect for making powerful first impressions.', ['Complete professional kit', 'Tech-ready accessories', 'Premium quality', 'Customizable options', 'Leadership approved'])">
                     <div class="product-image">
-                        <img src="asset/offineeds/IMG20250803125051.jpg" alt="Power Professional Bundle">
+                        <img loading="lazy" decoding="async" src="asset/offineeds/IMG20250803125051.jpg" alt="Power Professional Bundle">
                     </div>
                     <div class="product-info">
                         <h3>Power Professional Bundle</h3>
@@ -186,7 +178,7 @@
         <img id="lightboxImage" src="" alt="Full size image">
     </div>
 
-    <script src="collection-script.js"></script>
+    <script src="collection-script.js" defer></script>
 </body>
 </html>
 

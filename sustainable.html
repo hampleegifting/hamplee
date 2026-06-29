@@ -2,27 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Sustainable - Eco Connoisseur | Hamplee</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"></noscript>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
+    <script src="nav.js" defer></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">HAMPLEE</a>
-            <ul class="nav-links">
-                <li><a href="index.html#collections">Collections</a></li>
-                <li><a href="index.html#hampers">Hampers</a></li>
-                <li><a href="index.html#custom">Custom Orders</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="nav-placeholder"></div>
 
     <!-- Collection Header -->
     <section class="collection-header">
@@ -39,7 +30,7 @@
             <div class="products-grid">
                 <div class="product-card fade-up delay-1" onclick="openProductModal('Eco-Luxury Hamper', 'asset/sustainable/IMG20250803113138.jpg', '₹6,999', 'A thoughtfully curated sustainable hamper featuring eco-friendly luxury products. Perfect for the environmentally conscious executive who values both quality and sustainability.', ['100% sustainable products', 'Eco-friendly packaging', 'Carbon-neutral delivery', 'Supports local artisans', 'Premium organic selections'])">
                     <div class="product-image">
-                        <img src="asset/sustainable/IMG20250803113138.jpg" alt="Eco-Luxury Hamper">
+                        <img loading="lazy" decoding="async" src="asset/sustainable/IMG20250803113138.jpg" alt="Eco-Luxury Hamper">
                     </div>
                     <div class="product-info">
                         <h3>Eco-Luxury Hamper</h3>
@@ -51,7 +42,7 @@
 
                 <div class="product-card fade-up delay-2" onclick="openProductModal('Green Premium', 'asset/sustainable/IMG20250803114730.jpg', '₹7,499', 'Where luxury meets sustainability in perfect harmony. This premium collection showcases the finest eco-conscious products without compromising on elegance.', ['Certified organic products', 'Reusable luxury packaging', 'Plant-based selections', 'Zero-waste initiative', 'Ethically sourced items'])">
                     <div class="product-image">
-                        <img src="asset/sustainable/IMG20250803114730.jpg" alt="Green Premium">
+                        <img loading="lazy" decoding="async" src="asset/sustainable/IMG20250803114730.jpg" alt="Green Premium">
                     </div>
                     <div class="product-info">
                         <h3>Green Premium</h3>
@@ -63,7 +54,7 @@
 
                 <div class="product-card fade-up delay-3" onclick="openProductModal('Earth\'s Treasures', 'asset/sustainable/IMG20250809111104.jpg', '₹8,999', 'Celebrate nature\'s finest offerings with this exquisite collection. Each item is carefully selected to honor the earth while delivering unmatched quality.', ['Natural ingredients only', 'Biodegradable materials', 'Fair trade certified', 'Minimal environmental impact', 'Luxury sustainable design'])">
                     <div class="product-image">
-                        <img src="asset/sustainable/IMG20250809111104.jpg" alt="Earth's Treasures">
+                        <img loading="lazy" decoding="async" src="asset/sustainable/IMG20250809111104.jpg" alt="Earth's Treasures">
                     </div>
                     <div class="product-info">
                         <h3>Earth's Treasures</h3>
@@ -75,7 +66,7 @@
 
                 <div class="product-card fade-up delay-4" onclick="openProductModal('Conscious Choice', 'asset/sustainable/IMG20250809112157.jpg', '₹6,499', 'Make a statement with gifts that reflect your values. This collection embodies ethical luxury with every carefully chosen element.', ['Vegan-friendly options', 'Recycled packaging', 'Chemical-free products', 'Supports women artisans', 'Climate positive'])">
                     <div class="product-image">
-                        <img src="asset/sustainable/IMG20250809112157.jpg" alt="Conscious Choice">
+                        <img loading="lazy" decoding="async" src="asset/sustainable/IMG20250809112157.jpg" alt="Conscious Choice">
                     </div>
                     <div class="product-info">
                         <h3>Conscious Choice</h3>
@@ -87,7 +78,7 @@
 
                 <div class="product-card fade-up delay-1" onclick="openProductModal('Natural Elegance', 'asset/sustainable/IMG20250809112658.jpg', '₹7,999', 'Pure, natural, and exceptionally beautiful. This hamper celebrates the elegance of simplicity with premium sustainable products.', ['All-natural ingredients', 'Handcrafted items', 'Compostable packaging', 'Locally sourced', 'Premium quality assured'])">
                     <div class="product-image">
-                        <img src="asset/sustainable/IMG20250809112658.jpg" alt="Natural Elegance">
+                        <img loading="lazy" decoding="async" src="asset/sustainable/IMG20250809112658.jpg" alt="Natural Elegance">
                     </div>
                     <div class="product-info">
                         <h3>Natural Elegance</h3>
@@ -99,7 +90,7 @@
 
                 <div class="product-card fade-up delay-2" onclick="openProductModal('Green Luxe', 'asset/sustainable/IMG20250809113725.jpg', '₹9,499', 'Premium eco-friendly gifting at its finest. Experience luxury redefined through sustainable practices and exceptional quality.', ['Ultra-premium sustainability', 'Plastic-free packaging', 'Organic certifications', 'Limited edition items', 'Environmental giving back'])">
                     <div class="product-image">
-                        <img src="asset/sustainable/IMG20250809113725.jpg" alt="Green Luxe">
+                        <img loading="lazy" decoding="async" src="asset/sustainable/IMG20250809113725.jpg" alt="Green Luxe">
                     </div>
                     <div class="product-info">
                         <h3>Green Luxe</h3>
@@ -111,7 +102,7 @@
 
                 <div class="product-card fade-up delay-3" onclick="openProductModal('Sustainable Spirit', 'asset/sustainable/IMG20250809114320.jpg', '₹5,999', 'Gifting with purpose and style. This collection embodies the spirit of sustainability while maintaining the highest standards of luxury.', ['Sustainable sourcing', 'Eco-conscious brands', 'Reusable containers', 'Carbon offset included', 'Socially responsible'])">
                     <div class="product-image">
-                        <img src="asset/sustainable/IMG20250809114320.jpg" alt="Sustainable Spirit">
+                        <img loading="lazy" decoding="async" src="asset/sustainable/IMG20250809114320.jpg" alt="Sustainable Spirit">
                     </div>
                     <div class="product-info">
                         <h3>Sustainable Spirit</h3>
@@ -123,7 +114,7 @@
 
                 <div class="product-card fade-up delay-4" onclick="openProductModal('Planet-Friendly Luxury', 'asset/sustainable/IMG20250809114928.jpg', '₹8,499', 'Exceptional gifts with zero compromise on sustainability or quality. Perfect for those who demand the best for their clients and the planet.', ['Earth-friendly materials', 'Premium natural products', 'Sustainable luxury brands', 'Zero plastic policy', 'Tree planted per order'])">
                     <div class="product-image">
-                        <img src="asset/sustainable/IMG20250809114928.jpg" alt="Planet-Friendly Luxury">
+                        <img loading="lazy" decoding="async" src="asset/sustainable/IMG20250809114928.jpg" alt="Planet-Friendly Luxury">
                     </div>
                     <div class="product-info">
                         <h3>Planet-Friendly Luxury</h3>
@@ -135,7 +126,7 @@
 
                 <div class="product-card fade-up delay-1" onclick="openProductModal('Eco-Prestige', 'asset/sustainable/IMG20250809115349.jpg', '₹10,999', 'The finest sustainable selection for the most discerning recipients. This prestige collection represents the pinnacle of eco-luxury gifting.', ['Ultra-premium eco products', 'Bespoke sustainable packaging', 'Exclusive green brands', 'Maximum positive impact', 'White-glove green service'])">
                     <div class="product-image">
-                        <img src="asset/sustainable/IMG20250809115349.jpg" alt="Eco-Prestige">
+                        <img loading="lazy" decoding="async" src="asset/sustainable/IMG20250809115349.jpg" alt="Eco-Prestige">
                     </div>
                     <div class="product-info">
                         <h3>Eco-Prestige</h3>
@@ -241,7 +232,7 @@
         <img id="lightboxImage" src="" alt="Full size image">
     </div>
 
-    <script src="collection-script.js"></script>
+    <script src="collection-script.js" defer></script>
 </body>
 </html>
 

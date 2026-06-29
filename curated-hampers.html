@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Luxury Gift Boxes & Hampers | Hamplee</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"></noscript>
     
     <style>
         * {
@@ -46,9 +47,26 @@
 
         /* Hero Section */
         .page-hero {
-            padding: 80px 40px 60px;
+            position: relative;
+            padding-top: 80px;
+            padding-bottom: 60px;
+            padding-left: max(24px, env(safe-area-inset-left, 0px));
+            padding-right: max(24px, env(safe-area-inset-right, 0px));
             text-align: center;
             background: linear-gradient(135deg, #F8F7F4 0%, #FFFFFF 100%);
+        }
+
+        .page-hero.selection-mode {
+            background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)),
+                url('asset/moodboard/AdobeStock_1476270645-1920.jpeg') center center / cover no-repeat;
+            padding-top: 100px;
+            padding-bottom: 80px;
+        }
+
+        .page-hero.selection-mode h1,
+        .page-hero.selection-mode p {
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         .page-hero h1 {
@@ -74,7 +92,10 @@
         .page-container {
             max-width: 1600px;
             margin: 0 auto;
-            padding: 60px 40px 80px;
+            padding-top: 60px;
+            padding-bottom: 80px;
+            padding-left: max(24px, env(safe-area-inset-left, 0px));
+            padding-right: max(24px, env(safe-area-inset-right, 0px));
         }
 
         /* Filters & Products Layout */
@@ -263,8 +284,10 @@
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
             gap: 30px;
+            content-visibility: auto;
+            contain-intrinsic-size: auto 1200px;
         }
 
         /* Product Card */
@@ -345,6 +368,70 @@
 
         .wishlist-heart:not(.liked) {
             color: var(--grey);
+        }
+
+        body.selection-mode .filters-sidebar,
+        body.selection-mode .mobile-filter-toggle,
+        body.selection-mode .filter-overlay {
+            display: none !important;
+        }
+
+        body.selection-mode footer {
+            display: none;
+        }
+
+        body.selection-mode .content-wrapper {
+            gap: 0;
+        }
+
+        .product-selection-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 12;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .selection-mode .product-selection-overlay {
+            opacity: 1;
+        }
+
+        .selection-checkbox {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: 3px solid #ddd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-selection-overlay.selected .selection-checkbox {
+            background: var(--gold);
+            border-color: var(--gold);
+        }
+
+        .checkmark-icon {
+            width: 24px;
+            height: 24px;
+            fill: white;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.3s ease;
+        }
+
+        .product-selection-overlay.selected .checkmark-icon {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .product-card.product-selected {
+            outline: 2px solid var(--gold);
+            box-shadow: 0 8px 30px rgba(201, 169, 89, 0.35);
         }
 
         .product-details {
@@ -908,16 +995,19 @@
 
         @media (max-width: 768px) {
             .page-container {
-                padding: 24px 20px 80px;
+                padding-top: 12px;
+                padding-bottom: 48px;
+                padding-left: max(14px, env(safe-area-inset-left, 0px));
+                padding-right: max(14px, env(safe-area-inset-right, 0px));
             }
 
             .page-hero {
-                padding: 16px 20px 20px;
+                padding: 12px 16px 14px;
             }
 
             .page-hero h1 {
-                font-size: 28px;
-                margin-bottom: 10px;
+                font-size: 26px;
+                margin-bottom: 8px;
             }
             
             .page-hero p {
@@ -927,16 +1017,17 @@
 
             .products-grid {
                 grid-template-columns: 1fr;
+                gap: 14px;
             }
 
             .main-nav {
                 flex-direction: column;
-                gap: 15px;
+                gap: 10px;
             }
 
             .secondary-nav-links {
                 flex-direction: column;
-                gap: 15px;
+                gap: 10px;
                 text-align: center;
             }
         }
@@ -1193,7 +1284,6 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="index.html#collections">Collections</a></li>
                     <li><a href="curated-hampers.html">All Hampers</a></li>
-                    <li><a href="products.html">All Products</a></li>
                     <li><a href="index.html#custom-cta">Custom Orders</a></li>
                 </ul>
             </div>
@@ -1969,13 +2059,144 @@
 
         let filteredHampers = [...hampers];
         let currentModalHamperId = null;
+        let isSelectionMode = false;
+        let selectedHampersForMoodBoard = [];
+
+        function enableSelectionMode(type) {
+            isSelectionMode = true;
+
+            const nav = document.querySelector('nav');
+            const announcementBar = document.querySelector('.announcement-bar');
+            const navPlaceholder = document.querySelector('.nav-placeholder');
+            if (nav) nav.style.display = 'none';
+            if (announcementBar) announcementBar.style.display = 'none';
+            if (navPlaceholder) navPlaceholder.style.display = 'none';
+
+            const pageHero = document.querySelector('.page-hero');
+            if (pageHero) pageHero.classList.add('selection-mode');
+
+            const pageTitle = document.querySelector('.page-hero h1');
+            if (pageTitle) {
+                pageTitle.textContent = type === 'include'
+                    ? 'Select Hampers to Include'
+                    : 'Select Hampers to Exclude';
+            }
+            const pageSubtitle = document.querySelector('.page-hero p');
+            if (pageSubtitle) {
+                pageSubtitle.textContent = 'Tap hampers to select them for your preferences. Use View Details to read the full description.';
+            }
+
+            document.body.classList.add('selection-mode');
+
+            if (type === 'include') {
+                const wishlistItems = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+                wishlistItems.forEach(item => {
+                    if (item.type === 'hamper' && hampers.some(h => h.id === item.id)) {
+                        if (!selectedHampersForMoodBoard.some(p => p.id === item.id)) {
+                            selectedHampersForMoodBoard.push({
+                                id: item.id,
+                                name: item.name,
+                                category: item.category || 'Hamper'
+                            });
+                        }
+                    }
+                });
+            }
+
+            window.addEventListener('beforeunload', sendSelectionToParent);
+        }
+
+        function sendSelectionToParent() {
+            if (window.parent && isSelectionMode) {
+                window.parent.postMessage({
+                    type: 'productSelection',
+                    products: selectedHampersForMoodBoard
+                }, '*');
+            }
+        }
+
+        function updateWishlistCounters(count) {
+            if (typeof updateWishlistCount === 'function') {
+                updateWishlistCount();
+            } else if (typeof window.updateWishlistCount === 'function') {
+                window.updateWishlistCount();
+            }
+            try {
+                if (window.parent && window.parent !== window) {
+                    if (typeof window.parent.updateWishlistCount === 'function') {
+                        window.parent.updateWishlistCount();
+                    } else if (typeof window.parent.updateLikedWishlistCount === 'function') {
+                        window.parent.updateLikedWishlistCount();
+                    }
+                    window.parent.postMessage({
+                        type: 'wishlistUpdate',
+                        count: count
+                    }, '*');
+                }
+            } catch (e) {}
+        }
+
+        function toggleHamperForMoodBoard(index) {
+            if (!isSelectionMode) return;
+
+            const hamper = filteredHampers[index];
+            if (!hamper) return;
+
+            const hamperId = hamper.id;
+            const existingIndex = selectedHampersForMoodBoard.findIndex(p => p.id === hamperId);
+            let wishlistItems = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectionType = urlParams.get('type');
+
+            if (existingIndex > -1) {
+                selectedHampersForMoodBoard.splice(existingIndex, 1);
+
+                if (selectionType === 'include') {
+                    const wishlistIndex = wishlistItems.findIndex(item => item.id === hamperId);
+                    if (wishlistIndex > -1) {
+                        wishlistItems.splice(wishlistIndex, 1);
+                        localStorage.setItem('likedWishlist', JSON.stringify(wishlistItems));
+                        updateWishlistCounters(wishlistItems.length);
+                    }
+                }
+            } else {
+                selectedHampersForMoodBoard.push({
+                    id: hamperId,
+                    name: hamper.name,
+                    category: hamper.category
+                });
+
+                if (selectionType === 'include') {
+                    const wishlistIndex = wishlistItems.findIndex(item => item.id === hamperId);
+                    if (wishlistIndex === -1) {
+                        wishlistItems.push({
+                            id: hamper.id,
+                            name: hamper.name,
+                            category: hamper.category,
+                            image: hamper.image,
+                            price: hamper.price,
+                            type: 'hamper'
+                        });
+                        localStorage.setItem('likedWishlist', JSON.stringify(wishlistItems));
+                        updateWishlistCounters(wishlistItems.length);
+                    }
+                }
+            }
+
+            renderProducts();
+            sendSelectionToParent();
+        }
 
         // Initialize page
         function init() {
-            renderProducts();
-            // updateLikedWishlistCount is now handled by nav.js
-            
-            // Search functionality - wait for nav to load
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchTerm = urlParams.get('search');
+            const selectionMode = urlParams.get('mode');
+
+            if (selectionMode === 'selection') {
+                enableSelectionMode(urlParams.get('type') || 'include');
+            }
+
             setTimeout(() => {
                 const searchInput = document.getElementById('navSearch');
                 if (searchInput) {
@@ -1987,15 +2208,14 @@
                 }
             }, 100);
 
-            // Check for search parameter
-            const urlParams = new URLSearchParams(window.location.search);
-            const searchTerm = urlParams.get('search');
             if (searchTerm) {
                 const searchInput = document.getElementById('navSearch');
                 if (searchInput) {
                     searchInput.value = searchTerm;
                 }
                 performSearchWithTerm(searchTerm);
+            } else {
+                renderProducts();
             }
         }
 
@@ -2018,10 +2238,11 @@
                        hamper.tags.some(tag => tag.toLowerCase().includes(term));
             });
             renderProducts();
-            
-            // Update page title
-            document.querySelector('.page-title').textContent = `Search Results for "${searchTerm}"`;
-            document.querySelector('.page-subtitle').textContent = `Found ${filteredHampers.length} hamper(s)`;
+
+            if (!isSelectionMode) {
+                document.querySelector('.page-title').textContent = `Search Results for "${searchTerm}"`;
+                document.querySelector('.page-subtitle').textContent = `Found ${filteredHampers.length} hamper(s)`;
+            }
         }
 
         // Render products
@@ -2043,16 +2264,30 @@
 
             grid.innerHTML = filteredHampers.map((hamper, index) => {
                 const likedItems = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
-                const isLiked = likedItems.some(item => item.id === hamper.id);
-                
-                return `
-                <div class="product-card" onclick="openProductModal('${hamper.id}');">
-                    <div class="product-image">
-                        <img src="${hamper.image}" alt="${hamper.name}">
-                        <span class="product-badge">${hamper.badge}</span>
-                        <div class="wishlist-heart ${isLiked ? 'liked' : ''}" onclick="event.stopPropagation(); toggleWishlist('${hamper.id}');">
-                            ♥
+                const isLiked = !isSelectionMode && likedItems.some(item => item.id === hamper.id);
+                const isSelected = isSelectionMode && selectedHampersForMoodBoard.some(p => p.id === hamper.id);
+                const selectionOverlay = isSelectionMode ? `
+                    <div class="product-selection-overlay ${isSelected ? 'selected' : ''}">
+                        <div class="selection-checkbox">
+                            <svg viewBox="0 0 24 24" class="checkmark-icon">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
                         </div>
+                    </div>
+                ` : '';
+                const cardClick = isSelectionMode
+                    ? `toggleHamperForMoodBoard(${index})`
+                    : `openProductModal('${hamper.id}')`;
+
+                return `
+                <div class="product-card ${isSelected ? 'product-selected' : ''}" onclick="${cardClick};" style="position: relative;">
+                    ${selectionOverlay}
+                    <div class="product-image">
+                        <img src="${hamper.image}" alt="${hamper.name}" loading="lazy" decoding="async">
+                        <span class="product-badge">${hamper.badge}</span>
+                        ${!isSelectionMode ? `<div class="wishlist-heart ${isLiked ? 'liked' : ''}" onclick="event.stopPropagation(); toggleWishlist('${hamper.id}');">
+                            ♥
+                        </div>` : ''}
                     </div>
                     <div class="product-details">
                         <div class="product-category">${hamper.category}</div>

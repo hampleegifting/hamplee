@@ -2,27 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>NGO - Share & Care | Hamplee</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"></noscript>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
+    <script src="nav.js" defer></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">HAMPLEE</a>
-            <ul class="nav-links">
-                <li><a href="index.html#collections">Collections</a></li>
-                <li><a href="index.html#hampers">Hampers</a></li>
-                <li><a href="index.html#custom">Custom Orders</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="nav-placeholder"></div>
 
     <!-- Collection Header -->
     <section class="collection-header">
@@ -39,7 +30,7 @@
             <div class="products-grid">
                 <div class="product-card fade-up delay-1" onclick="openProductModal('Community Care Package', 'asset/ngo/IMG20250803121743.jpg', '₹4,999', 'A meaningful hamper designed to spread joy while supporting worthy causes. Each purchase contributes to our partner NGOs working in education and healthcare.', ['Proceeds support NGOs', 'Ethically sourced products', 'Fair trade certified', 'Community empowerment', 'Transparent giving'])">
                     <div class="product-image">
-                        <img src="asset/ngo/IMG20250803121743.jpg" alt="Community Care Package">
+                        <img loading="lazy" decoding="async" src="asset/ngo/IMG20250803121743.jpg" alt="Community Care Package">
                     </div>
                     <div class="product-info">
                         <h3>Community Care Package</h3>
@@ -51,7 +42,7 @@
 
                 <div class="product-card fade-up delay-2" onclick="openProductModal('Hope & Harmony', 'asset/ngo/IMG20250803122408.jpg', '₹5,499', 'Share hope through thoughtful gifting. This collection directly supports child education programs while delivering premium quality to your recipients.', ['Supports child education', 'Quality assured items', 'Social responsibility', 'Meaningful giving', 'Impact reporting included'])">
                     <div class="product-image">
-                        <img src="asset/ngo/IMG20250803122408.jpg" alt="Hope & Harmony">
+                        <img loading="lazy" decoding="async" src="asset/ngo/IMG20250803122408.jpg" alt="Hope & Harmony">
                     </div>
                     <div class="product-info">
                         <h3>Hope & Harmony</h3>
@@ -63,7 +54,7 @@
 
                 <div class="product-card fade-up delay-3" onclick="openProductModal('Hearts United', 'asset/ngo/IMG20250809110254.jpg', '₹6,499', 'Unite hearts through compassionate gifting. Every hamper supports healthcare initiatives for underprivileged communities while bringing joy to your loved ones.', ['Healthcare support', 'Premium products', 'Verified NGO partners', 'Double the impact', 'Certificate of contribution'])">
                     <div class="product-image">
-                        <img src="asset/ngo/IMG20250809110254.jpg" alt="Hearts United">
+                        <img loading="lazy" decoding="async" src="asset/ngo/IMG20250809110254.jpg" alt="Hearts United">
                     </div>
                     <div class="product-info">
                         <h3>Hearts United</h3>
@@ -75,7 +66,7 @@
 
                 <div class="product-card fade-up delay-4" onclick="openProductModal('Change Makers Collection', 'asset/ngo/IMG20250809120255.jpg', '₹7,999', 'Be a change maker with every gift. This premium collection supports women empowerment programs while delivering exceptional quality and presentation.', ['Women empowerment', 'Luxury hamper', 'Verified impact', 'Skill development support', 'Monthly impact reports'])">
                     <div class="product-image">
-                        <img src="asset/ngo/IMG20250809120255.jpg" alt="Change Makers Collection">
+                        <img loading="lazy" decoding="async" src="asset/ngo/IMG20250809120255.jpg" alt="Change Makers Collection">
                     </div>
                     <div class="product-info">
                         <h3>Change Makers Collection</h3>
@@ -181,7 +172,7 @@
         <img id="lightboxImage" src="" alt="Full size image">
     </div>
 
-    <script src="collection-script.js"></script>
+    <script src="collection-script.js" defer></script>
 </body>
 </html>
 
