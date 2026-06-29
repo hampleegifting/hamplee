@@ -17,9 +17,12 @@
 }
 
 /* ── Nav Placeholder ── */
+/* Matches the visual of announcement bar (dark, 36px) + nav (cream, 72px)
+   so there is zero visible shift when nav.js injects the real nav */
 .nav-placeholder {
   height: 108px;
-  background: var(--cream);
+  background: linear-gradient(var(--dark) 36px, var(--cream) 36px);
+  flex-shrink: 0;
 }
 body.nav-loaded .nav-placeholder {
   display: none;
@@ -57,7 +60,7 @@ nav {
 }
 
 .nav-inner {
-  max-width: 1380px;
+  max-width: 1580px;
   margin: 0 auto;
   padding: 0 clamp(20px, 4vw, 60px);
   height: 72px;

@@ -1735,6 +1735,46 @@ section { overflow: hidden; }
 }
 
 /* ══════════════════════════════════════════
+   PERFORMANCE
+═══════════════════════════════════════════ */
+
+/* Skeleton loader for featured hamper cards */
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position:  600px 0; }
+}
+
+.hamper-card-skeleton {
+  height: 320px;
+  background: linear-gradient(90deg, #ede9e3 25%, #f5f2ec 50%, #ede9e3 75%);
+  background-size: 1200px 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+/* Promote key animated elements to GPU layer */
+.collection-tile img,
+.hamper-card,
+.detail-panel,
+.nav-drawer {
+  will-change: transform;
+}
+
+/* Remove 300ms tap delay on mobile for all interactive elements */
+a, button, .pill, .hamper-card, .collection-tile, .contact-card {
+  touch-action: manipulation;
+}
+
+/* Defer rendering of below-fold sections — huge mobile win */
+.statement-section,
+.process-section,
+.testimonials-section,
+.contact-section,
+.site-footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+/* ══════════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════════ */
 
