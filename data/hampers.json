@@ -879,6 +879,7 @@
         "Silk Necktie",
         "Gold Tie Clip Set in Presentation Box",
         "Wooden Chess / Strategy Board Game",
+        "Premium Dry Fruits",
         "Handwritten Thank You Card"
       ],
       "items": [
@@ -913,6 +914,10 @@
         {
           "name": "Wooden Chess & Strategy Board Game",
           "description": "Inlaid Wood · Compact & Portable · Premium Finish · Doubles as a Desk Accent"
+        },
+        {
+          "name": "Premium Dry Fruits",
+          "description": "Curated Selection of Cashews, Almonds & Pistachios · Elegant Gift Packaging · Rich & Nutritious"
         },
         {
           "name": "Handwritten Thank You Card",
