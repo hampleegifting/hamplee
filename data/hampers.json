@@ -772,6 +772,71 @@
     },
 
     {
+      "id": "office-009",
+      "name": "The Corner Office",
+      "tagline": "Everything the modern desk deserves",
+      "category": "Office",
+      "occasions": ["Corporate Gifting", "Employee Gifting", "Client Gifting", "New Joiner"],
+      "price": { "amount": 10999, "display": "Starting from ₹10,999" },
+      "badge": "Premium",
+      "description": "A head-turning premium desk kit that transforms any workspace. From foldable laptop stand to wireless headphones, every piece is chosen for daily utility, sleek design, and lasting brand recall — all custom-branded with your logo.",
+      "highlights": [
+        "Foldable Aluminum Laptop Stand",
+        "Wireless Over-Ear Headphones",
+        "Vacuum Insulated Flask",
+        "Leather Desk Mat",
+        "Ceramic Travel Mug with Lid",
+        "Branded Notebook & Pen",
+        "Motivational Desk Photo Frame",
+        "Decorative Mini Plant",
+        "Premium Black Gift Box with Ribbon"
+      ],
+      "items": [
+        {
+          "name": "Foldable Aluminum Laptop Stand",
+          "description": "Adjustable Height & Angle · Portable & Foldable · Premium Aluminum · Fits Laptops 10–17\" · Anti-Slip Pads · Custom Logo"
+        },
+        {
+          "name": "Wireless Over-Ear Headphones",
+          "description": "Premium Sound Quality · Soft Cushioned Earpads · Foldable Design · Bluetooth 5.0 · Up to 30 Hours Playtime · Custom Logo"
+        },
+        {
+          "name": "Vacuum Insulated Flask",
+          "description": "Double-Wall Stainless Steel · Keeps Hot & Cold · Leak-Proof · 500ml · Smart Lid · Custom Logo"
+        },
+        {
+          "name": "Leather Desk Mat",
+          "description": "Tan Cognac PU Leather · Water-Resistant · Non-Slip Base · Smooth Writing Surface · Desk Protector"
+        },
+        {
+          "name": "Ceramic Travel Mug with Lid",
+          "description": "Premium Ceramic · Spill-Proof Sliding Lid · Microwave Safe · 350ml · Minimalist Design"
+        },
+        {
+          "name": "Branded Notebook & Pen",
+          "description": "Soft-Touch Cover · A5 Size · 192 Ruled Pages · Matching Pen · Custom Logo Print"
+        },
+        {
+          "name": "Motivational Desk Photo Frame",
+          "description": "White Finish · Tabletop Display · Printed Motivational Quote · Custom Message Available"
+        },
+        {
+          "name": "Decorative Mini Plant",
+          "description": "Live/Artificial Succulent · Copper/Bronze Pot · Desk Accent · Low Maintenance"
+        },
+        {
+          "name": "Premium Black Gift Box",
+          "description": "Luxury Rigid Black Box · White Satin Ribbon · Custom Logo on Lid · Premium Unboxing Experience"
+        }
+      ],
+      "image": "asset/offineeds/office-009.png",
+      "gallery": [],
+      "moq": 10,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
       "id": "office-008",
       "name": "The Executive Suite",
       "tagline": "Sleek essentials for the discerning professional",
