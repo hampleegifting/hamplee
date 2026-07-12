@@ -430,7 +430,7 @@ function closeLightbox() {
           <h3 class="hamper-card-name">${h.name}</h3>
           <p class="hamper-card-tagline">${h.tagline}</p>
           <div class="hamper-card-footer">
-            <span class="hamper-card-price">${h.price.display}</span>
+            <span class="hamper-card-price">${h.price && h.price.amount ? '₹' + h.price.amount.toLocaleString('en-IN') + '<span class="price-gst">+ 18% GST</span>' : 'Price on Request'}</span>
             <span class="hamper-enquire-btn">View Details →</span>
           </div>
         </div>

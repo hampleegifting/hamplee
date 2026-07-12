@@ -1130,21 +1130,24 @@ section { overflow: hidden; }
   gap: 2px;
 }
 
-.hamper-card-price-label {
-  font-family: var(--font-sans);
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--grey-light);
-}
-
 .hamper-card-price {
   font-family: var(--font-serif);
   font-size: 22px;
-  color: var(--dark);
+  color: var(--gold);
   font-weight: 400;
   line-height: 1;
+  letter-spacing: 0.3px;
+}
+
+.price-gst {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  font-weight: 500;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--grey-light);
+  margin-top: 5px;
 }
 
 .hamper-card-actions {
@@ -1388,8 +1391,11 @@ section { overflow: hidden; }
 
 .panel-price {
   font-family: var(--font-serif);
-  font-size: 22px;
+  font-size: 24px;
   color: var(--gold);
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  line-height: 1;
   margin-bottom: 20px;
 }
 
@@ -1827,7 +1833,6 @@ a, button, .pill, .hamper-card, .collection-tile, .contact-card {
   /* Labels & tags: 9–10px → 12px minimum */
   .section-label          { font-size: 12px; letter-spacing: 2.5px; }
   .hamper-card-category   { font-size: 11px; }
-  .hamper-card-price-label{ font-size: 11px; }
   .hamper-enquire-btn     { font-size: 12px; }
   .occasion-tag           { font-size: 11px; padding: 5px 12px; }
   .filter-group-label     { font-size: 11px; }

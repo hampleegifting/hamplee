@@ -133,7 +133,7 @@ function saveWishlist(list) {
 // ── Build enquiry messages from wishlist ────────────
 function buildWAMessage(items) {
   const list = items.map((h, i) => {
-    const price      = h.price ? h.price.display : (h.priceLabel || '');
+    const price      = h.price && h.price.amount ? '₹' + h.price.amount.toLocaleString('en-IN') + ' + 18% GST' : (h.priceLabel || '');
     const highlights = (h.highlights || []).map(hl => `   • ${hl}`).join('\n');
     return `${i + 1}. *${h.name}*\n   Collection: ${h.category || ''} | Price: ${price}${highlights ? '\n' + highlights : ''}`;
   }).join('\n\n');
@@ -148,7 +148,7 @@ Could you please share bulk pricing, availability, and customisation options for
 
 function buildEmailBody(items) {
   const list = items.map((h, i) => {
-    const price      = h.price ? h.price.display : (h.priceLabel || '');
+    const price      = h.price && h.price.amount ? '₹' + h.price.amount.toLocaleString('en-IN') + ' + 18% GST' : (h.priceLabel || '');
     const highlights = (h.highlights || []).map(hl => `     • ${hl}`).join('\n');
     const moq        = h.moq ? `\n   MOQ: ${h.moq} pieces` : '';
     return `${i + 1}. ${h.name}\n   Collection: ${h.category || ''} | Price: ${price}${moq}${highlights ? `\n   What's inside:\n${highlights}` : ''}`;
@@ -211,7 +211,7 @@ function render() {
   // Render cards
   grid.innerHTML = wishlist.map(h => {
     const img   = h.image || (h.images && h.images[0]) || '';
-    const price = h.price ? h.price.display : (h.priceLabel || '');
+    const price = h.price && h.price.amount ? '₹' + h.price.amount.toLocaleString('en-IN') + '<span class="price-gst">+ 18% GST</span>' : (h.priceLabel || '');
     const cat   = h.category || '';
     const badge = h.badge || '';
     return `

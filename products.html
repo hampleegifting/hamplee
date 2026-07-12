@@ -503,9 +503,11 @@
 
         .product-price {
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 400;
             color: var(--gold);
             font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 0.3px;
+            line-height: 1;
         }
 
         .product-cta {
@@ -874,9 +876,11 @@
         .modal-price {
             font-size: 28px;
             color: var(--gold);
-            font-weight: 600;
+            font-weight: 400;
             margin-bottom: 24px;
             font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 0.3px;
+            line-height: 1;
         }
 
         .modal-tags {
@@ -1876,7 +1880,7 @@
             // Set modal content
             document.getElementById('modalTitle').textContent = product.name;
             document.getElementById('modalCategory').textContent = product.category;
-            document.getElementById('modalPrice').textContent = formatProductPrice(product);
+            document.getElementById('modalPrice').innerHTML = formatProductPrice(product);
             document.getElementById('modalDescription').textContent = product.description;
             
             // Set product tags

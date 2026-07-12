@@ -308,7 +308,7 @@ function renderGrid() {
   grid.innerHTML = hampers.map((h, i) => {
     const wished  = isWished(h.id);
     const delay   = (i % 4) + 1;
-    const price   = h.price ? h.price.display : 'Price on Request';
+    const price   = h.price && h.price.amount ? '₹' + h.price.amount.toLocaleString('en-IN') + '<span class="price-gst">+ 18% GST</span>' : 'Price on Request';
     const occasionsHtml = (h.occasions || []).slice(0, 3)
       .map(o => `<span class="occasion-tag">${o}</span>`).join('');
     return `
@@ -325,7 +325,6 @@ function renderGrid() {
         ${occasionsHtml ? `<div class="hamper-card-occasions">${occasionsHtml}</div>` : ''}
         <div class="hamper-card-footer">
           <div class="hamper-card-price-wrap">
-            <span class="hamper-card-price-label">Starting from</span>
             <span class="hamper-card-price">${price}</span>
           </div>
           <div class="hamper-card-actions">
@@ -390,7 +389,7 @@ function openPanel(id) {
 
 *${h.name}*
 Collection: ${h.category}
-Price: ${h.price.display}
+Price: ${h.price && h.price.amount ? '₹' + h.price.amount.toLocaleString('en-IN') + ' + 18% GST' : 'Price on Request'}
 
 What's inside:
 ${highlights}
@@ -434,7 +433,7 @@ Best regards`
   document.getElementById('panelCat').textContent  = h.category;
   document.getElementById('panelBadge').textContent = h.badge || '';
   document.getElementById('panelName').textContent  = h.name;
-  document.getElementById('panelPrice').textContent = h.price.display;
+  document.getElementById('panelPrice').innerHTML = h.price && h.price.amount ? '₹' + h.price.amount.toLocaleString('en-IN') + '<span class="price-gst">+ 18% GST</span>' : 'Price on Request';
   document.getElementById('panelDesc').textContent  = h.description;
   if (h.items && h.items.length) {
     document.getElementById('panelHighlights').innerHTML =

@@ -89,8 +89,8 @@
   };
 
   global.formatProductPrice = function (product) {
-    if (product.priceLabel) return product.priceLabel;
-    return '₹' + product.price.toLocaleString('en-IN');
+    var amount = product.priceLabel || ('₹' + product.price.toLocaleString('en-IN'));
+    return amount + '<span class="price-gst">+ 18% GST</span>';
   };
 
   global.loadHampleeProductCatalog = async function (url) {
