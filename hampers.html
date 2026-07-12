@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
   <title>Our Hampers — Hamplee Luxury Gifting</title>
-  <meta name="description" content="Browse Hamplee's full collection of 30+ luxury curated hampers. Gourmet, Festive, Sustainable, NGO, and Office collections. Filter by occasion and budget.">
+  <meta name="description" content="Browse Hamplee's full collection of 60+ luxury curated hampers. Gourmet, Festive, Sustainable, NGO, Office, and Value Pack collections. Filter by occasion and budget.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,21 +36,6 @@
     <span class="section-label fade-up">Hamplee Collections</span>
     <h1 class="fade-up delay-1">Curated <em>Hampers</em></h1>
     <span class="gold-rule fade-up delay-2"></span>
-    <p class="fade-up delay-2" id="headerCount">Explore our full collection</p>
-    <div class="catalog-stats fade-up delay-3">
-      <div class="catalog-stat">
-        <span class="catalog-stat-num">30+</span>
-        <span class="catalog-stat-label">Curated Hampers</span>
-      </div>
-      <div class="catalog-stat">
-        <span class="catalog-stat-num">5</span>
-        <span class="catalog-stat-label">Collections</span>
-      </div>
-      <div class="catalog-stat">
-        <span class="catalog-stat-num">₹3,999</span>
-        <span class="catalog-stat-label">Starting From</span>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -67,16 +52,33 @@
           <button class="pill" data-category="Sustainable">Sustainable</button>
           <button class="pill" data-category="NGO">NGO</button>
           <button class="pill" data-category="Office">Office</button>
+          <button class="pill" data-category="Value Pack">Value Pack</button>
         </div>
       </div>
-      <div class="filter-group">
-        <span class="filter-group-label">Budget</span>
-        <div class="filter-pills" id="budgetPills">
-          <button class="pill active" data-budget="all">All</button>
-          <button class="pill" data-budget="5000">Under ₹5k</button>
-          <button class="pill" data-budget="10000">₹5k – ₹10k</button>
-          <button class="pill" data-budget="15000">₹10k – ₹15k</button>
-          <button class="pill" data-budget="99999">₹15k+</button>
+      <div class="filter-group budget-filter-group">
+        <div class="budget-filter-top">
+          <span class="filter-group-label">Budget</span>
+          <div class="filter-pills" id="budgetPills">
+            <button class="pill active" data-budget="all">All</button>
+            <button class="pill" data-budget="0-1000">Under ₹1K</button>
+            <button class="pill" data-budget="0-2000">Under ₹2K</button>
+            <button class="pill" data-budget="2000-5000">₹2K – ₹5K</button>
+            <button class="pill" data-budget="5000-10000">₹5K – ₹10K</button>
+            <button class="pill" data-budget="10000-99999">₹10K+</button>
+          </div>
+        </div>
+        <div class="price-slider-wrap">
+          <div class="price-slider-header">
+            <span class="price-slider-label">Price Range</span>
+            <span class="price-slider-value" id="sliderValue">₹0 – ₹20K+</span>
+          </div>
+          <div class="price-slider-track-wrap">
+            <div class="price-slider-track">
+              <div class="price-slider-fill" id="sliderFill"></div>
+            </div>
+            <input type="range" id="sliderMin" min="0" max="20000" step="500" value="0">
+            <input type="range" id="sliderMax" min="0" max="20000" step="500" value="20000">
+          </div>
         </div>
       </div>
     </div>
@@ -125,6 +127,7 @@
           <li><a href="hampers.html?category=Sustainable">Sustainable</a></li>
           <li><a href="hampers.html?category=NGO">NGO &amp; Social</a></li>
           <li><a href="hampers.html?category=Office">Office</a></li>
+          <li><a href="hampers.html?category=Value Pack">Value Pack</a></li>
         </ul>
       </div>
       <div>
@@ -234,6 +237,9 @@ let ALL_HAMPERS = [];
 let CONTACT    = {};
 let activeCategory = 'all';
 let activeBudget   = 'all';
+const SLIDER_MAX   = 20000;
+let priceMin = 0;
+let priceMax = SLIDER_MAX;
 
 // ── Boot ─────────────────────────────────────────────
 (function init() {
@@ -270,12 +276,12 @@ function getFiltered() {
   return ALL_HAMPERS.filter(h => {
     const catOk = activeCategory === 'all' || h.category === activeCategory;
     let   budOk = true;
-    if (activeBudget !== 'all') {
-      const amt = parseInt(activeBudget);
-      if (amt === 5000)  budOk = h.price.amount < 5000;
-      else if (amt === 10000) budOk = h.price.amount >= 5000  && h.price.amount <= 10000;
-      else if (amt === 15000) budOk = h.price.amount > 10000  && h.price.amount <= 15000;
-      else if (amt === 99999) budOk = h.price.amount > 15000;
+    const amt   = h.price && h.price.amount ? h.price.amount : 0;
+    if (activeBudget === 'slider') {
+      budOk = amt >= priceMin && (priceMax >= SLIDER_MAX || amt <= priceMax);
+    } else if (activeBudget !== 'all') {
+      const parts = activeBudget.split('-');
+      budOk = amt >= parseInt(parts[0]) && amt <= parseInt(parts[1]);
     }
     return catOk && budOk;
   });
@@ -294,7 +300,6 @@ function renderGrid() {
   const shown = hampers.length;
 
   countEl.innerHTML    = `<span>${shown}</span> hamper${shown !== 1 ? 's' : ''} shown`;
-  headerEl.textContent = `${total} curated hampers across 5 collections`;
 
   if (hampers.length === 0) {
     grid.innerHTML = `
@@ -362,15 +367,67 @@ function initFilters() {
     });
   });
 
+  // ── Slider helpers ──
+  function fmtAmt(val) {
+    if (val <= 0) return '₹0';
+    if (val >= SLIDER_MAX) return '₹20K+';
+    return val >= 1000 ? '₹' + Math.round(val / 1000) + 'K' : '₹' + val;
+  }
+
+  function updateSliderUI() {
+    const minPct = (priceMin / SLIDER_MAX) * 100;
+    const maxPct = (priceMax / SLIDER_MAX) * 100;
+    document.getElementById('sliderFill').style.left  = minPct + '%';
+    document.getElementById('sliderFill').style.width = (maxPct - minPct) + '%';
+    document.getElementById('sliderValue').textContent = fmtAmt(priceMin) + ' – ' + fmtAmt(priceMax);
+  }
+
+  function syncSliderToPreset(budget) {
+    if (budget === 'all') {
+      priceMin = 0; priceMax = SLIDER_MAX;
+    } else if (budget !== 'slider') {
+      const parts = budget.split('-');
+      priceMin = parseInt(parts[0]);
+      priceMax = Math.min(parseInt(parts[1]), SLIDER_MAX);
+    }
+    document.getElementById('sliderMin').value = priceMin;
+    document.getElementById('sliderMax').value = priceMax;
+    updateSliderUI();
+  }
+
   document.querySelectorAll('[data-budget]').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('[data-budget]').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       activeBudget = btn.dataset.budget;
+      syncSliderToPreset(activeBudget);
       track('filter_budget', { budget: btn.dataset.budget });
       renderGrid();
     });
   });
+
+  const sliderMinEl = document.getElementById('sliderMin');
+  const sliderMaxEl = document.getElementById('sliderMax');
+
+  sliderMinEl.addEventListener('input', () => {
+    priceMin = Math.min(parseInt(sliderMinEl.value), priceMax - 500);
+    sliderMinEl.value = priceMin;
+    document.querySelectorAll('[data-budget]').forEach(b => b.classList.remove('active'));
+    activeBudget = 'slider';
+    updateSliderUI();
+    renderGrid();
+  });
+
+  sliderMaxEl.addEventListener('input', () => {
+    priceMax = Math.max(parseInt(sliderMaxEl.value), priceMin + 500);
+    sliderMaxEl.value = priceMax;
+    document.querySelectorAll('[data-budget]').forEach(b => b.classList.remove('active'));
+    activeBudget = 'slider';
+    updateSliderUI();
+    renderGrid();
+  });
+
+  updateSliderUI();
 }
 
 // ── Detail Panel ──────────────────────────────────────

@@ -11,7 +11,7 @@
       "6. Run: node scripts/build-hampers-data.js  — this updates the website.",
       "7. To show on the homepage, set 'featured': true (only 4 show at a time)."
     ],
-    "categories": ["Gourmet", "Festive", "Sustainable", "NGO", "Office"],
+    "categories": ["Gourmet", "Festive", "Sustainable", "NGO", "Office", "Value Pack"],
     "occasions": [
       "Corporate Gifting",
       "Festive",
@@ -36,7 +36,8 @@
       "Festive": "asset/festivity/",
       "Sustainable": "asset/sustainable/",
       "NGO": "asset/ngo/",
-      "Office": "asset/offineeds/"
+      "Office": "asset/offineeds/",
+      "Value Pack": "asset/valuepack/"
     }
   },
 
@@ -1749,6 +1750,811 @@
       "image": "asset/offineeds/office-009.png",
       "gallery": [],
       "moq": 10,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-001",
+      "name": "The Mug Duo",
+      "tagline": "Two cups, one thoughtful gift",
+      "category": "Value Pack",
+      "occasions": ["Corporate Gifting", "Employee Gifting", "Birthday"],
+      "price": { "amount": 1199 },
+      "badge": "New Arrival",
+      "description": "A pair of sleek matte-black ceramic mugs presented in a curated gift box — simple, stylish, and perfect for any coffee or tea lover.",
+      "highlights": [
+        "Set of 2 Matte Black Ceramic Mugs",
+        "Premium Gift Box with Shredded Paper Nest",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Set of 2 Matte Black Ceramic Mugs",
+          "description": "Matte Finish · 300 ml Each · Microwave & Dishwasher Safe · Clean Minimal Design"
+        },
+        {
+          "name": "Premium Gift Box",
+          "description": "Rigid Box · Shredded Paper Nest · Custom Logo Available"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Message · Printed on Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-001.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-002",
+      "name": "The Copper Indulgence",
+      "tagline": "Warmth in every sip and bite",
+      "category": "Value Pack",
+      "occasions": ["Corporate Gifting", "Festive", "Birthday"],
+      "price": { "amount": 1499 },
+      "badge": "New Arrival",
+      "description": "A charming set pairing a copper-finish mug with artisanal honey and a delicate pastry — a warm, indulgent welcome for any occasion.",
+      "highlights": [
+        "Copper-Finish Ceramic Mug",
+        "Organic Artisanal Honey Jar",
+        "Handcrafted Pastry / Shortbread",
+        "Premium Gift Box with Shredded Paper Nest",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Copper-Finish Ceramic Mug",
+          "description": "Metallic Copper Glaze · 350 ml · Microwave Safe · Elegant Design"
+        },
+        {
+          "name": "Organic Artisanal Honey Jar",
+          "description": "Raw & Unfiltered · 100g · No Added Sugar · Natural Goodness"
+        },
+        {
+          "name": "Handcrafted Pastry",
+          "description": "Artisan Baked · Butter Shortbread or Croissant · Indulgent Treat"
+        },
+        {
+          "name": "Premium Gift Box",
+          "description": "Rigid Box · Shredded Paper Nest · Custom Branding Available"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-002.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-003",
+      "name": "The Tea Ritual",
+      "tagline": "Pause, brew, and savour",
+      "category": "Value Pack",
+      "occasions": ["Corporate Gifting", "Employee Gifting", "Birthday"],
+      "price": { "amount": 1299 },
+      "badge": "New Arrival",
+      "description": "A teal ceramic tea cup set designed for those who find joy in a quiet moment — beautiful, functional, and thoughtfully packaged.",
+      "highlights": [
+        "Set of 2 Teal Ceramic Tea Cups & Saucers",
+        "Premium Shredded Paper Nest",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Set of 2 Teal Ceramic Tea Cups & Saucers",
+          "description": "Hand-glazed Teal Finish · 200 ml Each · Stackable Design · Elegant Scalloped Edges"
+        },
+        {
+          "name": "Premium Gift Box",
+          "description": "Rigid Box · Shredded Paper Nest · Custom Branding Available"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-003.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-004",
+      "name": "The Sunshine Set",
+      "tagline": "Brighten any space, any day",
+      "category": "Value Pack",
+      "occasions": ["Corporate Gifting", "Employee Gifting", "Birthday"],
+      "price": { "amount": 999 },
+      "badge": "New Arrival",
+      "description": "A cheerful candle set featuring sunflower-accented tealights in a decorative tin — spreading warmth and light wherever they go.",
+      "highlights": [
+        "Sunflower Tealight Candle Set",
+        "Decorative Tin Container",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Sunflower Tealight Candles",
+          "description": "Set of 6 · Soy Wax Blend · Approx 4-hr Burn Each · Sunflower Petal Design"
+        },
+        {
+          "name": "Decorative Tin Container",
+          "description": "Reusable · Gold-tone Lid · Compact & Giftable"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-004.png",
+      "gallery": [],
+      "moq": 30,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-005",
+      "name": "The Motivator",
+      "tagline": "Inspiring words in every sip",
+      "category": "Value Pack",
+      "occasions": ["Employee Gifting", "Corporate Gifting", "Birthday"],
+      "price": { "amount": 1199 },
+      "badge": "New Arrival",
+      "description": "A set of printed glass tumblers carrying uplifting quotes — the kind of daily reminder that keeps spirits high at the desk or at home.",
+      "highlights": [
+        "Set of 2 Motivational Quote Glass Tumblers",
+        "Premium Gift Box with Shredded Paper Nest",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Set of 2 Motivational Quote Glass Tumblers",
+          "description": "Borosilicate Glass · 350 ml Each · Printed Inspirational Quote · Dishwasher Safe"
+        },
+        {
+          "name": "Premium Gift Box",
+          "description": "Rigid Box · Shredded Paper Nest · Custom Logo Available"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-005.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-006",
+      "name": "The Love Mug Set",
+      "tagline": "Made with love, shared with joy",
+      "category": "Value Pack",
+      "occasions": ["Birthday", "Employee Gifting", "Corporate Gifting"],
+      "price": { "amount": 1099 },
+      "badge": "New Arrival",
+      "description": "A sweet pair of heart-print ceramic mugs — warm and whimsical, perfect for gifting to someone who deserves a little extra cheer.",
+      "highlights": [
+        "Set of 2 Heart-Print Ceramic Mugs",
+        "Premium Gift Box with Shredded Paper Nest",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Set of 2 Heart-Print Ceramic Mugs",
+          "description": "Ceramic · 300 ml Each · Heart & Floral Print · Microwave Safe · Cheerful Design"
+        },
+        {
+          "name": "Premium Gift Box",
+          "description": "Rigid Box · Shredded Paper Nest · Custom Logo Available"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-006.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-007",
+      "name": "The Panda Delight",
+      "tagline": "Cute, cuddly, and completely charming",
+      "category": "Value Pack",
+      "occasions": ["Birthday", "Employee Gifting", "Corporate Gifting"],
+      "price": { "amount": 1499 },
+      "badge": "New Arrival",
+      "description": "An adorable panda-themed gift set that brings instant smiles — thoughtfully arranged in a keepsake box for a playful unboxing experience.",
+      "highlights": [
+        "Panda Plush or Ceramic Figurine",
+        "Panda-themed Mug",
+        "Artisan Chocolate or Treat",
+        "Premium Gift Box",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Panda Plush / Ceramic Figurine",
+          "description": "Adorable Panda Character · Soft or Ceramic Finish · Desk or Shelf Display"
+        },
+        {
+          "name": "Panda-themed Mug",
+          "description": "Ceramic · 300 ml · Panda Print · Microwave Safe"
+        },
+        {
+          "name": "Artisan Chocolate or Treat",
+          "description": "Premium Chocolate or Cookie · Individually Wrapped"
+        },
+        {
+          "name": "Premium Gift Box",
+          "description": "Rigid Box · Shredded Paper Nest · Custom Logo Available"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-007.png",
+      "gallery": [],
+      "moq": 20,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-008",
+      "name": "The Blooms & Bubbles Kit",
+      "tagline": "Where florals meet celebration",
+      "category": "Value Pack",
+      "occasions": ["Birthday", "Corporate Gifting", "Employee Gifting"],
+      "price": { "amount": 1399 },
+      "badge": "New Arrival",
+      "description": "A delightfully feminine set combining floral-printed glasses with a handmade crochet flower bouquet — thoughtful, artistic, and refreshingly different.",
+      "highlights": [
+        "Set of 2 Floral-Print Drinking Glasses",
+        "Handmade Crochet Flower Bouquet",
+        "Premium Gift Box",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Set of 2 Floral-Print Drinking Glasses",
+          "description": "Glass · 300 ml Each · Delicate Floral Pattern · Dishwasher Safe"
+        },
+        {
+          "name": "Handmade Crochet Flower Bouquet",
+          "description": "Artisan Crocheted · Mixed Blooms · Everlasting & Reusable · Unique Decor Piece"
+        },
+        {
+          "name": "Premium Gift Box",
+          "description": "Rigid Box · Shredded Paper Nest · Custom Logo Available"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-008.png",
+      "gallery": [],
+      "moq": 20,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-009",
+      "name": "The Sunflower Wish",
+      "tagline": "A little sunshine, a lot of love",
+      "category": "Value Pack",
+      "occasions": ["Birthday", "Employee Gifting", "Corporate Gifting"],
+      "price": { "amount": 1299 },
+      "badge": "New Arrival",
+      "description": "A warm sunflower-themed hamper bringing together cheerful blooms and heartfelt wishes — an uplifting gift for any special occasion.",
+      "highlights": [
+        "Sunflower Arrangement / Artificial Blooms",
+        "Wishing Jar or Scroll Cards",
+        "Artisan Sweet or Candy",
+        "Premium Gift Box",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Sunflower Arrangement",
+          "description": "Artificial Sunflower Blooms · Long-Lasting · Cheerful Bright Yellow · No Maintenance"
+        },
+        {
+          "name": "Wishing Jar or Scroll Cards",
+          "description": "Mini Jar of Wish Scrolls or Folded Cards · Heartfelt Messages · Keepsake"
+        },
+        {
+          "name": "Artisan Sweet or Candy",
+          "description": "Gourmet Candy or Chocolate · Individually Wrapped"
+        },
+        {
+          "name": "Premium Gift Box",
+          "description": "Rigid Box · Shredded Paper Nest · Custom Logo Available"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-009.png",
+      "gallery": [],
+      "moq": 20,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-010",
+      "name": "The Birthday Tote",
+      "tagline": "All the happy in one bag",
+      "category": "Value Pack",
+      "occasions": ["Birthday", "Employee Gifting"],
+      "price": { "amount": 1499 },
+      "badge": "New Arrival",
+      "description": "A vibrant birthday-themed tote bag filled with sunflowers and sweet surprises — the kind of gift that feels like a celebration in itself.",
+      "highlights": [
+        "Birthday Tote Bag",
+        "Sunflower Stems (Artificial)",
+        "Birthday Confetti or Balloon",
+        "Artisan Sweet or Chocolate",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Birthday Tote Bag",
+          "description": "Canvas or Non-Woven · Birthday Print · Reusable · Colourful Design"
+        },
+        {
+          "name": "Sunflower Stems (Artificial)",
+          "description": "Bright Yellow Artificial Sunflowers · Long-Lasting · Cheerful Accent"
+        },
+        {
+          "name": "Birthday Confetti or Balloon",
+          "description": "Mini Foil Balloon or Paper Confetti · Festive Touch"
+        },
+        {
+          "name": "Artisan Sweet or Chocolate",
+          "description": "Gourmet Chocolate or Birthday Cookie · Individually Wrapped"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Birthday Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-010.png",
+      "gallery": [],
+      "moq": 20,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-011",
+      "name": "The Golden Pedestal",
+      "tagline": "Elevated gifting, timeless elegance",
+      "category": "Value Pack",
+      "occasions": ["Corporate Gifting", "Festive", "Client Gifting"],
+      "price": { "amount": 1799 },
+      "badge": "New Arrival",
+      "description": "A set of gold hammered footed bowls with a regal presence — perfect for festive tables, dry fruit serving, or simply as a stunning décor accent.",
+      "highlights": [
+        "Set of 2 Gold Hammered Footed Bowls",
+        "Premium Gift Box",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Set of 2 Gold Hammered Footed Bowls",
+          "description": "Gold-Plated Finish · Hammered Texture · Footed / Pedestal Base · Decorative & Functional"
+        },
+        {
+          "name": "Premium Gift Box",
+          "description": "Rigid Box · Shredded Paper Nest · Custom Branding Available"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-011.png",
+      "gallery": [],
+      "moq": 20,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-012",
+      "name": "The Gold Bowl Duo",
+      "tagline": "Classic form, modern gleam",
+      "category": "Value Pack",
+      "occasions": ["Corporate Gifting", "Festive", "Client Gifting"],
+      "price": { "amount": 1699 },
+      "badge": "New Arrival",
+      "description": "A refined pair of gold hammered flat-bottom bowls — versatile for gifting, serving sweets, or adorning a sideboard with understated luxury.",
+      "highlights": [
+        "Set of 2 Gold Hammered Flat-Bottom Bowls",
+        "Premium Gift Box",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Set of 2 Gold Hammered Flat-Bottom Bowls",
+          "description": "Gold-Plated Finish · Hammered Texture · Flat Base · Multi-purpose Serving or Décor"
+        },
+        {
+          "name": "Premium Gift Box",
+          "description": "Rigid Box · Shredded Paper Nest · Custom Branding Available"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-012.png",
+      "gallery": [],
+      "moq": 20,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-013",
+      "name": "The Heritage Thali",
+      "tagline": "Rooted in tradition, gifted with pride",
+      "category": "Value Pack",
+      "occasions": ["Festive", "Corporate Gifting", "Client Gifting"],
+      "price": { "amount": 1599 },
+      "badge": "New Arrival",
+      "description": "A traditional thali or tray set inspired by Indian craftsmanship — beautiful for festive celebrations, pooja rituals, or as a meaningful cultural gift.",
+      "highlights": [
+        "Traditional Decorative Thali / Tray",
+        "Assorted Festive Dry Fruits or Sweets",
+        "Premium Gift Box",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Traditional Decorative Thali / Tray",
+          "description": "Embossed Design · Brass or Steel Finish · Festive Motifs · Pooja or Serving Use"
+        },
+        {
+          "name": "Assorted Festive Dry Fruits or Sweets",
+          "description": "Premium Mixed Nuts or Artisan Sweets · Festive Packaging"
+        },
+        {
+          "name": "Premium Gift Box",
+          "description": "Rigid Box · Shredded Paper Nest · Custom Branding Available"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-013.png",
+      "gallery": [],
+      "moq": 20,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-014",
+      "name": "The Evil Eye Charm",
+      "tagline": "Warding off the bad, welcoming the good",
+      "category": "Value Pack",
+      "occasions": ["Corporate Gifting", "Festive", "Birthday"],
+      "price": { "amount": 999 },
+      "badge": "New Arrival",
+      "description": "A curated evil eye protection set combining meaningful talismans with thoughtful trinkets — a gift that carries good energy and warm intentions.",
+      "highlights": [
+        "Evil Eye Wall Hanging or Keychain",
+        "Evil Eye Bracelet",
+        "Evil Eye Decorative Tray or Dish",
+        "Premium Gift Box",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Evil Eye Wall Hanging or Keychain",
+          "description": "Blue Glass Evil Eye · Protective Charm · Home or Car Accessory"
+        },
+        {
+          "name": "Evil Eye Bracelet",
+          "description": "Adjustable · Blue & Gold Tones · Protective Talisman"
+        },
+        {
+          "name": "Evil Eye Decorative Tray or Dish",
+          "description": "Ceramic or Metal · Evil Eye Motif · Small Trinket or Ring Dish"
+        },
+        {
+          "name": "Premium Gift Box",
+          "description": "Rigid Box · Shredded Paper Nest · Custom Branding Available"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-014.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-015",
+      "name": "The Rajasthani Diya Set",
+      "tagline": "Light up moments with artisan craft",
+      "category": "Value Pack",
+      "occasions": ["Festive", "Corporate Gifting", "Diwali"],
+      "price": { "amount": 1099 },
+      "badge": "New Arrival",
+      "description": "A pair of handcrafted Rajasthani diyas in vivid colours — a celebration of Indian folk art and the perfect festive gift to illuminate any home.",
+      "highlights": [
+        "Set of 2 Handpainted Rajasthani Diyas",
+        "Tea-light Candles",
+        "Premium Gift Box",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Set of 2 Handpainted Rajasthani Diyas",
+          "description": "Terracotta · Hand-painted Folk Art · Vibrant Colours · Artisan Crafted"
+        },
+        {
+          "name": "Tea-light Candles",
+          "description": "Set of 4 · Unscented · 4-hr Burn Each"
+        },
+        {
+          "name": "Premium Gift Box",
+          "description": "Rigid Box · Shredded Paper Nest · Custom Branding Available"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-015.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-016",
+      "name": "The Connoisseur's Spread",
+      "tagline": "Fine taste, finer company",
+      "category": "Value Pack",
+      "occasions": ["Corporate Gifting", "Client Gifting", "Festive"],
+      "price": { "amount": 1899 },
+      "badge": "New Arrival",
+      "description": "A sophisticated pairing of crystal-clear wine glasses and premium NATUF baklava — an indulgent gift for those who appreciate the finer things.",
+      "highlights": [
+        "Set of 2 Crystal Wine Glasses",
+        "NATUF Assorted Baklava Box",
+        "Premium Gift Box",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Set of 2 Crystal Wine Glasses",
+          "description": "Lead-free Crystal · 400 ml Each · Elegant Stem · Dishwasher Safe"
+        },
+        {
+          "name": "NATUF Assorted Baklava Box",
+          "description": "Premium Middle Eastern Baklava · Assorted Flavours · 150g · Rich & Indulgent"
+        },
+        {
+          "name": "Premium Gift Box",
+          "description": "Rigid Box · Shredded Paper Nest · Custom Branding Available"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-016.png",
+      "gallery": [],
+      "moq": 15,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-017",
+      "name": "The Rakhi Gold Treat",
+      "tagline": "Sweetness and shine for your favourite sibling",
+      "category": "Value Pack",
+      "occasions": ["Festive", "Corporate Gifting"],
+      "price": { "amount": 1499 },
+      "badge": "New Arrival",
+      "description": "A Raksha Bandhan set combining artisan honey with a gold katori — a golden pairing of sweetness and craftsmanship to celebrate the bond of siblings.",
+      "highlights": [
+        "Artisan Honey Jar",
+        "Gold Hammered Katori / Small Bowl",
+        "Decorative Rakhi",
+        "Premium Gift Box",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Artisan Honey Jar",
+          "description": "Raw & Unfiltered · 150g · Natural Goodness · Premium Glass Jar"
+        },
+        {
+          "name": "Gold Hammered Katori / Small Bowl",
+          "description": "Gold-Plated Finish · Hammered Texture · Festive Serving or Décor Use"
+        },
+        {
+          "name": "Decorative Rakhi",
+          "description": "Designer Thread Rakhi · Embellished with Beads or Stones"
+        },
+        {
+          "name": "Premium Gift Box",
+          "description": "Rigid Box · Shredded Paper Nest · Custom Branding Available"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Rakhi Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-017.png",
+      "gallery": [],
+      "moq": 20,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-018",
+      "name": "The Rakhi Blue Luxe",
+      "tagline": "Blue, bold, and bound by love",
+      "category": "Value Pack",
+      "occasions": ["Festive", "Corporate Gifting"],
+      "price": { "amount": 1699 },
+      "badge": "New Arrival",
+      "description": "A rich indigo-blue Raksha Bandhan set with artisan keepsakes — a vibrant, thoughtful gift celebrating sibling love with colour and craft.",
+      "highlights": [
+        "Blue Ceramic or Enamel Mug",
+        "Blue Embellished Rakhi",
+        "Artisan Sweet or Chocolate",
+        "Blue Satin Ribbon Box",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Blue Ceramic or Enamel Mug",
+          "description": "Deep Indigo Blue · 300 ml · Microwave Safe · Festive Finish"
+        },
+        {
+          "name": "Blue Embellished Rakhi",
+          "description": "Designer Rakhi · Blue Stone & Thread · Festive Keepsake"
+        },
+        {
+          "name": "Artisan Sweet or Chocolate",
+          "description": "Gourmet Chocolate or Indian Sweet · Individually Wrapped"
+        },
+        {
+          "name": "Blue Satin Ribbon Box",
+          "description": "Rigid Box · Blue Satin Ribbon · Premium Unboxing Experience"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Rakhi Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-018.png",
+      "gallery": [],
+      "moq": 20,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-019",
+      "name": "The Rakhi Honey Mug",
+      "tagline": "A sip of sweetness, a lifetime of bonds",
+      "category": "Value Pack",
+      "occasions": ["Festive", "Corporate Gifting"],
+      "price": { "amount": 1299 },
+      "badge": "New Arrival",
+      "description": "A warm Raksha Bandhan set pairing a gold ceramic mug with artisan honey — a sweet, simple, and heartfelt way to celebrate sibling love.",
+      "highlights": [
+        "Gold-Accent Ceramic Mug",
+        "Artisan Honey Jar",
+        "Decorative Rakhi",
+        "Premium Gift Box",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Gold-Accent Ceramic Mug",
+          "description": "Warm Tone Glaze · Gold Handle · 300 ml · Microwave Safe"
+        },
+        {
+          "name": "Artisan Honey Jar",
+          "description": "Raw & Unfiltered · 100g · Natural Goodness · Festive Label"
+        },
+        {
+          "name": "Decorative Rakhi",
+          "description": "Designer Thread Rakhi · Gold-tone Embellishment"
+        },
+        {
+          "name": "Premium Gift Box",
+          "description": "Rigid Box · Shredded Paper Nest · Custom Branding Available"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Rakhi Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-019.png",
+      "gallery": [],
+      "moq": 20,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-020",
+      "name": "The Honey & Heart",
+      "tagline": "Sweet nothings, brewed with care",
+      "category": "Value Pack",
+      "occasions": ["Corporate Gifting", "Employee Gifting", "Birthday"],
+      "price": { "amount": 1199 },
+      "badge": "New Arrival",
+      "description": "A heartwarming combo of artisan honey and a heart-print coffee cup — a simple, sweet gift that says everything without saying a word.",
+      "highlights": [
+        "Artisan Honey Jar",
+        "Heart-Print Coffee Cup",
+        "Premium Gift Box",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Artisan Honey Jar",
+          "description": "Raw & Unfiltered · 100g · Natural Goodness · Premium Glass Jar"
+        },
+        {
+          "name": "Heart-Print Coffee Cup",
+          "description": "Ceramic · 300 ml · Heart Motif · Microwave & Dishwasher Safe"
+        },
+        {
+          "name": "Premium Gift Box",
+          "description": "Rigid Box · Shredded Paper Nest · Custom Logo Available"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalized Message · Premium Card Stock"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-020.png",
+      "gallery": [],
+      "moq": 25,
       "customizable": true,
       "featured": false
     }
