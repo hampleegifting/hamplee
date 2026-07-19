@@ -30,12 +30,22 @@
 
 <div class="nav-placeholder"></div>
 
-<!-- ── Page Header ── -->
+<!-- ── Page Header (compact sticky bar) ── -->
 <section class="catalog-header">
   <div class="container">
-    <span class="section-label fade-up">Hamplee Collections</span>
-    <h1 class="fade-up delay-1">Curated <em>Hampers</em></h1>
-    <span class="gold-rule fade-up delay-2"></span>
+    <div class="catalog-header-inner">
+      <div class="catalog-header-title">
+        <span class="section-label">Collections</span>
+        <h1>Curated <em>Hampers</em></h1>
+      </div>
+      <div class="catalog-header-actions">
+        <span class="results-count" id="resultsCount"></span>
+        <button class="filter-toggle-btn" id="filterToggleBtn" onclick="openFilterSidebar()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="20" y2="12"/><line x1="12" y1="18" x2="20" y2="18"/></svg>
+          Filters
+        </button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -93,15 +103,10 @@
 
   <!-- Main Content -->
   <div class="catalog-content">
-    <div class="catalog-topbar">
-      <button class="filter-toggle-btn" onclick="openFilterSidebar()">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="20" y2="12"/><line x1="12" y1="18" x2="20" y2="18"/></svg>
-        Filters
-      </button>
-      <span class="results-count" id="resultsCount"></span>
-    </div>
-    <div class="hampers-grid" id="hampersGrid">
-      <!-- Populated by JS -->
+    <div class="container">
+      <div class="hampers-grid" id="hampersGrid">
+        <!-- Populated by JS -->
+      </div>
     </div>
   </div>
 
@@ -365,26 +370,17 @@ function getBadgeClass(badge) {
   return '';
 }
 
-// ── Filter Sidebar (mobile) ───────────────────────────
+// ── Filter Sidebar ────────────────────────────────────
 function openFilterSidebar() {
-  const sidebar  = document.getElementById('filterBar');
-  const overlay  = document.getElementById('filterOverlay');
-  if (window.innerWidth <= 768) {
-    const header = document.querySelector('.catalog-header');
-    const top    = header ? Math.max(72, header.getBoundingClientRect().bottom) : 72;
-    sidebar.style.top    = top + 'px';
-    sidebar.style.height = 'calc(100vh - ' + top + 'px)';
-  }
-  sidebar.classList.add('open');
-  overlay.classList.add('visible');
+  document.getElementById('filterBar').classList.add('open');
+  document.getElementById('filterOverlay').classList.add('visible');
+  document.getElementById('filterToggleBtn').classList.add('active');
   document.body.classList.add('filter-open');
 }
 function closeFilterSidebar() {
-  const sidebar = document.getElementById('filterBar');
-  sidebar.classList.remove('open');
-  sidebar.style.top    = '';
-  sidebar.style.height = '';
+  document.getElementById('filterBar').classList.remove('open');
   document.getElementById('filterOverlay').classList.remove('visible');
+  document.getElementById('filterToggleBtn').classList.remove('active');
   document.body.classList.remove('filter-open');
 }
 
@@ -397,7 +393,7 @@ function initFilters() {
       activeCategory = btn.dataset.category;
       track('filter_category', { category: btn.dataset.category });
       renderGrid();
-      if (window.innerWidth <= 768) closeFilterSidebar();
+      closeFilterSidebar();
     });
   });
 
@@ -437,7 +433,7 @@ function initFilters() {
       syncSliderToPreset(activeBudget);
       track('filter_budget', { budget: btn.dataset.budget });
       renderGrid();
-      if (window.innerWidth <= 768) closeFilterSidebar();
+      closeFilterSidebar();
     });
   });
 
