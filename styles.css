@@ -1886,6 +1886,110 @@ section { overflow: hidden; }
   transform: translateX(-50%) translateY(0);
 }
 
+/* ── Selection Mode (iframe embed from custom order flow) ── */
+body.selection-mode nav,
+body.selection-mode .announcement-bar,
+body.selection-mode .nav-placeholder,
+body.selection-mode .site-footer,
+body.selection-mode .cta-band,
+body.selection-mode .wa-float,
+body.selection-mode .ig-float { display: none !important; }
+
+body.selection-mode .catalog-header { top: 0; }
+body.selection-mode .catalog-content { padding-bottom: 100px; }
+
+.hamper-card.selected {
+  border-left-color: var(--gold);
+  box-shadow: 0 0 0 2px var(--gold);
+}
+
+.hamper-card.selected .hamper-card-image::after {
+  content: '✓';
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  background: var(--gold);
+  color: var(--dark);
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.hamper-select-indicator {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.35);
+  padding: 6px 0;
+  transition: color 0.2s;
+}
+
+.hamper-card.selected .hamper-select-indicator {
+  color: var(--gold);
+}
+
+.selection-confirm-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--dark);
+  padding: 14px 24px;
+  z-index: 500;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 2px solid var(--gold);
+}
+
+.selection-confirm-bar.visible { display: flex; }
+
+.selection-count-text {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+
+.selection-count-text span {
+  color: var(--gold);
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.selection-confirm-btn {
+  background: var(--gold);
+  color: var(--dark);
+  border: none;
+  padding: 12px 28px;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.selection-confirm-btn:hover { opacity: 0.85; }
+
 /* ══════════════════════════════════════════
    PERFORMANCE
 ═══════════════════════════════════════════ */

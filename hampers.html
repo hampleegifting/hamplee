@@ -218,6 +218,12 @@
   </div>
 </aside>
 
+<!-- ── Selection Mode: floating confirm bar ── -->
+<div class="selection-confirm-bar" id="selectionConfirmBar">
+  <span class="selection-count-text" id="selectionCount"><span>0</span> hampers selected</span>
+  <button class="selection-confirm-btn" onclick="confirmSelectionAndClose()">Confirm Selection</button>
+</div>
+
 <script src="data/hampers-data.js"></script>
 <script>
 // ══════════════════════════════════════════════════════
@@ -256,6 +262,67 @@ const SLIDER_MAX   = 20000;
 let priceMin = 0;
 let priceMax = SLIDER_MAX;
 
+// ── Selection Mode (embedded in custom order iframe) ──
+let IS_SELECTION_MODE = false;
+let SELECTION_TYPE    = 'include';
+let SELECTED_FOR_FORM = [];
+
+function enableSelectionMode(type) {
+  IS_SELECTION_MODE = true;
+  SELECTION_TYPE    = type;
+  document.body.classList.add('selection-mode');
+
+  const h1 = document.querySelector('.catalog-header h1');
+  if (h1) h1.innerHTML = type === 'include' ? 'Select <em>Hampers</em>' : 'Exclude <em>Hampers</em>';
+  const label = document.querySelector('.catalog-header .section-label');
+  if (label) label.textContent = type === 'include' ? 'Tap to choose hampers' : 'Tap to mark exclusions';
+
+  // Pre-populate from wishlist when in include mode
+  if (type === 'include') {
+    const wishlist = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+    wishlist.forEach(item => {
+      if (ALL_HAMPERS.some(h => h.id === item.id) && !SELECTED_FOR_FORM.some(s => s.id === item.id)) {
+        SELECTED_FOR_FORM.push({ id: item.id, name: item.name, category: item.category || 'Hamper' });
+      }
+    });
+  }
+
+  document.getElementById('selectionConfirmBar').classList.add('visible');
+  updateSelectionBar();
+}
+
+function toggleHamperSelection(id) {
+  const h   = ALL_HAMPERS.find(x => x.id === id);
+  if (!h) return;
+  const idx = SELECTED_FOR_FORM.findIndex(x => x.id === id);
+  if (idx > -1) {
+    SELECTED_FOR_FORM.splice(idx, 1);
+  } else {
+    SELECTED_FOR_FORM.push({ id: h.id, name: h.name, category: h.category });
+  }
+  renderGrid();
+  updateSelectionBar();
+  sendSelectionToParent();
+}
+
+function updateSelectionBar() {
+  const n = SELECTED_FOR_FORM.length;
+  document.getElementById('selectionCount').innerHTML = `<span>${n}</span> hamper${n !== 1 ? 's' : ''} selected`;
+}
+
+function sendSelectionToParent() {
+  if (window.parent && window.parent !== window) {
+    window.parent.postMessage({ type: 'productSelection', products: SELECTED_FOR_FORM }, '*');
+  }
+}
+
+function confirmSelectionAndClose() {
+  sendSelectionToParent();
+  if (window.parent && window.parent !== window) {
+    window.parent.postMessage({ type: 'confirmAndClose', products: SELECTED_FOR_FORM }, '*');
+  }
+}
+
 // ── Boot ─────────────────────────────────────────────
 (function init() {
   try {
@@ -264,9 +331,15 @@ let priceMax = SLIDER_MAX;
     ALL_HAMPERS = data.hampers;
     CONTACT     = data.contact;
 
-    // Read URL param for pre-selected category
     const params = new URLSearchParams(window.location.search);
-    const cat    = params.get('category');
+
+    // Selection mode (embedded in custom order iframe)
+    if (params.get('mode') === 'selection') {
+      enableSelectionMode(params.get('type') || 'include');
+    }
+
+    // Pre-selected category from URL
+    const cat = params.get('category');
     if (cat) {
       activeCategory = cat;
       const btn = document.querySelector(`[data-category="${cat}"]`);
@@ -326,13 +399,25 @@ function renderGrid() {
   }
 
   grid.innerHTML = hampers.map((h, i) => {
-    const wished  = isWished(h.id);
-    const delay   = (i % 4) + 1;
-    const price   = h.price && h.price.amount ? '₹' + h.price.amount.toLocaleString('en-IN') + '<span class="price-gst">+ 18% GST</span>' : 'Price on Request';
+    const wished     = isWished(h.id);
+    const isSelected = IS_SELECTION_MODE && SELECTED_FOR_FORM.some(s => s.id === h.id);
+    const delay      = (i % 4) + 1;
+    const price      = h.price && h.price.amount ? '₹' + h.price.amount.toLocaleString('en-IN') + '<span class="price-gst">+ 18% GST</span>' : 'Price on Request';
     const occasionsHtml = (h.occasions || []).slice(0, 3)
       .map(o => `<span class="occasion-tag">${o}</span>`).join('');
+    const cardClick  = IS_SELECTION_MODE ? `toggleHamperSelection('${h.id}')` : `openPanel('${h.id}')`;
+    const footer     = IS_SELECTION_MODE
+      ? `<div class="hamper-select-indicator">${isSelected ? '✓ Selected' : '+ Select'}</div>`
+      : `<div class="hamper-card-actions">
+           <button class="hamper-wish-inline ${wished ? 'wishlisted' : ''}"
+             onclick="event.stopPropagation(); toggleWishlist('${h.id}', this)"
+             aria-label="${wished ? 'Remove from wishlist' : 'Add to wishlist'}">
+             ${wished ? '♥' : '♡'}
+           </button>
+           <span class="hamper-enquire-btn">View Details →</span>
+         </div>`;
     return `
-    <div class="hamper-card fade-up delay-${delay}" onclick="openPanel('${h.id}')">
+    <div class="hamper-card fade-up delay-${delay}${isSelected ? ' selected' : ''}" onclick="${cardClick}">
       <div class="hamper-card-image">
         ${h.badge ? `<span class="hamper-badge ${getBadgeClass(h.badge)}">${h.badge}</span>` : ''}
         <img loading="lazy" decoding="async" src="${h.image}" alt="${h.name}">
@@ -347,14 +432,7 @@ function renderGrid() {
           <div class="hamper-card-price-wrap">
             <span class="hamper-card-price">${price}</span>
           </div>
-          <div class="hamper-card-actions">
-            <button class="hamper-wish-inline ${wished ? 'wishlisted' : ''}"
-              onclick="event.stopPropagation(); toggleWishlist('${h.id}', this)"
-              aria-label="${wished ? 'Remove from wishlist' : 'Add to wishlist'}">
-              ${wished ? '♥' : '♡'}
-            </button>
-            <span class="hamper-enquire-btn">View Details →</span>
-          </div>
+          ${footer}
         </div>
       </div>
     </div>`;
@@ -646,5 +724,4 @@ function initFadeObserver() {
 document.addEventListener('DOMContentLoaded', initFadeObserver);
 </script>
 
-</body>
 </html>

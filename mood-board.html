@@ -879,7 +879,7 @@
             z-index: 10000;
             backdrop-filter: blur(10px);
             overflow-y: auto;
-            padding: 40px 20px;
+            padding: 20px;
         }
 
         .product-selector-modal.active {
@@ -895,105 +895,19 @@
         }
 
         .product-selector-content {
-            background: white;
-            border-radius: 20px;
             width: 100%;
-            max-width: 1600px;
-            max-height: 95vh;
-            height: 95vh;
+            max-width: 70%;
+            height: 92vh;
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
+            border-radius: 4px;
             animation: modalSlideIn 0.4s ease;
-        }
-
-        .product-selector-header {
-            padding: 16px 24px;
-            border-bottom: 2px solid var(--gold);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .product-selector-header h3 {
-            font-size: 20px;
-            color: var(--dark);
-            margin: 0;
-        }
-
-        .close-selector {
-            font-size: 28px;
-            color: var(--dark);
-            background: none;
-            border: none;
-            cursor: pointer;
-            width: 36px;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-
-        .close-selector:hover {
-            background: var(--gold);
-            color: white;
-            transform: rotate(90deg);
-        }
-
-        .product-selector-body {
-            flex: 1;
-            overflow: hidden;
-            padding: 0;
-            background: var(--light);
         }
 
         #productsIframe {
             width: 100%;
             height: 100%;
-            min-height: 700px;
             border: none;
-        }
-
-        .product-selector-footer {
-            padding: 16px 24px;
-            border-top: 2px solid var(--light);
-            display: flex;
-            justify-content: flex-end;
-            gap: 12px;
-        }
-
-        .selector-btn {
-            padding: 12px 28px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 14px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid var(--gold);
-        }
-
-        .btn-cancel {
-            background: white;
-            color: var(--gold);
-        }
-
-        .btn-cancel:hover {
-            background: var(--light);
-            transform: translateY(-2px);
-        }
-
-        .btn-confirm {
-            background: var(--gold);
-            color: white;
-        }
-
-        .btn-confirm:hover {
-            background: var(--dark);
-            border-color: var(--dark);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(26, 26, 26, 0.3);
+            display: block;
         }
 
         @media (max-width: 768px) {
@@ -1002,18 +916,6 @@
                 gap: 15px;
             }
 
-            .product-selector-header h3 {
-                font-size: 22px;
-            }
-
-            .selector-categories {
-                gap: 8px;
-            }
-
-            .category-filter {
-                padding: 8px 16px;
-                font-size: 12px;
-            }
         }
     </style>
 </head>
@@ -1332,64 +1234,58 @@
             const submitBtn = document.getElementById('submitBtn');
             submitBtn.textContent = 'Submitting...';
             submitBtn.disabled = true;
-            
-            // Google Sheets endpoint
-            const scriptURL = "https://script.google.com/macros/s/AKfycbyeQLC4-A85U9YFrvYQH_jSAdAMqyDapEQJyGChJ_9bIjqy_TxPIaAuBOUH6FUpiwIYnQ/exec";
-            
-            // Prepare data as labeled pipe-separated string
-            const dataString = [
-                `Name: ${data.name || 'N/A'}`,
-                `Email: ${data.email || 'N/A'}`,
-                `Contact: ${data.contact || 'N/A'}`,
-                `Company: ${data.company || 'N/A'}`,
-                `Designation: ${data.designation || 'N/A'}`,
-                `Event/Initiative: ${data.event || 'N/A'}`,
-                `Event Date: ${data.eventDate || 'N/A'}`,
-                `Quantity: ${data.quantity || 'N/A'}`,
-                `Delivery Date: ${data.deliveryDate || 'N/A'}`,
-                `Budget: ${data.budget || 'N/A'}`,
-                `Previously Gifted: ${data.previousItems || 'N/A'}`,
-                `Items to Include: ${data.includeItems || 'N/A'}`,
-                `Items to Exclude: ${data.excludeItems || 'N/A'}`,
-                `Expectations: ${data.expectations || 'N/A'}`
-            ].join(' | ');
-            
-            // Log for debugging
-            console.log('Sending data:', dataString);
-            
-            const formParams = new URLSearchParams();
-            formParams.append('address', 'MOOD_BOARD');
-            formParams.append('contact', dataString);
-            
-            // Submit to Google Sheets
-            fetch(scriptURL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: formParams.toString()
+
+            // ── Web3Forms — delivers email to hamplee.gifting@gmail.com ──
+            // Get your free key at: https://web3forms.com  (enter hamplee.gifting@gmail.com)
+            const WEB3FORMS_KEY = 'c45e4b92-c36b-4d77-94f8-23139440dee3';
+
+            const payload = {
+                access_key: WEB3FORMS_KEY,
+                subject:    `Custom Order Request — ${data.name || 'New Enquiry'}`,
+                from_name:  data.name  || 'Hamplee Website',
+                replyto:    data.email || '',
+
+                // Contact details
+                'Full Name':         data.name         || '—',
+                'Email':             data.email        || '—',
+                'Phone':             data.contact      || '—',
+                'Company':           data.company      || '—',
+                'Designation':       data.designation  || '—',
+
+                // Order details
+                'Event / Initiative': data.event       || '—',
+                'Event Date':         data.eventDate   || '—',
+                'Quantity':           data.quantity    || '—',
+                'Delivery Date':      data.deliveryDate || '—',
+                'Budget':             data.budget      || '—',
+
+                // Preferences
+                'Hampers to Include':  data.includeItems   || '—',
+                'Previously Gifted':   data.previousItems  || '—',
+                'Items to Exclude':    data.excludeItems   || '—',
+                'Vision & Expectations': data.expectations || '—'
+            };
+
+            fetch('https://api.web3forms.com/submit', {
+                method:  'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body:    JSON.stringify(payload)
             })
-            .then(response => response.text())
-            .then(responseText => {
-                console.log('Success:', responseText);
-                
-                // Hide form and show success
+            .then(r => r.json())
+            .then(result => {
+                if (!result.success) throw new Error(result.message || 'Submission failed');
                 document.querySelector('.form-card').style.display = 'none';
                 document.getElementById('successMessage').classList.add('active');
                 document.querySelector('.progress-container').style.display = 'none';
-                
-                // Scroll to top
                 window.scrollTo({ top: 0, behavior: 'smooth' });
-                
-                // Reset form
                 this.reset();
                 submitBtn.textContent = 'Submit Your Vision';
                 submitBtn.disabled = false;
                 currentStep = 1;
             })
             .catch(error => {
-                console.error('Error:', error);
+                console.error('Submission error:', error);
                 alert('There was an error submitting your form. Please try again or contact us directly.');
-                
-                // Reset button
                 submitBtn.textContent = 'Submit Your Vision';
                 submitBtn.disabled = false;
             });
@@ -1480,21 +1376,9 @@
     </script>
 
     <!-- Product Selector Modal -->
-    <div class="product-selector-modal" id="productSelectorModal">
+    <div class="product-selector-modal" id="productSelectorModal" onclick="handleModalBackdropClick(event)">
         <div class="product-selector-content">
-            <div class="product-selector-header">
-                <h3 id="selectorTitle">Select Hampers to Include</h3>
-                <button class="close-selector" onclick="closeProductSelector()">&times;</button>
-            </div>
-            
-            <div class="product-selector-body">
-                <iframe id="productsIframe" src="" frameborder="0"></iframe>
-            </div>
-            
-            <div class="product-selector-footer">
-                <button class="selector-btn btn-cancel" onclick="closeProductSelector()">Cancel</button>
-                <button class="selector-btn btn-confirm" onclick="confirmSelection()">Confirm Selection</button>
-            </div>
+            <iframe id="productsIframe" src="" frameborder="0"></iframe>
         </div>
     </div>
 
@@ -1509,13 +1393,8 @@
         function openProductSelector(type) {
             currentSelectionType = type;
             const modal = document.getElementById('productSelectorModal');
-            const title = document.getElementById('selectorTitle');
             const iframe = document.getElementById('productsIframe');
-            
-            title.textContent = type === 'include' 
-                ? 'Browse & Select Hampers to Include' 
-                : 'Browse & Select Hampers to Exclude';
-            
+
             if (type === 'include' && !selectedProducts.include.length) {
                 const likedItems = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
                 const hampersOnly = likedItems.filter(item => item.type === 'hamper');
@@ -1531,10 +1410,16 @@
             
             document.body.classList.add('modal-open');
             
-            iframe.src = `curated-hampers.html?mode=selection&type=${type}`;
+            iframe.src = `item-selector.html?type=${type}`;
             
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
+        }
+
+        function handleModalBackdropClick(event) {
+            if (event.target === document.getElementById('productSelectorModal')) {
+                closeProductSelector();
+            }
         }
 
         function closeProductSelector() {
@@ -1552,11 +1437,14 @@
         window.addEventListener('message', function(event) {
             console.log('Received message:', event.data);
             
-            if (event.data.type === 'productSelection') {
-                // Only update if products array is defined (not undefined or null)
+            if (event.data.type === 'productSelection' || event.data.type === 'confirmAndClose') {
                 if (event.data.products !== undefined) {
                     selectedProducts[currentSelectionType] = event.data.products;
-                    console.log('Updated selectedProducts:', selectedProducts);
+                }
+                // "Confirm Selection" button inside the iframe auto-confirms and closes
+                if (event.data.type === 'confirmAndClose') {
+                    confirmSelection();
+                    return;
                 }
             }
             
