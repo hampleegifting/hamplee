@@ -58,7 +58,7 @@
       "tagline": "Refined taste, exquisite selection",
       "category": "Gourmet",
       "occasions": ["Corporate Gifting", "Client Gifting", "Festive"],
-      "price": { "amount": 5350},
+      "price": { "amount": 5850},
       "badge": "Bestseller",
       "description": "A carefully curated selection of premium artisanal foods and beverages. This collection brings together the finest flavors from renowned producers, perfect for discerning palates and special occasions.",
       "highlights": [
@@ -117,7 +117,7 @@
         },
         {
           "name": "Customized Greeting Card",
-          "description": "Personalized Message . Brand-Stamped . Elegant Finishing Touch"
+          "description": "Personalized Message . Elegant Finishing Touch"
         }
       ],
       "image": "asset/gourmet/gourmet-001.png",
@@ -133,7 +133,7 @@
       "tagline": "Rare flavors, exceptional quality",
       "category": "Gourmet",
       "occasions": ["Client Gifting", "Corporate Gifting", "Birthday", "Festive"],
-      "price": { "amount": 3200},
+      "price": { "amount": 3250},
       "badge": "Premium",
       "description": "A beautifully curated gourmet selection presented in a cream luxury gift box — featuring artisan chocolate truffles, premium nuts, an aromatic green tea tin, handcrafted cookies, and a sleek borosilicate glass bottle. Every item chosen for quality, indulgence, and lasting impression.",
       "highlights": [
@@ -144,7 +144,7 @@
         "Spiced Honey Artisan Cookies Tin",
         "Roasted Almonds Pouch",
         "Premium Cashews Pouch",
-        "Luxury Scented Candle"
+        "Luxury Scented Jar Candle"
       ],
       "items": [
         {
@@ -161,7 +161,7 @@
         },
         {
           "name": "Premium Green Tea Tin",
-          "description": "High-Grade Loose Leaf Green Tea . Airtight Lid Tin . Rich in Antioxidants . Refreshing . 100gm"
+          "description": "High-Grade Loose Leaf Green Tea . Airtight Lid Tin . Rich in Antioxidants . Refreshing . 50gm"
         },
         {
           "name": "Spiced Artisan Cookies",
@@ -169,15 +169,15 @@
         },
         {
           "name": "Premium Almonds",
-          "description": "Premium Whole Almonds . Natural & Nutritious . Jute Drawstring Pouch . 50gm"
+          "description": "Premium Whole Almonds . Natural & Nutritious . Jute Drawstring Pouch . 100gm"
         },
         {
           "name": "Premium Cashews",
-          "description": "Whole Cashew Kernels . Rich & Creamy . Jute Drawstring Pouch . 50gm"
+          "description": "Whole Cashew Kernels . Rich & Creamy . Jute Drawstring Pouch . 100gm"
         },
         {
           "name": "Premium Pistachios",
-          "description": "Premium Pistachio . Light Salted . Jute Drawstring Pouch . 50gm"
+          "description": "Premium Pistachio . Light Salted . Jute Drawstring Pouch . 100gm"
         },
         {
           "name": "Luxury Scented Candle",
@@ -197,16 +197,16 @@
       "tagline": "Premium indulgence redefined",
       "category": "Gourmet",
       "occasions": ["Client Gifting", "Corporate Gifting", "Birthday"],
-      "price": { "amount": 2199 },
+      "price": { "amount": 2599 },
       "badge": "Premium",
-      "description": "A dark, sophisticated gourmet hamper for the refined palate — featuring the refreshing leaf tea, pure Jamun Honey, a curated dips and sauces assortment, earth-friendly glass, and crunchy quinoa puffs. Presented in a premium matte black gift box with satin ribbon.",
+      "description": "A sophisticated gourmet hamper for the refined palate — featuring the refreshing leaf tea, pure Jamun Honey, a curated dips and sauces assortment, earth-friendly glass, and crunchy quinoa puffs. Presented in a premium gift box.",
       "highlights": [
         "Premium Rigid Gift Box",
         "Lemongrass Leaf Tea",
         "Jamun Honey Jar",
         "Artisanal Honey Assortment (4 Varieties)",
         "Quinoa Puffs Bag",
-        "Earth-friendly glass"
+        "Earth-friendly glass (Set of 2)"
       ],
       "items": [
         {
@@ -230,7 +230,7 @@
           "description": "Roasted Quinoa Snack . Cheese and Herbs . High Protein . Light & Crunchy . Guilt-Free Indulgence . 20g"
         },
         {
-          "name": "Earth-friendly Tea glass",
+          "name": "Earth-friendly Tea glass (Set of 2)",
           "description": "Unbreakable . Bamboo | Coffee | Rice Husk . Dishwasher Safe . Microwave Safe . Hot & Cold . Upcycled . 100ml"
         }
       ],
@@ -243,13 +243,13 @@
 
     {
       "id": "gourmet-004",
-      "name": "Grand Gastronome",
+      "name": "Tea Time Bliss",
       "tagline": "The pinnacle of culinary gifting",
       "category": "Gourmet",
       "occasions": ["Client Gifting", "Corporate Gifting", "Festive"],
       "price": { "amount": 1799 },
       "badge": "Premium",
-      "description": "An exceptional gourmet experience built around the finest raw honeys and premium tea — presented in a luxury gift box. Featuring Organic Jamun Honey, ceramic mugs, premium tea leaves, and a honey dipper, this is gifting at its most refined.",
+      "description": "An exceptional gourmet experience built around the finest raw honey and premium tea — presented in a luxury gift box. Featuring Organic Jamun Honey, ceramic mugs, premium tea leaves, and a honey dipper, this is gifting at its most refined.",
       "highlights": [
         "Premium Rigid Gift Box",
         "Jamun Honey (Tin)",
@@ -281,7 +281,7 @@
       ],
       "image": "asset/gourmet/gourmet-004.png",
       "gallery": [],
-      "moq": 5,
+      "moq": 10,
       "customizable": true,
       "featured": false
     },
@@ -292,7 +292,7 @@
       "tagline": "Tradition meets luxury",
       "category": "Gourmet",
       "occasions": ["Client Gifting", "Corporate Gifting", "Festive"],
-      "price": { "amount": 2199},
+      "price": { "amount": 2499},
       "badge": "Premium",
       "description": "A celebration of timeless recipes and heritage brands that have perfected their craft over generations. This premium collection honors tradition while delivering contemporary elegance.",
       "highlights": ["Heritage brands", "Traditional recipes", "Generational expertise", "Premium presentation", "Timeless elegance"],
@@ -315,7 +315,7 @@
         },
         {
           "name": "Kaju Katli Box",
-          "description": "WTraditional Indian Sweet . Rich Cashew Delight . Premium Quality . 200g Pack"
+          "description": "Traditional Indian Sweet . Rich Cashew Delight . Premium Quality . 200g Pack"
         },
         {
           "name": "Aster Flower Seed Ball",
@@ -324,7 +324,7 @@
       ],
       "image": "asset/gourmet/IMG20250815113228.jpg",
       "gallery": [],
-      "moq": 5,
+      "moq": 10,
       "customizable": true,
       "featured": false
     },
@@ -332,12 +332,12 @@
     {
       "id": "gourmet-006",
       "name": "Imperial Feast",
-      "tagline": "The ultimate gourmet experience",
-      "category": "Gourmet",
-      "occasions": ["Client Gifting"],
-      "price": { "amount": 3499},
+      "tagline": "The ultimate festive experience",
+      "category": "Festive",
+      "occasions": ["Client Gifting", "Corporate Gifting", "Festive"],
+      "price": { "amount": 3899},
       "badge": "Limited Edition",
-      "description": "Our most prestigious gourmet collection featuring rare delicacies, vintage selections, and the finest products money can buy. Perfect for celebrating milestone occasions.",
+      "description": "Our most prestigious festive collection featuring rare gourmet delicacies, vintage selections, and the finest products money can buy. Perfect for celebrating milestone occasions.",
       "highlights": ["Ultra-premium selection", "Rare delicacies", "Vintage items", "Museum-quality presentation", "Once-in-a-lifetime gifting"],
       "items": [
         {
@@ -353,7 +353,7 @@
           "description": "100% Pure Brass . Traditional South Indian Design . 6-Inch Height . Authentic Coffee Brewing"
         },
         {
-          "name": "Brass Dabara Set",
+          "name": "Brass Dabara Set of 1",
           "description": "Pure Brass Finish . Traditional Coffee Serving Set . Elegant Heritage Design . 150ml"
         },
         {
@@ -373,9 +373,9 @@
           "description": "Eco-Friendly Seed Ball . Easy to Grow . Sustainable Gift Addition . Nature-Inspired Keepsake"
         }
       ],
-      "image": "asset/gourmet/IMG20250815114410.jpg",
+      "image": "asset/festivity/IMG20250815114410.jpg",
       "gallery": [],
-      "moq": 5,
+      "moq": 10,
       "customizable": true,
       "featured": false
     },
@@ -386,7 +386,7 @@
       "tagline": "Soft, scented, and simply beautiful",
       "category": "Festive",
       "occasions": ["Festive", "Corporate Gifting", "Employee Gifting", "Client Gifting"],
-      "price": { "amount": 1450},
+      "price": { "amount": 1650},
       "badge": "Bestseller",
       "description": "A refined, minimal festive gift for those who appreciate understated elegance — featuring a premium aromatic tomb shaped candle, cashews in a pouch, a sculptural ceramic vase with a tulip flower, and a personalized thank you card. All nestled in a signature Hamplee box.",
       "highlights": [
@@ -394,7 +394,7 @@
         "AUR Vanilla+ Natural Aromatic Body Mist",
         "Premium Cashews in Linen Pouch",
         "White Ceramic Vase with Tulip",
-        "Personalized Thank You Card"
+        "Personalized Card"
       ],
       "items": [
         {
@@ -402,25 +402,25 @@
           "description": "Premium Luxury Rigid Box . Resusable . Sophisticated Design . Custom Logo"
         },
         {
-          "name": "Oud Vanilla Scented Tomb Lid Jar Candle",
+          "name": "Scented Tomb Lid Jar Candle",
           "description": "Organic & Aromatic . Vanilla + Oud Scented . Aromatherapy fragrance . Amber Glass Bottle"
         },
         {
           "name": "Premium Cashews",
-          "description": "Whole Cashew Kernels . Premium Grade . Rich & Creamy . Jute Drawstring Pouch . 50gm"
+          "description": "Whole Cashew Kernels . Premium Grade . Rich & Creamy . Jute Drawstring Pouch . 100gm"
         },
         {
           "name": "White Ceramic Vase with Tulip",
           "description": "Handcrafted Ceramic 6.5inch . Matte White Finish . Tulip stick . Elegant Desk or Home Accent"
         },
         {
-          "name": "Personalized Thank You Card",
-          "description": "Custom Message . Premium Paper . Thoughtful Finishing Touch"
+          "name": "Personalized Card",
+          "description": "Custom Message . Thoughtful Finishing Touch"
         }
       ],
       "image": "asset/festivity/festivity-001.png",
       "gallery": [],
-      "moq": 25,
+      "moq": 10,
       "customizable": true,
       "featured": true
     },
@@ -431,7 +431,7 @@
       "tagline": "Celebrating every moment",
       "category": "Festive",
       "occasions": ["Festive", "Corporate Gifting", "Employee Gifting", "Diwali"],
-      "price": { "amount": 3850 },
+      "price": { "amount": 4150 },
       "badge": "Most Popular",
       "description": "A rich, opulent festive hamper that brings celebration to life — featuring a luxurious jamawar silk stole, Artisan assorted baklava, a scented massage candle, premium copper mule mug, premium dry fruits, Organic Honey and Jute glass bottle. Presented in Hamplee's gift box, this is festive gifting at its most joyful.",
       "highlights": [
@@ -444,7 +444,7 @@
         "Decorative Chocolate Box",
         "Glass Bottle",
         "Premium Gold Tin",
-        "Thank You Card"
+        "Custom Message Card"
       ],
       "items": [
         {
@@ -480,26 +480,26 @@
           "description": "Premium Borosilicate Glass . Bamboo Lid & Sleeve Accent . Eco-Friendly . Jute Sleeve . Leak-Proof . 500ml . Custom Logo"
         },
         {
-          "name": "Personalized Thank You Card",
-          "description": "Custom Message . Premium Paper . Thoughtful Finishing Touch"
+          "name": "Personalized Card",
+          "description": "Custom Message . Thoughtful Finishing Touch"
         }
       ],
       "image": "asset/festivity/festivity-002.png",
       "gallery": [],
-      "moq": 25,
+      "moq": 10,
       "customizable": true,
       "featured": false
     },
 
     {
       "id": "festive-003",
-      "name": "New Year Elegance",
+      "name": "Timeless Toast",
       "tagline": "Toast to new beginnings in style",
       "category": "Festive",
       "occasions": ["New Year", "Corporate Gifting", "Client Gifting", "Festive"],
       "price": { "amount": 3200 },
       "badge": "Premium",
-      "description": "Raise a toast to new beginnings with this rose gold-toned celebration set — featuring a pair of rose gold stainless steel wine glasses, a luxurious jamawar silk blended stole, and elegant finishing touches. Presented in Hamplee box, it's a gift that marks special moments with timeless style.",
+      "description": "Raise a toast to new beginnings with this rose gold-toned celebration set — featuring a pair of rose gold stainless steel wine glasses, a luxurious jamawar silk blended stole, and elegant finishing touches. Presented in Premium rigid box, it's a gift that marks special moments with timeless style.",
       "highlights": [
         "Matte Black Luxury Gift Box",
         "Rose Gold Stainless Steel Wine Glasses (Set of 2)",
@@ -521,8 +521,8 @@
           "description": "Soft Silk Blend . Versatile Festive Wear . Unisex . Premium Traditional Wear"
         },
         {
-          "name": "Personalized Thank You Card",
-          "description": "Custom Message . Premium Paper . Thoughtful Finishing Touch"
+          "name": "Personalized Card",
+          "description": "Custom Message . Thoughtful Finishing Touch"
         }
       ],
       "image": "asset/festivity/festivity-003.png",
@@ -538,7 +538,7 @@
       "tagline": "Where tradition gleams in gold",
       "category": "Festive",
       "occasions": ["Festive", "Diwali", "Corporate Gifting", "Client Gifting"],
-      "price": { "amount": 2699},
+      "price": { "amount": 2850},
       "badge": "Premium",
       "description": "A deeply traditional festive gift set inspired by India's rich cultural heritage — featuring a pure copper water bottle, a pair of copper tumblers, and two brass lotus diya. Presented in a Hamplee's gift box, this hamper is a celebration of Diwali in its most authentic form.",
       "highlights": [
@@ -555,7 +555,7 @@
         },
         {
           "name": "Pure Copper Water Bottle",
-          "description": "100% Pure Copper . BPA Free . Leak-Proof . Boosts Immunity . 900ml"
+          "description": "100% Pure Copper . BPA Free . Leak-Proof . Boosts Immunity . 750ml"
         },
         {
           "name": "Pure Copper Tumblers",
@@ -566,8 +566,8 @@
           "description": "Set of 2 . Colorful Lotus Design . Brass . Festive Diwali Décor . 10cm"
         },
         {
-          "name": "Personalized Thank You Card",
-          "description": "Custom Message . Premium Paper . Thoughtful Finishing Touch"
+          "name": "Personalized Card",
+          "description": "Custom Message . Thoughtful Finishing Touch"
         }
       ],
       "image": "asset/festivity/festivity-004.png",
@@ -579,11 +579,11 @@
 
     {
       "id": "festive-005",
-      "name": "The Tea Ceremony",
+      "name": "The Golden Sips",
       "tagline": "Steep in serenity, gift in style",
       "category": "Festive",
       "occasions": ["Festive", "Client Gifting", "Corporate Gifting"],
-      "price": { "amount": 1600 },
+      "price": { "amount": 1599 },
       "badge": "Premium",
       "description": "A premium tea gifting set that transforms every sip into a ritual — featuring a single-estate premium tea in tin packaging, a pair of handcrafted porcelain mugs, and an ornate decorative spoon. All curated inside luxury gift box that is as beautiful to unwrap as what's inside.",
       "highlights": [
@@ -603,7 +603,7 @@
         },
         {
           "name": "Porcelain Mugs",
-          "description": "Set of 2 . Handcrafted Premium Porcelain . Microwave Safe . 300ml Each"
+          "description": "Set of 2 . Handcrafted Premium Porcelain . Microwave Safe . 350ml Each"
         },
         {
           "name": "Ornate Decorative Spoon",
@@ -612,7 +612,7 @@
       ],
       "image": "asset/festivity/festivity-005.png",
       "gallery": [],
-      "moq": 5,
+      "moq": 10,
       "customizable": true,
       "featured": false
     },
@@ -622,10 +622,10 @@
       "name": "Heritage Celebration",
       "tagline": "Honoring tradition with luxury",
       "category": "Festive",
-      "occasions": ["Festive", "Diwali", "Client Gifting", "Corporate Gifting"],
-      "price": { "amount": 2850 },
+      "occasions": ["Festive", "Diwali", "Client Gifting", "Corporate Gifting", "Employee Gifting"],
+      "price": { "amount": 3250 },
       "badge": "Limited Edition",
-      "description": "A deeply rooted festive hamper that honors the finest Indian traditions — featuring scented urli candle, a pair of custom printed brass dabara set, hand-painted Rajasthani folk art wooden-ceramic coasters, and premium dry fruits. Presented in a Hamplee gift box, it's a gift worthy of the most special celebrations.",
+      "description": "A deeply rooted festive hamper that honors the finest Indian traditions — featuring scented urli candle, a pair of custom printed brass dabara set, hand-painted Rajasthani folk art wooden-ceramic coasters, and premium dry fruits. Presented in a premium gift box, it's a gift worthy of the most special celebrations.",
       "highlights": [
         "Burgundy Luxury Gift Box",
         "Handcrafted Kaju Katli Tray",
@@ -657,8 +657,8 @@
           "description": "Almonds & Cashwes . Naturally Nutritious . Crunchy & premium quality. Jute Drawstring Pouch . 100gm"
         },
         {
-          "name": "Personalized Thank You Card",
-          "description": "Custom Message . Premium Paper . Thoughtful Finishing Touch"
+          "name": "Personalized Card",
+          "description": "Custom Message . Thoughtful Finishing Touch"
         }
       ],
       "image": "asset/festivity/festivity-006.png",
