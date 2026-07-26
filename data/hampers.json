@@ -975,7 +975,7 @@
       "tagline": "Elevate daily work with smart essentials",
       "category": "Office",
       "occasions": ["Employee Gifting", "Corporate Gifting", "Client Gifting"],
-      "price": { "amount": 3999, "display": "Starting from ₹3,999" },
+      "price": { "amount": 3999},
       "badge": "Bestseller",
       "description": "Transform your workspace with premium essentials designed for the modern professional. Each item in this bundle is handpicked for daily utility, smart design, and the kind of quality that makes a lasting impression — all with custom branding available.",
       "highlights": [
@@ -990,8 +990,12 @@
       ],
       "items": [
         {
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Resusable . Sophisticated Design . Custom Logo"
+        },
+        {
           "name": "Aquaminder Smart Water Bottle",
-          "description": "RGB LED Glow & Timer . Smart Hourly Sound & Glow Reminders . Built-in Rechargeable Lithium Battery . USB-C Charging . 15-Day Battery Life . Chug Lid with One-Hand Operation . Detachable Smart Base . 600ml . Non Toxic . BPA Free . Dishwasher Safe . BIS Certified . Food-Grade"
+          "description": "RGB LED Glow & Timer . Smart Sound & Glow Reminders . Built-in Rechargeable Lithium Battery . USB-C Charging . Chug Lid with One-Hand Operation . Detachable Smart Base . 600ml . Non Toxic . BPA Free . Dishwasher Safe . BIS Certified . Food-Grade"
         },
         {
           "name": "Natural Rosewood Brain Teaser Puzzle Box Set",
@@ -1011,15 +1015,11 @@
         },
         {
           "name": "Executive Diary & Pen",
-          "description": "PU Leather Cover . A5 Size . 200 High Quality Paper Pages . Matching Pen Included . Custom Logo Print"
+          "description": "Hard Cover . A5 Size . 200 High Quality Paper Pages . Matching Pen Included . Custom Logo Print"
         },
         {
           "name": "Custom Stickers",
           "description": "High Quality Vinyl Stickers . ~10 Pieces Per Set"
-        },
-        {
-          "name": "Premium Hamper Box",
-          "description": "Premium Rigid Cupboard Box . Reusable . Custom Color Sleeves & Pattern for Branding"
         }
       ],
       "image": "asset/offineeds/office-001.png",
@@ -1035,7 +1035,7 @@
       "tagline": "Designed for new beginnings",
       "category": "Office",
       "occasions": ["Employee Gifting", "Corporate Gifting", "New Joiner"],
-      "price": { "amount": 4499, "display": "Starting from ₹4,499" },
+      "price": { "amount": 4499 },
       "badge": "Most Popular",
       "description": "Boost productivity with carefully curated office essentials. Perfect for welcoming new team members or celebrating work anniversaries with style and utility.",
       "highlights": [
@@ -1047,12 +1047,16 @@
       ],
       "items": [
         {
-          "name": "Premium Rigid Box with Logo",
-          "description": "Premium Rigid Packaging . Custom Logo Branding"
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Resusable . Sophisticated Design . Custom Logo"
         },
         {
           "name": "Bamboo Stainless Steel Bottle",
-          "description": "Digital Vacuum Insulated & Double Wall . Capacity 750ml . Leak-Proof . Digital Temperature Sensor"
+          "description": "Vacuum Insulated & Double Wall . Capacity 750ml . Leak-Proof"
+        },
+        {
+          "name": "Bamboo Stainless Steel Travel Mug",
+          "description": "Vacuum Insulated & Double Wall . Capacity 500ml . Perfect fot travel . Leak-Proof"
         },
         {
           "name": "Branded Wireless Headphones",
@@ -1063,8 +1067,8 @@
           "description": "Eco-Friendly . 100 Pages"
         },
         {
-          "name": "Luxury Couverture Assorted Chocolates Box",
-          "description": "Premium Couverture Chocolate . Assorted Selection"
+          "name": "Artisan Chocolate Assortment Box",
+          "description": "Box of 5 . Pure Couverture Chocolate . Signature Belgian Style . Milk, Dark & White Pralines . Pure Cocoa Butter . Egg-less . 55g"
         }
       ],
       "image": "asset/offineeds/office-002.png",
@@ -1080,9 +1084,9 @@
       "tagline": "For those who hustle hard",
       "category": "Office",
       "occasions": ["Corporate Gifting", "Client Gifting", "Employee Gifting", "New Joiner"],
-      "price": { "amount": 5499, "display": "Starting from ₹5,499" },
+      "price": { "amount": 3500},
       "badge": "Corporate Pick",
-      "description": "Timeless corporate gifts that never go out of style. This collection features premium branded merchandise perfect for client meetings and corporate events.",
+      "description": "Timeless corporate gifts that never go out of style. This collection features premium branded merchandise perfect for clients, employees and corporate events.",
       "highlights": [
         "Premium Rigid Box with Logo",
         "The Hustler Tumbler (1000ml)",
@@ -1092,16 +1096,16 @@
       ],
       "items": [
         {
-          "name": "Premium Rigid Box with Logo",
-          "description": "Premium Rigid Packaging . Custom Logo Branding"
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Resusable . Sophisticated Design . Custom Logo"
         },
         {
-          "name": "The Hustler Tumbler with Handle & Straw",
-          "description": "3-Position Lid . Cup Holder Compatible for Travel . Insulated Stainless Steel . BPA-Free . Capacity 1000ml . Leak-Proof"
+          "name": "Tumbler with Straw",
+          "description": "3-Position Lid . With handle Compatible for Travel . Insulated Stainless Steel . BPA-Free . Capacity 1000ml . Leak-Proof"
         },
         {
-          "name": "Notebook & Pen Set",
-          "description": "Eco-Friendly . 100 Pages"
+          "name": "Diary & Pen Set",
+          "description": "Executive Diary and Pen . 100 Pages"
         },
         {
           "name": "Wooden Photo Frame",
@@ -1109,7 +1113,7 @@
         },
         {
           "name": "Tech Kit Organizer",
-          "description": "Gadget Safety Kit . Vegan Leather . Premium Finish"
+          "description": "Gadget Safety Kit . Vegan Leather . Sapcious . Premium Finish"
         }
       ],
       "image": "asset/offineeds/office-003.png",
@@ -1125,7 +1129,7 @@
       "tagline": "Luxury for the modern professional",
       "category": "Office",
       "occasions": ["Corporate Gifting", "Client Gifting", "Employee Gifting", "New Joiner"],
-      "price": { "amount": 6999, "display": "Starting from ₹6,999" },
+      "price": { "amount": 2999},
       "badge": "Premium",
       "description": "Upgrade your desk game with luxury office accessories. This premium collection transforms any workspace into an inspiring environment for peak performance.",
       "highlights": [
@@ -1138,8 +1142,8 @@
       ],
       "items": [
         {
-          "name": "Premium Rigid Box with Logo",
-          "description": "Premium Rigid Packaging . Custom Logo Branding"
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Resusable . Sophisticated Design . Custom Logo"
         },
         {
           "name": "Laptop Riser Stand Holder",
@@ -1151,7 +1155,7 @@
         },
         {
           "name": "Notebook & Pen Set",
-          "description": "Eco-Friendly . 100 Pages"
+          "description": "Executive Diary and Pen . 100 Pages"
         },
         {
           "name": "Wooden Photo Frame",
@@ -1175,7 +1179,7 @@
       "tagline": "For those who mean business",
       "category": "Office",
       "occasions": ["Corporate Gifting", "Client Gifting", "Employee Gifting", "New Joiner"],
-      "price": { "amount": 7999, "display": "Starting from ₹7,999" },
+      "price": { "amount": 4999 },
       "badge": "Premium",
       "description": "The ultimate professional starter pack featuring premium tech accessories, elegant stationery, and executive essentials. Perfect for making powerful first impressions.",
       "highlights": [
@@ -1188,7 +1192,7 @@
       "items": [
         {
           "name": "Luxury Laptop Backpack",
-          "description": "Premium Build . Spacious Compartments . Ergonomic Design . Fits Laptops up to 15.6\""
+          "description": "Premium Build . Spacious Compartments . Ergonomic Design . Fits Laptops up to 15.6"
         },
         {
           "name": "Copper Water Bottle",
@@ -1200,11 +1204,15 @@
         },
         {
           "name": "Handmade Crochet Sunflower Pot",
-          "description": "Eco-Friendly . Office Desk Decor . Height 6 Inches"
+          "description": "Artisan Crochet Sunflower . Cheerful Yellow & Brown . Miniature Pot Base . Desk Decor . Handmade with Love"
         },
         {
           "name": "Coffee Mug",
-          "description": "Microwave & Dishwasher Safe . Premium Porcelain . 300ml"
+          "description": "Microwave & Dishwasher Safe . Premium Quality . 300ml"
+        },
+        {
+          "name": "Wooden Log Coaster",
+          "description": "Natural Wood Slice . Handcrafted . Natural & rustic aesthetic to your table . 3.5 inch"
         }
       ],
       "image": "asset/offineeds/office-005.png",
@@ -1220,7 +1228,7 @@
       "tagline": "Wear the brand, own the story",
       "category": "Office",
       "occasions": ["Corporate Gifting", "Employee Gifting", "New Joiner", "Client Gifting"],
-      "price": { "amount": 4999, "display": "Starting from ₹4,999" },
+      "price": { "amount": 4999 },
       "badge": "Corporate Pick",
       "description": "A complete branded merchandise kit that turns every employee into a brand ambassador. Curated with premium everyday essentials — each piece carries your logo with pride.",
       "highlights": [
@@ -1232,6 +1240,10 @@
         "Premium Hamper Box"
       ],
       "items": [
+        {
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Resusable . Sophisticated Design . Custom Logo"
+        },
         {
           "name": "Hot & Cold Stainless Steel Bottle",
           "description": "Double-Wall Insulated . Maintains Temperature for Extended Hours . Leak Proof . Durable . 750ml . Company Logo"
@@ -1249,12 +1261,8 @@
           "description": "Sleek Custom Design . Company Branding . Built for Everyday Use"
         },
         {
-          "name": "Executive Diary & Pen",
+          "name": "Executive Notebook & Pen",
           "description": "A5 Size . 192 Ruled Pages . Premium Pen with Logo . Company Branding"
-        },
-        {
-          "name": "Hamper Box",
-          "description": "Premium Magnetic Rigid Cupboard Box . Reusable . Logo Print on Top"
         }
       ],
       "image": "asset/offineeds/office-006.png",
@@ -1270,9 +1278,9 @@
       "tagline": "Sleek essentials for the discerning professional",
       "category": "Office",
       "occasions": ["Corporate Gifting", "Client Gifting", "Employee Gifting"],
-      "price": { "amount": 5999, "display": "Starting from ₹5,999" },
+      "price": { "amount": 2899 },
       "badge": "New Arrival",
-      "description": "A refined stationery and drinkware set crafted for the modern executive. Featuring a leather pen pouch, premium hardcover notebook, elegant metal pen, and a sleek vacuum flask — all presented in a signature Hamplee gift box.",
+      "description": "A refined stationery and drinkware set crafted for the modern executive. Featuring a PU leather pen pouch, premium hardcover notebook, elegant metal pen, and a sleek vacuum bottle - all presented in a premium gift box.",
       "highlights": [
         "Leather Pen & Pencil Pouch",
         "Executive Hardcover Notebook",
@@ -1282,24 +1290,24 @@
       ],
       "items": [
         {
-          "name": "Leather Pen & Pencil Pouch",
-          "description": "Premium Vegan Leather . Zippered Closure . Compact & Slim . Fits Pens, Stylus & Small Accessories . Custom Logo"
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Resusable . Sophisticated Design . Custom Logo"
+        },
+        {
+          "name": "Leather stationary Pouch",
+          "description": "Premium PU Leather . Zippered Closure . Compact & Slim . Fits Pens, Stylus & Small Accessories . Custom Logo"
         },
         {
           "name": "Executive Hardcover Notebook",
-          "description": "Charcoal Textured Cover . Elastic Closure Band . Built-in Pen Loop . A5 Size . 192 Ruled Pages . Premium Quality Paper"
+          "description": "Hard and Rigid Cover . A5 Size . 192 Ruled Pages . Premium Quality Paper"
         },
         {
           "name": "Premium Metal Pen",
-          "description": "Gold Finish . Smooth Writing . Elegant Minimalist Design . Refillable"
+          "description": "Premium Finish . Smooth Writing . Elegant Minimalist Design"
         },
         {
-          "name": "Vacuum Insulated Flask",
-          "description": "Champagne Finish . Double-Wall Vacuum Insulated . Stainless Steel . Keeps Hot & Cold . Leak-Proof . 500ml . Hamplee Branded"
-        },
-        {
-          "name": "Premium Hamplee Gift Box",
-          "description": "Rigid Matte Grey Box . Satin Ribbon Closure . Hamplee Signature Branding . Reusable"
+          "name": "Vacuum Insulated Bottle",
+          "description": "Double-Wall Vacuum Insulated . Stainless Steel . Keeps Hot & Cold . Leak-Proof . 500ml . Custom Logo"
         }
       ],
       "image": "asset/offineeds/office-008.png",
@@ -1315,9 +1323,9 @@
       "tagline": "Brewed for the refined professional",
       "category": "Office",
       "occasions": ["Corporate Gifting", "Client Gifting", "Employee Gifting"],
-      "price": { "amount": 4499, "display": "Starting from ₹4,499" },
+      "price": { "amount": 2799},
       "badge": "New Arrival",
-      "description": "A curated kit for the coffee lover at the desk — pairing premium artisanal coffee with stylish drinkware and refined leather accessories. Every detail is designed to elevate the everyday.",
+      "description": "A curated kit for the coffee lover at the desk - pairing premium coffee with stylish drinkware and refined leather accessories. Every detail is designed to elevate the everyday.",
       "highlights": [
         "Premium Gift Tote Bag",
         "TGL Co. Signature Coffee",
@@ -1328,23 +1336,23 @@
       "items": [
         {
           "name": "Premium Gift Tote Bag",
-          "description": "Structured Box Bag . Tan Leather Handles . Hamplee Branded . Reusable"
+          "description": "Structured Box Rigid Bag . Tan Leather Handles . Cutom Logo . Reusable"
         },
         {
-          "name": "TGL Co. Signature Coffee",
-          "description": "Premium Artisanal Blend . Gold Jar Packaging . Rich & Bold Flavour"
+          "name": "Signature Coffee",
+          "description": "Premium Artisanal Blend . Jar Packaging . Rich & Bold Flavour"
         },
         {
-          "name": "Glass Can Tumbler with Bamboo Lid & Straw",
-          "description": "Borosilicate Glass . Black Neoprene Sleeve . Bamboo Lid . Reusable Straw"
+          "name": "Glass Tumbler with Bamboo Lid & Straw",
+          "description": "Borosilicate Glass . Silicone Sleeve for easy handling . Bamboo Lid . Reusable Straw"
         },
         {
           "name": "Leather Valet Tray",
-          "description": "Premium Tan Leather . Desk Catch-All Organizer . Minimalist Design"
+          "description": "Premium Tan PU Leather . Desk Catch-All Organizer . Minimalist Design"
         },
         {
-          "name": "Leather Strap Accessory",
-          "description": "Premium Leather . Compact & Elegant . Everyday Carry Essential"
+          "name": "Leather Keychain",
+          "description": "PU Leather and Metal . Compact & Elegant . Everyday Carry Essential"
         }
       ],
       "image": "asset/offineeds/office-007.png",
@@ -1360,9 +1368,9 @@
       "tagline": "Dream it. Believe it. Achieve it.",
       "category": "Office",
       "occasions": ["Employee Gifting", "Corporate Gifting", "New Joiner"],
-      "price": { "amount": 4999, "display": "Starting from ₹4,999" },
+      "price": { "amount": 1999},
       "badge": "Most Popular",
-      "description": "A motivational gifting kit designed to inspire from day one. Packed with a goal planner, a dreamer's notebook, a reed diffuser for calm focus, and feel-good accessories — all in a premium frosted tote. The perfect hamper for new joiners, performance recognition, and team appreciation.",
+      "description": "A motivational gifting kit designed to inspire from day one. Packed with a goal planner, a dreamer's notebook, a reed diffuser for calm focus, and feel-good accessories - all in a premium frosted tote. The perfect hamper for new joiners, performance recognition, and team appreciation.",
       "highlights": [
         "Premium Frosted Gift Tote with Gold Bow",
         "Win The Day Goal Planner",
@@ -1377,24 +1385,24 @@
           "description": "Clear PVC Bag . Gold Satin Ribbon Bow . Gold Shredded Paper Filler . Reusable . Premium Presentation"
         },
         {
-          "name": "Win The Day Goal Planner",
-          "description": "Daily Goal Setting Pages . Habit Tracker . Reflection Sections . Premium Paper . Hardcover"
+          "name": "Goal Planner",
+          "description": "Daily Goal Setting Pages . Habit Tracker . Reflection Sections . Premium Paper . Softcover"
         },
         {
-          "name": "Travel & Tech Organiser Bag",
-          "description": "Zippered Closure . Top Handle . Multiple Pockets . Fits Cables, Chargers & Accessories . Durable"
+          "name": "Thermal Insulated Lunch Bag",
+          "description": "Keeps food hot . Top Handle . Leak Proof . Lunch Organiser . Easy to carry . Stylish"
         },
         {
-          "name": "You Got This! Glass Tumbler with Straw",
-          "description": "Borosilicate Glass . Reusable Straw . Motivational Quote Print . Leak-Proof Lid . 400ml . Dishwasher Safe"
+          "name": "Glass Tumbler with Straw",
+          "description": "Borosilicate Glass . Reusable Straw . Motivational Quote Print . Leak-Proof Lid . 450ml . Dishwasher Safe"
         },
         {
-          "name": "Reed Diffuser with Dried Flower",
+          "name": "Reed Diffuser with Essential oil",
           "description": "Amber Glass Bottle . Premium Fragrance . Reed Sticks . Decorative Dried Rose . Long-Lasting Scent"
         },
         {
-          "name": "Motivational Vinyl Stickers",
-          "description": "Set of 2 . Never Give Up & Believe in Yourself . High-Quality Vinyl . Waterproof . For Laptop, Bottle or Journal"
+          "name": "Motivational Stickers",
+          "description": "Set of 2 . Custom . High-Quality . Waterproof . For Laptop, Bottle or Journal"
         }
       ],
       "image": "asset/offineeds/office-012.png",
@@ -1410,7 +1418,7 @@
       "tagline": "Inspired by nature, curated with care",
       "category": "Office",
       "occasions": ["Corporate Gifting", "Employee Gifting", "Client Gifting", "New Joiner"],
-      "price": { "amount": 6999, "display": "Starting from ₹6,999" },
+      "price": { "amount": 6999},
       "badge": "New Arrival",
       "description": "A nature-inspired gifting set built around sustainability and everyday utility. Featuring plantable stationery, premium drinkware, an umbrella, and artisan chocolates — all in a branded rigid gift box. A hamper that's as conscious as it is thoughtful.",
       "highlights": [
@@ -1425,111 +1433,45 @@
       ],
       "items": [
         {
-          "name": "Premium Rigid Gift Box with Branding",
-          "description": "Premium Rigid Box . Custom Logo Branding . Elegant Presentation . Reusable"
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Resusable . Sophisticated Design . Custom Logo"
         },
         {
           "name": "Portable Umbrella with Travel Pouch",
-          "description": "Compact & Lightweight . Auto Open/Close . Wind-Resistant . Handy Zippered Pouch . Custom Branding"
+          "description": "Compact & Lightweight . Easy to Carry . Wind-Resistant . Handy Zippered Pouch . Custom Branding"
         },
         {
-          "name": "Eco-Friendly Plantable Notebook",
-          "description": "Seed-Embedded Cover . Plant After Use . Recycled Paper Pages . Ruled . Sustainable Gifting"
+          "name": "Plantable Stationary Set",
+          "description": "Plantable Paper Pen set of 2. Plantable Paper Pencil set of 2 . Resuable Box"
         },
         {
-          "name": "Eco-Friendly Plantable Pen & Pencil Set",
-          "description": "Seed-Embedded Tips . Grow Herbs or Flowers After Use . Smooth Writing . Sustainable & Unique"
+          "name": "Magnetic Planter",
+          "description": "Mini Test Tube Planter . Magnetic Holder . Reusable Tube Box"
         },
         {
-          "name": "Premium Couverture Assorted Chocolates Box",
-          "description": "Premium Couverture Chocolate . Assorted Selection . Elegant Box . Indulgent Finish"
+          "name": "Plantable Notebook",
+          "description": "Custom Logo Print . Plant after use . Ecofriendly . 40 Pages . Size: 5 x 7 (Inch)"
+        },
+        {
+          "name": "Artisan Chocolate Assortment Box",
+          "description": "Box of 5 . Pure Couverture Chocolate . Signature Belgian Style . Milk, Dark & White Pralines . Pure Cocoa Butter . Egg-less . 55g"
         },
         {
           "name": "Glass Tumbler with Straw",
-          "description": "Borosilicate Glass . Reusable Straw . Leak-Proof Lid . 400ml . Eco-Conscious"
+          "description": "Borosilicate Glass . Reusable Straw . Leak-Proof Lid . 450ml . Dishwasher Safe"
         },
         {
-          "name": "Large Travel Mug with Lid",
-          "description": "Double-Wall Insulated . Hot & Cold . Spill-Proof Lid . 600ml . Durable & Stylish"
+          "name": "Tumbler with Straw",
+          "description": "3-Position Lid . With handle Compatible for Travel . Insulated Stainless Steel . BPA-Free . Capacity 750ml . Leak-Proof"
         },
         {
-          "name": "Mini Magnetised Decorative Planter",
-          "description": "Magnetic Base . Desk or Fridge Mount . Compact . Comes with Soil & Seeds . Cheerful Desk Accent"
+          "name": "Aster Flower Seed Ball",
+          "description": "Eco-Friendly Seed Ball . Easy to Grow . Sustainable Gift Addition . Nature-Inspired Keepsake"
         }
       ],
       "image": "asset/offineeds/office-011.png",
       "gallery": [],
       "moq": 25,
-      "customizable": true,
-      "featured": false
-    },
-
-    {
-      "id": "office-010",
-      "name": "The Prestige Collection",
-      "tagline": "For the person who deserves the finest",
-      "category": "Office",
-      "occasions": ["Client Gifting", "Corporate Gifting", "Employee Gifting"],
-      "price": { "amount": 9999, "display": "Starting from ₹9,999" },
-      "badge": "Premium",
-      "description": "A deeply curated luxury gift set built around a burgundy and gold palette — pairing refined stationery, artisanal treats, and timeless accessories in a structured leather tote. Perfect for senior clients, leadership gifting, and milestone occasions.",
-      "highlights": [
-        "Structured Leather Gift Tote with Gold Ribbon",
-        "Artisanal Honey Jar in Burlap Pouch",
-        "Luxury Scented Candle",
-        "Wrapped Gourmet Chocolate Box",
-        "Premium Leather Notepad",
-        "Silk Necktie",
-        "Gold Tie Clip Set in Presentation Box",
-        "Wooden Chess / Strategy Board Game",
-        "Premium Dry Fruits",
-        "Handwritten Thank You Card"
-      ],
-      "items": [
-        {
-          "name": "Structured Leather Gift Tote",
-          "description": "Burgundy Vegan Leather . Rigid Frame . Gold Satin Ribbon Bow . Reusable . Premium Presentation"
-        },
-        {
-          "name": "Artisanal Honey Jar",
-          "description": "Pure Natural Honey . Burlap Drawstring Pouch . Gold Dipper Included . Premium Label"
-        },
-        {
-          "name": "Luxury Scented Candle",
-          "description": "Premium Fragrance . Amber Glass Jar . Long Burn Time . Elegant Label . Hand-Poured"
-        },
-        {
-          "name": "Gourmet Chocolate Box",
-          "description": "Premium Couverture Chocolates . White Gift Wrap . Assorted Selection . Indulgent Finish"
-        },
-        {
-          "name": "Premium Leather Notepad",
-          "description": "Tan Cognac Leather Cover . Embossed Finish . Elastic Strap . High-Quality Ruled Pages . Bookmark Ribbon"
-        },
-        {
-          "name": "Silk Tie",
-          "description": "100% Woven Silk . Classic Width . Premium Finish . Elegant Gift Packaging"
-        },
-        {
-          "name": "Gold Tie Clip Set",
-          "description": "Premium Gold-Finish Tie Clip . White Presentation Box . Sophisticated Design . Custom Engraving Available"
-        },
-        {
-          "name": "Wooden Chess & Strategy Board Game",
-          "description": "Inlaid Wood . Compact & Portable . Premium Finish . Doubles as a Desk Accent"
-        },
-        {
-          "name": "Premium Dry Fruits",
-          "description": "Curated Selection of Cashews, Almonds & Pistachios . Elegant Gift Packaging . Rich & Nutritious"
-        },
-        {
-          "name": "Handwritten Thank You Card",
-          "description": "Personalised Message . Premium Paper . Gold Wax Seal . Bespoke Touch"
-        }
-      ],
-      "image": "asset/offineeds/office-010.png",
-      "gallery": [],
-      "moq": 10,
       "customizable": true,
       "featured": false
     },
@@ -1703,66 +1645,6 @@
         }
       ],
       "image": "asset/festivity/festivity-009.png",
-      "gallery": [],
-      "moq": 10,
-      "customizable": true,
-      "featured": false
-    },
-
-    {
-      "id": "office-009",
-      "name": "The Desk Essentials Kit",
-      "tagline": "Everything the modern desk deserves",
-      "category": "Office",
-      "occasions": ["Corporate Gifting", "Employee Gifting", "Client Gifting", "New Joiner"],
-      "price": { "amount": 10999, "display": "Starting from ₹10,999" },
-      "badge": "Premium",
-      "description": "A head-turning premium desk kit that transforms any workspace. From foldable laptop stand to wireless headphones, every piece is chosen for daily utility, sleek design, and lasting brand recall — all custom-branded with your logo.",
-      "highlights": [
-        "Foldable Aluminum Laptop Stand",
-        "Wireless Over-Ear Headphones",
-        "Vacuum Insulated Flask",
-        "Leather Desk Mat",
-        "Ceramic Travel Mug with Lid",
-        "Branded Notebook & Pen",
-        "Motivational Desk Photo Frame",
-        "Premium Black Gift Box with Ribbon"
-      ],
-      "items": [
-        {
-          "name": "Foldable Aluminum Laptop Stand",
-          "description": "Adjustable Height & Angle . Portable & Foldable . Premium Aluminum . Fits Laptops 10–17\" . Anti-Slip Pads . Custom Logo"
-        },
-        {
-          "name": "Wireless Over-Ear Headphones",
-          "description": "Premium Sound Quality . Soft Cushioned Earpads . Foldable Design . Bluetooth 5.0 . Up to 30 Hours Playtime . Custom Logo"
-        },
-        {
-          "name": "Vacuum Insulated Flask",
-          "description": "Double-Wall Stainless Steel . Keeps Hot & Cold . Leak-Proof . 500ml . Smart Lid . Custom Logo"
-        },
-        {
-          "name": "Leather Desk Mat",
-          "description": "Tan Cognac PU Leather . Water-Resistant . Non-Slip Base . Smooth Writing Surface . Desk Protector"
-        },
-        {
-          "name": "Ceramic Travel Mug with Lid",
-          "description": "Premium Ceramic . Spill-Proof Sliding Lid . Microwave Safe . 350ml . Minimalist Design"
-        },
-        {
-          "name": "Branded Notebook & Pen",
-          "description": "Soft-Touch Cover . A5 Size . 192 Ruled Pages . Matching Pen . Custom Logo Print"
-        },
-        {
-          "name": "Motivational Desk Photo Frame",
-          "description": "White Finish . Tabletop Display . Printed Motivational Quote . Custom Message Available"
-        },
-        {
-          "name": "Premium Black Gift Box",
-          "description": "Luxury Rigid Black Box . White Satin Ribbon . Custom Logo on Lid . Premium Unboxing Experience"
-        }
-      ],
-      "image": "asset/offineeds/office-009.png",
       "gallery": [],
       "moq": 10,
       "customizable": true,
