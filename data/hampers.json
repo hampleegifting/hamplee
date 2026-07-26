@@ -674,7 +674,7 @@
       "tagline": "Sustainable elegance for the conscious gifter",
       "category": "Sustainable",
       "occasions": ["Corporate Gifting", "Client Gifting", "Employee Gifting"],
-      "price": { "amount": 2300 },
+      "price": { "amount": 2299 },
       "badge": "Eco-Friendly",
       "description": "A thoughtfully curated sustainable hamper featuring eco-friendly luxury products. Perfect for the environmentally conscious executive who values both quality and sustainability.",
       "highlights": ["100% sustainable products", "Eco-friendly packaging", "Carbon-neutral delivery", "Supports local artisans", "Premium organic selections"],
@@ -721,7 +721,7 @@
       "tagline": "Luxury meets sustainability",
       "category": "Sustainable",
       "occasions": ["Corporate Gifting", "Client Gifting"],
-      "price": { "amount": 2600 },
+      "price": { "amount": 2599 },
       "badge": "Eco-Friendly",
       "description": "Where luxury meets sustainability in perfect harmony. This premium collection showcases the finest eco-conscious products without compromising on elegance.",
       "highlights": ["Certified organic products", "Reusable luxury packaging", "Plant-based selections", "Zero-waste initiative", "Ethically sourced items"],
@@ -772,7 +772,7 @@
       "tagline": "Pure, natural, exceptionally beautiful",
       "category": "Sustainable",
       "occasions": ["Corporate Gifting", "Client Gifting", "Birthday"],
-      "price": { "amount": 1500 },
+      "price": { "amount": 1499 },
       "badge": "Eco-Friendly",
       "description": "Pure, natural, and exceptionally beautiful. This hamper celebrates the elegance of simplicity with premium sustainable products.",
       "highlights": ["All-natural ingredients", "Handcrafted items", "Compostable packaging", "Locally sourced", "Premium quality assured"],
@@ -807,11 +807,11 @@
 
     {
       "id": "sustain-008",
-      "name": "Planet-Friendly Luxury",
+      "name": "Eco-Treasures",
       "tagline": "Zero compromise on sustainability or quality",
       "category": "Sustainable",
-      "occasions": ["Client Gifting", "Corporate Gifting"],
-      "price": { "amount": 1650 },
+      "occasions": ["Client Gifting", "Corporate Gifting", "Festive", "Diwali"],
+      "price": { "amount": 1699 },
       "badge": "Eco-Friendly",
       "description": "Exceptional gifts with zero compromise on sustainability or quality. Perfect for those who demand the best for their clients and the planet.",
       "highlights": ["Earth-friendly materials", "Premium natural products", "Sustainable luxury brands", "Zero plastic policy", "Tree planted per order"],
@@ -851,7 +851,7 @@
       ],
       "image": "asset/sustainable/IMG20250809114928.jpg",
       "gallery": [],
-      "moq": 5,
+      "moq": 10,
       "customizable": true,
       "featured": false
     },
@@ -861,8 +861,8 @@
       "name": "Eco-Prestige",
       "tagline": "The pinnacle of eco-luxury gifting",
       "category": "Sustainable",
-      "occasions": ["Client Gifting"],
-      "price": { "amount": 1600},
+      "occasions": ["Client Gifting", "Festive", "Diwali", "Employee Gifting"],
+      "price": { "amount": 1699},
       "badge": "Limited Edition",
       "description": "The finest sustainable selection for the most discerning recipients. This prestige collection represents the pinnacle of eco-luxury gifting.",
       "highlights": ["Ultra-premium eco products", "Bespoke sustainable packaging", "Exclusive green brands", "Maximum positive impact", "White-glove green service"],
@@ -894,19 +894,19 @@
       ],
       "image": "asset/sustainable/IMG20250809115349.jpg",
       "gallery": [],
-      "moq": 5,
+      "moq": 10,
       "customizable": true,
       "featured": false
     },
 
     {
       "id": "ngo-001",
-      "name": "Community Care Package",
+      "name": "Empower Together",
       "tagline": "Gifts that give back",
-      "category": "NGO",
-      "occasions": ["Social Impact", "Corporate Gifting", "Employee Gifting"],
-      "price": { "amount": 3700 },
-      "badge": "Corporate Pick",
+      "category": "NGO Creations",
+      "occasions": ["Corporate Gifting", "Festive", "Employee Gifting"],
+      "price": { "amount": 3799 },
+      "badge": "Social Impact",
       "description": "A meaningful hamper crafted almost entirely by artisan communities and NGO partners. Every purchase directly supports livelihoods in education, women empowerment, and traditional craft preservation.",
       "highlights": [
         "Premium Matte Black Gift Box",
@@ -1024,7 +1024,7 @@
       ],
       "image": "asset/offineeds/office-001.png",
       "gallery": [],
-      "moq": 25,
+      "moq": 10,
       "customizable": true,
       "featured": true
     },
@@ -1073,7 +1073,7 @@
       ],
       "image": "asset/offineeds/office-002.png",
       "gallery": [],
-      "moq": 25,
+      "moq": 10,
       "customizable": true,
       "featured": false
     },
@@ -1083,8 +1083,8 @@
       "name": "Hustler Kit",
       "tagline": "For those who hustle hard",
       "category": "Office",
-      "occasions": ["Corporate Gifting", "Client Gifting", "Employee Gifting", "New Joiner"],
-      "price": { "amount": 3500},
+      "occasions": ["Corporate Gifting", "Client Gifting", "New Joiner"],
+      "price": { "amount": 3499},
       "badge": "Corporate Pick",
       "description": "Timeless corporate gifts that never go out of style. This collection features premium branded merchandise perfect for clients, employees and corporate events.",
       "highlights": [
@@ -1118,7 +1118,7 @@
       ],
       "image": "asset/offineeds/office-003.png",
       "gallery": [],
-      "moq": 25,
+      "moq": 10,
       "customizable": true,
       "featured": false
     },
@@ -1128,7 +1128,7 @@
       "name": "Desk Deluxe",
       "tagline": "Luxury for the modern professional",
       "category": "Office",
-      "occasions": ["Corporate Gifting", "Client Gifting", "Employee Gifting", "New Joiner"],
+      "occasions": ["Corporate Gifting", "Client Gifting", "New Joiner"],
       "price": { "amount": 2999},
       "badge": "Premium",
       "description": "Upgrade your desk game with luxury office accessories. This premium collection transforms any workspace into an inspiring environment for peak performance.",
@@ -1178,7 +1178,7 @@
       "name": "Power Professional Kit",
       "tagline": "For those who mean business",
       "category": "Office",
-      "occasions": ["Corporate Gifting", "Client Gifting", "Employee Gifting", "New Joiner"],
+      "occasions": ["Corporate Gifting", "Client Gifting", "New Joiner"],
       "price": { "amount": 4999 },
       "badge": "Premium",
       "description": "The ultimate professional starter pack featuring premium tech accessories, elegant stationery, and executive essentials. Perfect for making powerful first impressions.",
@@ -1274,11 +1274,11 @@
 
     {
       "id": "office-008",
-      "name": "The Executive Suite",
+      "name": "Workplace Ready Kit",
       "tagline": "Sleek essentials for the discerning professional",
       "category": "Office",
-      "occasions": ["Corporate Gifting", "Client Gifting", "Employee Gifting"],
-      "price": { "amount": 2899 },
+      "occasions": ["Corporate Gifting", "Employee Gifting", "New Joiner"],
+      "price": { "amount": 2599 },
       "badge": "New Arrival",
       "description": "A refined stationery and drinkware set crafted for the modern executive. Featuring a PU leather pen pouch, premium hardcover notebook, elegant metal pen, and a sleek vacuum bottle - all presented in a premium gift box.",
       "highlights": [
@@ -1312,14 +1312,14 @@
       ],
       "image": "asset/offineeds/office-008.png",
       "gallery": [],
-      "moq": 25,
+      "moq": 10,
       "customizable": true,
       "featured": false
     },
 
     {
       "id": "office-007",
-      "name": "The Coffee Connoisseur",
+      "name": "The Productivity Brew",
       "tagline": "Brewed for the refined professional",
       "category": "Office",
       "occasions": ["Corporate Gifting", "Client Gifting", "Employee Gifting"],
@@ -1364,7 +1364,7 @@
 
     {
       "id": "office-012",
-      "name": "The Achiever Kit",
+      "name": "Achiever's Kit",
       "tagline": "Dream it. Believe it. Achieve it.",
       "category": "Office",
       "occasions": ["Employee Gifting", "Corporate Gifting", "New Joiner"],
@@ -1414,11 +1414,11 @@
 
     {
       "id": "office-011",
-      "name": "The Botanist",
+      "name": "Eco Journey",
       "tagline": "Inspired by nature, curated with care",
       "category": "Office",
-      "occasions": ["Corporate Gifting", "Employee Gifting", "Client Gifting", "New Joiner"],
-      "price": { "amount": 6999},
+      "occasions": ["Corporate Gifting", "Client Gifting", "New Joiner"],
+      "price": { "amount": 4599},
       "badge": "New Arrival",
       "description": "A nature-inspired gifting set built around sustainability and everyday utility. Featuring plantable stationery, premium drinkware, an umbrella, and artisan chocolates — all in a branded rigid gift box. A hamper that's as conscious as it is thoughtful.",
       "highlights": [
@@ -1478,12 +1478,12 @@
 
     {
       "id": "festive-007",
-      "name": "The Everyday Edit",
+      "name": "Celebrating Her",
       "tagline": "Curated for the life she loves",
-      "category": "Festive",
-      "occasions": ["Employee Gifting", "Birthday", "Festive" , "Women's Day"],
-      "price": { "amount": 2700 },
-      "badge": "New Arrival",
+      "category": "Office",
+      "occasions": ["Employee Gifting", "Women's Day Corpoarate Gifting"],
+      "price": { "amount": 3099 },
+      "badge": "Most Popular",
       "description": "A thoughtfully curated everyday gifting set that blends utility with delight — featuring a large stainless steel tumbler, a ceramic mug, a travel jewelry organizer, a pear-shaped LED nightlight, a crochet Message Pear, and 12 months planner. Packed in a signature Hamplee box, it's a gift she'll reach for every single day.",
       "highlights": [
         "Matte Black Luxury Gift Box",
@@ -1525,8 +1525,8 @@
           "description": "Planner and Goals Tracker . 12 Monthly Spreads . 52 Weekly Spreads . 6 Utility Sections"
         },
         {
-          "name": "Personalized Thank You Card",
-          "description": "Custom Message . Premium Paper . Thoughtful Finishing Touch"
+          "name": "Personalized Card",
+          "description": "Custom Message . Thoughtful Finishing Touch"
         }
       ],
       "image": "asset/festivity/festivity-007.png",
@@ -1538,11 +1538,11 @@
 
     {
       "id": "festive-008",
-      "name": "The Chill Edit",
+      "name": "Unstoppable Her",
       "tagline": "Because she deserves to unwind",
-      "category": "Festive",
-      "occasions": ["Corporate Gifting", "Employee Gifting", "Birthday", "Festive"],
-      "price": { "amount": 2600 },
+      "category": "Office",
+      "occasions": ["Women's Day Corpoarate Gifting", "Employee Gifting"],
+      "price": { "amount": 3099 },
       "badge": "New Arrival",
       "description": "A self-care and travel gifting set packed with everything she needs to slow down and glow — featuring a reed diffuser, eye sleeping mask, a passport holder, Crochet Sunflower bouquet, sheet face mask, Sticky notes diary, and a lip balm. Tucked inside a rich burgundy Hamplee box, this is the gift that says: take a break, you've earned it.",
       "highlights": [
@@ -1590,8 +1590,8 @@
           "description": "Chill Out front design . Sticky Notes Diary . Unique design"
         },
         {
-          "name": "Personalized Thank You Card",
-          "description": "Custom Message . Premium Paper . Thoughtful Finishing Touch"
+          "name": "Personalized Card",
+          "description": "Custom Message . Thoughtful Finishing Touch"
         }
       ],
       "image": "asset/festivity/festivity-008.png",
@@ -1605,10 +1605,10 @@
       "id": "festive-009",
       "name": "Bloom & Shine",
       "tagline": "Celebrating the women who shine",
-      "category": "Festive",
-      "occasions": ["Employee Gifting", "Birthday", "Festive", "Women's Day"],
+      "category": "Office",
+      "occasions": ["Employee Gifting", "Women's Day Corpoarate Gifting"],
       "price": { "amount": 1900 },
-      "badge": "Premium",
+      "badge": "Corporate Pick",
       "description": "A beautiful Women's Day gifting set that celebrates her in every detail — featuring a soy wax scented jar candle, a travel jewelry organizer, a lip balm, a crochet heart keychain, and a handmade crochet sunflower pot. Presented in a gift box, this is a gift as warm and radiant as she is.",
       "highlights": [
         "Cream Happy Women's Day Gift Box with Satin Ribbon",
@@ -1624,7 +1624,7 @@
           "description": "Premium Luxury Rigid Box . Resusable . Sophisticated Design . Custom Logo"
         },
         {
-          "name": "Soy Wax Scented Candle",
+          "name": "Soy Wax Scented Jar Candle",
           "description": "100% Soy Wax . Premium Fragrance . Glass Jar . Long Burn Time . Warm & Calming Scent"
         },
         {
@@ -1646,7 +1646,7 @@
       ],
       "image": "asset/festivity/festivity-009.png",
       "gallery": [],
-      "moq": 10,
+      "moq": 25,
       "customizable": true,
       "featured": false
     },
@@ -1656,7 +1656,7 @@
       "name": "The Soup Bowl Duo",
       "tagline": "Two cups, one thoughtful gift",
       "category": "Value Pack",
-      "occasions": ["Corporate Gifting", "Employee Gifting", "Birthday"],
+      "occasions": ["Corporate Gifting", "Festive"],
       "price": { "amount": 1199 },
       "badge": "New Arrival",
       "description": "A pair of Porcelain Soup Bowls presented in a curated gift box — simple, stylish, and perfect for any coffee or tea lover.",
@@ -1685,17 +1685,17 @@
       ],
       "image": "asset/valuepack/value-hamper-001.png",
       "gallery": [],
-      "moq": 25,
+      "moq": "Not Applicable",
       "customizable": true,
       "featured": false
     },
 
     {
       "id": "value-hamper-002",
-      "name": "The Copper Indulgence",
+      "name": "The Indulgence",
       "tagline": "Warmth in every sip and bite",
-      "category": "Value Pack",
-      "occasions": ["Corporate Gifting", "Festive", "Birthday"],
+      "category": "Festive",
+      "occasions": ["Corporate Gifting", "Client Gifting", "Festive"],
       "price": { "amount": 1850 },
       "badge": "New Arrival",
       "description": "A charming set pairing a copper mule mug with organic honey, wooden log coaster and a baklava assortments— a warm, indulgent welcome for any occasion.",
@@ -1738,7 +1738,7 @@
       ],
       "image": "asset/valuepack/value-hamper-002.png",
       "gallery": [],
-      "moq": 25,
+      "moq": 20,
       "customizable": true,
       "featured": false
     },
@@ -1748,7 +1748,7 @@
       "name": "The Tea Ritual",
       "tagline": "Pause, brew, and savour",
       "category": "Value Pack",
-      "occasions": ["Corporate Gifting", "Employee Gifting", "Birthday"],
+      "occasions": ["Corporate Gifting", "Festive", "Mother's Day"],
       "price": { "amount": 1199 },
       "badge": "New Arrival",
       "description": "A teal ceramic tea cup set designed for those who find joy in a quiet moment — beautiful, functional, and thoughtfully packaged.",
@@ -1781,7 +1781,7 @@
       ],
       "image": "asset/valuepack/value-hamper-003.png",
       "gallery": [],
-      "moq": 25,
+      "moq": "Not Applicable",
       "customizable": true,
       "featured": false
     },
@@ -1791,7 +1791,7 @@
       "name": "Aroma with Affection",
       "tagline": "Brighten any space, any day",
       "category": "Value Pack",
-      "occasions": ["Corporate Gifting", "Employee Gifting", "Birthday", "Mother's Day"],
+      "occasions": ["Corporate Gifting", "Festive", "Mother's Day"],
       "price": { "amount": 850 },
       "badge": "New Arrival",
       "description": "A cheerful candle set featuring handmade crochet sunflower in a decorative box — spreading warmth and light wherever they go.",
@@ -1820,7 +1820,7 @@
       ],
       "image": "asset/valuepack/value-hamper-004.png",
       "gallery": [],
-      "moq": 30,
+      "moq": "Not Applicable",
       "customizable": true,
       "featured": false
     },
@@ -1830,7 +1830,7 @@
       "name": "Sip in Style",
       "tagline": "Inspiring words in every sip",
       "category": "Value Pack",
-      "occasions": ["Employee Gifting", "Corporate Gifting", "Birthday"],
+      "occasions": ["Corporate Gifting", "Birthday", "Anniversary"],
       "price": { "amount": 850 },
       "badge": "New Arrival",
       "description": "A set of printed glass tumblers carrying uplifting quotes — the kind of daily reminder that keeps spirits high at the desk or at home.",
@@ -1855,7 +1855,7 @@
       ],
       "image": "asset/valuepack/value-hamper-005.png",
       "gallery": [],
-      "moq": 25,
+      "moq": "Not Applicable",
       "customizable": true,
       "featured": false
     },
@@ -1865,7 +1865,7 @@
       "name": "Heartfelt Elegance",
       "tagline": "Made with love, shared with joy",
       "category": "Value Pack",
-      "occasions": ["Birthday", "Employee Gifting", "Corporate Gifting", "Anniversary", "Birthday"],
+      "occasions": ["Corporate Gifting", "Anniversary", "Valentine's Day", "Birthday"],
       "price": { "amount": 1099 },
       "badge": "New Arrival",
       "description": "A sweet pair of heart-print ceramic mugs & coaster, crochet heart keychain — warm and whimsical, perfect for gifting to someone who deserves a little extra cheer.",
@@ -1898,7 +1898,7 @@
       ],
       "image": "asset/valuepack/value-hamper-006.png",
       "gallery": [],
-      "moq": 25,
+      "moq": "Not Applicable",
       "customizable": true,
       "featured": false
     },
@@ -1908,7 +1908,7 @@
       "name": "The Panda Delight",
       "tagline": "Cute, cuddly, and completely charming",
       "category": "Value Pack",
-      "occasions": ["Birthday", "Employee Gifting", "Corporate Gifting"],
+      "occasions": ["Corporate Gifting", "Valentine's Day", "Birthday"],
       "price": { "amount": 1499 },
       "badge": "New Arrival",
       "description": "An adorable panda-themed gift set that brings instant smiles — thoughtfully arranged in a keepsake box for a playful unboxing experience.",
@@ -1939,7 +1939,7 @@
       ],
       "image": "asset/valuepack/value-hamper-007.png",
       "gallery": [],
-      "moq": 20,
+      "moq": "Not Applicable",
       "customizable": true,
       "featured": false
     },
@@ -1949,7 +1949,7 @@
       "name": "The floral Kit",
       "tagline": "Where florals meet celebration",
       "category": "Value Pack",
-      "occasions": ["Birthday", "Corporate Gifting", "Employee Gifting", "Birthday"],
+      "occasions": ["Corporate Gifting", "Festive", "Birthday"],
       "price": { "amount": 1399 },
       "badge": "New Arrival",
       "description": "A delightful set combining floral double wall glasses with a handmade crochet flower bouquet — thoughtful, artistic, and refreshingly different.",
@@ -1979,7 +1979,7 @@
       ],
       "image": "asset/valuepack/value-hamper-008.png",
       "gallery": [],
-      "moq": 20,
+      "moq": "10",
       "customizable": true,
       "featured": false
     },
@@ -1989,7 +1989,7 @@
       "name": "The Sunflower Wish",
       "tagline": "A little sunshine, a lot of love",
       "category": "Value Pack",
-      "occasions": ["Birthday", "Employee Gifting", "Corporate Gifting"],
+      "occasions": ["Women's Day Corpoarate Gifting", "Birthday", "Festive"],
       "price": { "amount": 1099 },
       "badge": "New Arrival",
       "description": "A warm sunflower-themed hamper bringing together cheerful blooms and heartfelt wishes — an uplifting gift for any special occasion.",
@@ -2024,7 +2024,7 @@
       ],
       "image": "asset/valuepack/value-hamper-009.png",
       "gallery": [],
-      "moq": 20,
+      "moq": "Not Applicable",
       "customizable": true,
       "featured": false
     },
@@ -2034,7 +2034,7 @@
       "name": "The Birthday duo",
       "tagline": "All the happy in one bag",
       "category": "Value Pack",
-      "occasions": ["Birthday", "Employee Gifting"],
+      "occasions": ["Birthday", "Baby Ceremony"],
       "price": { "amount": 750 },
       "badge": "New Arrival",
       "description": "A vibrant birthday-themed bag filled with crochet sunflower pot and water bottle — the kind of gift that feels like a celebration in itself.",
@@ -2075,7 +2075,7 @@
       "name": "The Golden Bowl Duo",
       "tagline": "Elevated gifting, timeless elegance",
       "category": "Value Pack",
-      "occasions": ["Corporate Gifting", "Festive", "Client Gifting", "Baby Ceremony"],
+      "occasions": ["Corporate Gifting", "Festive", "Baby Ceremony"],
       "price": { "amount": 950 },
       "badge": "New Arrival",
       "description": "A set of golden dessert bowls with a regal presence — perfect for festive tables, dry fruit serving, or any dessert of your choice.",
@@ -2104,7 +2104,7 @@
       ],
       "image": "asset/valuepack/value-hamper-011.png",
       "gallery": [],
-      "moq": 20,
+      "moq": 10,
       "customizable": true,
       "featured": false
     },
@@ -2113,9 +2113,9 @@
       "id": "value-hamper-013",
       "name": "The Chip n Dip Platter Box",
       "tagline": "Rooted in tradition, gifted with pride",
-      "category": "Value Pack",
-      "occasions": ["Festive", "Corporate Gifting", "Client Gifting"],
-      "price": { "amount": 1599 },
+      "category": "Festive",
+      "occasions": ["Festive", "Corporate Gifting", "House Warming"],
+      "price": { "amount": 1799 },
       "badge": "New Arrival",
       "description": "Mango Wood Chip and Dip Platter set inspired by Indian craftsmanship — beautiful for festive celebrations, parties, or as a meaningful cultural gift.",
       "highlights": [
@@ -2150,7 +2150,7 @@
       "name": "The Evil Eye Charm",
       "tagline": "Warding off the bad, welcoming the good",
       "category": "Value Pack",
-      "occasions": ["Corporate Gifting", "Festive", "Birthday", "Baby Ceremony"],
+      "occasions": ["Women's Day Corpoarate Gifting", "Festive", "Birthday", "Baby Ceremony"],
       "price": { "amount": 1199 },
       "badge": "New Arrival",
       "description": "A curated evil eye Ceramic Mug and Saucer set with Pear shaped crochet keychain — a gift that carries good energy and warm intentions.",
@@ -2181,7 +2181,7 @@
       ],
       "image": "asset/valuepack/value-hamper-014.png",
       "gallery": [],
-      "moq": 25,
+      "moq": "Not Applicable",
       "customizable": true,
       "featured": false
     },
@@ -2191,7 +2191,7 @@
       "name": "Mitti Di Khushboo",
       "tagline": "Light up moments with artisan craft",
       "category": "Value Pack",
-      "occasions": ["Festive", "Corporate Gifting", "Diwali", "Anniversary"],
+      "occasions": ["Corporate Gifting", "Festive", "Diwali", "Anniversary"],
       "price": { "amount": 1099 },
       "badge": "New Arrival",
       "description": "A pair of handcrafted Terracotta tea light candle holders in vivid colours - a celebration of Indian folk art and the perfect festive gift to illuminate any home.",
@@ -2217,17 +2217,17 @@
       ],
       "image": "asset/valuepack/value-hamper-015.png",
       "gallery": [],
-      "moq": 25,
+      "moq": "Not Applicable",
       "customizable": true,
       "featured": false
     },
 
     {
       "id": "value-hamper-016",
-      "name": "The Connoisseur's Spread",
+      "name": "The Host's Choice",
       "tagline": "Fine taste, finer company",
-      "category": "Value Pack",
-      "occasions": ["Corporate Gifting", "Client Gifting", "Festive", "Anniversary", "Diwali"],
+      "category": "Festive",
+      "occasions": ["Corporate Gifting", "Festive", "Anniversary", "Christmas Gifting"],
       "price": { "amount": 2700 },
       "badge": "New Arrival",
       "description": "A sophisticated pairing of rose gold stainless steel wine goblets and premium baklava assortment — an indulgent gift for those who appreciate the finer things.",
@@ -2252,7 +2252,7 @@
         },
         {
           "name": "Customized Greeting Card",
-          "description": "Personalised Message . Brand-Stamped . Elegant Finishing Touch"
+          "description": "Personalised Message . Elegant Finishing Touch"
         }
       ],
       "image": "asset/valuepack/value-hamper-016.png",
@@ -2264,10 +2264,10 @@
 
     {
       "id": "value-hamper-017",
-      "name": "The Rakhi Gold Treat",
+      "name": "Rakshabandhan Golden Treat",
       "tagline": "Sweetness and shine for your favourite sibling",
-      "category": "Value Pack",
-      "occasions": ["Rakhi","Festive","Rakshabandhan"],
+      "category": "Festive",
+      "occasions": ["Festive", "Rakshabandhan"],
       "price": { "amount": 1800 },
       "badge": "New Arrival",
       "description": "A Raksha Bandhan set combining organic honey jamun flavoured, Brass lotus diya, brass glass, laddoo candles — a golden pairing of sweetness and craftsmanship to celebrate the bond of siblings.",
@@ -2305,12 +2305,12 @@
         },
         {
           "name": "Customized Greeting Card",
-          "description": "Personalised Message . Brand-Stamped . Elegant Finishing Touch"
+          "description": "Personalised Message . Elegant Finishing Touch"
         }
       ],
       "image": "asset/valuepack/value-hamper-017.png",
       "gallery": [],
-      "moq": 20,
+      "moq": "Not Applicable",
       "customizable": true,
       "featured": false
     },
@@ -2321,7 +2321,7 @@
       "tagline": "Blue, bold, and bound by love",
       "category": "Value Pack",
       "occasions": ["Festive", "Friendship Day"],
-      "price": { "amount": 1699 },
+      "price": { "amount": 1499 },
       "badge": "New Arrival",
       "description": "A rich blue theme Raksha Bandhan set with artisan keepsakes - a vibrant, thoughtful gift celebrating sibling love with colour and craft.",
       "highlights": [
@@ -2363,7 +2363,7 @@
       ],
       "image": "asset/valuepack/value-hamper-018.png",
       "gallery": [],
-      "moq": 20,
+      "moq": "Not Applicable",
       "customizable": true,
       "featured": false
     },
@@ -2372,8 +2372,8 @@
       "id": "value-hamper-019",
       "name": "A Warm Rakhi Celebration",
       "tagline": "A sip of sweetness, a lifetime of bonds",
-      "category": "Value Pack",
-      "occasions": ["Festive", "Corporate Gifting"],
+      "category": "Festive",
+      "occasions": ["Festive", "Rakshabandhan"],
       "price": { "amount": 2100 },
       "badge": "New Arrival",
       "description": "A warm Raksha Bandhan hamper - a sweet, simple, and heartfelt way to celebrate sibling love.",
@@ -2411,12 +2411,12 @@
         },
         {
           "name": "Customized Greeting Card",
-          "description": "Personalised Message . Brand-Stamped . Elegant Finishing Touch"
+          "description": "Personalised Message . Elegant Finishing Touch"
         }
       ],
       "image": "asset/valuepack/value-hamper-019.png",
       "gallery": [],
-      "moq": 20,
+      "moq": "Not Applicable",
       "customizable": true,
       "featured": false
     },
@@ -2425,7 +2425,7 @@
       "id": "value-hamper-020",
       "name": "The Heartfelt Hamper",
       "tagline": "Sweet nothings, brewed with care",
-      "category": "Value Pack",
+      "category": "Festive",
       "occasions": ["Anniversary", "Wedding", "Birthday"],
       "price": { "amount": 1799 },
       "badge": "New Arrival",
@@ -2472,7 +2472,7 @@
       ],
       "image": "asset/valuepack/value-hamper-020.png",
       "gallery": [],
-      "moq": 25,
+      "moq": "Not Applicable",
       "customizable": true,
       "featured": false
     }

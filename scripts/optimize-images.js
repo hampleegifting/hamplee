@@ -31,12 +31,19 @@ const EXTS = new Set(['.png', '.jpg', '.jpeg']);
 
 let processed = 0, skipped = 0, errors = 0, savedBytes = 0;
 
+// Matches generated output files like name-600.jpg, name-1200.jpg, name-1800.jpg
+// (and any chained variants). Never process these as source images.
+const GENERATED = /-(600|1200|1800)(\.\w+)?(\.\w+)*\.(jpg|jpeg)$/i;
+
 function findImages(dir, results = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       findImages(full, results);
-    } else if (EXTS.has(path.extname(entry.name).toLowerCase())) {
+    } else if (
+      EXTS.has(path.extname(entry.name).toLowerCase()) &&
+      !GENERATED.test(entry.name)
+    ) {
       results.push(full);
     }
   }
