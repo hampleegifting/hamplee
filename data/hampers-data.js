@@ -21,7 +21,7 @@ window.HAMPLEE_DATA = {
       "Gourmet",
       "Festive",
       "Sustainable",
-      "NGO",
+      "NGO Creations",
       "Office",
       "Value Pack"
     ],

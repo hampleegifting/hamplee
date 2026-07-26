@@ -11,7 +11,7 @@
       "6. Run: node scripts/build-hampers-data.js  — this updates the website.",
       "7. To show on the homepage, set 'featured': true (only 4 show at a time)."
     ],
-    "categories": ["Gourmet", "Festive", "Sustainable", "NGO", "Office", "Value Pack"],
+    "categories": ["Gourmet", "Festive", "Sustainable", "NGO Creations", "Office", "Value Pack"],
     "occasions": [
       "Corporate Gifting",
       "Festive",
