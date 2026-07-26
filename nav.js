@@ -23,6 +23,11 @@ function loadNavigation() {
         </ul>
 
         <div class="nav-icons">
+          <button class="nav-search-btn" id="navSearchBtn" onclick="toggleSearch()" title="Search hampers" aria-label="Search hampers">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </button>
           <a href="liked-wishlist.html" class="nav-wish-icon" id="navWishIcon" title="Wishlist" aria-label="View wishlist">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
@@ -40,8 +45,8 @@ function loadNavigation() {
         <button class="drawer-close" onclick="closeMobileMenu()" aria-label="Close menu">×</button>
         <a href="index.html" class="drawer-logo">HAMPLEE</a>
         <ul class="drawer-menu">
-          <li><a href="hampers.html"     onclick="closeMobileMenu()">Our Hampers</a></li>
-          <li><a href="mood-board.html"  onclick="closeMobileMenu()">Custom Order</a></li>
+          <li><a href="hampers.html"        onclick="closeMobileMenu()">Our Hampers</a></li>
+          <li><a href="mood-board.html"     onclick="closeMobileMenu()">Custom Order</a></li>
           <li><a href="liked-wishlist.html" onclick="closeMobileMenu()">My Wishlist</a></li>
         </ul>
         <div class="drawer-contact">
@@ -56,6 +61,29 @@ function loadNavigation() {
         </div>
       </div>
     </nav>
+
+    <!-- ── Global Search Overlay ── -->
+    <div class="search-overlay" id="searchOverlay" onclick="handleSearchOverlayClick(event)">
+      <div class="search-modal">
+        <div class="search-input-row">
+          <svg class="search-input-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Search hampers, occasions, collections…"
+            oninput="handleSearchInput(event)"
+            onkeydown="handleSearchKey(event)"
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <button class="search-close-btn" onclick="closeSearch()" aria-label="Close search">×</button>
+        </div>
+        <div class="search-results-wrap" id="searchResults"></div>
+      </div>
+    </div>
   `;
 
   const placeholder = document.querySelector('.nav-placeholder');
@@ -67,11 +95,18 @@ function loadNavigation() {
 
   document.body.classList.add('nav-loaded');
 
-  // Defer non-critical init
   setTimeout(() => {
     highlightActiveNavLink();
     updateWishlistBadge();
   }, 0);
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      if (document.getElementById('searchOverlay')?.classList.contains('open')) closeSearch();
+      else closeMobileMenu();
+    }
+  });
+
 }
 
 // ── Mobile Menu ──────────────────────────────────
@@ -96,11 +131,10 @@ function updateWishlistBadge() {
   const items = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
   const badge = document.getElementById('navWishBadge');
   if (!badge) return;
-  badge.textContent  = items.length;
+  badge.textContent   = items.length;
   badge.style.display = items.length > 0 ? 'flex' : 'none';
 }
 
-// Public aliases
 window.updateLikedWishlistCount = updateWishlistBadge;
 window.updateWishlistCount      = updateWishlistBadge;
 
@@ -108,9 +142,108 @@ window.updateWishlistCount      = updateWishlistBadge;
 function highlightActiveNavLink() {
   const page = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-menu a, .drawer-menu a').forEach(link => {
-    const href = link.getAttribute('href');
-    link.classList.toggle('active', href === page);
+    link.classList.toggle('active', link.getAttribute('href') === page);
   });
+}
+
+// ── Global Search ─────────────────────────────────
+let _searchData  = null;
+let _searchTimer = null;
+
+async function _loadSearchData() {
+  if (_searchData) return _searchData;
+  if (window.HAMPLEE_DATA) {
+    _searchData = window.HAMPLEE_DATA.hampers;
+    return _searchData;
+  }
+  try {
+    const res  = await fetch('data/hampers.json');
+    const json = await res.json();
+    _searchData = json.hampers;
+  } catch(e) {
+    _searchData = [];
+  }
+  return _searchData;
+}
+
+function toggleSearch() {
+  const overlay = document.getElementById('searchOverlay');
+  if (overlay.classList.contains('open')) closeSearch();
+  else openSearch();
+}
+
+function openSearch() {
+  document.getElementById('searchOverlay').classList.add('open');
+  document.body.classList.add('search-open');
+  setTimeout(() => document.getElementById('searchInput').focus(), 60);
+  _loadSearchData();
+}
+
+function closeSearch() {
+  document.getElementById('searchOverlay').classList.remove('open');
+  document.body.classList.remove('search-open');
+  document.getElementById('searchInput').value = '';
+  document.getElementById('searchResults').innerHTML = '';
+}
+
+function handleSearchOverlayClick(e) {
+  if (e.target === document.getElementById('searchOverlay')) closeSearch();
+}
+
+function handleSearchKey(e) {
+  if (e.key === 'Escape') { closeSearch(); return; }
+  if (e.key === 'Enter') {
+    const q = document.getElementById('searchInput').value.trim();
+    if (q) {
+      closeSearch();
+      window.location.href = 'hampers.html?search=' + encodeURIComponent(q);
+    }
+  }
+}
+
+function handleSearchInput(e) {
+  clearTimeout(_searchTimer);
+  const q = e.target.value.trim();
+  if (!q) { document.getElementById('searchResults').innerHTML = ''; return; }
+  _searchTimer = setTimeout(async () => {
+    const data   = await _loadSearchData();
+    const ql     = q.toLowerCase();
+    const results = data.filter(h =>
+      h.name.toLowerCase().includes(ql) ||
+      h.category.toLowerCase().includes(ql) ||
+      (h.tagline     && h.tagline.toLowerCase().includes(ql)) ||
+      (h.description && h.description.toLowerCase().includes(ql)) ||
+      (h.occasions   && h.occasions.some(o => o.toLowerCase().includes(ql))) ||
+      (h.badge       && h.badge.toLowerCase().includes(ql))
+    ).slice(0, 8);
+    _renderSearchResults(results, q);
+  }, 180);
+}
+
+function _renderSearchResults(results, q) {
+  const el = document.getElementById('searchResults');
+  if (!results.length) {
+    el.innerHTML = `<div class="search-no-results">No hampers found for "<strong>${q}</strong>"</div>`;
+    return;
+  }
+  el.innerHTML = results.map(h => {
+    const price = h.price && h.price.amount
+      ? '₹' + Number(h.price.amount).toLocaleString('en-IN')
+      : 'Price on Request';
+    const thumb = h.image.replace(/\.(png|jpe?g)$/i, '-600.jpg');
+    return `
+    <a class="search-result-item" href="hampers.html?open=${h.id}" onclick="closeSearch()">
+      <div class="search-result-img">
+        <img src="${thumb}" alt="${h.name}" onerror="this.onerror=null;this.src='${h.image}'">
+      </div>
+      <div class="search-result-text">
+        <span class="search-result-cat">${h.category}</span>
+        <span class="search-result-name">${h.name}</span>
+        <span class="search-result-price">${price}</span>
+      </div>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="flex-shrink:0;opacity:0.25"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>`;
+  }).join('');
 }
 
 // ── Boot ──────────────────────────────────────────

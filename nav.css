@@ -7,7 +7,8 @@
   --gold:        #C9A959;
   --gold-light:  #E8D5A3;
   --dark:        #1A1A1A;
-  --cream:       #F8F7F4;
+  --cream:       #F5ECE7;
+  --brand-dark:  #2C1A0E;
   --white:       #FFFFFF;
   --grey:        #6B6B6B;
   --border-soft: rgba(0,0,0,0.07);
@@ -21,7 +22,7 @@
    so there is zero visible shift when nav.js injects the real nav */
 .nav-placeholder {
   height: 108px;
-  background: linear-gradient(var(--dark) 36px, var(--cream) 36px);
+  background: linear-gradient(var(--brand-dark) 36px, var(--cream) 36px);
   flex-shrink: 0;
 }
 body.nav-loaded .nav-placeholder {
@@ -31,7 +32,7 @@ body.nav-loaded .nav-placeholder {
 
 /* ── Announcement Bar ── */
 .announcement-bar {
-  background: var(--dark);
+  background: var(--brand-dark);
   color: rgba(255,255,255,0.65);
   font-family: var(--font-sans);
   font-size: 11px;
@@ -309,6 +310,172 @@ body.nav-open .nav-drawer {
   stroke: currentColor;
   stroke-width: 2;
 }
+
+/* ── Nav Search Button ── */
+.nav-search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--dark);
+  transition: color 0.2s;
+  padding: 0;
+}
+.nav-search-btn:hover { color: var(--gold); }
+.nav-search-btn svg { display: block; }
+
+/* ── Search Overlay ── */
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 18, 14, 0.72);
+  z-index: 600;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: clamp(60px, 12vh, 120px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.search-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.search-modal {
+  width: min(640px, calc(100vw - 32px));
+  background: var(--white);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+  transform: translateY(-12px);
+  transition: transform 0.25s ease;
+}
+.search-overlay.open .search-modal {
+  transform: translateY(0);
+}
+
+.search-input-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.search-input-ico {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--grey);
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--dark);
+  background: transparent;
+  letter-spacing: 0.3px;
+}
+.search-input::placeholder { color: rgba(107,107,107,0.6); }
+
+.search-close-btn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--grey);
+  cursor: pointer;
+  padding: 0 2px;
+  transition: color 0.2s;
+}
+.search-close-btn:hover { color: var(--dark); }
+
+.search-results-wrap {
+  max-height: min(420px, 50vh);
+  overflow-y: auto;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-soft);
+  transition: background 0.15s;
+}
+.search-result-item:last-child { border-bottom: none; }
+.search-result-item:hover { background: var(--cream); }
+
+.search-result-img {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--cream);
+}
+.search-result-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.search-result-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.search-result-cat {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.search-result-name {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.search-result-price {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--grey);
+}
+
+.search-no-results {
+  padding: 28px 20px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--grey);
+  text-align: center;
+}
+.search-no-results strong { color: var(--dark); }
+
+body.search-open { overflow: hidden; }
 
 /* ── Responsive: show hamburger ── */
 @media (max-width: 960px) {

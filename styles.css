@@ -11,7 +11,8 @@
   --gold-subtle: rgba(201, 169, 89, 0.12);
   --dark:        #1A1A1A;
   --dark-soft:   #2C2C2C;
-  --cream:       #F8F7F4;
+  --brand-dark:  #2C1A0E;
+  --cream:       #F5ECE7;
   --cream-mid:   #F0EDE6;
   --white:       #FFFFFF;
   --grey:        #6B6B6B;
@@ -486,7 +487,7 @@ section { overflow: hidden; }
 /* ── Process Section ── */
 .process-section {
   padding: 100px 0;
-  background: var(--dark);
+  background: var(--brand-dark);
   color: var(--white);
 }
 
@@ -651,7 +652,7 @@ section { overflow: hidden; }
 /* ── Custom Order CTA Band ── */
 .cta-band {
   padding: 100px 0;
-  background: var(--dark);
+  background: var(--brand-dark);
   text-align: center;
   color: var(--white);
 }
@@ -661,7 +662,7 @@ section { overflow: hidden; }
 
 /* ── Footer ── */
 .site-footer {
-  background: #111;
+  background: var(--brand-dark);
   color: rgba(255,255,255,0.55);
   padding: 80px 0 0;
 }
@@ -756,7 +757,7 @@ section { overflow: hidden; }
 
 /* ── Catalog Header (compact sticky bar) ── */
 .catalog-header {
-  background: var(--dark);
+  background: var(--brand-dark);
   border-bottom: 1px solid rgba(255,255,255,0.07);
   position: sticky;
   top: 72px;
@@ -819,7 +820,7 @@ section { overflow: hidden; }
   width: 320px;
   height: 100vh;
   overflow-y: auto;
-  background: var(--dark);
+  background: var(--brand-dark);
   padding: 28px 20px;
   box-sizing: border-box;
   z-index: 600;
@@ -1942,7 +1943,7 @@ body.selection-mode .catalog-content { padding-bottom: 100px; }
   bottom: 0;
   left: 0;
   right: 0;
-  background: var(--dark);
+  background: var(--brand-dark);
   padding: 14px 24px;
   z-index: 500;
   align-items: center;
