@@ -1271,31 +1271,9 @@ section { overflow: hidden; }
   margin-top: auto;
 }
 
-.hamper-card-price-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.hamper-card-price {
-  font-family: var(--font-serif);
-  font-size: 22px;
-  color: var(--gold);
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0.3px;
-}
-
-.price-gst {
-  display: block;
-  font-family: var(--font-sans);
-  font-size: 8.5px;
-  font-weight: 500;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  color: var(--grey-light);
-  margin-top: 5px;
-}
+.hamper-card-price-wrap { display: none; }
+.hamper-card-price      { display: none; }
+.price-gst              { display: none; }
 
 .hamper-card-actions {
   display: flex;
@@ -1325,18 +1303,24 @@ section { overflow: hidden; }
 }
 
 .hamper-enquire-btn {
-  font-size: 10px;
+  font-family: var(--font-sans);
+  font-size: 9.5px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--gold);
-  background: none;
-  border: none;
+  background: transparent;
+  border: 1.5px solid var(--gold);
   cursor: pointer;
-  padding: 0;
-  transition: color 0.2s ease;
+  padding: 9px 14px;
+  transition: background 0.22s ease, color 0.22s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
-.hamper-enquire-btn:hover { color: var(--gold-dark); }
+.hamper-enquire-btn:hover {
+  background: var(--gold);
+  color: var(--white);
+}
 
 /* ── Detail Side Panel ── */
 .panel-backdrop {
@@ -1536,15 +1520,7 @@ section { overflow: hidden; }
   line-height: 1.1;
 }
 
-.panel-price {
-  font-family: var(--font-serif);
-  font-size: 24px;
-  color: var(--gold);
-  font-weight: 400;
-  letter-spacing: 0.3px;
-  line-height: 1;
-  margin-bottom: 20px;
-}
+.panel-price { display: none; }
 
 .panel-desc {
   font-size: 14px;
@@ -2084,7 +2060,7 @@ a, button, .pill, .hamper-card, .collection-tile, .contact-card {
   /* Labels & tags: 9–10px → 12px minimum */
   .section-label          { font-size: 12px; letter-spacing: 2.5px; }
   .hamper-card-category   { font-size: 11px; }
-  .hamper-enquire-btn     { font-size: 12px; }
+  .hamper-enquire-btn     { font-size: 9.5px; padding: 10px 14px; }
   .occasion-tag           { font-size: 11px; padding: 5px 12px; }
   .catalog-stat-label     { font-size: 11px; }
   .results-count          { font-size: 10px; letter-spacing: 1px; }
@@ -2095,7 +2071,6 @@ a, button, .pill, .hamper-card, .collection-tile, .contact-card {
   /* Card body text */
   .hamper-card-desc       { font-size: 14px; }
   .hamper-card-tagline    { font-size: 15px; }
-  .hamper-card-price      { font-size: 24px; }
 
   /* Filter pills */
   .pill                   { font-size: 11px; padding: 7px 14px; }
@@ -2135,7 +2110,6 @@ a, button, .pill, .hamper-card, .collection-tile, .contact-card {
   /* Small-screen type: bumped further for 375px phones */
   .hamper-card-name     { font-size: 20px; }
   .hamper-card-desc     { font-size: 14px; }
-  .hamper-card-price    { font-size: 22px; }
   .section-title        { font-size: clamp(26px, 8vw, 38px); }
   .statement-title      { font-size: clamp(24px, 7vw, 36px); }
   .statement-body       { font-size: 15px; line-height: 1.8; }

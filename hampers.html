@@ -485,20 +485,17 @@ function renderGrid() {
     const wished     = isWished(h.id);
     const isSelected = IS_SELECTION_MODE && SELECTED_FOR_FORM.some(s => s.id === h.id);
     const delay      = (i % 4) + 1;
-    const price      = h.price && h.price.amount ? '₹' + h.price.amount.toLocaleString('en-IN') + '<span class="price-gst">+ 18% GST</span>' : 'Price on Request';
     const occasionsHtml = (h.occasions || []).slice(0, 3)
       .map(o => `<span class="occasion-tag">${o}</span>`).join('');
     const cardClick  = IS_SELECTION_MODE ? `toggleHamperSelection('${h.id}')` : `openPanel('${h.id}')`;
     const footer     = IS_SELECTION_MODE
       ? `<div class="hamper-select-indicator">${isSelected ? '✓ Selected' : '+ Select'}</div>`
-      : `<div class="hamper-card-actions">
-           <button class="hamper-wish-inline ${wished ? 'wishlisted' : ''}"
-             onclick="event.stopPropagation(); toggleWishlist('${h.id}', this)"
-             aria-label="${wished ? 'Remove from wishlist' : 'Add to wishlist'}">
-             ${wished ? '♥' : '♡'}
-           </button>
-           <span class="hamper-enquire-btn">View Details →</span>
-         </div>`;
+      : `<button class="hamper-wish-inline ${wished ? 'wishlisted' : ''}"
+           onclick="event.stopPropagation(); toggleWishlist('${h.id}', this)"
+           aria-label="${wished ? 'Remove from wishlist' : 'Add to wishlist'}">
+           ${wished ? '♥' : '♡'}
+         </button>
+         <span class="hamper-enquire-btn">Enquire for Bulk Price</span>`;
     return `
     <div class="hamper-card fade-up delay-${delay}${isSelected ? ' selected' : ''}" onclick="${cardClick}">
       <div class="hamper-card-image">
@@ -517,9 +514,6 @@ function renderGrid() {
         <p class="hamper-card-desc">${h.description}</p>
         ${occasionsHtml ? `<div class="hamper-card-occasions">${occasionsHtml}</div>` : ''}
         <div class="hamper-card-footer">
-          <div class="hamper-card-price-wrap">
-            <span class="hamper-card-price">${price}</span>
-          </div>
           ${footer}
         </div>
       </div>
@@ -643,27 +637,25 @@ function openPanel(id) {
 
 *${h.name}*
 Collection: ${h.category}
-Price: ${h.price && h.price.amount ? '₹' + h.price.amount.toLocaleString('en-IN') + ' + 18% GST' : 'Price on Request'}
 
 What's inside:
 ${highlights}
 
 MOQ: ${h.moq || 10} pieces${h.customizable ? ' | Custom branding available' : ''}
 
-Please share availability and bulk pricing. Thank you!`
+Could you please share the bulk pricing and availability? Thank you!`
   );
-  const mailSub  = encodeURIComponent(`Hamper Enquiry — ${h.name} | Hamplee`);
+  const mailSub  = encodeURIComponent(`Bulk Pricing Enquiry — ${h.name} | Hamplee`);
   const mailBody = encodeURIComponent(
 `Hi Hamplee Team,
 
-I am interested in the following hamper and would like to know more:
+I am interested in the following hamper and would like to enquire about bulk pricing:
 
 ────────────────────────────
 HAMPER DETAILS
 ────────────────────────────
 Name:        ${h.name}
 Collection:  ${h.category}
-Price:       ${h.price.display}
 
 Description:
 ${h.description}
@@ -690,7 +682,7 @@ Best regards`
   document.getElementById('panelCat').textContent  = h.category;
   document.getElementById('panelBadge').textContent = h.badge || '';
   document.getElementById('panelName').textContent  = h.name;
-  document.getElementById('panelPrice').innerHTML = h.price && h.price.amount ? '₹' + h.price.amount.toLocaleString('en-IN') + '<span class="price-gst">+ 18% GST</span>' : 'Price on Request';
+  document.getElementById('panelPrice').style.display = 'none';
   document.getElementById('panelDesc').textContent  = h.description;
   if (h.items && h.items.length) {
     document.getElementById('panelHighlights').innerHTML =

@@ -2475,6 +2475,448 @@
       "moq": "Not Applicable",
       "customizable": true,
       "featured": false
+    },
+
+    {
+      "id": "festive-010",
+      "name": "Festive Warmth",
+      "tagline": "A celebration of joy and warmth",
+      "category": "Festive",
+      "occasions": ["Corporate Gifting", "Festive", "Diwali"],
+      "price": { "amount": 2499 },
+      "badge": "New Arrival",
+      "description": "A beautifully curated festive hamper packed with premium goodies — perfect for celebrating every special occasion with warmth and elegance.",
+      "highlights": [
+        "Premium Rigid Gift Box",
+        "Curated Festive Items",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Reusable . Sophisticated Design"
+        },
+        {
+          "name": "Chip n Dip Platter Set",
+          "description": "Custom Print Design . Mango Wood . Festive Motifs . Serving starters . Comes with dip bowl . Stainless steel tong . 10 inch tray"
+        },
+        {
+          "name": "Cotton Comforter",
+          "description": "Premium Cotton Comforter with Frill Border . Soft Lightweight Reversible Bedding Quilt for Double Bed . Breathable All Season" 
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalised Message . Elegant Finishing Touch"
+        }
+      ],
+      "image": "asset/festivity/festivity-010.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "festive-011",
+      "name": "New Festive Hamper 11",
+      "tagline": "Gifting made magical",
+      "category": "Festive",
+      "occasions": ["Corporate Gifting", "Festive", "Diwali"],
+      "price": { "amount": 2499 },
+      "badge": "New Arrival",
+      "description": "A beautifully curated festive hamper packed with premium goodies — perfect for celebrating every special occasion with warmth and elegance.",
+      "highlights": [
+        "Premium Rigid Gift Box",
+        "Curated Festive Items",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Reusable . Sophisticated Design . Custom Logo"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalised Message . Elegant Finishing Touch"
+        }
+      ],
+      "image": "asset/festivity/festivity-011.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "festive-012",
+      "name": "New Festive Hamper 12",
+      "tagline": "Every gift tells a story",
+      "category": "Festive",
+      "occasions": ["Corporate Gifting", "Festive", "Diwali"],
+      "price": { "amount": 2499 },
+      "badge": "New Arrival",
+      "description": "A beautifully curated festive hamper packed with premium goodies — perfect for celebrating every special occasion with warmth and elegance.",
+      "highlights": [
+        "Premium Rigid Gift Box",
+        "Curated Festive Items",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Reusable . Sophisticated Design . Custom Logo"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalised Message . Elegant Finishing Touch"
+        }
+      ],
+      "image": "asset/festivity/festivity-012.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "office-009",
+      "name": "New Office Hamper 9",
+      "tagline": "Crafted for the modern workspace",
+      "category": "Office",
+      "occasions": ["Corporate Gifting", "Employee Gifting", "New Joiner"],
+      "price": { "amount": 2999 },
+      "badge": "New Arrival",
+      "description": "A thoughtfully assembled corporate gifting set featuring premium office essentials — designed to inspire productivity and make every desk a great place to work.",
+      "highlights": [
+        "Premium Rigid Gift Box",
+        "Curated Office Essentials",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Reusable . Sophisticated Design . Custom Logo"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalised Message . Elegant Finishing Touch"
+        }
+      ],
+      "image": "asset/offineeds/office-009.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "office-010",
+      "name": "New Office Hamper 10",
+      "tagline": "The perfect professional gift",
+      "category": "Office",
+      "occasions": ["Corporate Gifting", "Employee Gifting", "New Joiner"],
+      "price": { "amount": 2999 },
+      "badge": "New Arrival",
+      "description": "A thoughtfully assembled corporate gifting set featuring premium office essentials — designed to inspire productivity and make every desk a great place to work.",
+      "highlights": [
+        "Premium Rigid Gift Box",
+        "Curated Office Essentials",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Reusable . Sophisticated Design . Custom Logo"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalised Message . Elegant Finishing Touch"
+        }
+      ],
+      "image": "asset/offineeds/office-010.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "office-013",
+      "name": "New Office Hamper 13",
+      "tagline": "Elevate every workday",
+      "category": "Office",
+      "occasions": ["Corporate Gifting", "Employee Gifting", "New Joiner"],
+      "price": { "amount": 2999 },
+      "badge": "New Arrival",
+      "description": "A thoughtfully assembled corporate gifting set featuring premium office essentials — designed to inspire productivity and make every desk a great place to work.",
+      "highlights": [
+        "Premium Rigid Gift Box",
+        "Curated Office Essentials",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Reusable . Sophisticated Design . Custom Logo"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalised Message . Elegant Finishing Touch"
+        }
+      ],
+      "image": "asset/offineeds/office-013.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "office-014",
+      "name": "New Office Hamper 14",
+      "tagline": "Where care meets productivity",
+      "category": "Office",
+      "occasions": ["Corporate Gifting", "Employee Gifting", "New Joiner"],
+      "price": { "amount": 2999 },
+      "badge": "New Arrival",
+      "description": "A thoughtfully assembled corporate gifting set featuring premium office essentials — designed to inspire productivity and make every desk a great place to work.",
+      "highlights": [
+        "Premium Rigid Gift Box",
+        "Curated Office Essentials",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Reusable . Sophisticated Design . Custom Logo"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalised Message . Elegant Finishing Touch"
+        }
+      ],
+      "image": "asset/offineeds/office-014.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "office-015",
+      "name": "New Office Hamper 15",
+      "tagline": "For teams that go the extra mile",
+      "category": "Office",
+      "occasions": ["Corporate Gifting", "Employee Gifting", "New Joiner"],
+      "price": { "amount": 2999 },
+      "badge": "New Arrival",
+      "description": "A thoughtfully assembled corporate gifting set featuring premium office essentials — designed to inspire productivity and make every desk a great place to work.",
+      "highlights": [
+        "Premium Rigid Gift Box",
+        "Curated Office Essentials",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Reusable . Sophisticated Design . Custom Logo"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalised Message . Elegant Finishing Touch"
+        }
+      ],
+      "image": "asset/offineeds/office-015.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "office-016",
+      "name": "New Office Hamper 16",
+      "tagline": "Gifting with purpose",
+      "category": "Office",
+      "occasions": ["Corporate Gifting", "Employee Gifting", "New Joiner"],
+      "price": { "amount": 2999 },
+      "badge": "New Arrival",
+      "description": "A thoughtfully assembled corporate gifting set featuring premium office essentials — designed to inspire productivity and make every desk a great place to work.",
+      "highlights": [
+        "Premium Rigid Gift Box",
+        "Curated Office Essentials",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Reusable . Sophisticated Design . Custom Logo"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalised Message . Elegant Finishing Touch"
+        }
+      ],
+      "image": "asset/offineeds/office-016.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "office-017",
+      "name": "New Office Hamper 17",
+      "tagline": "Appreciate, inspire, repeat",
+      "category": "Office",
+      "occasions": ["Corporate Gifting", "Employee Gifting", "New Joiner"],
+      "price": { "amount": 2999 },
+      "badge": "New Arrival",
+      "description": "A thoughtfully assembled corporate gifting set featuring premium office essentials — designed to inspire productivity and make every desk a great place to work.",
+      "highlights": [
+        "Premium Rigid Gift Box",
+        "Curated Office Essentials",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Reusable . Sophisticated Design . Custom Logo"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalised Message . Elegant Finishing Touch"
+        }
+      ],
+      "image": "asset/offineeds/office-017.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "office-018",
+      "name": "New Office Hamper 18",
+      "tagline": "Because great teams deserve great gifts",
+      "category": "Office",
+      "occasions": ["Corporate Gifting", "Employee Gifting", "New Joiner"],
+      "price": { "amount": 2999 },
+      "badge": "New Arrival",
+      "description": "A thoughtfully assembled corporate gifting set featuring premium office essentials — designed to inspire productivity and make every desk a great place to work.",
+      "highlights": [
+        "Premium Rigid Gift Box",
+        "Curated Office Essentials",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Reusable . Sophisticated Design . Custom Logo"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalised Message . Elegant Finishing Touch"
+        }
+      ],
+      "image": "asset/offineeds/office-018.png",
+      "gallery": [],
+      "moq": 25,
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-012",
+      "name": "New Value Hamper 12",
+      "tagline": "Premium quality, thoughtful value",
+      "category": "Value Pack",
+      "occasions": ["Corporate Gifting", "Festive"],
+      "price": { "amount": 1499 },
+      "badge": "New Arrival",
+      "description": "A charming value pack hamper that combines everyday utility with festive cheer — a thoughtful gift that delights without breaking the budget.",
+      "highlights": [
+        "Premium Gift Box",
+        "Curated Value Items",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Reusable . Sophisticated Design . Custom Logo"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalised Message . Elegant Finishing Touch"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-012.png",
+      "gallery": [],
+      "moq": "Not Applicable",
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-021",
+      "name": "New Value Hamper 21",
+      "tagline": "Small gift, big impact",
+      "category": "Value Pack",
+      "occasions": ["Corporate Gifting", "Festive"],
+      "price": { "amount": 1499 },
+      "badge": "New Arrival",
+      "description": "A charming value pack hamper that combines everyday utility with festive cheer — a thoughtful gift that delights without breaking the budget.",
+      "highlights": [
+        "Premium Gift Box",
+        "Curated Value Items",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Reusable . Sophisticated Design . Custom Logo"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalised Message . Elegant Finishing Touch"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-021.png",
+      "gallery": [],
+      "moq": "Not Applicable",
+      "customizable": true,
+      "featured": false
+    },
+
+    {
+      "id": "value-hamper-022",
+      "name": "New Value Hamper 22",
+      "tagline": "Every occasion, every budget",
+      "category": "Value Pack",
+      "occasions": ["Corporate Gifting", "Festive"],
+      "price": { "amount": 1499 },
+      "badge": "New Arrival",
+      "description": "A charming value pack hamper that combines everyday utility with festive cheer — a thoughtful gift that delights without breaking the budget.",
+      "highlights": [
+        "Premium Gift Box",
+        "Curated Value Items",
+        "Customized Greeting Card"
+      ],
+      "items": [
+        {
+          "name": "Premium Rigid Gift Box",
+          "description": "Premium Luxury Rigid Box . Reusable . Sophisticated Design . Custom Logo"
+        },
+        {
+          "name": "Customized Greeting Card",
+          "description": "Personalised Message . Elegant Finishing Touch"
+        }
+      ],
+      "image": "asset/valuepack/value-hamper-022.png",
+      "gallery": [],
+      "moq": "Not Applicable",
+      "customizable": true,
+      "featured": false
     }
 
   ]
