@@ -1808,7 +1808,8 @@ section { overflow: hidden; }
 
 /* ── Floating Buttons ── */
 .wa-float,
-.ig-float {
+.ig-float,
+.li-float {
   position: fixed;
   width: 52px;
   height: 52px;
@@ -1833,11 +1834,19 @@ section { overflow: hidden; }
   background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
 
+.li-float {
+  bottom: 156px;
+  right: 28px;
+  background: #0A66C2;
+}
+
 .wa-float:hover,
-.ig-float:hover { transform: scale(1.1); box-shadow: 0 6px 24px rgba(0,0,0,0.28); }
+.ig-float:hover,
+.li-float:hover { transform: scale(1.1); box-shadow: 0 6px 24px rgba(0,0,0,0.28); }
 
 .wa-float svg,
-.ig-float svg { width: 26px; height: 26px; fill: var(--white); }
+.ig-float svg,
+.li-float svg { width: 26px; height: 26px; fill: var(--white); }
 
 /* Toast Notification */
 .toast {
@@ -1870,7 +1879,8 @@ body.selection-mode .nav-placeholder,
 body.selection-mode .site-footer,
 body.selection-mode .cta-band,
 body.selection-mode .wa-float,
-body.selection-mode .ig-float { display: none !important; }
+body.selection-mode .ig-float,
+body.selection-mode .li-float { display: none !important; }
 
 body.selection-mode .catalog-header { top: 0; }
 body.selection-mode .catalog-content { padding-bottom: 100px; }
