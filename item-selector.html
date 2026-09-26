@@ -3,654 +3,521 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Select Items — Hamplee</title>
+  <title>Select Hampers — Hamplee</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Montserrat:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Montserrat:wght@400;500;600&display=swap"></noscript>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --gold:       #C9A959;
-      --gold-light: #DEC07A;
-      --dark:       #1A1A1A;
-      --cream:      #F8F7F4;
-      --white:      #FFFFFF;
-      --grey:       #6B6B6B;
-      --border:     #E8E4DC;
-      --serif:      'Cormorant Garamond', Georgia, serif;
-      --sans:       'Montserrat', sans-serif;
+      --gold:   #C9A959;
+      --dark:   #1A1A1A;
+      --cream:  #F8F7F4;
+      --white:  #FFFFFF;
+      --grey:   #6B6B6B;
+      --border: #E8E4DC;
+      --serif:  'Cormorant Garamond', Georgia, serif;
+      --sans:   'Montserrat', sans-serif;
     }
 
-    body {
-      font-family: var(--sans);
-      background: var(--cream);
-      color: var(--dark);
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
+    html, body { height: 100%; font-family: var(--sans); background: var(--cream); color: var(--dark); overflow: hidden; }
 
-    /* ── Top bar (merged with toolbar) ── */
-    .selector-topbar {
-      background: var(--dark);
-      padding: 12px 20px;
+    /* ─── Shell ─────────────────────────────────────────── */
+    .shell { display: flex; flex-direction: column; height: 100vh; position: relative; overflow: hidden; }
+
+    /* ─── Shared header / footer ─────────────────────────── */
+    .bar {
+      background: var(--white);
+      flex-shrink: 0;
+    }
+    .top-bar {
+      border-bottom: 1px solid var(--border);
+      padding: 14px 16px 0;
+    }
+    .top-bar-row {
       display: flex;
       align-items: center;
-      gap: 16px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 2px solid var(--gold);
-    }
-
-    .selector-topbar-title {
-      font-family: var(--serif);
-      font-size: 18px;
-      font-weight: 300;
-      color: var(--white);
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    .selector-topbar-title em {
-      font-style: italic;
-      color: var(--gold-light);
-    }
-
-    .topbar-divider {
-      width: 1px;
-      height: 20px;
-      background: rgba(255,255,255,0.15);
-      flex-shrink: 0;
-    }
-
-    .toolbar-search {
-      flex: 1;
-      height: 34px;
-      border: 1px solid rgba(255,255,255,0.15);
-      background: rgba(255,255,255,0.07);
-      padding: 0 12px;
-      font-family: var(--sans);
-      font-size: 11px;
-      color: var(--white);
-      outline: none;
-      transition: border-color 0.2s, background 0.2s;
-      border-radius: 2px;
-    }
-
-    .toolbar-search::placeholder { color: rgba(255,255,255,0.3); }
-    .toolbar-search:focus {
-      border-color: var(--gold);
-      background: rgba(255,255,255,0.11);
-    }
-
-    .toolbar-filter {
-      height: 34px;
-      border: 1px solid rgba(255,255,255,0.15);
-      background: rgba(255,255,255,0.07);
-      padding: 0 28px 0 10px;
-      font-family: var(--sans);
-      font-size: 11px;
-      color: var(--white);
-      outline: none;
-      cursor: pointer;
-      transition: border-color 0.2s;
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='rgba(255,255,255,0.5)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 10px center;
-      border-radius: 2px;
-      flex-shrink: 0;
-    }
-
-    .toolbar-filter:focus { border-color: var(--gold); }
-    .toolbar-filter option { background: var(--dark); color: var(--white); }
-
-    .topbar-count {
-      font-family: var(--sans);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    .topbar-count span {
-      color: var(--gold);
-      font-family: var(--serif);
-      font-size: 18px;
-      font-weight: 400;
-      letter-spacing: 0;
-      margin-right: 4px;
-      vertical-align: middle;
-    }
-
-    /* ── Body layout ── */
-    .selector-body {
-      flex: 1;
-      min-height: 0;
-      display: flex;
-      overflow: hidden;
-    }
-
-    /* ── Hampers list ── */
-    .hampers-col {
-      flex: 1;
-      overflow-y: auto;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
       gap: 12px;
-      padding-bottom: 80px;
+      margin-bottom: 14px;
     }
 
-    /* ── Accordion card ── */
-    .hamper-accordion {
-      background: var(--white);
+    .icon-btn {
+      width: 32px; height: 32px;
+      border-radius: 50%;
       border: 1px solid var(--border);
-      overflow: hidden;
-      transition: border-color 0.25s, box-shadow 0.25s;
-      border-radius: 2px;
-      flex-shrink: 0;
-    }
-
-    .hamper-accordion.has-selected {
-      border-color: var(--gold);
-      box-shadow: 0 0 0 1px var(--gold);
-    }
-
-    /* ── Accordion head — full-width image banner ── */
-    .hamper-accordion-head {
-      position: relative;
-      cursor: pointer;
-      user-select: none;
-      overflow: hidden;
-    }
-
-    /* Large banner image */
-    .hamper-thumb {
-      width: 100%;
-      aspect-ratio: 16 / 7;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       background: var(--cream);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      color: var(--grey);
+      flex-shrink: 0;
+      transition: background 0.15s, color 0.15s;
     }
+    .icon-btn:hover { background: var(--border); color: var(--dark); }
 
-    .hamper-accordion-head:hover .hamper-thumb {
-      transform: scale(1.04);
-    }
-
-    /* Gradient overlay on image */
-    .hamper-thumb-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.02) 0%,
-        rgba(0,0,0,0.08) 40%,
-        rgba(0,0,0,0.72) 100%
-      );
-      pointer-events: none;
-    }
-
-    /* Text meta — pinned to bottom of image */
-    .hamper-meta {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 14px 14px 12px;
-    }
-
-    .hamper-meta-cat {
-      font-size: 8px;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--gold-light);
-      margin-bottom: 4px;
-    }
-
-    .hamper-meta-name {
+    .bar-title {
       font-family: var(--serif);
-      font-size: 18px;
-      font-weight: 400;
-      color: var(--white);
+      font-size: 19px;
+      font-weight: 300;
+      color: var(--dark);
+      flex: 1;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      line-height: 1.2;
     }
 
-    .hamper-meta-price {
-      font-size: 10px;
-      color: rgba(255,255,255,0.6);
-      margin-top: 3px;
-      letter-spacing: 0.5px;
+    /* Search */
+    .search-wrap { position: relative; flex: 1; max-width: 260px; }
+    .search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #bbb; pointer-events: none; }
+    .search-input {
+      width: 100%; height: 34px;
+      border: 1px solid var(--border); border-radius: 20px;
+      padding: 0 12px 0 32px;
+      font-family: var(--sans); font-size: 12px; color: var(--dark);
+      background: var(--cream); outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-input::placeholder { color: #bbb; }
+    .search-input:focus { border-color: var(--gold); background: var(--white); }
+
+    /* Category pills */
+    .pills {
+      display: flex; gap: 7px; overflow-x: auto;
+      padding-bottom: 14px; scrollbar-width: none;
+    }
+    .pills::-webkit-scrollbar { display: none; }
+    .pill {
+      height: 26px; padding: 0 13px;
+      border-radius: 20px; border: 1px solid var(--border);
+      background: var(--white);
+      font-family: var(--sans); font-size: 11px; font-weight: 500; color: var(--grey);
+      cursor: pointer; white-space: nowrap; flex-shrink: 0;
+      transition: all 0.15s;
+    }
+    .pill:hover { border-color: var(--gold); color: var(--dark); }
+    .pill.active { background: var(--dark); border-color: var(--dark); color: var(--white); }
+
+    /* Footer */
+    .bot-bar {
+      border-top: 1px solid var(--border);
+      padding: 12px 16px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .bot-label { font-size: 12px; color: var(--grey); }
+    .bot-label strong { font-size: 14px; font-weight: 600; color: var(--dark); margin-right: 3px; }
+    .confirm-btn {
+      height: 38px; padding: 0 24px;
+      background: var(--gold); color: var(--white);
+      border: none; border-radius: 40px;
+      font-family: var(--sans); font-size: 12px; font-weight: 600;
+      cursor: pointer; white-space: nowrap;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+    .confirm-btn:hover:not(:disabled) { opacity: 0.88; transform: translateY(-1px); }
+    .confirm-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    /* ─── Grid view ──────────────────────────────────────── */
+    .grid-scroll {
+      flex: 1; overflow-y: auto; padding: 14px;
+    }
+    .hamper-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
     }
 
-    /* Controls pinned to top-right of image */
-    .hamper-head-controls {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+    /* Card */
+    .h-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
     }
+    .h-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateY(-2px); border-color: #ccc; }
+    .h-card.has-selection { border-color: var(--gold); }
 
-    .selected-badge {
-      background: var(--gold);
-      color: var(--dark);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      padding: 4px 9px;
+    .h-card-img-wrap { position: relative; aspect-ratio: 4/3; overflow: hidden; background: var(--cream); }
+    .h-card-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+    .h-card:hover .h-card-img { transform: scale(1.04); }
+
+    /* Selection indicator badge on card */
+    .h-card-badge {
+      position: absolute; top: 7px; right: 7px;
+      min-width: 22px; height: 22px; padding: 0 6px;
       border-radius: 20px;
-      display: none;
+      background: var(--gold); color: var(--white);
+      font-size: 10px; font-weight: 700;
+      display: none; align-items: center; justify-content: center;
       white-space: nowrap;
     }
+    .h-card.has-selection .h-card-badge { display: flex; }
 
-    .selected-badge.visible { display: block; }
+    /* Arrow hint */
+    .h-card-arrow {
+      position: absolute; bottom: 7px; right: 7px;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(0,0,0,0.35);
+      display: flex; align-items: center; justify-content: center;
+    }
 
-    .chevron-wrap {
-      width: 28px;
-      height: 28px;
-      background: rgba(0,0,0,0.45);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s;
+    .h-card-info { padding: 9px 11px 11px; }
+    .h-card-cat { font-size: 9px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
+    .h-card-name { font-family: var(--serif); font-size: 14px; color: var(--dark); line-height: 1.25; }
+
+    .empty-msg { grid-column: 1/-1; text-align: center; padding: 48px 20px; font-size: 13px; color: var(--grey); line-height: 1.7; }
+
+    /* ─── Detail view ────────────────────────────────────── */
+    .detail-view {
+      position: absolute; inset: 0;
+      background: var(--cream);
+      display: flex; flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.3s cubic-bezier(0.25,0.46,0.45,0.94);
+      z-index: 10;
+    }
+    .detail-view.open { transform: translateX(0); }
+
+    .detail-top {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 16px;
+      display: flex; align-items: center; gap: 12px;
       flex-shrink: 0;
     }
-
-    .hamper-accordion-head:hover .chevron-wrap {
-      background: rgba(0,0,0,0.65);
+    .detail-top-title {
+      font-family: var(--serif);
+      font-size: 18px; font-weight: 300;
+      color: var(--dark); flex: 1;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
 
-    .chevron {
-      width: 14px;
-      height: 14px;
-      color: var(--white);
-      transition: transform 0.25s ease;
-      display: block;
+    .detail-scroll { flex: 1; overflow-y: auto; }
+
+    /* Hero image */
+    .detail-hero {
+      width: 100%; aspect-ratio: 16/7;
+      object-fit: cover; display: block;
+      background: var(--cream);
     }
 
-    .hamper-accordion.open .chevron { transform: rotate(180deg); }
+    .detail-body { padding: 20px 16px 0; }
 
-    /* ── Items list ── */
-    .hamper-items {
-      display: none;
-      border-top: 1px solid var(--border);
-      padding: 4px 0;
+    .detail-cat { font-size: 9px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .detail-name { font-family: var(--serif); font-size: 26px; font-weight: 300; color: var(--dark); line-height: 1.2; margin-bottom: 6px; }
+    .detail-tagline { font-size: 13px; color: var(--grey); line-height: 1.6; margin-bottom: 20px; }
+
+    /* Add whole hamper row */
+    .whole-row {
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      cursor: pointer;
+      transition: border-color 0.2s;
+      margin-bottom: 20px;
+      gap: 12px;
+    }
+    .whole-row:hover { border-color: #ccc; }
+    .whole-row.selected { border-color: var(--gold); background: #FFFDF7; }
+
+    .whole-row-text { flex: 1; }
+    .whole-row-label { font-size: 13px; font-weight: 600; color: var(--dark); margin-bottom: 2px; }
+    .whole-row-hint { font-size: 11px; color: var(--grey); }
+
+    .whole-check {
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 1.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.18s;
+      background: var(--white);
+    }
+    .whole-row.selected .whole-check { background: var(--gold); border-color: var(--gold); }
+    .whole-check-icon { display: none; }
+    .whole-row.selected .whole-check-icon { display: block; }
+
+    /* Section divider */
+    .section-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--grey);
+      margin-bottom: 10px;
     }
 
-    .hamper-accordion.open .hamper-items { display: block; }
-
-    /* Items header row */
-    .hamper-items-label {
-      padding: 8px 14px 4px;
-      font-size: 8px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--grey);
-    }
+    /* Item rows */
+    .items-list { display: flex; flex-direction: column; gap: 1px; margin-bottom: 20px; }
+    .no-items-msg { font-size: 13px; color: var(--grey); padding: 12px 0; }
 
     .item-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 10px 14px 10px 20px;
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 12px 16px;
+      background: var(--white);
       cursor: pointer;
       transition: background 0.15s;
-      border-bottom: 1px solid rgba(0,0,0,0.04);
+      border-radius: 0;
     }
-
-    .item-row:last-child { border-bottom: none; }
+    .item-row:first-child { border-radius: 10px 10px 0 0; }
+    .item-row:last-child  { border-radius: 0 0 10px 10px; }
+    .item-row:only-child  { border-radius: 10px; }
     .item-row:hover { background: #FFFDF7; }
     .item-row.checked { background: #FFFBF0; }
 
-    .item-checkbox {
-      width: 18px;
-      height: 18px;
+    .item-check {
+      width: 20px; height: 20px; border-radius: 4px;
       border: 1.5px solid var(--border);
-      flex-shrink: 0;
-      margin-top: 2px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.15s;
       background: var(--white);
-      border-radius: 2px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 2px;
+      transition: all 0.15s;
     }
-
-    .item-row.checked .item-checkbox {
-      background: var(--gold);
-      border-color: var(--gold);
-    }
-
-    .item-check-icon {
-      display: none;
-      color: var(--dark);
-      font-size: 11px;
-      font-weight: 700;
-      line-height: 1;
-    }
-
+    .item-row.checked .item-check { background: var(--gold); border-color: var(--gold); }
+    .item-check-icon { display: none; }
     .item-row.checked .item-check-icon { display: block; }
 
     .item-text { flex: 1; min-width: 0; }
+    .item-name { font-size: 13px; font-weight: 500; color: var(--dark); margin-bottom: 2px; }
+    .item-desc { font-size: 11px; color: var(--grey); line-height: 1.5; }
+    /* Bottom padding inside scroll */
+    .detail-scroll-pad { height: 20px; }
 
-    .item-name {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--dark);
-      margin-bottom: 2px;
-    }
-
-    .item-desc {
-      font-size: 10px;
-      color: var(--grey);
-      line-height: 1.5;
-    }
-
-    /* ── Selection panel (desktop) ── */
-    .selection-col {
-      width: 25%;
-      flex-shrink: 0;
-      background: var(--white);
-      border-left: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    .selection-col-header {
-      padding: 14px 16px 10px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .selection-col-title {
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--dark);
-    }
-
-    .clear-all-btn {
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--grey);
-      background: none;
-      border: none;
-      cursor: pointer;
-      transition: color 0.2s;
-      display: none;
-    }
-
-    .clear-all-btn:hover { color: var(--dark); }
-    .clear-all-btn.visible { display: block; }
-
-    .selected-items-scroll {
-      flex: 1;
-      overflow-y: auto;
-      padding: 8px 0;
-    }
-
-    .selection-empty {
-      padding: 24px 16px;
-      text-align: center;
-      font-size: 11px;
-      color: rgba(0,0,0,0.3);
-      line-height: 1.6;
-    }
-
-    .selected-item-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      padding: 8px 12px;
-      border-bottom: 1px solid rgba(0,0,0,0.04);
-    }
-
-    .selected-item-row:last-child { border-bottom: none; }
-
-    .selected-item-text { flex: 1; min-width: 0; }
-
-    .selected-item-name {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--dark);
-      margin-bottom: 1px;
-    }
-
-    .selected-item-from {
-      font-size: 9px;
-      color: var(--grey);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .remove-selected-btn {
-      background: none;
-      border: none;
-      color: rgba(0,0,0,0.25);
-      font-size: 16px;
-      cursor: pointer;
-      line-height: 1;
-      padding: 0;
-      flex-shrink: 0;
-      transition: color 0.15s;
-    }
-
-    .remove-selected-btn:hover { color: var(--dark); }
-
-    /* ── Footer bar (mirrors topbar) ── */
-    .selector-footer {
-      background: var(--dark);
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      position: sticky;
-      bottom: 0;
-      z-index: 100;
-      border-top: 2px solid var(--gold);
-    }
-
-    .footer-count {
-      font-family: var(--sans);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      white-space: nowrap;
-    }
-
-    .footer-count span {
-      color: var(--gold);
-      font-family: var(--serif);
-      font-size: 18px;
-      font-weight: 400;
-      letter-spacing: 0;
-      margin-right: 4px;
-      vertical-align: middle;
-    }
-
-    .footer-confirm-btn {
-      background: var(--gold);
-      color: var(--dark);
-      border: none;
-      padding: 10px 24px;
-      font-family: var(--sans);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: opacity 0.2s;
-      white-space: nowrap;
-    }
-
-    .footer-confirm-btn:hover { opacity: 0.85; }
-
-    /* ── Responsive ── */
-    @media (max-width: 640px) {
-      .selection-col { display: none; }
-    }
-
-    /* ── Empty / no match state ── */
-    .no-results-msg {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 13px;
-      color: var(--grey);
+    /* ─── Responsive ─────────────────────────────────────── */
+    @media (max-width: 480px) {
+      .bar-title { font-size: 16px; }
+      .search-wrap { max-width: none; }
+      .hamper-grid { gap: 8px; }
+      .grid-scroll { padding: 10px; }
+      .detail-name { font-size: 22px; }
+      .detail-hero { aspect-ratio: 4/3; }
     }
   </style>
 </head>
 <body>
+<div class="shell">
 
-<!-- Merged top bar -->
-<div class="selector-topbar">
-  <span class="selector-topbar-title">Select <em>Items</em></span>
-  <div class="topbar-divider"></div>
-  <input class="toolbar-search" type="text" id="searchInput" placeholder="Search items or hampers…" oninput="applyFilters()">
-  <select class="toolbar-filter" id="categorySelect" onchange="applyFilters()">
-    <option value="all">All Collections</option>
-  </select>
-  <div class="topbar-divider"></div>
-  <span class="topbar-count" id="topbarCount"><span>0</span> selected</span>
-</div>
-
-<!-- Body -->
-<div class="selector-body">
-
-  <!-- Hampers accordion list -->
-  <div class="hampers-col" id="hampersCol"></div>
-
-  <!-- Desktop selection panel -->
-  <div class="selection-col">
-    <div class="selection-col-header">
-      <span class="selection-col-title">Your Selection</span>
-      <button class="clear-all-btn" id="clearAllBtn" onclick="clearAll()">Clear all</button>
+  <!-- ── Grid view ───────────────────────────────────── -->
+  <div class="top-bar bar" id="gridTopBar">
+    <div class="top-bar-row">
+      <span class="bar-title">Select Hampers</span>
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input class="search-input" id="searchInput" type="text" placeholder="Search…" oninput="applyFilters()">
+      </div>
+      <button class="icon-btn" onclick="cancelAndClose()" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="14" height="14" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
     </div>
-    <div class="selected-items-scroll" id="selectedItemsScroll">
-      <p class="selection-empty" id="emptyMsg">Tap any item to add it to your selection.</p>
+    <div class="pills" id="pillsRow">
+      <button class="pill active" data-cat="all" onclick="setCat('all')">All</button>
     </div>
   </div>
 
-</div>
+  <div class="grid-scroll" id="gridScroll">
+    <div class="hamper-grid" id="hamperGrid"></div>
+  </div>
 
-<!-- Footer bar -->
-<div class="selector-footer">
-  <span class="footer-count" id="footerCount"><span>0</span> items selected</span>
-  <button class="footer-confirm-btn" onclick="confirmAndClose()">Confirm Selection</button>
-</div>
+  <div class="bot-bar bar" id="gridBotBar">
+    <span class="bot-label" id="footerLabel"><strong>0</strong> added</span>
+    <button class="confirm-btn" id="confirmBtn" onclick="confirmAndClose()" disabled>Add to Mood Board</button>
+  </div>
+
+  <!-- ── Detail view ─────────────────────────────────── -->
+  <div class="detail-view" id="detailView">
+
+    <div class="detail-top bar">
+      <button class="icon-btn" onclick="closeDetail()" aria-label="Back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="14" height="14" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <span class="detail-top-title" id="detailTopTitle"></span>
+    </div>
+
+    <div class="detail-scroll" id="detailScroll">
+      <img class="detail-hero" id="detailHero" src="" alt="">
+
+      <div class="detail-body">
+        <div class="detail-cat"  id="detailCat"></div>
+        <div class="detail-name" id="detailName"></div>
+        <div class="detail-tagline" id="detailTagline"></div>
+
+        <!-- Select whole hamper -->
+        <div class="whole-row" id="wholeRow" onclick="toggleWholeHamper()">
+          <div class="whole-row-text">
+            <div class="whole-row-label">Add entire hamper</div>
+            <div class="whole-row-hint">Include this complete hamper in your mood board</div>
+          </div>
+          <div class="whole-check" id="wholeCheck">
+            <svg class="whole-check-icon" viewBox="0 0 12 10" fill="none" width="11" height="9">
+              <polyline points="1,5 4.5,8.5 11,1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Individual items -->
+        <div id="itemsSection">
+          <div class="section-label" id="itemsLabel"></div>
+          <div class="items-list" id="itemsList"></div>
+        </div>
+
+        <div class="detail-scroll-pad"></div>
+      </div>
+    </div>
+
+    <div class="bot-bar bar">
+      <span class="bot-label" id="detailFooterLabel"><strong>0</strong> added</span>
+      <button class="confirm-btn" id="detailConfirmBtn" onclick="confirmAndClose()" disabled>Add to Mood Board</button>
+    </div>
+
+  </div><!-- /detail-view -->
+</div><!-- /shell -->
 
 <script src="data/hampers-data.js"></script>
 <script>
-// ── State ────────────────────────────────────────────
-let ALL_HAMPERS    = [];
-let SELECTED_ITEMS = [];   // { id, name, description, hamperId, hamperName }
-let openHamperIds  = new Set();
-let currentSearch  = '';
-let currentCat     = 'all';
+// ── State ─────────────────────────────────────────────
+let ALL_HAMPERS   = [];
+let currentCat    = 'all';
+let currentSearch = '';
+let activeHamper  = null;   // hamper object currently shown in detail
 
-// ── Boot ─────────────────────────────────────────────
+// SELECTION is a flat Map keyed by a unique string:
+//   whole hamper  → key = "H:festive-004"
+//   individual item → key = "I:festive-004:2"
+const SELECTION = new Map();
+
+// ── Boot ──────────────────────────────────────────────
 window.addEventListener('DOMContentLoaded', () => {
   const data = window.HAMPLEE_DATA;
   if (!data || !data.hampers) {
-    document.getElementById('hampersCol').innerHTML =
-      '<p class="no-results-msg">Unable to load items. Please close and try again.</p>';
+    document.getElementById('hamperGrid').innerHTML =
+      '<p class="empty-msg">Unable to load hampers. Please close and try again.</p>';
     return;
   }
   ALL_HAMPERS = data.hampers;
 
-  // Populate category dropdown
   const cats = [...new Set(ALL_HAMPERS.map(h => h.category))];
-  const sel  = document.getElementById('categorySelect');
+  const row  = document.getElementById('pillsRow');
   cats.forEach(c => {
-    const opt = document.createElement('option');
-    opt.value = c; opt.textContent = c;
-    sel.appendChild(opt);
+    const btn = document.createElement('button');
+    btn.className = 'pill';
+    btn.dataset.cat = c;
+    btn.textContent = c;
+    btn.onclick = () => setCat(c);
+    row.appendChild(btn);
   });
 
-  renderHampers();
+  renderGrid();
 });
 
 // ── Filters ───────────────────────────────────────────
-function applyFilters() {
-  currentSearch = document.getElementById('searchInput').value.toLowerCase().trim();
-  currentCat    = document.getElementById('categorySelect').value;
-  renderHampers();
+function setCat(cat) {
+  currentCat = cat;
+  document.querySelectorAll('.pill').forEach(p =>
+    p.classList.toggle('active', p.dataset.cat === cat)
+  );
+  renderGrid();
 }
 
-function getFilteredHampers() {
+function applyFilters() {
+  currentSearch = document.getElementById('searchInput').value.toLowerCase().trim();
+  renderGrid();
+}
+
+function getFiltered() {
   return ALL_HAMPERS.filter(h => {
     if (currentCat !== 'all' && h.category !== currentCat) return false;
     if (!currentSearch) return true;
-    if (h.name.toLowerCase().includes(currentSearch)) return true;
-    if (h.category.toLowerCase().includes(currentSearch)) return true;
-    return (h.items || []).some(it =>
-      it.name.toLowerCase().includes(currentSearch) ||
-      (it.description || '').toLowerCase().includes(currentSearch)
+    return (
+      h.name.toLowerCase().includes(currentSearch) ||
+      h.category.toLowerCase().includes(currentSearch) ||
+      (h.tagline || '').toLowerCase().includes(currentSearch)
     );
   });
 }
 
-// ── Render ────────────────────────────────────────────
-function renderHampers() {
-  const hampers = getFilteredHampers();
-  const col     = document.getElementById('hampersCol');
+// ── Grid render ───────────────────────────────────────
+function renderGrid() {
+  const hampers = getFiltered();
+  const grid    = document.getElementById('hamperGrid');
 
   if (!hampers.length) {
-    col.innerHTML = '<p class="no-results-msg">No hampers match your search.</p>';
+    grid.innerHTML = '<p class="empty-msg">No hampers match your search.</p>';
     return;
   }
 
-  col.innerHTML = hampers.map(h => {
-    const isOpen      = openHamperIds.has(h.id);
-    const items       = h.items || [];
-    const selCount    = items.filter((_, i) => SELECTED_ITEMS.some(s => s.id === itemId(h.id, i))).length;
-    const hasSelected = selCount > 0;
-    const price       = h.price && h.price.amount
-      ? '₹' + h.price.amount.toLocaleString('en-IN')
-      : 'Price on Request';
+  grid.innerHTML = hampers.map(h => {
+    const count        = selectionCountFor(h.id);
+    const hasSel       = count > 0;
+    const thumb        = h.image.replace(/\.(png|jpe?g)$/i, '-600.jpg');
+    const label        = count === 1 && SELECTION.has('H:' + h.id)
+      ? 'Entire hamper'
+      : count > 0 ? `${count} item${count > 1 ? 's' : ''}` : '';
 
-    // Filter items by search
-    const visibleItems = currentSearch
-      ? items.filter(it =>
-          it.name.toLowerCase().includes(currentSearch) ||
-          (it.description || '').toLowerCase().includes(currentSearch)
-        )
-      : items;
+    return `
+      <div class="h-card${hasSel ? ' has-selection' : ''}"
+           onclick="openDetail('${h.id}')" role="button" tabindex="0">
+        <div class="h-card-img-wrap">
+          <img class="h-card-img" src="${thumb}" alt="${h.name}"
+               onerror="this.onerror=null;this.src='${h.image}'" loading="lazy" decoding="async">
+          <div class="h-card-badge">${label}</div>
+          <div class="h-card-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" width="11" height="11" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+        <div class="h-card-info">
+          <div class="h-card-cat">${h.category}</div>
+          <div class="h-card-name">${h.name}</div>
+        </div>
+      </div>`;
+  }).join('');
+}
 
-    const itemsHtml = visibleItems.map((it, rawIdx) => {
-      const origIdx = items.indexOf(it);
-      const id      = itemId(h.id, origIdx);
-      const checked = SELECTED_ITEMS.some(s => s.id === id);
+function selectionCountFor(hid) {
+  // Count whole-hamper + individual items selected for this hamper
+  let n = 0;
+  if (SELECTION.has('H:' + hid)) n++;
+  SELECTION.forEach((_, k) => { if (k.startsWith('I:' + hid + ':')) n++; });
+  return n;
+}
+
+// ── Detail view ───────────────────────────────────────
+function openDetail(hid) {
+  activeHamper = ALL_HAMPERS.find(h => h.id === hid);
+  if (!activeHamper) return;
+  const h = activeHamper;
+
+  // Populate header
+  document.getElementById('detailTopTitle').textContent = h.name;
+  document.getElementById('detailCat').textContent      = h.category;
+  document.getElementById('detailName').textContent     = h.name;
+  document.getElementById('detailTagline').textContent  = h.tagline || h.description || '';
+
+  // Hero image — use 1200w for quality
+  const heroImg = document.getElementById('detailHero');
+  heroImg.src   = h.image.replace(/\.(png|jpe?g)$/i, '-1200.jpg');
+  heroImg.alt   = h.name;
+  heroImg.onerror = () => { heroImg.onerror = null; heroImg.src = h.image; };
+
+  // Whole-hamper row state
+  refreshWholeRow();
+
+  // Items list
+  const items = h.items || [];
+  const itemsSection = document.getElementById('itemsSection');
+
+  if (items.length) {
+    document.getElementById('itemsLabel').textContent =
+      items.length === 1 ? '1 item in this hamper' : `${items.length} items in this hamper`;
+
+    document.getElementById('itemsList').innerHTML = items.map((it, idx) => {
+      const key     = 'I:' + h.id + ':' + idx;
+      const checked = SELECTION.has(key);
       return `
-        <div class="item-row ${checked ? 'checked' : ''}"
-             onclick="toggleItem('${h.id}', ${origIdx})">
-          <div class="item-checkbox">
-            <span class="item-check-icon">✓</span>
+        <div class="item-row${checked ? ' checked' : ''}" onclick="toggleItem('${h.id}', ${idx})">
+          <div class="item-check">
+            <svg class="item-check-icon" viewBox="0 0 12 10" fill="none" width="10" height="8">
+              <polyline points="1,5 4.5,8.5 11,1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
           <div class="item-text">
             <div class="item-name">${it.name}</div>
@@ -658,132 +525,80 @@ function renderHampers() {
           </div>
         </div>`;
     }).join('');
-
-    return `
-      <div class="hamper-accordion ${isOpen ? 'open' : ''} ${hasSelected ? 'has-selected' : ''}"
-           id="acc-${h.id}">
-
-        <!-- Banner image head -->
-        <div class="hamper-accordion-head" onclick="toggleAccordion('${h.id}')">
-          <img class="hamper-thumb" src="${h.image}" alt="${h.name}" loading="lazy">
-          <div class="hamper-thumb-overlay"></div>
-
-          <!-- Bottom-pinned text -->
-          <div class="hamper-meta">
-            <div class="hamper-meta-cat">${h.category}</div>
-            <div class="hamper-meta-name">${h.name}</div>
-            <div class="hamper-meta-price">${price} &nbsp;·&nbsp; ${items.length} items</div>
-          </div>
-
-          <!-- Top-right controls -->
-          <div class="hamper-head-controls">
-            <span class="selected-badge ${hasSelected ? 'visible' : ''}">${selCount} picked</span>
-            <div class="chevron-wrap">
-              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                <polyline points="6 9 12 15 18 9"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        <!-- Items list -->
-        <div class="hamper-items">
-          <div class="hamper-items-label">Items in this hamper</div>
-          ${itemsHtml || '<p style="padding:10px 14px 12px;font-size:11px;color:var(--grey)">No items available</p>'}
-        </div>
-      </div>`;
-  }).join('');
-}
-
-function toggleAccordion(hamperId) {
-  if (openHamperIds.has(hamperId)) {
-    openHamperIds.delete(hamperId);
+    itemsSection.style.display = '';
   } else {
-    openHamperIds.add(hamperId);
+    itemsSection.style.display = 'none';
   }
-  renderHampers();
+
+  // Reset detail scroll position
+  document.getElementById('detailScroll').scrollTop = 0;
+
+  // Slide in
+  document.getElementById('detailView').classList.add('open');
 }
 
-// ── Item selection ────────────────────────────────────
-function itemId(hamperId, idx) {
-  return `${hamperId}__item__${idx}`;
+function closeDetail() {
+  document.getElementById('detailView').classList.remove('open');
+  activeHamper = null;
+  renderGrid();       // refresh card badges
 }
 
-function toggleItem(hamperId, itemIdx) {
-  const h  = ALL_HAMPERS.find(x => x.id === hamperId);
+// ── Selection logic ───────────────────────────────────
+function toggleWholeHamper() {
+  if (!activeHamper) return;
+  const key = 'H:' + activeHamper.id;
+  if (SELECTION.has(key)) {
+    SELECTION.delete(key);
+  } else {
+    SELECTION.set(key, { id: activeHamper.id, name: activeHamper.name, category: activeHamper.category });
+  }
+  refreshWholeRow();
+  refreshCounts();
+  sendToParent();
+}
+
+function refreshWholeRow() {
+  if (!activeHamper) return;
+  const selected = SELECTION.has('H:' + activeHamper.id);
+  document.getElementById('wholeRow').classList.toggle('selected', selected);
+}
+
+function toggleItem(hid, idx) {
+  const h   = ALL_HAMPERS.find(x => x.id === hid);
   if (!h) return;
-  const it  = h.items[itemIdx];
-  if (!it)  return;
-  const id  = itemId(hamperId, itemIdx);
-  const pos = SELECTED_ITEMS.findIndex(s => s.id === id);
-  if (pos > -1) {
-    SELECTED_ITEMS.splice(pos, 1);
+  const it  = (h.items || [])[idx];
+  if (!it) return;
+  const key = 'I:' + hid + ':' + idx;
+
+  if (SELECTION.has(key)) {
+    SELECTION.delete(key);
   } else {
-    SELECTED_ITEMS.push({
-      id,
-      name:        it.name,
-      description: it.description || '',
-      hamperId:    h.id,
-      hamperName:  h.name
-    });
-  }
-  renderHampers();
-  renderSelectionPanel();
-  updateCounts();
-  sendToParent();
-}
-
-function clearAll() {
-  SELECTED_ITEMS = [];
-  renderHampers();
-  renderSelectionPanel();
-  updateCounts();
-  sendToParent();
-}
-
-// ── Selection panel ───────────────────────────────────
-function renderSelectionPanel() {
-  const scroll   = document.getElementById('selectedItemsScroll');
-  const clearBtn = document.getElementById('clearAllBtn');
-
-  if (!SELECTED_ITEMS.length) {
-    scroll.innerHTML = '<p class="selection-empty" id="emptyMsg">Tap any item to add it to your selection.</p>';
-    clearBtn.classList.remove('visible');
-    return;
+    SELECTION.set(key, { id: key, name: it.name, category: h.name });
   }
 
-  clearBtn.classList.add('visible');
-  scroll.innerHTML = SELECTED_ITEMS.map(s => `
-    <div class="selected-item-row">
-      <div class="selected-item-text">
-        <div class="selected-item-name">${s.name}</div>
-        <div class="selected-item-from">from ${s.hamperName}</div>
-      </div>
-      <button class="remove-selected-btn" onclick="removeSelected('${s.id}')" aria-label="Remove">×</button>
-    </div>`).join('');
-}
+  // Re-render just the item row in place
+  const rows = document.querySelectorAll('#itemsList .item-row');
+  if (rows[idx]) rows[idx].classList.toggle('checked', SELECTION.has(key));
 
-function removeSelected(id) {
-  SELECTED_ITEMS = SELECTED_ITEMS.filter(s => s.id !== id);
-  renderHampers();
-  renderSelectionPanel();
-  updateCounts();
+  refreshCounts();
   sendToParent();
 }
 
-function updateCounts() {
-  const n = SELECTED_ITEMS.length;
-  document.getElementById('topbarCount').innerHTML = `<span>${n}</span> selected`;
-  document.getElementById('footerCount').innerHTML = `<span>${n}</span> item${n !== 1 ? 's' : ''} selected`;
+// ── Counts & footer ───────────────────────────────────
+function refreshCounts() {
+  const n = SELECTION.size;
+  const label = n === 0 ? '<strong>0</strong> added'
+    : `<strong>${n}</strong> ${n === 1 ? 'item' : 'items'} added`;
+
+  document.getElementById('footerLabel').innerHTML       = label;
+  document.getElementById('detailFooterLabel').innerHTML = label;
+  document.getElementById('confirmBtn').disabled       = n === 0;
+  document.getElementById('detailConfirmBtn').disabled = n === 0;
 }
 
 // ── Parent communication ──────────────────────────────
 function buildProducts() {
-  return SELECTED_ITEMS.map(s => ({
-    id:       s.id,
-    name:     s.name,
-    category: s.hamperName
-  }));
+  return [...SELECTION.values()];
 }
 
 function sendToParent() {
@@ -793,10 +608,53 @@ function sendToParent() {
 }
 
 function confirmAndClose() {
+  if (SELECTION.size === 0) return;
   if (window.parent && window.parent !== window) {
     window.parent.postMessage({ type: 'confirmAndClose', products: buildProducts() }, '*');
   }
 }
+
+function cancelAndClose() {
+  if (window.parent && window.parent !== window) {
+    window.parent.postMessage({ type: 'confirmAndClose', products: buildProducts() }, '*');
+  }
+}
+
+// ── Sync from parent (tag removed in mood board) ─────
+window.addEventListener('message', e => {
+  if (e.data.type !== 'syncSelection') return;
+
+  // Rebuild SELECTION from parent's authoritative list.
+  // Whole-hamper products have id = "festive-004" but the SELECTION map
+  // keys them as "H:festive-004". Individual items already carry "I:" prefix.
+  SELECTION.clear();
+  (e.data.products || []).forEach(p => {
+    const key = p.id.startsWith('I:') ? p.id : 'H:' + p.id;
+    SELECTION.set(key, p);
+  });
+
+  // Refresh grid badges
+  renderGrid();
+
+  // If detail panel is open, refresh its state in place
+  if (activeHamper && document.getElementById('detailView').classList.contains('open')) {
+    refreshWholeRow();
+    document.querySelectorAll('#itemsList .item-row').forEach((row, idx) => {
+      const key = 'I:' + activeHamper.id + ':' + idx;
+      row.classList.toggle('checked', SELECTION.has(key));
+    });
+  }
+
+  refreshCounts();
+});
+
+// Keyboard nav
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    if (document.getElementById('detailView').classList.contains('open')) closeDetail();
+    else cancelAndClose();
+  }
+});
 </script>
 </body>
 </html>

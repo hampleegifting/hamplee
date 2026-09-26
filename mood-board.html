@@ -659,33 +659,6 @@
             background: #FFFDF7;
         }
 
-        .vision-section {
-            background: linear-gradient(135deg, #FFFDF7 0%, #FFF9E6 100%);
-            border: 1.5px solid var(--gold);
-            border-radius: 12px;
-            padding: 20px 22px;
-            margin-top: 4px;
-        }
-
-        .vision-section .pref-header {
-            margin-bottom: 16px;
-        }
-
-        .vision-section .pref-header-text label {
-            font-size: 17px;
-        }
-
-        .vision-section textarea {
-            min-height: 160px;
-            background: white;
-            border: 1.5px solid rgba(201, 169, 89, 0.45);
-            border-radius: 8px;
-        }
-
-        .vision-section textarea:focus {
-            border-color: var(--gold);
-            box-shadow: 0 0 0 3px rgba(201, 169, 89, 0.1);
-        }
 
         .browse-icon {
             font-size: 20px;
@@ -749,12 +722,17 @@
         }
 
         .product-selector-content {
-            width: 100%;
-            /* max-width: 70%; */
+            width: 50%;
             height: 92vh;
             overflow: hidden;
             border-radius: 4px;
             animation: modalSlideIn 0.4s ease;
+        }
+
+        @media (max-width: 768px) {
+            .product-selector-content {
+                width: 100%;
+            }
         }
 
         #productsIframe {
@@ -862,29 +840,7 @@
                             </div>
                         </div>
 
-                        <div class="preference-card">
-                            <div class="pref-header">
-                                <span class="pref-emoji">🔄</span>
-                                <div class="pref-header-text">
-                                    <label for="previousItems">Previously Gifted Items</label>
-                                    <p class="preference-hint">Help us keep your gifts fresh and unique</p>
-                                </div>
-                            </div>
-                            <textarea id="previousItems" name="previousItems" placeholder="List any items or categories you've gifted before that you'd like to avoid repeating..."></textarea>
-                        </div>
 
-                    </div>
-
-                    <!-- Vision Statement -->
-                    <div class="vision-section">
-                        <div class="pref-header">
-                            <span class="pref-emoji pref-emoji--large">✨</span>
-                            <div class="pref-header-text">
-                                <label for="expectations">Your Vision & Expectations <span class="required">*</span></label>
-                                <p class="preference-hint">Help us understand the story you want to tell</p>
-                            </div>
-                        </div>
-                        <textarea id="expectations" name="expectations" required placeholder="Share your vision...&#10;&#10;• What impression do you want to create?&#10;• What values should the hampers reflect?&#10;• What emotions should recipients feel?&#10;• Any specific themes or messages to convey?"></textarea>
                     </div>
                 </div>
 
@@ -1028,9 +984,7 @@
                 'Budget':             data.budget      || '—',
 
                 // Preferences
-                'Hampers to Include':  data.includeItems   || '—',
-                'Previously Gifted':   data.previousItems  || '—',
-                'Vision & Expectations': data.expectations || '—'
+                'Hampers to Include': data.includeItems || '—'
             };
 
             fetch('https://api.web3forms.com/submit', {
@@ -1062,14 +1016,11 @@
         // Check if coming from wishlist
         const urlParams = new URLSearchParams(window.location.search);
         const skipToVision = urlParams.get('skip') === 'true';
-        
+
         if (skipToVision) {
-            // Hide the first 2 preference cards (Items to Include, Previously Gifted)
+            // Hide the Items to Include card (wishlist is pre-populated via populateFromLikedWishlist)
             const preferenceCards = document.querySelectorAll('.preference-card');
-            if (preferenceCards.length >= 2) {
-                preferenceCards[0].style.display = 'none'; // Items to Include
-                preferenceCards[1].style.display = 'none'; // Previously Gifted
-            }
+            if (preferenceCards.length >= 1) preferenceCards[0].style.display = 'none';
         }
         
         // Initialize - always start at step 1
@@ -1154,26 +1105,32 @@
 
         function openProductSelector(type) {
             currentSelectionType = type;
-            const modal = document.getElementById('productSelectorModal');
+            const modal  = document.getElementById('productSelectorModal');
             const iframe = document.getElementById('productsIframe');
 
-            if (type === 'include' && !selectedProducts.include.length) {
-                const likedItems = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
-                const hampersOnly = likedItems.filter(item => item.type === 'hamper');
-                
-                if (hampersOnly.length > 0) {
-                    selectedProducts.include = hampersOnly.map(item => ({
-                        id: item.id,
-                        name: item.name,
-                        category: item.category || 'Hamper'
-                    }));
-                }
-            }
-            
             document.body.classList.add('modal-open');
-            
-            iframe.src = `item-selector.html?type=${type}`;
-            
+
+            // Load the iframe only once — keeping it alive preserves the
+            // SELECTION state inside it across modal open/close cycles.
+            if (!iframe.dataset.loaded) {
+                iframe.dataset.loaded = 'true';
+
+                // Pre-populate from liked wishlist on very first open
+                if (type === 'include') {
+                    const likedItems  = JSON.parse(localStorage.getItem('likedWishlist') || '[]');
+                    const hampersOnly = likedItems.filter(item => item.type === 'hamper');
+                    if (hampersOnly.length > 0) {
+                        selectedProducts.include = hampersOnly.map(item => ({
+                            id:       item.id,
+                            name:     item.name,
+                            category: item.category || 'Hamper'
+                        }));
+                    }
+                }
+
+                iframe.src = `item-selector.html?type=${type}`;
+            }
+
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
@@ -1186,12 +1143,10 @@
 
         function closeProductSelector() {
             const modal = document.getElementById('productSelectorModal');
-            const iframe = document.getElementById('productsIframe');
             modal.classList.remove('active');
             document.body.style.overflow = 'auto';
-            iframe.src = '';
-            
-            // Remove modal-open class from body
+            // Do NOT clear iframe.src — the iframe's JS state (SELECTION map)
+            // must survive so reopening the modal shows previous selections.
             document.body.classList.remove('modal-open');
         }
 
@@ -1260,15 +1215,24 @@
 
         function removeItem(event, type, productId) {
             event.stopPropagation();
-            
+
             const index = selectedProducts[type].findIndex(p => p.id == productId);
             if (index > -1) {
                 selectedProducts[type].splice(index, 1);
             }
-            
-            // Update display
+
+            // Update mood-board display
             currentSelectionType = type;
             confirmSelection();
+
+            // Push the updated list into the iframe so its checkboxes/badges sync
+            const iframe = document.getElementById('productsIframe');
+            if (iframe && iframe.contentWindow && iframe.dataset.loaded) {
+                iframe.contentWindow.postMessage({
+                    type: 'syncSelection',
+                    products: selectedProducts[type]
+                }, '*');
+            }
         }
     </script>
 </body>
