@@ -16,6 +16,126 @@
   <link rel="stylesheet" href="styles.css">
   <script src="nav.js" defer></script>
 
+  <style>
+    /* ── Enquire Modal ── */
+    .enquire-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 3000;
+      backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+    }
+    .enquire-backdrop.open { display: flex; }
+
+    .enquire-modal {
+      background: #fff;
+      border-radius: 16px;
+      width: min(540px, 94vw);
+      max-height: 92vh;
+      overflow-y: auto;
+      padding: 48px;
+      position: relative;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.22);
+      animation: enquireIn 0.3s ease;
+    }
+    @keyframes enquireIn {
+      from { opacity: 0; transform: translateY(18px) scale(0.97); }
+      to   { opacity: 1; transform: translateY(0)  scale(1); }
+    }
+    .enquire-close {
+      position: absolute;
+      top: 18px; right: 18px;
+      width: 36px; height: 36px;
+      background: var(--cream, #F8F7F4);
+      border: none; border-radius: 50%;
+      cursor: pointer; font-size: 20px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--dark, #1A1A1A);
+      transition: background 0.2s;
+    }
+    .enquire-close:hover { background: #EDE9E3; }
+    .enquire-modal h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px; font-weight: 400;
+      color: var(--dark, #1A1A1A);
+      margin-bottom: 6px; line-height: 1.2;
+    }
+    .enquire-sub {
+      font-size: 14px; color: #6B6B6B;
+      margin-bottom: 32px; line-height: 1.6;
+    }
+    .eq-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px; margin-bottom: 16px;
+    }
+    .eq-group { margin-bottom: 16px; }
+    .eq-group label {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px; font-weight: 600;
+      color: var(--dark, #1A1A1A);
+      margin-bottom: 8px; letter-spacing: 0.3px;
+    }
+    .eq-group label .req { color: var(--gold, #C9A959); margin-left: 2px; }
+    .eq-group input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #E0E0E0;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--dark, #1A1A1A);
+      background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-sizing: border-box;
+    }
+    .eq-group input:focus {
+      outline: none;
+      border-color: var(--gold, #C9A959);
+      box-shadow: 0 0 0 3px rgba(201,169,89,0.12);
+    }
+    .eq-group input::placeholder { color: #AAAAAA; }
+    .enquire-submit {
+      width: 100%; margin-top: 8px;
+      padding: 16px;
+      background: var(--gold, #C9A959);
+      color: #fff; border: none;
+      border-radius: 50px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px; font-weight: 600;
+      letter-spacing: 0.5px; cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .enquire-submit:hover { opacity: 0.88; transform: translateY(-1px); }
+    .enquire-submit:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+    .enquire-success {
+      display: none; text-align: center; padding: 16px 0 8px;
+    }
+    .enquire-success.show { display: block; }
+    .enquire-success-circle {
+      width: 72px; height: 72px;
+      background: var(--gold, #C9A959);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      box-shadow: 0 8px 30px rgba(201,169,89,0.35);
+    }
+    .enquire-success h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px; font-weight: 400;
+      color: var(--dark, #1A1A1A); margin-bottom: 12px;
+    }
+    .enquire-success p { font-size: 15px; color: #6B6B6B; line-height: 1.7; }
+    @media (max-width: 560px) {
+      .enquire-modal { padding: 32px 20px; }
+      .eq-row { grid-template-columns: 1fr; }
+    }
+  </style>
+
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JEV1LX1E06"></script>
   <script>
@@ -43,14 +163,9 @@
   <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
     <span class="wishlist-count-label" id="wishlistCountLabel"></span>
     <div class="wishlist-enquire-bar">
-      <a href="#" class="btn btn-wa" id="waEnquireBtn" target="_blank">
-        <svg viewBox="0 0 24 24" width="16" height="16" style="fill:white;flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Enquire via WhatsApp
-      </a>
-      <a href="#" class="btn btn-outline" id="emailEnquireBtn">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        Enquire via Email
-      </a>
+      <span class="hamper-enquire-btn" onclick="openEnquireModal()" style="cursor:pointer">
+        Enquire for Bulk Price →
+      </span>
       <button class="btn-outline" onclick="clearWishlist()" style="padding:14px 20px;font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;background:transparent;color:var(--grey);border:1.5px solid rgba(0,0,0,0.12);cursor:pointer">
         Clear All
       </button>
@@ -103,6 +218,133 @@
   </div>
 </footer>
 
+<!-- ── Enquire for Bulk Price Modal ── -->
+<div class="enquire-backdrop" id="enquireBackdrop" onclick="handleEnquireBackdrop(event)">
+  <div class="enquire-modal">
+    <button class="enquire-close" onclick="closeEnquireModal()" aria-label="Close">×</button>
+
+    <div id="enquireFormWrap">
+      <h2>Enquire for Bulk Price</h2>
+      <p class="enquire-sub">Share your details and we'll get back to you with bulk pricing within 24 hours.</p>
+
+      <form id="enquireForm" onsubmit="submitEnquireForm(event)">
+        <input type="hidden" name="hamper" id="enquireHamperField">
+
+        <div class="eq-row">
+          <div class="eq-group">
+            <label>Full Name <span class="req">*</span></label>
+            <input type="text" name="name" required placeholder="Your full name">
+          </div>
+          <div class="eq-group">
+            <label>Email Address <span class="req">*</span></label>
+            <input type="email" name="email" required placeholder="your@email.com">
+          </div>
+        </div>
+        <div class="eq-row">
+          <div class="eq-group">
+            <label>Contact Number <span class="req">*</span></label>
+            <input type="tel" name="contact" required placeholder="+91 98765 43210">
+          </div>
+          <div class="eq-group">
+            <label>Expected Quantity <span class="req">*</span></label>
+            <input type="number" name="quantity" required min="1" placeholder="No. of hampers">
+          </div>
+        </div>
+        <div class="eq-group">
+          <label>Budget Range per Hamper <span class="req">*</span></label>
+          <input type="text" name="budget" required placeholder="e.g. ₹1,000 – ₹2,000">
+        </div>
+
+        <button type="submit" class="enquire-submit" id="enquireSubmitBtn">Send Enquiry</button>
+      </form>
+    </div>
+
+    <div class="enquire-success" id="enquireSuccess">
+      <div class="enquire-success-circle">
+        <svg viewBox="0 0 52 52" width="34" height="34" fill="none">
+          <path stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" d="M14 27l7.8 7.8L38 18"/>
+        </svg>
+      </div>
+      <h3>Enquiry Sent!</h3>
+      <p>Thank you! We'll get back to you with bulk pricing for your wishlist within 24 hours.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openEnquireModal() {
+    const wishlist = getWishlist();
+    const hamperNames = wishlist.map(h => h.name).join(', ');
+    document.getElementById('enquireHamperField').value = hamperNames;
+    document.getElementById('enquireForm').reset();
+    document.getElementById('enquireHamperField').value = hamperNames; // restore after reset
+    document.getElementById('enquireFormWrap').style.display = '';
+    document.getElementById('enquireSuccess').classList.remove('show');
+    document.getElementById('enquireSubmitBtn').textContent = 'Send Enquiry';
+    document.getElementById('enquireSubmitBtn').disabled = false;
+    document.getElementById('enquireBackdrop').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    track('wishlist_enquiry_open', { item_count: wishlist.length });
+  }
+
+  function closeEnquireModal() {
+    document.getElementById('enquireBackdrop').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function handleEnquireBackdrop(e) {
+    if (e.target === document.getElementById('enquireBackdrop')) closeEnquireModal();
+  }
+
+  function submitEnquireForm(e) {
+    e.preventDefault();
+    const btn = document.getElementById('enquireSubmitBtn');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    const data     = Object.fromEntries(new FormData(e.target));
+    const wishlist = getWishlist();
+    const WEB3FORMS_KEY = 'c45e4b92-c36b-4d77-94f8-23139440dee3';
+
+    const payload = {
+      access_key: WEB3FORMS_KEY,
+      subject:    `Bulk Price Enquiry — Wishlist (${wishlist.length} hamper${wishlist.length !== 1 ? 's' : ''})`,
+      from_name:  data.name  || 'Hamplee Website',
+      replyto:    data.email || '',
+
+      'Full Name': data.name     || '—',
+      'Email':     data.email    || '—',
+      'Phone':     data.contact  || '—',
+      'Quantity':  data.quantity || '—',
+      'Budget':    data.budget   || '—',
+      'Wishlist':  data.hamper   || '—',
+    };
+
+    fetch('https://api.web3forms.com/submit', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body:    JSON.stringify(payload)
+    })
+    .then(r => r.json())
+    .then(res => {
+      if (!res.success) throw new Error(res.message || 'Submission failed');
+      document.getElementById('enquireFormWrap').style.display = 'none';
+      document.getElementById('enquireSuccess').classList.add('show');
+      track('wishlist_enquiry_submit', { item_count: wishlist.length });
+    })
+    .catch(err => {
+      console.error('Enquiry submission error:', err);
+      btn.textContent = 'Send Enquiry';
+      btn.disabled = false;
+      alert('There was an error submitting your enquiry. Please try again or contact us directly.');
+    });
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeEnquireModal();
+  });
+</script>
+
 <!-- Floating Instagram -->
 <a href="https://instagram.com/hamplee.gifting" class="ig-float" target="_blank" aria-label="Follow us on Instagram">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -128,8 +370,6 @@ function track(event, params) {
   if (typeof gtag === 'function') gtag('event', event, params || {});
 }
 
-const WHATSAPP = '917970765884';
-const EMAIL    = 'hamplee.gifting@gmail.com';
 
 function getWishlist() {
   return JSON.parse(localStorage.getItem('likedWishlist') || '[]');
@@ -138,51 +378,6 @@ function getWishlist() {
 function saveWishlist(list) {
   localStorage.setItem('likedWishlist', JSON.stringify(list));
   if (typeof updateLikedWishlistCount === 'function') updateLikedWishlistCount();
-}
-
-// ── Build enquiry messages from wishlist ────────────
-function buildWAMessage(items) {
-  const list = items.map((h, i) => {
-    const price      = h.price && h.price.amount ? '₹' + h.price.amount.toLocaleString('en-IN') + ' + 18% GST' : (h.priceLabel || '');
-    const highlights = (h.highlights || []).map(hl => `   • ${hl}`).join('\n');
-    return `${i + 1}. *${h.name}*\n   Collection: ${h.category || ''} | Price: ${price}${highlights ? '\n' + highlights : ''}`;
-  }).join('\n\n');
-  return encodeURIComponent(
-`Hi Hamplee! I've shortlisted the following hampers and would like to enquire:
-
-${list}
-
-Could you please share bulk pricing, availability, and customisation options for all items? Thank you!`
-  );
-}
-
-function buildEmailBody(items) {
-  const list = items.map((h, i) => {
-    const price      = h.price && h.price.amount ? '₹' + h.price.amount.toLocaleString('en-IN') + ' + 18% GST' : (h.priceLabel || '');
-    const highlights = (h.highlights || []).map(hl => `     • ${hl}`).join('\n');
-    const moq        = h.moq ? `\n   MOQ: ${h.moq} pieces` : '';
-    return `${i + 1}. ${h.name}\n   Collection: ${h.category || ''} | Price: ${price}${moq}${highlights ? `\n   What's inside:\n${highlights}` : ''}`;
-  }).join('\n\n');
-  return {
-    subject: encodeURIComponent(`Hamplee Wishlist Enquiry — ${items.length} Hamper${items.length > 1 ? 's' : ''}`),
-    body: encodeURIComponent(
-`Hi Hamplee Team,
-
-I've shortlisted the following hampers and would like to enquire about pricing, availability, and customisation options:
-
-────────────────────────────
-WISHLIST (${items.length} hamper${items.length > 1 ? 's' : ''})
-────────────────────────────
-
-${list}
-
-────────────────────────────
-
-Please get in touch with bulk pricing and delivery details.
-
-Best regards`
-    )
-  };
 }
 
 // ── Render ────────────────────────────────────────────
@@ -210,18 +405,10 @@ function render() {
   countLabel.textContent = `${wishlist.length} hamper${wishlist.length !== 1 ? 's' : ''} saved`;
   subtitle.textContent   = `${wishlist.length} hamper${wishlist.length !== 1 ? 's' : ''} in your wishlist`;
 
-  // Wire up enquiry buttons
-  const waMsg  = buildWAMessage(wishlist);
-  const emailD = buildEmailBody(wishlist);
-  document.getElementById('waEnquireBtn').href    = `https://wa.me/${WHATSAPP}?text=${waMsg}`;
-  document.getElementById('emailEnquireBtn').href = `mailto:${EMAIL}?subject=${emailD.subject}&body=${emailD.body}`;
-  document.getElementById('waEnquireBtn').onclick    = () => track('wishlist_enquiry_wa', { item_count: wishlist.length });
-  document.getElementById('emailEnquireBtn').onclick = () => track('wishlist_enquiry_email', { item_count: wishlist.length });
 
   // Render cards
   grid.innerHTML = wishlist.map(h => {
     const img   = h.image || (h.images && h.images[0]) || '';
-    const price = h.price && h.price.amount ? '₹' + h.price.amount.toLocaleString('en-IN') + '<span class="price-gst">+ 18% GST</span>' : (h.priceLabel || '');
     const cat   = h.category || '';
     const badge = h.badge || '';
     return `
@@ -235,34 +422,11 @@ function render() {
         <div class="hamper-card-category">${cat}</div>
         <h3 class="hamper-card-name">${h.name}</h3>
         <p class="hamper-card-tagline">${h.tagline || ''}</p>
-        <div class="hamper-card-footer">
-          <span class="hamper-card-price">${price}</span>
-          <a href="${buildSingleWALink(h)}" target="_blank" class="hamper-enquire-btn" onclick="event.stopPropagation(); track('whatsapp_enquiry', { hamper_name: '${h.name.replace(/'/g,"\\'")}', hamper_category: '${h.category}', page: 'wishlist' })">Enquire →</a>
-        </div>
       </div>
     </div>`;
   }).join('');
 }
 
-function buildSingleWALink(h) {
-  const price      = h.price ? h.price.display : (h.priceLabel || '');
-  const highlights = (h.highlights || []).map(hl => `• ${hl}`).join('\n');
-  const msg = encodeURIComponent(
-`Hi Hamplee! I'm interested in this hamper:
-
-*${h.name}*
-Collection: ${h.category || ''}
-Price: ${price}
-
-What's inside:
-${highlights}
-
-MOQ: ${h.moq || 10} pieces${h.customizable ? ' | Custom branding available' : ''}
-
-Please share availability and bulk pricing. Thank you!`
-  );
-  return `https://wa.me/${WHATSAPP}?text=${msg}`;
-}
 
 function getBadgeClass(badge) {
   if (badge === 'Bestseller' || badge === 'Most Popular') return 'gold';
