@@ -641,6 +641,11 @@ document.addEventListener('DOMContentLoaded', initFadeObserver);
 <!-- Inline Detail Panel for homepage -->
 <div class="panel-backdrop" onclick="closePanelHome()"></div>
 <aside class="detail-panel" id="homePanel" role="dialog" aria-modal="true" aria-label="Hamper details">
+  <button class="panel-back-btn" onclick="window.location.href='hampers.html'" aria-label="Back to catalogue">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="20" height="20" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"/>
+    </svg>
+  </button>
   <button class="panel-close-btn" onclick="closePanelHome()" aria-label="Close">×</button>
   <div class="panel-scroll">
     <div class="panel-image-wrap">
