@@ -252,3 +252,16 @@ if (document.readyState === 'loading') {
 } else {
   loadNavigation();
 }
+
+// ── Image Protection ──────────────────────────────
+// Suppress right-click context menu and drag-to-save on all images site-wide.
+// capture:true ensures this runs before any other handler can re-enable it.
+document.addEventListener('contextmenu', e => {
+  if (e.target.closest('img, .hamper-card-image, .panel-image-wrap, .search-result-img')) {
+    e.preventDefault();
+  }
+}, true);
+
+document.addEventListener('dragstart', e => {
+  if (e.target.tagName === 'IMG') e.preventDefault();
+}, true);

@@ -2076,6 +2076,27 @@ a, button, .pill, .hamper-card, .collection-tile, .contact-card {
   .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ── Image Protection ─────────────────────────────────────────────────────── */
+/* Prevent drag-to-save and iOS long-press save globally */
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+/* Transparent overlay sits above the <img> (z-index 0) but below all
+   interactive buttons (z-index 2+). Right-click lands on the overlay,
+   not the image element, so "Save image as…" never appears. */
+.hamper-card-image::after,
+.panel-image-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: all;
+}
+
 @media (max-width: 768px) {
   /* Catalog header: stack title and actions on separate rows */
   .catalog-header-inner  { flex-direction: column; align-items: center; gap: 10px; padding: 14px 0; }
