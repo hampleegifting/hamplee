@@ -606,6 +606,17 @@ function thumbSrcset(src) {
 function thumbSrc(src) { return src.replace(/\.(png|jpe?g)$/i, '-1200.jpg'); }
 function panelSrc(src) { return src.replace(/\.(png|jpe?g)$/i, '-1800.jpg'); }
 
+// Preload the hi-res panel image on card hover/touch so it's in cache by the
+// time the user taps. Simple dedup — only fetches each URL once per session.
+const _preloaded = {};
+function preloadPanelImg(src) {
+  const hi = panelSrc(src);
+  if (_preloaded[hi]) return;
+  _preloaded[hi] = true;
+  const img = new Image();
+  img.src = hi;
+}
+
 // ── Render Grid ───────────────────────────────────────
 function renderGrid() {
   const hampers   = getFiltered();
@@ -645,7 +656,7 @@ function renderGrid() {
          </button>
          <span class="hamper-enquire-btn" onclick="event.stopPropagation(); openEnquireModal('${h.id}')">Enquire for Bulk Price</span>`;
     return `
-    <div class="hamper-card fade-up delay-${delay}${isSelected ? ' selected' : ''}" onclick="${cardClick}">
+    <div class="hamper-card fade-up delay-${delay}${isSelected ? ' selected' : ''}" onclick="${cardClick}" onmouseenter="preloadPanelImg('${h.image}')" ontouchstart="preloadPanelImg('${h.image}')" >
       <div class="hamper-card-image">
         ${h.badge ? `<span class="hamper-badge ${getBadgeClass(h.badge)}">${h.badge}</span>` : ''}
         <img loading="lazy" decoding="async"
@@ -802,11 +813,35 @@ function openPanel(id) {
   const wished   = wishlist.some(w => w.id === h.id);
 
 
-  const panelImg           = document.getElementById('panelImg');
-  panelImg.src             = panelSrc(h.image);
+  const panelImg = document.getElementById('panelImg');
   panelImg.alt             = h.name;
   panelImg.dataset.original = h.image;
-  panelImg.onerror         = () => { panelImg.onerror = null; panelImg.src = h.image; };
+
+  // Fade out the stale image, then show the cached medium-res thumbnail
+  // immediately (zero wait — it's already in the browser cache from the grid).
+  // Once the full-size panel image has loaded, swap it in silently.
+  panelImg.style.opacity = '0';
+  panelImg.onload  = null;
+  panelImg.onerror = null;
+
+  const lowSrc = thumbSrc(h.image);  // -1200.jpg — cached from grid
+  const hiSrc  = panelSrc(h.image);  // -1800.jpg — load in background
+
+  panelImg.src = lowSrc;
+  panelImg.onload = () => {
+    panelImg.style.opacity = '1';
+    // Upgrade to hi-res silently once it arrives
+    const hi = new Image();
+    hi.onload  = () => { panelImg.src = hi.src; };
+    hi.onerror = () => { /* keep showing lowSrc, fine */ };
+    hi.src = hiSrc;
+  };
+  panelImg.onerror = () => {
+    // Low-res failed too — fall back to original PNG
+    panelImg.src = h.image;
+    panelImg.style.opacity = '1';
+    panelImg.onerror = null;
+  };
   document.getElementById('panelCat').textContent  = h.category;
   document.getElementById('panelBadge').textContent = h.badge || '';
   document.getElementById('panelName').textContent  = h.name;
