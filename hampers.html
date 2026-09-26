@@ -838,12 +838,27 @@ function openPanel(id) {
 
   document.getElementById('detailPanel').dataset.hamper = h.id;
   document.body.classList.add('panel-open');
+  // Push a history entry so the physical back button closes the panel
+  // instead of navigating the user away from the page.
+  history.pushState({ panelOpen: true, hId: id }, '');
   document.getElementById('detailPanel').focus();
 }
 
 function closePanel() {
   document.body.classList.remove('panel-open');
+  // If we pushed a history entry when opening, pop it so the back stack
+  // stays clean. The popstate handler below guards against double-close.
+  if (history.state && history.state.panelOpen) {
+    history.back();
+  }
 }
+
+// Physical back button: close the panel instead of leaving the page.
+window.addEventListener('popstate', () => {
+  if (document.body.classList.contains('panel-open')) {
+    document.body.classList.remove('panel-open');
+  }
+});
 
 function clearSearchFilter() {
   activeSearch = '';
